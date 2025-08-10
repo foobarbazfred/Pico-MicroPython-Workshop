@@ -35,7 +35,21 @@ while True:
 #
 ```
 
+自動的に点滅するプログラムは以下(sinを使っています)
+```
+from machine import Pin
+from machine import PWM
 
+import time
+MAX_VALUE = 0x4000
+
+pwm0 = PWM(Pin(16), freq=2000, duty_u16=0)  # setup PWM
+while True:
+    for i in range(math.pi, 0.1)
+        value = MAX_VALUE * sin(i)
+        pwm0.duty_u16(value)
+        time.sleep(0.5)
+```
 
 参考WebPage<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#pwm-pulse-width-modulation
