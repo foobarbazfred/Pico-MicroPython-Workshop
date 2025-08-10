@@ -30,7 +30,9 @@ while True:
     pwm0.duty_u16(value)
     estim_vol = MAX_VOLT * value / MAX_VALUE
     print(value, hex(value), estim_vol, 'V')
-    time.sleep(0.5)
+
+#
+#
 ```
 
 
