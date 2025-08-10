@@ -17,7 +17,6 @@ while True:
 ```
 from machine import Pin
 from rp2 import bootsel_button
-import time
 
 led = Pin('LED', Pin.OUT)
 while True:
