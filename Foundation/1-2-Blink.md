@@ -12,3 +12,24 @@ led = Pin(16, Pin.OUT)
 led.on()
 led.off()
 ```
+押しボタンスイッチはGP15に接続します。
+GP15を入力用に初期化するコードは以下
+```
+from machine import Pin
+sw = Pin(15, Pin.IN, Pin.PULL_UP)
+```
+押しボタンを押して値が0になるか確認しましょう
+```
+sw.value()
+```
+
+押されている時はLEDが点灯するプログラム（部分）は以下
+スイッチの値を取得して、値が0であれがGNDに接続されている(押されている)と判断できます。
+0の時は押されている時ですのでLEDを点灯させます。それ以外はLEDを消します。
+```
+while True:
+    if sw.value() == 0:
+        led.on()
+    else:
+        led.off()
+```
