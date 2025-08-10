@@ -28,5 +28,9 @@ servo.duty_u16(int(0.5/20 * MAX_VALUE))  # angle : 0 degree
 servo.duty_u16(int(1.5/20 * MAX_VALUE))  # angle : 90 degrees
 servo.duty_u16(int(2.4/20 * MAX_VALUE))  # angle : 180 degrees
 ```
+可変抵抗（ボリューム）の軸の回転に連動してサーボのホーンを動かすプログラムは以下
+```
+   <ここにコード>
+```
 参考URL<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/esp8266/tutorial/pwm.html#control-a-hobby-servo
