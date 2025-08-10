@@ -11,5 +11,5 @@ pwm0 = PWM(Pin(16), freq=freq, duty_u16=int(0xffff/2))  # setup PWM
 for freq in range(400,2000,10): 
     print(freq)
     pwm0.freq(freq)
-    time.sleep(0.5)
+    time.sleep(0.2)
 ```
