@@ -32,8 +32,7 @@ adc = ADC(Pin(26))     # create ADC object on ADC pin
 
 while True:
     value = adc.read_u16()
-    print(value, hex(value))
     estim_vol = MAX_VOLT * value / MAX_VALUE
-    print(estim_vol, 'V')
+    print(value, hex(value), estim_vol, 'V')
     time.sleep(0.5)
 ```
