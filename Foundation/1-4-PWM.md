@@ -13,6 +13,25 @@ pwm0.duty_u16(1000)
 ```
 
 先ほどのボリュームと連動して明るさを調整するプログラムは以下
+```
+from machine import Pin
+from machine import ADC
+from machine import PWM
+
+import time
+MAX_VALUE = 0xffff
+MAX_VOLT = 3.3
+adc = ADC(Pin(26))     # create ADC object on ADC pin
+
+pwm0 = PWM(Pin(16), freq=2000, duty_u16=0)  # setup PWM
+
+while True:
+    value = adc.read_u16()
+    pwm0.duty_u16(value)
+    estim_vol = MAX_VOLT * value / MAX_VALUE
+    print(value, hex(value), estim_vol, 'V')
+    time.sleep(0.5)
+```
 
 
 
