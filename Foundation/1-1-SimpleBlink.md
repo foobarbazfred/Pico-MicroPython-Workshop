@@ -4,10 +4,25 @@
 ```
 from machine import Pin
 import time
+
 led = Pin('LED', Pin.OUT)
 while True:
     led.on()
     time.sleep(1)
     led.off()
     time.sleep(1)
+```
+
+ボード上のBOOTSELボタンに連動してLEDが点灯するプログラムは以下
+```
+from machine import Pin
+from rp2 import bootsel_button
+import time
+
+led = Pin('LED', Pin.OUT)
+while True:
+    if bootsel_button() == 1:
+        led.on()
+    else:
+        led.off()
 ```
