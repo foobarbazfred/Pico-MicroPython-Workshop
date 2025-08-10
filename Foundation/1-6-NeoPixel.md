@@ -11,3 +11,11 @@ https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/h
 ['__class__', '__name__', 'Pin', '__dict__', '__file__', 'array', 'rp2', 'time', 'ws2812', 'myNeopixel']
 ```
 dir(neopixel2)と入力すると、neopixel2モジュール内のシンボル一覧が表示されます。myNeopixelが含まれているとPIOを用いたfreenove版がロードされています。
+
+```
+import time
+from machine import Pin
+from neopixel import myNeopixel
+NUM_LEDS = 8
+np = myNeopixel(NUM_LEDS, 18)
+```
