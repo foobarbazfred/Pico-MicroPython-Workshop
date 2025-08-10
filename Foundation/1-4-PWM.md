@@ -39,15 +39,14 @@ while True:
 ```
 from machine import Pin
 from machine import PWM
-import math
 
 import time
 MAX_VALUE = 0x4000
 
 pwm0 = PWM(Pin(16), freq=2000, duty_u16=0)  # setup PWM
 while True:
-    for i in range(0, math.pi, 0.1):
-        value = MAX_VALUE * sin(i)
+    for i in range(0, 30 , 1):  # 30 means math.pi * 10
+        value = MAX_VALUE * sin(i/10)    # i/10 means math.pi * 10 -> math.py
         pwm0.duty_u16(value)
         time.sleep(0.5)
 ```
