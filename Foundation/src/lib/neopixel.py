@@ -1,7 +1,7 @@
 # original source: Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico-master
+#  https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico.git`
 #
-#
-#
+
 
 
 import array, time
