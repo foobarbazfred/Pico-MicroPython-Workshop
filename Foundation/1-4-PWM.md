@@ -46,10 +46,10 @@ MAX_VALUE = 0x4000
 
 pwm0 = PWM(Pin(16), freq=2000, duty_u16=0)  # setup PWM
 while True:
-    for i in range(0, 30 , 1):  # 30 means math.pi * 10
-        value = int(MAX_VALUE * math.sin(i/10))    # i/10 means math.pi * 10 -> math.py
+    for i in range(0, 300 , 1):  # 300 means math.pi * 100
+        value = int(MAX_VALUE * math.sin(i/100))    # i/100 means math.pi * 100 -> math.py
         pwm0.duty_u16(value)
-        time.sleep(0.5)
+        time.sleep(0.01)
 ```
 
 参考WebPage<br>
