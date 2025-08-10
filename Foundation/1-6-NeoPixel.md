@@ -19,3 +19,11 @@ from neopixel2 import myNeopixel
 NUM_LEDS = 8
 np = myNeopixel(NUM_LEDS, 18)
 ```
+```
+pos = 5
+led_r = 10
+led_g = 100
+led_b = 100
+np.set_pixel(pos, led_r, led_g, led_b)
+nb.show()
+```
