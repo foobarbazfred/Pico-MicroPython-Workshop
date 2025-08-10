@@ -1,9 +1,9 @@
-# 1-1  シンプルなLED点滅ぷろぐらむ
+# 1-1  シンプルなLED点滅プログラム
 
 配線も不要でボード上のLEDを点滅させるプログラムは以下
 ```
 from machine import Pin
-import tiem
+import time
 led = Pin('LED', Pin.OUT)
 while True:
     led.on()
