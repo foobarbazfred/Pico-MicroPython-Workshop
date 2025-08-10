@@ -15,7 +15,7 @@ dir(neopixel2)と入力すると、neopixel2モジュール内のシンボル一
 ```
 import time
 from machine import Pin
-from neopixel import myNeopixel
+from neopixel2 import myNeopixel
 NUM_LEDS = 8
 np = myNeopixel(NUM_LEDS, 18)
 ```
