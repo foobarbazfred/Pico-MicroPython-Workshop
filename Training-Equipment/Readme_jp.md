@@ -3,6 +3,10 @@
 マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用する。表示装置して、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれる
 
 https://store.freenove.com/products/fnk0058
+
+マイコンはRaspberry Pi Pico 2Wを使用します
+- https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
+
 ## 補助教材
 何をどのように学んでもらうか、学習過程を考えた際、以下の教材を追加したい
 1. 温湿度センサ；M5Stack用 温湿度CO2センサ（SCD41）(案)
