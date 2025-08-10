@@ -3,6 +3,7 @@
 組み込みライブラリのNeoPixelではタイミングが守れないためか正常に動作しません。freenoveが提供するNeoPixelドライバはPIOによりタイミング制御されており、正常に動くと思われます。以下に置いていますので、このライブラリを使ってください。
 https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/heads/main/Foundation/src/lib/neopixel.py
 
+組み込みモジュールとの衝突を避けるため、neopixel2.py等と名前を変えてMicroPythonにインストールしてください。
 上記ライブラリが正しく使えているかは以下で確認してください。
 ```
 >>> import neopixel2
