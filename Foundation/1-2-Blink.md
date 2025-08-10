@@ -13,7 +13,7 @@ led.on()
 led.off()
 ```
 押しボタンスイッチはGP15に接続します。
-GP15を入力用に初期化するコードは以下
+GP15を入力用に初期化するコードは以下。通常はスイッチをプルアップしておき、押されたらGNDに接続する回路を組むと思います。幸い、GPIOにはPullUp回路が内蔵されていますので、GPIO側でPullUpしておくことで、プルアップ抵抗の取付を省略できます。
 ```
 from machine import Pin
 sw = Pin(15, Pin.IN, Pin.PULL_UP)
