@@ -87,7 +87,17 @@ servo_rotate_horn(servo, 90)
 
 可変抵抗（ボリューム）の軸の回転に連動してサーボのホーンを動かすプログラムは以下
 ```
-   <ここにコード>
+from machine import ADC
+from machine import Pin
+from mylib import servo_rotate_horn
+from mylib import PWM_FREQ_SERVO
+
+adc = ADC(Pin(26))     # create ADC object on ADC pin
+servo = PWM(Pin(17), freq=PWM_FREQ_SERVO)
+while True:
+    vr = adc.read_u16() 
+    degree = int(180 * vr / 0xffff)
+    servo_rotate_horn(servo, degree)
 ```
 参考URL<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/esp8266/tutorial/pwm.html#control-a-hobby-servo
