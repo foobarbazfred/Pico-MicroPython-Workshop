@@ -1,5 +1,6 @@
-# upysh is unix shell like tools
-#  https://github.com/m5stack/M5Stack_MicroPython/blob/master/MicroPython_BUILD/components/micropython/esp32/modules/upysh.py
+# upysh is a library for manipulating files in Python, similar to a Unix shell.
+#  original source:
+#     https://github.com/m5stack/M5Stack_MicroPython/blob/master/MicroPython_BUILD/components/micropython/esp32/modules/upysh.py
 #
 #
 import sys
