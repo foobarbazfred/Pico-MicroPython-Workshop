@@ -78,6 +78,12 @@ def servo_test():
 # servo_test()
 ```
 
+サーボ制御関数は共通ライブラリ、mylib.pyに入れていますので以下のコードで利用できます。
+```
+from mylib import servo_rotate_horn
+servo = PWM(Pin(17), freq=PWM_FREQ_SERVO)
+servo_rotate_horn(servo, 90)
+```
 
 可変抵抗（ボリューム）の軸の回転に連動してサーボのホーンを動かすプログラムは以下
 ```
