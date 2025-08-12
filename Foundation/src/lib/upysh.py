@@ -39,7 +39,9 @@ class LS:
         total = 0
         for f in l:
             st = os.stat(f)
-            ftime = time.strftime("%Y/%m/%d %X", time.localtime(st[8]))
+            #ftime = time.strftime("%Y/%m/%d %X", time.localtime(st[8])) # unavaiable MicroPython for RPi Pico
+            (YY, MM, DD, hh, mm, ss, _, _)time.localtime(st[8])
+            ftime = f'{YY}/{MM:02d}/{DD:02d} {hh:02d}:{mm:02d}:{ss:02d}'
             if st[0] & 0x4000:  # stat.S_IFDIR
                 print("   <dir>  %s  %s" % (ftime, f))
             else:
