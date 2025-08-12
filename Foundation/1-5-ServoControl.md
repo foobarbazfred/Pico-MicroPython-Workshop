@@ -87,8 +87,9 @@ servo_rotate_horn(servo, 90)
 
 可変抵抗（ボリューム）の軸の回転に連動してサーボのホーンを動かすプログラムは以下
 ```
-from machine import ADC
 from machine import Pin
+from machine import ADC
+from machine import PWM
 from mylib import servo_rotate_horn
 from mylib import PWM_FREQ_SERVO
 
