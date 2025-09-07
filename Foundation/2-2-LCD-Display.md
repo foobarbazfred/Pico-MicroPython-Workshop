@@ -43,7 +43,7 @@ lcd = I2CLcd(i2c, LCD_ADDR, 2, 16)
 ```
 lcd.clear()
 lcd.move_to(0, 0)   # clearすると0,0に設定されます
-lcd.putstr("hello\n   bye")
+lcd.putstr(" ### hello\n   bye ####")
 ```
 
 
