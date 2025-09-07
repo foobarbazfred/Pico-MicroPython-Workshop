@@ -43,8 +43,13 @@ lcd = I2CLcd(i2c, LCD_ADDR, 2, 16)
 ```
 lcd.clear()
 lcd.move_to(0, 0)   # clearすると0,0に設定されます
-lcd.putstr(" ### hello\n   bye ####")
+lcd.putstr(" ### Hello and \n  good bye ####")
 ```
-
+2行目だけ出力したい場合は、、
+```
+lcd.clear()
+lcd.move_to(0, 1)
+lcd.putstr("     bye!! ")
+```
 
 The serial-to-parallel IC chip used in this module is PCF8574T (PCF8574AT), and its default I2C address is 0x27(0x3F).
