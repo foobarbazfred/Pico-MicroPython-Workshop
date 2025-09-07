@@ -30,8 +30,18 @@ I2C(0, freq=400000, scl=5, sda=4, timeout=50000)
 LCDに文字を表示するには、RAM領域にASCIIコードを書き込む必要があります。プログラムですべて実装するのは大変なので、LCD用ドライバを活用して、プログラム量を減らせられます。
 LCD用ドライバとして＃＃＃、＃＃＃、＃＃＃がありますが、今回使っているキットのメーカが提供するLCDドライバ(I2C_LCD1602)を活用します。
 
+LCDの初期化
+```
+LCD_ADDR = 0x27
+from machine import Pin, I2C
+i2c = I2C(0)
+lcd = I2CLcd(i2c, LCD_ADDR, 2, 16)
+```
+テスト；文字列のPrint
+```
+lcd.move_to(0, 0)
 
-
+```
 
 
 The serial-to-parallel IC chip used in this module is PCF8574T (PCF8574AT), and its default I2C address is 0x27(0x3F).
