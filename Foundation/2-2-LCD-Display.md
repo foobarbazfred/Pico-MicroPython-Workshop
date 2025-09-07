@@ -43,9 +43,15 @@ lcd = I2CLcd(i2c, LCD_ADDR, 2, 16)
 ```
 lcd.clear()
 lcd.move_to(0, 0)   # clearすると0,0に設定されます
+lcd.putstr("   Hello, World!   ")
+```
+文字列の途中に改行コードが含まれると２行目に改行されて出力されます
+```
+lcd.clear()
+lcd.move_to(0, 0)   # clearすると0,0に設定されます
 lcd.putstr(" ### Hello and \n  good bye ####")
 ```
-2行目だけ出力したい場合は、、
+2行目だけ出力したい場合は以下
 ```
 lcd.clear()
 lcd.move_to(0, 1)
