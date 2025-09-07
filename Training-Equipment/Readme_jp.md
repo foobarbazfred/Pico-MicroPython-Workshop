@@ -1,6 +1,6 @@
 # 研修用教材
 ## 使用教材
-マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用する。表示装置して、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれる
+マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置して、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
 
 https://store.freenove.com/products/fnk0058
 
