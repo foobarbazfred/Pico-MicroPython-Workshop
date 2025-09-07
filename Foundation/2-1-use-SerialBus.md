@@ -63,3 +63,5 @@ i2c.writeto(ADDR, data)
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-i2c-bus
 - クラスI2C
   - https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2C.html#class-i2c-a-two-wire-serial-protocol
+- I2Cバス仕様書 (I2Cバス仕様およびユーザーマニュアル)
+  - chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.nxp.com/docs/ja/user-guide/UM10204.pdf
