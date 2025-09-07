@@ -58,6 +58,17 @@ lcd.clear()
 lcd.move_to(0, 1)
 lcd.putstr("     bye!! ")
 ```
+今後他のデバイスがI2C_0を使うことを想定して、LCDはLCD_1を使います
+```
+from machine import Pin
+from machine import I2C
+from I2C_LCD import I2CLcd
+LCD_ADDR = 0x27
+
+i2c_1 = I2C(1, scl=Pin(19), sda=Pin(18), freq=400_000)
+lcd = I2CLcd(i2c_1, LCD_ADDR, 2, 16)
+lcd.putstr('hello')
+```
 
 The serial-to-parallel IC chip used in this module is PCF8574T (PCF8574AT), and its default I2C address is 0x27(0x3F).
 
