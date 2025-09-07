@@ -1,8 +1,8 @@
 # LCD Displayの利用
 
-LCD Displayは16x2が表示可能、LCDはI2Cで接続され、デバイスアドレスは0x27です。
+LCD Display（LCDキャラクターディスプレイモジュール(16×2行バックライト付)）は16x2が表示可能です。LCDとはI2Cで接続され、I2Cのデバイスアドレスは0x27です。
 マイコンとの接続は、5V,GNDに加え、I2Cのクロック、データバスを接続します。
-I2Cと8bitバスの変換にはコントローラはPCF8574T (PCF8574AT)が使われています。LCDコントローラはHD44780互換品やST7066相当と思われます。
+I2Cと8bitバスの変換にはコントローラはPCF8574T (PCF8574AT)が使われています。LCDコントローラは一般的なコントローラである、HD44780互換品やST7066等と思われます。
 
 先ほど説明に従い、HW I2Cを使いI2C_0でデフォルトで接続してみます。
 ```
@@ -63,3 +63,4 @@ The serial-to-parallel IC chip used in this module is PCF8574T (PCF8574AT), and 
 
 - 参考資料
   - https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/blob/master/Python/Python_Libraries/LCD_API.py
+  - https://cdn.sparkfun.com/assets/2/7/5/5/f/st7066.pdf
