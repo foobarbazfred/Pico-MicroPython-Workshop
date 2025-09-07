@@ -9,6 +9,8 @@ https://store.freenove.com/products/fnk0058
 
 キットを使う上でのマニュアル類は以下
 - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
+ドライバ類は以下
+- https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/tree/master/Python
 
 ## 補助教材
 何をどのように学んでもらうか、学習過程を考えた際、以下の教材を追加したい
