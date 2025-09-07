@@ -7,6 +7,9 @@ https://store.freenove.com/products/fnk0058
 マイコンはRaspberry Pi Pico 2Wを使用します
 - https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
 
+キットを使う上でのマニュアル類は以下
+- https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
+
 ## 補助教材
 何をどのように学んでもらうか、学習過程を考えた際、以下の教材を追加したい
 1. 温湿度センサ；M5Stack用 温湿度CO2センサ（SCD41）(案)
