@@ -41,8 +41,9 @@ lcd = I2CLcd(i2c, LCD_ADDR, 2, 16)
 ```
 テスト；文字列のPrint
 ```
-lcd.move_to(0, 0)
-
+lcd.clear()
+lcd.move_to(0, 0)   # clearすると0,0に設定されます
+lcd.putstr("hello\n   bye")
 ```
 
 
