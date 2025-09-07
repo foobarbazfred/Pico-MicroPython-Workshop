@@ -48,15 +48,35 @@ i2c.scan()
 ```
 デバイスからのデータ受信
 ```
-ADDR = 0x3F        #  接続先デバイスのアドレス（例）
-data = i2c.readfrom(ADDR, nbytes)
+DEV_ADDR = 0x3F        #  接続先デバイスのアドレス（例）
+data = i2c.readfrom(DEV_ADDR, nbytes)
 ```
 デバイスへのデータ送信
 ```
-ADDR = 0x3F        #  接続先デバイスのアドレス（例）
+DEV_ADDR = 0x3F        #  接続先デバイスのアドレス（例）
 data = bytes(0x00,0x01,0x02)
-i2c.writeto(ADDR, data)
+i2c.writeto(DEV_ADDR, data)
 ```
+
+デバイス上のレジスタからの読み込み
+```
+DEV_ADDR = 0x3F        #  接続先デバイスのアドレス（例）
+reg_addr = 0x10        #　レジスタアドレス（例）
+size = 4
+data = i2c.readfrom_mem(DEV_ADDR, reg_addr, size)
+```
+上記コードを実行すると、デバイスアドレス(3F)のデバイスのレジスタ、0x10番地から4バイトのデータを取得します
+
+デバイス上のレジスタへの書き込み
+```
+DEV_ADDR = 0x3F        #  接続先デバイスのアドレス（例）
+reg_addr = 0x10        #　レジスタアドレス（例）
+data = bytes(0xFF, 0x00, 0x80, 0x3F)
+i2c.writeto_mem(DEV_ADDR, reg_addr, data)
+```
+上記コードを実行すると、デバイスアドレス(3F)のデバイスのレジスタ、0x10番地から4バイトのデータを書き込みます
+
+
 
 ## 参考情報
 - MicroPython Documents; RP2 用クイックリファレンス
