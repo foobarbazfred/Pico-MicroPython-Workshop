@@ -32,8 +32,10 @@ LCD用ドライバとして＃＃＃、＃＃＃、＃＃＃がありますが�
 
 LCDの初期化
 ```
+from machine import I2C
+from I2C_LCD import I2CLcd
 LCD_ADDR = 0x27
-from machine import Pin, I2C
+
 i2c = I2C(0)
 lcd = I2CLcd(i2c, LCD_ADDR, 2, 16)
 ```
