@@ -12,6 +12,15 @@ I2Cは双方向バスであり、バスを制御するマスター側とマス�
 ## I2Cを利用するには
 
 I2Cバスを利用する上で、信号を作り出すハードウエアの観点と、I2Cバスを利用してデータを送受信するソフトウエアの観点があります。I2Cバスの信号を作り出すハードウエアは、I2C用周辺IOを使うハードウエア実装と、ソフトウエアによりI2C信号を作り出すソフトウエア実装があります。
+
+#### I2Cで接続されたデバイスを利用する際のソフトウエア、ハードウエア階層
+```
+|Application｜                  |Device｜
+|Device Driver｜                |Device Driver｜
+|I2C Driver|                    |I2C Driver|
+|I2C ＨＷ｜ ==================　|I2C HW|
+
+```
 MicroPythonではH実装、S実装のいずれも利用可能であり、I2Cの初期化時に設定します。以下I2Cの初期化例を示します。
 
 ### Hardware I2Cの利用
@@ -23,13 +32,7 @@ from machine import Pin, I2C
 i2c_0 = I2C(0)   # H/W I2C ch_0  scl=Pin(5), sda=Pin(4), freq=400_000
 i2c_1 = I2C(1)   # H/W I2C ch_1  scl=Pin(3), sda=Pin(2), freq=400_000
 ```
-```
-|Application｜                  |Device｜
-|Device Driver｜                |Device Driver｜
-|I2C Driver|                    |I2C Driver|
-|I2C ＨＷ｜ ==================　|I2C HW|
 
-```
 
 ### software I2Cの利用
 ```
