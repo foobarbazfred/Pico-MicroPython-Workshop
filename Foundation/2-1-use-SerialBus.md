@@ -32,7 +32,11 @@ from machine import Pin, I2C
 i2c_0 = I2C(0)   # H/W I2C ch_0  scl=Pin(5), sda=Pin(4), freq=400_000
 i2c_1 = I2C(1)   # H/W I2C ch_1  scl=Pin(3), sda=Pin(2), freq=400_000
 ```
-
+```
+from machine import Pin
+from machine import I2C
+i2c_1 = I2C(1, scl=Pin(19), sda=Pin(18), freq=40_000)
+```
 
 ### software I2Cの利用
 ```
