@@ -37,3 +37,24 @@ i2c_1 = I2C(1)   # H/W I2C ch_1  scl=Pin(3), sda=Pin(2), freq=400_000
 from machine import Pin, SoftI2C
 i2c = SoftI2C(scl=Pin(5), sda=Pin(4), freq=100_000)
 ```
+
+### I2C I/Fで接続されたデバイスとの通信
+デバイスの接続確認
+```
+i2c.scan()
+```
+デバイスからのデータ受信
+```
+data = i2c.readfrom(addr, nbytes)
+```
+デバイスへのデータ送信
+```
+data = bytes(0x00,0x01,0x02)
+i2c.writeto(addr, data)
+```
+
+## 参考情報
+RP2 用クイックリファレンス
+https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-i2c-bus
+クラスI2C
+https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2C.html#class-i2c-a-two-wire-serial-protocol
