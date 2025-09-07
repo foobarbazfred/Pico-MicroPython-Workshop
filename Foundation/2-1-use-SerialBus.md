@@ -25,12 +25,12 @@ MicroPythonではH実装、S実装のいずれも利用可能であり、I2Cの�
 
 ### Hardware I2Cの利用
 H実装のI2CバスはI2C0, I2C1の2チャンネル利用可能です。HW実装の場合、使えるピンは制限があり、ピン配置図から選んでください。
-何も指定しないと、I2C0の場合は、Pin4, Pin5、I2C1の場合はPin2, Pin3が割り当てられます。
+何も指定しないと、I2C0の場合は、GP4, GP5、I2C1の場合はGP6, GP7が割り当てられます。
 ```
 # initialize I2C
 from machine import Pin, I2C
 i2c_0 = I2C(0)   # H/W I2C ch_0  scl=Pin(5), sda=Pin(4), freq=400_000
-i2c_1 = I2C(1)   # H/W I2C ch_1  scl=Pin(3), sda=Pin(2), freq=400_000
+i2c_1 = I2C(1)   # H/W I2C ch_1  scl=Pin(7), sda=Pin(6), freq=400_000
 ```
 ```
 from machine import Pin
