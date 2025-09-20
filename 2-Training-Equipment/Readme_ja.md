@@ -27,5 +27,8 @@ https://store.freenove.com/products/fnk0058
 - https://github.com/micropython/micropython
 - https://github.com/micropython/micropython-lib
 - https://github.com/adafruit/circuitpython
-- https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf
+- PDF形式ドキュメント
+   - https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf
+   - https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Begiinner%27s-Guide-for-Raspberry-Pi-Pico.pdf
+   - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
 
