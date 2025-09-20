@@ -22,9 +22,9 @@ https://store.freenove.com/products/fnk0058
 ２日目は実際に手を動かして試作していただく。チーム構成としたい。この時、チームメンバでプログラムや設計書を共有できる仕組みが必要。大学様のネットワーク次第ですが、大学構内ネットワークの縛りがなければGoolgeDrive上等で共有するのも可能
 
 ## Document類
-https://micropython-docs-ja.readthedocs.io/ja/latest/
-https://www.raspberrypi.com/documentation/microcontrollers/micropython.html
-https://github.com/micropython/micropython
-https://github.com/micropython/micropython-lib
-https://github.com/adafruit/circuitpython
+- https://micropython-docs-ja.readthedocs.io/ja/latest/
+- https://www.raspberrypi.com/documentation/microcontrollers/micropython.html
+- https://github.com/micropython/micropython
+- https://github.com/micropython/micropython-lib
+- https://github.com/adafruit/circuitpython
 
