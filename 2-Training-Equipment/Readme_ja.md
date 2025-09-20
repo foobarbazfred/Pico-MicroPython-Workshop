@@ -21,7 +21,7 @@ https://store.freenove.com/products/fnk0058
 ## ファイル共有の仕組み
 ２日目は実際に手を動かして試作していただく。チーム構成としたい。この時、チームメンバでプログラムや設計書を共有できる仕組みが必要。大学様のネットワーク次第ですが、大学構内ネットワークの縛りがなければGoolgeDrive上等で共有するのも可能
 
-## Document類
+## Document類 (参考資料)
 - https://micropython-docs-ja.readthedocs.io/ja/latest/
 - https://www.raspberrypi.com/documentation/microcontrollers/micropython.html
 - https://github.com/micropython/micropython
@@ -31,4 +31,5 @@ https://store.freenove.com/products/fnk0058
    - https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf
    - https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Begiinner%27s-Guide-for-Raspberry-Pi-Pico.pdf
    - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
+   - https://github.com/raspberrypipress/released-pdfs/blob/main/get-started-with-micropython-raspberry-pi-pico.pdf
 
