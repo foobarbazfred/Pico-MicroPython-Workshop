@@ -21,7 +21,7 @@ On the second day, you will create a simple system as a practical exercise. Any 
    - Use Web APIs to get weather information and display it on an LCD or express it with a servo
    - Use MQTT for bidirectional communication with microcontrollers placed remotely. You can control LEDs and servos at remote locations
 
-## Super Pine Course
+## Legendary Course
 - Objective: Prototyping an IoT system
 - Example applications:
    - Upload collected sensor data to an IoT platform and visualize temperature, humidity, or human flow
