@@ -3,9 +3,8 @@
 - マイコンはRaspberry Pi Pico 2Wを使用します
    - https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
 - プログラミング言語はMicroPythonです(CircuitPythonもありますが今回は使いません)
-
-マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置して、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
-- https://store.freenove.com/products/fnk0058
+- マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置として、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
+   - https://store.freenove.com/products/fnk0058
 - キットを使う上でのマニュアル類は以下
    - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
 - キットに対応するドライバ類は以下
