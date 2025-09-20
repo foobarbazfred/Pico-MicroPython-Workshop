@@ -27,4 +27,5 @@ https://store.freenove.com/products/fnk0058
 - https://github.com/micropython/micropython
 - https://github.com/micropython/micropython-lib
 - https://github.com/adafruit/circuitpython
+- https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf
 
