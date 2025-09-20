@@ -15,7 +15,7 @@ On the second day, you will create a simple system as a practical exercise. Any 
    - Examples of display methods include using a server for gauges, LCD character displays, LED blinking patterns, and brightness changes of LEDs
    - You can also use Thonny's graphing function
 
-## Pine Course (Comples)
+## Pine Course (Complex)
 - Objective: Programming that utilizes networking
 - Example applications:
    - Use Web APIs to get weather information and display it on an LCD or express it with a servo
