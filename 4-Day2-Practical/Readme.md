@@ -1,19 +1,28 @@
-# Practical Session (Day 2)
-On the second day, as a practical session, you will create a simple system. You can choose any kind of circuit or application. Use a microcontroller (Raspberry Pi Pico 2 W) together with sensors, switches, etc.
-These are called the Mastery (Pine) Course, Practical (Bamboo) Course, and Fundamental (Plum) courses. The Matery course is not necessarily superior, but it is more complicated.
-
-Let’s start with the simplest, the Ume course.
+# Practical Edition (Day 2)
+On the second day, you will create a simple system as a practical exercise. Any kind of circuit or application is fine. Use a microcontroller (Raspberry Pi Pico 2 W) along with sensors or switches as you like. These are called the Pine Course, Bamboo Course, and Plum Course. Pine is not necessarily superior, but it is true that Pine is a bit more complicated. We will start the explanation from the simplest, Plum.
 
 ## Fundamental Course
-- Aim: Programming focused on switches, sound, and light
-- What you can do: Use switches and volume controls to make LEDs and speakers light up or play sounds in various patterns. A system dedicated to sound and light. You can also make simple games.
-## Practical Course
-- Aim: Programming utilizing sensors
-- What you can do: Use sensors like motion sensors, temperature/humidity sensors, or gyros to perform various measurements and provide feedback to the user using the acquired data.
-## Mastery Course
-- Aim: Programming utilizing networks
-- What you can do: Use Web APIs to get weather information and display it on an LCD or express it with a servo. Communicate bidirectionally with microcontrollers placed remotely using MQTT. For example, control LEDs at a remote location.
-## Legendary Course
-- Aim: Prototype an IoT system
-- What you can do: Upload data collected by sensors to an IoT platform and visualize things like temperature/humidity or people flow. ThingsBoard is provided as the IoT platform.
+- Objective: Programming focused on switches, sound, and light
+- Example applications:
+   - Use switches and volume controls to create various patterns of light and sound from LEDs or speakers
+   - Systems focused on sound and light. Can be developed into games
 
+## Practical Course
+- Objective: Programming that utilizes sensors
+- Example applications:
+   - Use sensors such as motion sensors, temperature/humidity sensors, gyro sensors, etc.
+   - Provide feedback to users with the measured data
+   - Examples of display methods include using a server for gauges, LCD character displays, LED blinking patterns, and brightness changes of LEDs
+   - You can also use Thonny's graphing function
+
+## Expert Course
+- Objective: Programming that utilizes networking
+- Example applications:
+   - Use Web APIs to get weather information and display it on an LCD or express it with a servo
+   - Use MQTT for bidirectional communication with microcontrollers placed remotely. You can control LEDs and servos at remote locations
+
+## Legendary Course
+- Objective: Prototyping an IoT system
+- Example applications:
+   - Upload collected sensor data to an IoT platform and visualize temperature, humidity, or human flow
+   - ThingsBoard / Node-RED will be provided as IoT platforms
