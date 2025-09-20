@@ -23,3 +23,8 @@ https://store.freenove.com/products/fnk0058
 
 ## Document類
 https://micropython-docs-ja.readthedocs.io/ja/latest/
+https://www.raspberrypi.com/documentation/microcontrollers/micropython.html
+https://github.com/micropython/micropython
+https://github.com/micropython/micropython-lib
+https://github.com/adafruit/circuitpython
+
