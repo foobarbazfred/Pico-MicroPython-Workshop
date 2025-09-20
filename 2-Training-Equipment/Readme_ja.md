@@ -1,16 +1,15 @@
 # 研修用教材
 ## 使用教材
+- マイコンはRaspberry Pi Pico 2Wを使用します
+   - https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
+- プログラミング言語はMicroPythonです(CircuitPythonもありますが今回は使いません)
+
 マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置して、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
-
-https://store.freenove.com/products/fnk0058
-
-マイコンはRaspberry Pi Pico 2Wを使用します
-- https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
-
-キットを使う上でのマニュアル類は以下
-- https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
-ドライバ類は以下
-- https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/tree/master/Python
+- https://store.freenove.com/products/fnk0058
+- キットを使う上でのマニュアル類は以下
+   - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
+- キットに対応するドライバ類は以下
+   - https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/tree/master/Python
 
 ## 補助教材
 何をどのように学んでもらうか、学習過程を考えた際、以下の教材を追加したい
