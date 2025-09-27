@@ -26,6 +26,7 @@
 - https://github.com/micropython/micropython
 - https://github.com/micropython/micropython-lib
 - https://github.com/adafruit/circuitpython
+- https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2S.html
 - PDF形式ドキュメント
    - https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf
    - https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Begiinner%27s-Guide-for-Raspberry-Pi-Pico.pdf
