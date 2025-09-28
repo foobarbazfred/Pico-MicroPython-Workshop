@@ -34,4 +34,5 @@
    - https://github.com/raspberrypipress/released-pdfs/blob/main/get-started-with-micropython-raspberry-pi-pico.pdf
  - sample source
    - https://github.com/miketeachman/micropython-i2s-examples/blob/master/examples/play_wav_from_sdcard_blocking.py
+   - https://github.com/wendlers/micropython-mfrc522/tree/master
 
