@@ -3,6 +3,11 @@
 # ok  (signed value)
 #
 
+#
+#original source:
+#   https://github.com/miketeachman/micropython-i2s-examples/blob/master/examples/play_tone.py
+#
+
 import os
 import time
 import math
