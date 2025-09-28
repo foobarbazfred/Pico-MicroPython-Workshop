@@ -5,7 +5,8 @@
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
     -  EPS32 (Espressif Core)
     -  Raspberry Pi Pico 2 (ARM Core/ RP2350)
-    -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)   
+    -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)
+  -  マイコン用プログラミング言語
   - MicroPython/Python復習 (Pythonを一度習った前提)
   - 開発環境セットアップ、ツール類紹介、ファイル転送
   - REPLを用いたボトムアップの試作例
