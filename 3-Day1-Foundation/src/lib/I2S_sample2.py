@@ -3,6 +3,12 @@
 #   https://github.com/miketeachman/micropython-i2s-examples/blob/master/examples/play_tone.py
 #
 
+# modified
+# (1) unsigned signal ->  signed signal
+# (2) use array data type
+# (3) 16bit length fix
+# (4) changed sampling rate 8KHz (The lowest supported sample rate of MAX98357)
+
 #
 # I2S Sin wave play test for Raspberry Pi Pico 2 with MAX98357
 #
