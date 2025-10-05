@@ -4,3 +4,7 @@ SPIバスは周辺機器との接続で使われます。I2Cと比べて高速�
 SPIバスによる制御例としてRFIDの受信を取り上げます。キットには、RFID-RC522が含まれています。このRFID-RS522は、＃＃＃、＃＃であり、I2C, SPI両方のバス接続に対応しています。
 SPIの理解のため、SPIで接続します。
 
+
+
+
+https://github.com/vtt-info/MicroPython_MFRC522/tree/main
