@@ -4,4 +4,4 @@
 - 6-Axis MEMS MotionTracking™ Device
 - I2Cで接続、3.3V電源です
 
-<img src="">
+<img src="3-Day1-Foundation/assets/Schematics_i2s_spaker.png" width=400>
