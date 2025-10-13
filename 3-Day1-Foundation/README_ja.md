@@ -136,9 +136,10 @@
     -  音楽や音声を再生する
       - I2Sによる音再生
   - 補講４ ； さらにいろんなデバイスを繋ぐ
+    -  SDカードとの接続(FileSystem,File Read/Write）    
+    -　LCDパネル（ビットマップ表示） 
     -  CMOSカメラとの接続
       -　デバイス例：Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico    
-    -  SDカードとの接続(FileSystem,File Read/Write）    
   - 補講４ ； マイコンとクラウドサービスとの連携
   - 補講５ ； マイコンでAI技術をどう活用するか
     - 活用できるAIの技術とは
