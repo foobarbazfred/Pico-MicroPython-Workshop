@@ -8,7 +8,7 @@
        - ESP32より性能低いがRISC-Vコアを使える WiFiモジュール込みパッケージ
     -  Raspberry Pi Pico 2 (ARM Core/ マイコン名はRP2350)
        - WiFiモジュールは外付け(RP2350はコアと周辺IOのみ)、ESP32より省電力、サイズはやや大、ARM Coreアーキ (RP2450はRISC-Vも内蔵)
-    -  STM32系
+    -  STM32系(ボード名：Nucleo)
     -  SAMD系(ARM Cortex-M4Fコア Microchip ATSAMD51P19)(商品 Wio Terminal)
     -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)
   -  マイコン用プログラミング言語
