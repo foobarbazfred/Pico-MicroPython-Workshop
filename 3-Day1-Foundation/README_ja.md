@@ -9,6 +9,8 @@
   -  マイコン用プログラミング言語
      -  C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, Micro Python(CircuitPython), Lua, JavaScript(TypeScript), Blockly  
   - MicroPython/Python復習 (Pythonを一度習った前提)
+    - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
+      - マイコン専用のモジュール、Pinの取り扱い等 
   - 開発環境セットアップ、ツール類紹介、ファイル転送
   - REPLを用いたボトムアップの試作例
      - Pythonは対話的にPGできますのでできREPLを使ってテストファーストで部品から組み上げましょう（部分から全体へ）
