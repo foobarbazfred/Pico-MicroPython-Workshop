@@ -3,8 +3,12 @@
 - 1日目と2日目の2日コース
 - 1日目の学び
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
-    -  EPS32 (Espressif Core)
+    -  EPS32/ESP32-S2/ESP32-S3 (Tensilica Xtensa Core)
+       - 高性能だが消費電力が大きい、WiFiモジュール込みのパッケージ、省サイズ化可能
+    -  EPS32-C3/ESP32-C5 (RISC-V Core)
+       - ESP32より性能低いがRISC-Vコアを使える WiFiモジュール込みパッケージ
     -  Raspberry Pi Pico 2 (ARM Core/ RP2350)
+       - WiFiモジュールは外付け(RP2350はコアと周辺IOのみ)、ESP32より省電力、サイズはやや大、ARM Coreアーキ (RP2450はRISC-Vも内蔵)
     -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)
   -  マイコン用プログラミング言語
      -  C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, Micro Python(CircuitPython), Lua, JavaScript(TypeScript), Blockly  
