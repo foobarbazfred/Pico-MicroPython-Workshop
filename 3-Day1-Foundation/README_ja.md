@@ -7,7 +7,7 @@
     -  Raspberry Pi Pico 2 (ARM Core/ RP2350)
     -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)
   -  マイコン用プログラミング言語
-    -　C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, Micro Python(CircuitPython), Lua, JavaScript(TypeScript), Blockly  
+      -　C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, Micro Python(CircuitPython), Lua, JavaScript(TypeScript), Blockly  
   - MicroPython/Python復習 (Pythonを一度習った前提)
   - 開発環境セットアップ、ツール類紹介、ファイル転送
   - REPLを用いたボトムアップの試作例
