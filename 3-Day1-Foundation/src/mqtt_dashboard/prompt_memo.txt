@@ -5,3 +5,9 @@ MQTTを使ったプログラミング研修用に、以下の条件でHTMLとJav
 - 各トピックのメッセージ本文は JSON形式で { "value": 数値 } の構造
 - ブラウザでMQTTにSubscribeして、受信したvalueをChart.jsのドーナツチャートで表示
 - チャートは4×4のグリッドで表示し、各チャートの中心にvalueを描画する
+
+
+// PC版MQTT Clientサンプルを作成した時のプロンプト
+MQTT Client側のサンプルコードをPC版で作ってください。 
+paho-mqttでお願いします。
+publishする時のvalueは乱数で1から100でお願いします
