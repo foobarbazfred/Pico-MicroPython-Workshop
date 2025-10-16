@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>MQTT Sensor Dashboard</title>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    h2 { text-align: center; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .chart-container {
+      text-align: center;
+    }
+    canvas {
+      max-width: 180px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>Sensor Volume Dashboard</h2>
+  <div class="grid" id="chartGrid"></div>
+
+  <script>
+    // MQTT Broker設定
+    const brokerUrl = "wss://broker.emqx.io:8084/mqtt";
+    const client = mqtt.connect(brokerUrl);
+    const chartMap = {}; // userID → Chartインスタンス
+
+    // ユーザーID一覧
+    const userIds = Array.from({ length: 16 }, (_, i) => `user${String(i + 1).padStart(3, '0')}`);
+
+    // Chart.jsプラグイン：中心に値を描画
+    const centerTextPlugin = {
+      id: 'centerText',
+      beforeDraw(chart) {
+        const { width, height } = chart;
+        const ctx = chart.ctx;
+        ctx.restore();
+
+        const value = chart.config._value ?? 0;
+        ctx.font = 'bold 18px sans-serif';
+        ctx.textBaseline = 'middle';
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#333';
+        ctx.fillText(value, width / 2, height / 2);
+        ctx.save();
+      }
+    };
+    Chart.register(centerTextPlugin);
+
+    // DOMにチャート用Canvasを追加
+    const chartGrid = document.getElementById("chartGrid");
+    userIds.forEach(userId => {
+      const container = document.createElement("div");
+      container.className = "chart-container";
+      container.innerHTML = `<h4>${userId}</h4><canvas id="chart-${userId}"></canvas>`;
+      chartGrid.appendChild(container);
+    });
+
+    // 各チャートを初期化
+    userIds.forEach(userId => {
+      const ctx = document.getElementById(`chart-${userId}`).getContext("2d");
+      chartMap[userId] = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Volume", "Remaining"],
+          datasets: [{
+            data: [0, 100],
+            backgroundColor: ["#4CAF50", "#eee"],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          cutout: "70%",
+          plugins: {
+            tooltip: { enabled: false },
+            legend: { display: false },
+          }
+        },
+        plugins: [centerTextPlugin],
+        _value: 0 // 初期値
+      });
+    });
+
+    // MQTT接続とSubscribe
+    client.on("connect", () => {
+      console.log("Connected to MQTT broker");
+      userIds.forEach(userId => {
+        const topic = `handson/sensor/volume/${userId}`;
+        client.subscribe(topic, err => {
+          if (!err) console.log("Subscribed to", topic);
+        });
+      });
+    });
+
+    // メッセージ受信時にチャート更新
+    client.on("message", (topic, message) => {
+      try {
+        const payload = JSON.parse(message.toString());
+        const value = payload.value;
+        const userId = topic.split("/").pop(); // user001 など
+        if (chartMap[userId]) {
+          chartMap[userId].data.datasets[0].data = [value, 100 - value];
+          chartMap[userId].config._value = value; // 中心表示用
+          chartMap[userId].update();
+        }
+      } catch (e) {
+        console.error("Invalid message:", message.toString());
+      }
+    });
+  </script>
+</body>
+</html>
