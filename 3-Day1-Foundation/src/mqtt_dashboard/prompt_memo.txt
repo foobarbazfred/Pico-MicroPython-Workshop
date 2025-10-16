@@ -1,0 +1,7 @@
+//本ソースコードを作成した時のプロンプト
+MQTTを使ったプログラミング研修用に、以下の条件でHTMLとJavaScriptの完全なソースコードを作ってください：
+- MQTT BrokerはEMQX（WebSocket接続：wss://broker.emqx.io:8084/mqtt）を使用
+- トピックは handson/sensor/volume/user001 ～ user016 の形式（16人分）
+- 各トピックのメッセージ本文は JSON形式で { "value": 数値 } の構造
+- ブラウザでMQTTにSubscribeして、受信したvalueをChart.jsのドーナツチャートで表示
+- チャートは4×4のグリッドで表示し、各チャートの中心にvalueを描画する
