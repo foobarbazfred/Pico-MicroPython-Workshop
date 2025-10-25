@@ -1,9 +1,6 @@
 #
-#
 # WebServer sample by Raspberry Pi Pico 2 W
 # v0.01 (2025/10/25)
-#
-#
 #
 
 import machine
@@ -39,6 +36,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 def make_rp2_board_status_html():
     rows = ''
     for pin in pins:
+         # keep using string representation to show pin info
          if 'mode=OUT' in str(pin):
              gpio_name = str(pin).split('(')[1].split(',')[0]
              control = f"<a href='/control?{gpio_name}=toggle'>TOGGLE</a>"
@@ -46,77 +44,123 @@ def make_rp2_board_status_html():
              control = 'xxx'
          rows += f'<tr><td>{str(pin)}</td><td>{pin.value()}</td><td>{control}</td></tr>'
     html = HTML_TEMPLATE.replace('__TABLE_ROWS__', rows)
-    led_status = str(machine.Pin.board.LED.value())
+    try:
+        led_status = str(machine.Pin.board.LED.value())
+    except Exception:
+        led_status = 'unknown'
     led_control = "<a href='/control?led0=toggle'>TOGGLE</a>"
     html = html.replace('__LED_CONTROL__', led_control)
     html = html.replace('__LED_STATUS__', led_status)
-    pb0_status = str(rp2.bootsel_button())
+    try:
+        pb0_status = str(rp2.bootsel_button())
+    except Exception:
+        pb0_status = 'unknown'
     html = html.replace('__PB0_STATUS__', pb0_status)
     html = html.replace('__UPDATE_URL__', "<a href='/status'>UPDATE STATUS</a>")
     return html
 
 def control(params):
-    if 'led0' in params:  # 'led0=toggle'
-        machine.Pin.board.LED.toggle()
-    elif 'GPIO' in params:  # 'GPIO2=toggle/GPIO3=toggle'
-        gpio_name = params.split('=')[0]
-        for pin in pins:
-             if gpio_name in str(pin):
-                 pin.toggle()
+    # params is a query string like 'led0=toggle' or 'GPIO2=toggle' or 'led0=toggle&GPIO2=toggle'
+    if not params:
+        return
+    for part in params.split('&'):
+        if '=' not in part:
+            continue
+        key, val = part.split('=', 1)
+        key = key.strip()
+        val = val.strip()
+        if key == 'led0' and val == 'toggle':
+            try:
+                machine.Pin.board.LED.toggle()
+            except Exception:
+                pass
+        else:
+            # handle GPIO like GPIO2=toggle
+            if val != 'toggle':
+                continue
+            for pin in pins:
+                try:
+                    if key in str(pin):
+                        pin.toggle()
+                except Exception:
+                    pass
 
 
 import socket
-addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
 
-s = socket.socket()
-s.bind(addr)
-s.listen(1)
+def webserver(host='0.0.0.0', port=80):
+    addr = socket.getaddrinfo(host, port)[0][-1]
+    s = socket.socket()
+    try:
+        s.bind(addr)
+        s.listen(1)
+        print('listening on', addr)
+        while True:
+            cl, addr = s.accept()
+            try:
+                print('client connected from', addr)
+                cl_file = cl.makefile('rwb', 0)
+                # read until CRLF
+                request = ''
+                while True:
+                    line = cl_file.readline()
+                    if not line or line == b'\r\n':
+                        break
+                    # decode safely
+                    try:
+                        line_s = line.decode()
+                    except Exception:
+                        line_s = ''
+                    if 'GET' in line_s:
+                       if 'status' in line_s:
+                            request = ('status')
+                       elif 'control' in line_s and '?' in line_s:
+                            # format of line....   b'GET /control?led0=toggle HTTP/1.1\r\n'
+                            try:
+                                target = line_s.split(' ')[1].split('?')[1]
+                            except Exception:
+                                target = ''
+                            request = ('control', target)
 
-print('listening on', addr)
+                if request == '' or request == ('status'):
+                    # just show status
+                    pass
+                elif isinstance(request, tuple) and request[0] == 'control':
+                    control_params = request[1]
+                    print('control....', control_params)
+                    control(control_params)
 
-led_status = 'unkown'
-while True:
-    cl, addr = s.accept()
-    print('client connected from', addr)
-    cl_file = cl.makefile('rwb', 0)
-    # read until CRLF
-    request = ''
-    while True:
-        line = cl_file.readline()
-        #print(line)
-        if 'GET' in line:
-           if 'status' in line:
-                request = ('status')
-           elif 'control' in line and '?' in line:
-                # format of line....   b'GET /control?led0=toggle HTTP/1.1\r\n'
-                target=line.decode().split(' ')[1].split('?')[1]
-                request = ('control', target)
-        if not line or line == b'\r\n':
-            break
+                html = make_rp2_board_status_html()
+                # send response
+                header = 'HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n'
+                try:
+                    cl.send(header.encode())
+                    cl.send(html.encode())
+                except Exception:
+                    try:
+                        cl.send(header)
+                        cl.send(html)
+                    except Exception:
+                        pass
+            except Exception as e:
+                print('request handling error', e)
+            finally:
+                try:
+                    cl.close()
+                except Exception:
+                    pass
+                print('close connection')
+    finally:
+        try:
+            s.close()
+        except Exception:
+            pass
 
-    response = ''
-    if request == '' or  'status' in request:
-        pass
-    elif 'control' in request:
-        control_params = request[1]
-        print('control....', control_params)
-        control(control_params)
+def main():
+    webserver()
 
-    html = make_rp2_board_status_html()
-    response = html
-
-    cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')
-    cl.send(response)
-    cl.close()
-    print('close connection')
-
-#
-#
-#
-
-
-
-
+if __name__ == '__main__':
+    main()
 
 # request sample
 #
@@ -130,4 +174,3 @@ while True:
 #  b'Accept-Encoding: gzip, deflate\r\n'
 #  b'Accept-Language: ja,en-US;q=0.9,en;q=0.8,zh-CN;q=0.7,zh;q=0.6\r\n'
 #  b'\r\n'
-#
