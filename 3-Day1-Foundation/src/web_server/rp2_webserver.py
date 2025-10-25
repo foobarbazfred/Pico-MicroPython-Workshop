@@ -174,3 +174,5 @@ if __name__ == '__main__':
 #  b'Accept-Encoding: gzip, deflate\r\n'
 #  b'Accept-Language: ja,en-US;q=0.9,en;q=0.8,zh-CN;q=0.7,zh;q=0.6\r\n'
 #  b'\r\n'
+
+#  https://docs.micropython.org/en/latest/esp8266/tutorial/network_tcp.html#simple-http-server
