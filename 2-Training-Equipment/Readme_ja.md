@@ -36,3 +36,10 @@
    - https://github.com/miketeachman/micropython-i2s-examples/blob/master/examples/play_wav_from_sdcard_blocking.py
    - https://github.com/wendlers/micropython-mfrc522/tree/master
 
+## 宿題
+- CO2センサを基板に接続するためのピッチ変換（ほっかいろ準備）
+- SDカードリーダソケットとSDカード手配
+- Dupontケーブル追加発注
+- Node-RED用RPi持ち込み
+- 受講者様PCの準備
+  - Thonnyを入れておいてもらう
