@@ -81,6 +81,7 @@ def servo_test():
 サーボ制御関数は共通ライブラリ、mylib.pyに入れていますので以下のコードで利用できます。
 ```
 from mylib import servo_rotate_horn
+PWM_FREQ_SERVO = 50  # 50Hz
 servo = PWM(Pin(17), freq=PWM_FREQ_SERVO)
 servo_rotate_horn(servo, 90)
 ```
