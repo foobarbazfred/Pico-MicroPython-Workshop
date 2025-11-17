@@ -10,3 +10,5 @@ DAC（Digital to Analog Converter）や ADC（Analog to Digital Converter）と�
 サンプリングレートは最低で、8KHz、最高で#KHzとなっています。このレートはADコンバータの仕様により決まります。
 
 <img src="assets/Schematics_i2s_spaker.png" width=400>
+
+https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/src/lib/I2S_sample4.py
