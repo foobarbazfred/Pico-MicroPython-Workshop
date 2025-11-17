@@ -31,7 +31,8 @@
    - https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf
    - https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Begiinner%27s-Guide-for-Raspberry-Pi-Pico.pdf
    - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
-   - https://github.com/raspberrypipress/released-pdfs/blob/main/get-started-with-micropython-raspberry-pi-pico.pdf
+   - Get started with MicroPython on Raspberry Pi Pico (英文ですが子供向けに書かれたRpi Pico 入門書)
+     - https://github.com/raspberrypipress/released-pdfs/blob/main/get-started-with-micropython-raspberry-pi-pico.pdf
  - sample source
    - https://github.com/miketeachman/micropython-i2s-examples/blob/master/examples/play_wav_from_sdcard_blocking.py
    - https://github.com/wendlers/micropython-mfrc522/tree/master
