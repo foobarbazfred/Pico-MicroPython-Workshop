@@ -3,14 +3,13 @@
 SPI（Serial Peripheral Interface）バスは周辺機器との接続で使われます。
 - SPIバスはモトローラによって開発され、現在はNXPが仕様を管理
 - SPIバスは、SCLK(クロック)、MOSI（Master Out Slave In）(送信)、MISO（Master In Slave Out）(受信)、CS(Chip Select)の４線で接続します
-- SCLK,MOSIはマイコン側が制御します
-- I2Cと比べて高速通信が可能になる点が特徴です。SPIでは設計上、数十MHzの速度でデータを送受信することが可能です。
+- SCLK,MOSI,CSはマスター（マイコン）側が制御します
+- I2Cと比べて高速通信が可能です。SPIでは設計上、数十MHzの速度でデータを送受信することが可能です。
 - SPIは複数デバイスを接続することができます。通信したいデバイスのCS(Chip Select)をLにすることで、通信先デバイスを指定します
 
-SPIバスによる制御例としてRFIDの受信を取り上げます。キットには、RFID-RC522が含まれています。このRFID-RS522は、＃＃＃、＃＃であり、I2C, SPI両方のバス接続に対応しています。
-SPIの理解のため、SPIで接続します。
-
 SPIバスの仕様上、マスタ・スレーブ間のデータの送受信(物理層)は規定されていますが、データをどう扱うのか（論理層）については規定されていません。例えば、センサがレジスタを持つ場合、センサのレジスタに値を書き込むのか、センサのレジスタから値を読み込むのか、SPIバスの仕様には定義されていません。このような使い方はデバイス各社がデータの扱いを独自に決めて運用しています。
+
+SPIバスによる制御例としてSDカードの制御を行います。またキットには、RFID-RC522が含まれています。このRFID-RS522は、＃＃＃、＃＃であり、I2C, SPI両方のバス接続に対応しています。
 
 https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-spi-bus<br>
 https://github.com/vtt-info/MicroPython_MFRC522/tree/main
