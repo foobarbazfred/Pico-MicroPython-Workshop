@@ -7,7 +7,7 @@
 
 DAC（Digital to Analog Converter）や ADC（Analog to Digital Converter）との接続で使われます。
 
-サンプリングレートは最低で、8KHz、最高で#KHzとなっています。このレートはADコンバータの仕様により決まります。
+サンプリングレートは最低で、8KHz、最高で#KHzとなっています。どのようなサンプリングレートを指定できるかはDACの仕様により決まります。
 
 <img src="assets/Schematics_i2s_spaker.png" width=400>
 
