@@ -13,8 +13,8 @@
        -  SAMD系(ARM Cortex-M4Fコア Microchip ATSAMD51P19)(商品 Wio Terminal)
        -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)
      -  マイコン用プログラミング言語
-　       -  C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, MicroPython(CircuitPython), Lua, JavaScript(TypeScript), Blockly
-  　     -  基本はクロス環境で開発、セルフで動くのは、MicroPython/CircuitPython/Luaの３種類のみ
+         - C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, MicroPython(CircuitPython), Lua, JavaScript(TypeScript), Blockly
+         - 基本はクロス環境で開発、セルフで動くのは、MicroPython/CircuitPython/Luaの３種類のみ
      - MicroPython/Python復習 (Pythonを一度習った前提)
         - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
           - マイコン専用のモジュール、Pinの取り扱い等 
