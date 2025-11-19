@@ -1,30 +1,31 @@
 # セミナーの実施方針
 
 - 1日目の学び
-  - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
-    -  EPS32/ESP32-S2/ESP32-S3 (Tensilica Xtensa Core)
-       - 高性能だが消費電力が大きい、WiFiモジュール込みのパッケージ、省サイズ化可能
-    -  EPS32-C3/ESP32-C5 (RISC-V Core)
-       - ESP32より性能低いがRISC-Vコアを使える WiFiモジュール込みパッケージ
-    -  Raspberry Pi Pico 2 (ARM Core/ マイコン名はRP2350)
-       - WiFiモジュールは外付け(RP2350はコアと周辺IOのみ)、ESP32より省電力、サイズはやや大、ARM Coreアーキ (RP2450はRISC-Vも内蔵)
-    -  STM32系(ボード名：Nucleo)
-    -  SAMD系(ARM Cortex-M4Fコア Microchip ATSAMD51P19)(商品 Wio Terminal)
-    -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)
-  -  マイコン用プログラミング言語
-     -  C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, MicroPython(CircuitPython), Lua, JavaScript(TypeScript), Blockly
-     -  基本はクロス環境で開発、セルフで動くのは、MicroPython/CircuitPython/Luaの３種類のみ
-  - MicroPython/Python復習 (Pythonを一度習った前提)
-    - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
-      - マイコン専用のモジュール、Pinの取り扱い等 
-  - 開発環境セットアップ、ツール類紹介、ファイル転送
-  - RPi Pico 2W ボードの説明
-  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
-  - REPLを用いたボトムアップの試作例
-     - Pythonは対話的にPGできます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
-  - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
-    - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
-  - 基礎１ ;  Input/Outputの基礎/Digial/Analog(PWM)
+  - 基礎１ ;  マイコンについて、Pythonについて、MicroPythonについて
+    - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
+       -  EPS32/ESP32-S2/ESP32-S3 (Tensilica Xtensa Core)
+          - 高性能だが消費電力が大きい、WiFiモジュール込みのパッケージ、省サイズ化可能
+       -  EPS32-C3/ESP32-C5 (RISC-V Core)
+          - ESP32より性能低いがRISC-Vコアを使える WiFiモジュール込みパッケージ
+       -  Raspberry Pi Pico 2 (ARM Core/ マイコン名はRP2350)
+          - WiFiモジュールは外付け(RP2350はコアと周辺IOのみ)、ESP32より省電力、サイズはやや大、ARM Coreアーキ (RP2450はRISC-Vも内蔵)
+       -  STM32系(ボード名：Nucleo)
+       -  SAMD系(ARM Cortex-M4Fコア Microchip ATSAMD51P19)(商品 Wio Terminal)
+       -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)
+     -  マイコン用プログラミング言語
+       -  C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, MicroPython(CircuitPython), Lua, JavaScript(TypeScript), Blockly
+       -  基本はクロス環境で開発、セルフで動くのは、MicroPython/CircuitPython/Luaの３種類のみ
+     - MicroPython/Python復習 (Pythonを一度習った前提)
+        - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
+          - マイコン専用のモジュール、Pinの取り扱い等 
+     - 開発環境セットアップ、ツール類紹介、ファイル転送
+     - RPi Pico 2W ボードの説明
+         -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
+     - REPLを用いたボトムアップの試作例
+         - Pythonは対話的にPGできます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
+     - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
+        - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
+  - 基礎２ ;  Input/Outputの基礎/Digial/Analog(PWM)
     - GPIO OUTPUT  LED点滅
     - GPIO INPUT  スイッチ入力
     - GPIO AD変換　ボリューム(可変抵抗)入力
@@ -34,7 +35,7 @@
       - VRでサーボモータの角度が変わる
       - VRで音の高低が変わる
     - GPIO/PWM/モータドライバによるモータ制御
-  - 基礎２ ; センサ活用、センサ接続方法(I2C, Serial)(できたらSPIも)
+  - 基礎３ ; センサ活用、センサ接続方法(I2C, Serial)(できたらSPIも)
     - センサ活用　(接続バス　I2C) , デバイスを制御する方法(ドライバ）
       - デバイス制御基礎(I2C,SPI,Serial,デバイス制御のためのレジスタ操作,制御を楽にしてくれるドライバ活用)
       - GPSとシリアル接続、緯度経度、時刻を取得
@@ -46,7 +47,7 @@
       - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（デジタル版テルミン）
     - RFIDによるICカードReadWrite
       -  SPIを使ってコントローラと接続、ICカードをかざすとIDを読み込む 
-  - 基礎３ ; インターネット接続、Web API利用, MQTT利用
+  - 基礎４ ; インターネット接続、Web API利用, MQTT利用
     - インターネット接続(Wi-Fi接続)  NTP接続
     - HTTPを用いた通信とサンプルコード
       - 天気予報サイトにアクセス、天気情報を得てLCDに表示、サーボで天気を示す
