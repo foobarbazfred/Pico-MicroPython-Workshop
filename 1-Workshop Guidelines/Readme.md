@@ -1,0 +1,16 @@
+### Workshop Guidelines
+- Hands-on using a microcontroller with wireless capability (RPi Pico W) and an interpreter (MicroPython)
+- Two-day course (Day 1 and Day 2)
+- Day 1 learning objectives
+  - Microcontroller basics (simple block diagrams, introduction to well-known microcontrollers)
+  - Review of MicroPython/Python (assumes prior Python experience)
+  - Development environment setup, tool overview, file transfer
+  - Bottom-up prototyping examples using the REPL
+  - Using libraries (installing modules with a package management tool)
+  - Basics 1: I/O fundamentals — Digital/Analog (PWM)
+  - Basics 2: Working with sensors, sensor connection methods (I2C, Serial) (SPI if possible)
+  - Basics 3: Internet connectivity, using Web APIs, using MQTT
+- Day 2 learning objectives
+  - Prototype application development combining RPi Pico + MicroPython + sensors and various devices
+  - Simple design, prototyping, and presentations
+  - Team-based creation
