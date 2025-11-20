@@ -8,3 +8,6 @@
 | ESP 系          | ESP32 / ESP8266                  | Wi-Fi/Bluetooth内蔵、安価、MicroPython標準サポート | IoT、スマート家電   |
 | STM32 系        | Nucleo / Blue Pill               | 高性能ARM Cortex-M、ピン数多め                  | モーター制御、高精度計測 |
 | 教育・学習向け        | micro:bit                        | LEDやボタン内蔵、簡単にプログラム可能                   | 初学者、学校教育     |
+
+MicroPythonが対応しているマイコンボード一覧<br>
+https://micropython.org/download/
