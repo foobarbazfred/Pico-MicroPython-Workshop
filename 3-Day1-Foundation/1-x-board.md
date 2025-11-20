@@ -1,0 +1,10 @@
+### MicroPythonを走らせられるボード
+
+
+| 種類             | 代表ボード                            | 特徴                                     | 用途例          |
+| -------------- | -------------------------------- | -------------------------------------- | ------------ |
+| Raspberry Pi 系 | Pico / Pico W / Pico 2 W         | 安価で小型、MicroPython対応、WはWi-Fi内蔵          | センサー制御、IoT   |
+| Arduino 系      | Arduino Uno / Nano / Nano 33 BLE | 豊富なシールド、C/C++中心だがMicroPythonも対応可能      | ロボット、教育      |
+| ESP 系          | ESP32 / ESP8266                  | Wi-Fi/Bluetooth内蔵、安価、MicroPython標準サポート | IoT、スマート家電   |
+| STM32 系        | Nucleo / Blue Pill               | 高性能ARM Cortex-M、ピン数多め                  | モーター制御、高精度計測 |
+| 教育・学習向け        | micro:bit                        | LEDやボタン内蔵、簡単にプログラム可能                   | 初学者、学校教育     |
