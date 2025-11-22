@@ -62,7 +62,8 @@
   - 補講１ ； MicroPythonの性能、チューニング、リソース管理
      - MicroPythonは早いのか遅いのか、C言語と比べて何倍時間がかかるのか
      - ボトルネックを探す方法、チューニング方法
-     - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断される(MicroPythonが落ちる?)）、作って良いバッファ最大サイズとは？
+     - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良いバッファ最大サイズとは？(Heap
+    メモリサイズの1/3を上限とするが無難)
   - 補講２ ； PIO...MicroPythonの遅さをハードウエアで解決する
      - PIO(Programming IO Interface)とは何か、目的、用途
      - 内部構造
