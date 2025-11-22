@@ -77,7 +77,8 @@
       -  Node-REDによるダッシュボード
       -  RPiPico上でWebServer、ブラウザ上でWidget表示
     -  音楽や音声を再生する
-      - I2Sによる音再生
+      - 音声合成LSIを利用(シリアル接続で発話できる)  
+      - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
   - 補講４ ； さらにいろんなデバイスを繋ぐ
     -  SDカードとの接続(FileSystem,File Read/Write）    
     -　LCDパネル（ビットマップ表示） 
