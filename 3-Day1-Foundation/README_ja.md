@@ -17,19 +17,20 @@
          - 基本はクロス環境で開発、セルフ環境で動くのは、MicroPython/CircuitPython/Lua
          - プログラミングする上で情報が多いのはArduino、いろんな人が記事を書いている
          - 個人向けの電子部材専門店のAdafruit社は同社の標準プログラミング環境として、ArduinoからCirduitPythonに移行(2017年頃)
+     - MicroPython/Python復習 (Pythonを一度習った前提)
+        - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
+          - マイコン専用のモジュール、Pinの取り扱い等 
          - MicroPythonかCircuitPythonか？
            - CurcuitPythonはMicroPythonから派生した言語で、Adafruit社が開発メンテナンス
            - 基本的なPythonの仕様は同じだが提供されるモジュールや類似モジュールでもメソッド（関数）の仕様が異なる
            - MicroPythonを基本に使い、使いたいセンサのドライバがCircuitPython版しかない場合、CircuitPythonを選択するのが良いのでは
            - CircuitPython版ドライバをMicroPython版にポーティングするのも可能（自力で頑張る） 
-     - MicroPython/Python復習 (Pythonを一度習った前提)
-        - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
-          - マイコン専用のモジュール、Pinの取り扱い等 
      - 開発環境セットアップ、ツール類紹介、ファイル転送
      - RPi Pico 2W ボードの説明
          -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
      - REPLを用いたボトムアップの試作例
          - Pythonは対話的にPGできます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
+         - 最初に使うセンサの場合、REPLで試行錯誤するのがTurnAroundTimeの短縮に効果的
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
         - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
   - 基礎２ ;  Input/Outputの基礎/Digial/Analog(PWM)
