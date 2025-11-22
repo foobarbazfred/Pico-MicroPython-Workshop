@@ -14,9 +14,9 @@
        -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)
      -  マイコン用プログラミング言語
          - C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, MicroPython(CircuitPython), Lua, JavaScript(TypeScript), Blockly
-         - 基本はクロス環境で開発、セルフで動くのは、MicroPython/CircuitPython/Luaの３種類のみ
+         - 基本はクロス環境で開発、セルフ環境で動くのは、MicroPython/CircuitPython/Lua
          - プログラミングする上で情報が多いのはArduino、いろんな人が記事を書いている
-         - Adafruit社は標準プログラミング環境として、ArduinoからCirduitPythonに切り替えた
+         - 個人向けの電子部材専門店のAdafruit社は同社の標準プログラミング環境として、ArduinoからCirduitPythonに移行(2017年頃)
      - MicroPython/Python復習 (Pythonを一度習った前提)
         - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
           - マイコン専用のモジュール、Pinの取り扱い等 
