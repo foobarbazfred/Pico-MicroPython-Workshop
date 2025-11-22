@@ -17,6 +17,11 @@
          - 基本はクロス環境で開発、セルフ環境で動くのは、MicroPython/CircuitPython/Lua
          - プログラミングする上で情報が多いのはArduino、いろんな人が記事を書いている
          - 個人向けの電子部材専門店のAdafruit社は同社の標準プログラミング環境として、ArduinoからCirduitPythonに移行(2017年頃)
+         - MicroPythonかCircuitPythonか？
+           - CurcuitPythonはMicroPythonから派生した言語で、Adafruit社が開発メンテナンス
+           - 基本的なPythonの仕様は同じだが提供されるモジュールや類似モジュールでもメソッド（関数）の仕様が異なる
+           - MicroPythonを基本に使い、使いたいセンサのドライバがCircuitPython版しかない場合、CircuitPythonを選択するのが良いのでは
+           - CircuitPython版ドライバをMicroPython版にポーティングするのも可能（自力で頑張る） 
      - MicroPython/Python復習 (Pythonを一度習った前提)
         - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
           - マイコン専用のモジュール、Pinの取り扱い等 
