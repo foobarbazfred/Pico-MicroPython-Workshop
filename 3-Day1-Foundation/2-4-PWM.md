@@ -8,7 +8,9 @@ PWMを使ってPWMの設定可能な最も低い周波数で点滅させるプ�
 from machine import Pin
 from machine import PWM
 PWM_OUTPUT_PIN=28
-pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
+pwm6 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
+# change duty
+pwm6.duty_u16(int(0xffff/16))
 ```
 
 PWMを使ってLEDを中間的な明るさで点灯させるプログラム
