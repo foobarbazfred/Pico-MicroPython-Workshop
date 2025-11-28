@@ -6,7 +6,7 @@
        -  [主要マイコン(マイコンボード)紹介）](1-x-board.md)
        -  簡単なブロック図(Raspberry Pi Pico 2)
        -  マイコンプログラミングを取り巻く要素技術（技術マップ）
-    -  マイコン用プログラミング言語
+    -  [マイコン用プログラミング言語](1-x-programming-languages.md)
      - MicroPython/Python復習 (すでにPythonを習った方を前提)
         - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
           - マイコン専用のモジュール、Pinの取り扱い等 
