@@ -3,6 +3,13 @@
 RP2350にはDA変換が搭載されていませんので、直接アナログ出力することができません。代替手段として、PWMを用いて、0、1(3.3V)以外の値（中間値）を表現することができます。もう少し詳しく説明すると、出力するパルス幅の比率を使って平均電力を変化させます(PWM : Pulse Width Modulation)。PWMで疑似的に表現された0/1のパルスをローパスフィルタ(LPF)（積分回路）に通すと、アナログ値が取り出せます。この講習では、LPFは使わず、そのままデバイスに投入します。
 
 LEDを点滅、点灯以外に、PWMを使うことで暗く光らせることができます。
+PWMを使ってPWMの設定可能な最も低い周波数で点滅させるプログラム
+```
+from machine import Pin
+from machine import PWM
+PWM_OUTPUT_PIN=28
+pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
+```
 
 PWMを使ってLEDを中間的な明るさで点灯させるプログラム
 ```
