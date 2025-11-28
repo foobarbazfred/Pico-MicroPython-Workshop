@@ -6,14 +6,17 @@ from machine import Pin
 from machine import PWM
 import time
 
+# setup PWM output
 PWM_OUT_PIN=16
 freq = 300
-pwm0 = PWM(Pin(PWM_OUT_PIN), freq=freq, duty_u16=int(0xffff/2))  # setup PWM
-for freq in range(300,2000,10): 
-    print(freq)
-    pwm0.freq(freq)
-    time.sleep(0.2)
+pwm0 = PWM(Pin(PWM_OUT_PIN), freq=freq, duty_u16=int(0xffff/2)) 
 
-# disable PWM
+# loop 
+for freq in range(300,2000,10): 
+    print('freq:', freq)
+    pwm0.freq(freq)
+    time.sleep(0.1)
+
+# finally; disable PWM
 pwm0.deinit()
 ```
