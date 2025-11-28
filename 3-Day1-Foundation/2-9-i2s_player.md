@@ -82,4 +82,5 @@ for volume in range(0x00, 0xFF, 0x10):
 #machine.reset()
 ```
 
-https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/src/lib/I2S_sample4.py
+https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/src/lib/I2S_sample4.py<br>
+https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2S.html
