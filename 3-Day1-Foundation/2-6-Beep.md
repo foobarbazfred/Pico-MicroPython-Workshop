@@ -41,3 +41,4 @@ https://www.asahi-net.or.jp/~hb9t-ktd/music/Japan/Research/DTM/freq_map.html
 | シ | B4 | 494 |
 | ド | C5 | 523 |
 
+（ご参考）チャルメラのメロディはドレミーレド、ドレミレドレー　と思います。　NHKの時報は、プ、プ、プ、ポーンですが、440Hz(x4)->880Hzらしいです。A4->A5(1オクターブ上のラ)
