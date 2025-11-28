@@ -37,6 +37,8 @@
  - sample source
    - https://github.com/miketeachman/micropython-i2s-examples/blob/master/examples/play_wav_from_sdcard_blocking.py
    - https://github.com/wendlers/micropython-mfrc522/tree/master
+- MicroPython Source Code
+   - https://github.com/micropython/micropython/tree/master
 
 ## 宿題
 - CO2センサを基板に接続するためのピッチ変換（ほっかいろ準備）
