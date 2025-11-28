@@ -44,6 +44,8 @@ PWM_FREQ_SERVO = 50  # 50Hz
 MAX_VALUE = 0xffff
 MAX_PULSE_WIDTH = 20 # max width : 20 ms in MAX_VALUE
 
+SERVO_PIN = 17
+
 def servo_rotate_horn(servo, degree):
     target_pulse_width = degree / 180 * (DEGREE_180 - DEGREE_0) + DEGREE_0
     servo.freq(PWM_FREQ_SERVO)  
@@ -53,7 +55,7 @@ def servo_rotate_horn(servo, degree):
 import time
 def servo_test():
     # initialize PWM for servo control
-    servo = PWM(Pin(17), freq=PWM_FREQ_SERVO)
+    servo = PWM(Pin(SERVO_PIN), freq=PWM_FREQ_SERVO)
     print('rotate 0 degree')
     servo_rotate_horn(servo, 0)
     time.sleep(1)
@@ -81,8 +83,10 @@ def servo_test():
 サーボ制御関数は共通ライブラリ、mylib.pyに入れていますので以下のコードで利用できます。
 ```
 from mylib import servo_rotate_horn
-PWM_FREQ_SERVO = 50  # 50Hz
-servo = PWM(Pin(17), freq=PWM_FREQ_SERVO)
+from mylib import PWM_FREQ_SERVO       # 50Hz
+
+SERVO_PIN = 17
+servo = PWM(Pin(SERVO_PIN), freq=PWM_FREQ_SERVO)
 servo_rotate_horn(servo, 90)
 ```
 
@@ -94,8 +98,11 @@ from machine import PWM
 from mylib import servo_rotate_horn
 from mylib import PWM_FREQ_SERVO
 
-adc = ADC(Pin(26))     # create ADC object on ADC pin
-servo = PWM(Pin(17), freq=PWM_FREQ_SERVO)
+VR_INPUT_PIN = 26
+SERVO_PIN = 17
+
+adc = ADC(Pin(VR_INPUT_PIN))     # create ADC object on ADC pin
+servo = PWM(Pin(SERVO_PIN), freq=PWM_FREQ_SERVO)
 while True:
     vr = adc.read_u16() 
     degree = int(180 * vr / 0xffff)
