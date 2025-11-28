@@ -7,14 +7,7 @@
        -  簡単なブロック図(Raspberry Pi Pico 2)
        -  マイコンプログラミングを取り巻く要素技術（技術マップ）
     -  [マイコン用プログラミング言語](1-x-programming-languages.md)
-     - MicroPython/Python復習 (すでにPythonを習った方を前提)
-        - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
-          - マイコン専用のモジュール、Pinの取り扱い等 
-         - MicroPythonかCircuitPythonか？
-           - CurcuitPythonはMicroPythonから派生した言語で、Adafruit社が開発メンテナンス
-           - 基本的なPythonの仕様は同じだが提供されるモジュールが異なる。同等のモジュールでもメソッド（関数）の仕様が異なる
-           - MicroPythonを基本に使い、使いたいセンサのドライバがCircuitPython版しかない場合、CircuitPythonを選択するのが良いのでは
-           - CircuitPython版ドライバをMicroPython版にポーティングするのも可能（自力で頑張る） 
+     - [MicroPython/Python復習](1-x-micropython_summary.md)
      - 開発環境セットアップ、ツール類紹介、ファイル転送
      - RPi Pico 2W ボードの説明
          -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
