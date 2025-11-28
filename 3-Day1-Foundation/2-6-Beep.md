@@ -6,8 +6,9 @@ from machine import Pin
 from machine import PWM
 import time
 
+PWM_OUT_PIN=16
 freq = 300
-pwm0 = PWM(Pin(16), freq=freq, duty_u16=int(0xffff/2))  # setup PWM
+pwm0 = PWM(Pin(PWM_OUT_PIN), freq=freq, duty_u16=int(0xffff/2))  # setup PWM
 for freq in range(300,2000,10): 
     print(freq)
     pwm0.freq(freq)
