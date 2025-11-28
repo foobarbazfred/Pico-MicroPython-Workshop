@@ -28,14 +28,15 @@ https://pim.murata.com/ja-jp/pim/details/?partNum=PKM22EPPH4001-B0
 https://khufrudamonotes.com/frequencies-for-equal-tempered-scale
 
 簡単に、中央のド付近の音階と周波数を抜粋します
+
 | 音名 | 記号 |  周波数(Hz) |
 |--|--|
-| ド | 2 |
-| レ | 2 |
-| ミ | 2 |
-| ファ | 2 |
-| ソ | 2 |
-| ラ | 2 |
-| シ | 2 |
-| ド | 2 |
+| ド | C | 262 |
+| レ | D | 294 |
+| ミ | E | 330 |
+| ファ | F | 349 |
+| ソ | G | 392 |
+| ラ | A | 440 |
+| シ | B | 493 |
+| ド | C | 523 |
 
