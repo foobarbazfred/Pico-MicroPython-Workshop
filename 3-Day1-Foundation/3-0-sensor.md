@@ -14,6 +14,9 @@
 [Adafruit社；センサ一覧](https://www.adafruit.com/category/35?srsltid=AfmBOopckPgLodnKvVW4jFYxSvkfkuLSZ2BhRSSDlvlPjNsN7y5mui_a)
 
 ### センサ参考文献
-センサ活用を詳しく解説した本
+センサ活用を詳しく解説した本<br>
 
-RPiでセンサを使う方法(サンプルコード、活用事例)
+
+Interface 2025年 8月号　IoTセンサ図鑑[2025年版]<br>
+https://interface.cqpub.co.jp/magazine/202508/
+RPiでセンサを使う方法(サンプルコード、活用事例)<br>
