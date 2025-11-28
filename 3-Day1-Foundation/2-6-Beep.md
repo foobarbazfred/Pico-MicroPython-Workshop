@@ -30,7 +30,7 @@ https://khufrudamonotes.com/frequencies-for-equal-tempered-scale
 簡単に、中央のド付近の音階と周波数を抜粋します
 
 | 音名 | 記号 |  周波数(Hz) |
-|--|--|
+|--|--|--|
 | ド | C | 262 |
 | レ | D | 294 |
 | ミ | E | 330 |
