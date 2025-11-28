@@ -64,4 +64,5 @@ while True:
 ```
 
 参考WebPage<br>
-https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#pwm-pulse-width-modulation
+https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#pwm-pulse-width-modulation<br>
+https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.PWM.html
