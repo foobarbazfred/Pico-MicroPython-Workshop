@@ -35,7 +35,7 @@
       - PWMを使ってサーボモータ制御(DUTYを変える)
       - [PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-5-ServoControl.md)
       - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
-    - DitalでAnalogを表現する-> フルカラーLEDを使う
+    - [DitalでAnalogを表現する-> フルカラーLEDを使う](2-6-NeoPixel.md)
     - GPIO AD/DA変換　ハンズオン（全部はできないの選択）
       - VRで光の明るさが変わる
       - VRでNeoPixelの色が変わる
