@@ -5,6 +5,7 @@
     -  マイコン基礎（簡単なブロック図、有名なマイコン紹介）
        -  [主要マイコン(マイコンボード)紹介）](1-x-board.md)
        -  簡単なブロック図(Raspberry Pi Pico 2)
+       -  マイコンプログラミングを取り巻く要素技術（技術マップ）
     -  マイコン用プログラミング言語
          - C, C++, C#, Embedded Rust, Arduino, Embedded Java, TinyGo, MicroPython(CircuitPython), Lua, JavaScript(TypeScript), Blockly
             - 上記大半の言語はクロス環境で開発(パソコン側にコンパイラをインストール、ソースを作成してコンパイルしてバイナリ(実行形式) を生成)、実行形式をマイコンに転送
