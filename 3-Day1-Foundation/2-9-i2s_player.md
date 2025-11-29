@@ -1,15 +1,15 @@
 # I2SによるDAコンバータとの接続
 
 非圧縮の音データを送受信するための仕様として、I2S (Inter-IC Sound)があります。これはNXPにより策定された仕様であり、下記の信号線で音データが送信されます。
-- 16bit/24bit長の音データ (SD(SDATA))
-- L/Rのいずれであるかを示すCLK (LRCLK(WDCLK))
-- 1bitの音信号を示すCLK (SCLK)
+- 16bit/24bit長の音データ : SD (SDATA)
+- L/Rのいずれであるかを示すCLK: WS (LRCLK/WDCLK)
+- 1bitの音信号を示すCLK:  SCK (SCLK)
 - MasterClock (SYSCLK/MCLK)
 
-DAC（Digital to Analog Converter）や ADC（Analog to Digital Converter）との接続で使われます。<br>
 https://en.wikipedia.org/wiki/I2S
 
-サンプリングレートは最低で、8KHz、最高で#KHzとなっています。どのようなサンプリングレートを指定できるかはDACの仕様により決まります。
+I2Sは、DigitalMICやADC（Analog to Digital Converter）とマイコンの接続、マイコンとDAC（Digital to Analog Converter）との接続で使われます。<br>
+I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データフォーマット）を考慮する必要があります。データ表現形式は、DAC等のデバイスによって決まります。例えば、＃＃＃のDACはサンプリングレートは最低で、8KHz、最高で#KHzとなっています。一音のビット幅は＃＃～＃＃まで選択できます。
 
 <img src="assets/Schematics_i2s_spaker.png" width=400>
 
