@@ -90,6 +90,7 @@ https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foun
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2S.html<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#i2s-bus<br>
 https://github.com/micropython/micropython/blob/master/ports/rp2/machine_i2s.c<br>
-https://www.nxp.com/docs/en/user-manual/UM11732.pdf
+https://www.nxp.com/docs/en/user-manual/UM11732.pdf<br>
 
-https://www.ti.com/lit/ds/symlink/pcm5100a-q1.pdf
+https://www.ti.com/lit/ds/symlink/pcm5100a-q1.pdf<br>
+https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/C/29_Play_Music.html<br>
