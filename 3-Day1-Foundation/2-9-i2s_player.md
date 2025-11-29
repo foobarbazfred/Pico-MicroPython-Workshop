@@ -15,6 +15,7 @@ I2Sを用いてデバイスと接続する場合、I2Sで規定される信号�
 |サンプリングレート |8 kHz to 384 kHz |
 |1音のbit幅 |16bits,24bit,32bit |
 |システムクロック|Clock multiples: 64, 128, 192, 256, 384, 512, 768, 1024, 1152, 1536, 2048, or 3072|
+
 なお、PCM5100Aの場合、システムクロックが供給されない場合、SCLから自動生成されます
 
 <img src="assets/Schematics_i2s_spaker.png" width=400>
