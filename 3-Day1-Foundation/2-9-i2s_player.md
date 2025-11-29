@@ -17,9 +17,8 @@ I2Sを用いてデバイスと接続する場合、I2Sで規定される信号�
 （1音のbit幅とは、LまたはRの1音を構成するビット幅）<br>
 CDの音は、44.1KHz/16bitサンプリング
 
-補足：PCM5100Aの場合、システムクロックが供給されない場合、SCLから自動生成されますので供給不要
-
-<img src="assets/Schematics_i2s_spaker.png" width=400>
+<img src="assets/Schematics_i2s_dac_pcm5100.png" width=600>
+補足：PCM5100Aの場合、システムクロック(ボード上のシルク印刷：SCLK)が供給されない場合、SCK(Continuous Serial Clock (ボード上のシルク印刷：BCK))から自動生成されますので供給不要
 
 ```
 #
