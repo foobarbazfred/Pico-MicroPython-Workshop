@@ -34,6 +34,8 @@
      - https://github.com/raspberrypipress/released-pdfs/blob/main/get-started-with-micropython-raspberry-pi-pico.pdf
    - https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Begiinner%27s-Guide-for-Raspberry-Pi-Pico.pdf
    - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
+   - Pico 2W ボードの回路図
+      - https://datasheets.raspberrypi.com/picow/pico-2-w-schematic.pdf
  - sample source
    - https://github.com/miketeachman/micropython-i2s-examples/blob/master/examples/play_wav_from_sdcard_blocking.py
    - https://github.com/wendlers/micropython-mfrc522/tree/master
