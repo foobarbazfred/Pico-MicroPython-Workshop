@@ -10,12 +10,12 @@ CO2センサの仕様
    - メモリに割り当てられたレジストをRWするのではなく、センサに制御コマンドを送信して制御する
 
 ### 配線図
-<img src="assets/i2c_SCD41.png" width=400>
+<img src="assets/i2c_SCD41.png" width=700>
 
 デバイス接続テスト
 ```
-I2C_SCL = 5
 I2C_SDA = 4
+I2C_SCL = 5
 i2c = I2C(id=bus, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
 >>> hex(i2c.scan()[0])
 '0x62'
@@ -112,8 +112,8 @@ def read_measurement(i2c, verbose=False):
 #######################################################################
 
 # Sensor I2C Connection Pin Assign
-I2C_SCL = 5
 I2C_SDA = 4
+I2C_SCL = 5
 
 
 def main():
