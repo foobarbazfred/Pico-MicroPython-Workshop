@@ -9,9 +9,7 @@
 https://en.wikipedia.org/wiki/I2S
 
 I2Sは、DigitalMICやADC（Analog to Digital Converter）とマイコンの接続、マイコンとDAC（Digital to Analog Converter）との接続で使われます。<br>
-I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データフォーマット）を考慮する必要があります。データ表現形式は、DAC等のデバイスによって決まります。
-開発キットに含まれるDACは、BarBrown社製のPCM5100Aという製品で、サンプリングレート8 kHz to 384 kHz、
-16bits,24bit,32bit, system clockは、Clock multiples: 64, 128, 192, 256, 384, 512, 768, 1024, 1152, 1536, 2048, or 3072となっています。
+I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データフォーマット）を考慮する必要があります。データ表現形式は、DAC等のデバイスによって決まります。例えば、＃＃＃のDACはサンプリングレートは最低で、8KHz、最高で#KHzとなっています。一音のビット幅は＃＃～＃＃まで選択できます。
 
 <img src="assets/Schematics_i2s_spaker.png" width=400>
 
@@ -91,5 +89,3 @@ https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2S.html<br
 https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#i2s-bus<br>
 https://github.com/micropython/micropython/blob/master/ports/rp2/machine_i2s.c<br>
 https://www.nxp.com/docs/en/user-manual/UM11732.pdf
-
-https://www.ti.com/lit/ds/symlink/pcm5100a-q1.pdf
