@@ -1,9 +1,10 @@
 # I2SによるDAコンバータとの接続
 
-非圧縮の音データを送信するための仕様として、I2S (Inter-IC Sound)があります。これはNXPにより策定された仕様であり、以下のような信号の仕様となっており、下記３つの信号で音データが送信されます。
+非圧縮の音データを送受信するための仕様として、I2S (Inter-IC Sound)があります。これはNXPにより策定された仕様であり、下記３つの信号で音データが送信されます。
 - 16bit/24bit長の音データ(SD)
 - L/Rのいずれであるかを示すLRCLK
 - 1bitの音信号を示すCLK
+- MasterClock(選択)
 
 DAC（Digital to Analog Converter）や ADC（Analog to Digital Converter）との接続で使われます。
 
