@@ -1,10 +1,9 @@
 # I2SによるDAコンバータとの接続
 
 非圧縮の音データを送受信するための仕様として、I2S (Inter-IC Sound)があります。これはNXPにより策定された仕様であり、下記の信号線で音データが送信されます。I2Sは、DigitalMICやADC（Analog to Digital Converter）とマイコンの接続、マイコンとDAC（Digital to Analog Converter）との接続で使われます。
-- 16bit/24bit長の音データ : SD (SDATA)
-- L/Rのいずれであるかを示すCLK: WS (LRCLK/WDCLK)
-- 1bitの音信号を示すCLK:  SCK (SCLK)
-- MasterClock (SYSCLK/MCLK)
+- 16bit/24bit長の音データ : SD(Serial Data) (SDATA/DIN(Audio Data input))
+- L/Rのいずれの音であるかを示すCLK: WS(Word Select) (LRCLK/WDCLK/LCK(Audio Data Word Clock Input))
+- 音データを構成する1bitと同期するクロック:  SCK (Continuous Serial Clock) (SCLK/BCK(Bit Clock Input))
 
 https://en.wikipedia.org/wiki/I2S<br>
 I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データ仕様）を考慮する必要があります。I2Sを用いて送受信するデータ仕様は、DAC等のデバイスによって決まります。
@@ -34,14 +33,14 @@ from machine import Pin
 from machine import I2S
 
 SCK_PIN = 16   # Serial Clock
-WS_PIN = 17    # L/R Clock
+WS_PIN = 17    # L/R Clock (Word Select Clock)
 SD_PIN = 18    # Serial Data
 
 I2S_ID = 0
 BUFFER_LENGTH_IN_BYTES = 1024
 
 SAMPLE_RATE_IN_HZ = 8_000      # The lowest supported sample rate of PCM5100A (8KHz)
-SAMPLE_SIZE_IN_BITS = 16       # 16bits/sound
+SAMPLE_SIZE_IN_SOUND = 16       # 16bits/one sound(L or R)
 FORMAT = I2S.MONO              # 
 
 # frequence define
@@ -64,7 +63,7 @@ LOW_VOLUME = 0x15
 # setup I2S
 #
 audio_out = I2S(I2S_ID, sck = Pin(SCK_PIN), ws = Pin(WS_PIN), sd = Pin(SD_PIN),
-          mode = I2S.TX, bits = SAMPLE_SIZE_IN_BITS, format = FORMAT, rate = SAMPLE_RATE_IN_HZ,
+          mode = I2S.TX, bits = SAMPLE_SIZE_IN_SOUND, format = FORMAT, rate = SAMPLE_RATE_IN_HZ,
           ibuf = BUFFER_LENGTH_IN_BYTES,
 )
 
