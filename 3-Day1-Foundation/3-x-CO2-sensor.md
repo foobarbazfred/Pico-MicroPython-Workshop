@@ -1,4 +1,4 @@
-# CO2センサの接続
+# CO2センサ(SCD41)の接続
 
 - Senserion SCD41
 - 温度、湿度、CO2濃度
