@@ -87,4 +87,5 @@ for volume in range(0x00, 0xFF, 0x10):
 https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/src/lib/I2S_sample4.py<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2S.html<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#i2s-bus<br>
-https://github.com/micropython/micropython/blob/master/ports/rp2/machine_i2s.c
+https://github.com/micropython/micropython/blob/master/ports/rp2/machine_i2s.c<br>
+https://www.nxp.com/docs/en/user-manual/UM11732.pdf
