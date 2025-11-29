@@ -1,15 +1,22 @@
 # CO2センサ(SCD41)の接続
 
+CO2センサにはSenserion社のCO2センサ(SCD41)が内蔵されています。SCD41は温度、湿度、CO2濃度が計測できる空気質センサです。I2Cによりセンサを制御します。Sensiron用のコンパクトなドライバがないので、今回は最小限のコードを書きました。一般的なセンサはレジスタ用のアドレスが割り振られていて、指定されたアドレスのレジスタにパラメータを書き込んだり、レジスタから値を読み込むことでデバイスとの通信を行います。Sensirionの場合、レジスタの概念がなく、コマンドの送受信でセンサを制御します。
+
+CO2センサの仕様
 - Senserion SCD41
 - 温度、湿度、CO2濃度
+- I2C接続
+   - デバイスアドレス： 0x62
+   - メモリに割り当てられたレジストをRWするのではなく、センサに制御コマンドを送信して制御する
 
 デバイス接続テスト
 ```
-self.i2c = I2C(id=bus, scl=Pin(sclpin), sda=Pin(sdapin), freq=400000)
+I2C_SCL = 5
+I2C_SDA = 4
+i2c = I2C(id=bus, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
 >>> hex(i2c.scan()[0])
 '0x62'
 ```
-Sensiron用のコンパクトなドライバがないので、今回は最小限のコードを書きました。一般的なセンサはレジスタ用のアドレスが割り振られていて、指定されたアドレスのレジスタにパラメータを書き込んだり、レジスタから値を読み込むことでデバイスとの通信を行います。Sensirionの場合、レジスタの概念がなく、コマンドの送受信でセンサを制御します。
 
 ```
 #
@@ -99,6 +106,13 @@ def read_measurement(i2c, verbose=False):
     return temp, hum, co2
 
 
+#######################################################################
+
+# Sensor I2C Connection Pin Assign
+I2C_SCL = 5
+I2C_SDA = 4
+
+
 def main():
 
     #
@@ -106,7 +120,7 @@ def main():
     #
     
     # setup i2c bus for sensor
-    i2c = I2C(0, scl=Pin(5), sda=Pin(4), freq=20_000)
+    i2c = I2C(0, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
     
     # >>> hex(i2c.scan()[0])
     # '0x62'
