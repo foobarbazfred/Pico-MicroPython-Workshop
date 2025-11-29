@@ -23,7 +23,7 @@ I2Sを用いてデバイスと接続する場合、I2Sで規定される信号�
 ```
 #
 # Sample Source for BB PCM5100A DAC
-#
+#  v0.01 (2025/12/29 15:00)
 #
 
 import os
@@ -57,6 +57,7 @@ FREQ_C5 = 523
 
 #
 MAX_VOLUME = 0xff
+LOW_VOLUME = 0x15
 
 
 #
@@ -92,10 +93,10 @@ def make_tone_signed_16b(sample_rate, frequency, volume = MAX_VOLUME):
 
 def sound_test_play_CEG():
 
-    tone_C4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C4)
-    tone_E4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_E4)
-    tone_G4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_G4)
-    tone_C5 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C5)
+    tone_C4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C4, LOW_VOLUME)
+    tone_E4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_E4, LOW_VOLUME)
+    tone_G4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_G4, LOW_VOLUME)
+    tone_C5 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C5, LOW_VOLUME)
 
     for _ in range(3):
         # play C4
