@@ -1,3 +1,8 @@
+# RP2をWebServerとして動かす
+
+MicroPythonにはSocketモジュールが存在しており、RP2をWebServerとして稼働させることができます。以下は簡単なWebServerの例です。
+80番ポートでTCPソケットをListenしています。Webブラウザから、RP2のIPに対して、http://192.168.10.100:80 等のURLでアクセスすることで、RP2はTCPのセッションを確立させ、GPIO Pinの状態を取得してHTMLを作成し、Webブラウザに返却します。
+
 https://docs.micropython.org/en/latest/esp8266/tutorial/network_tcp.html#simple-http-server
 
 ```
