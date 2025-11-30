@@ -18,7 +18,7 @@
         - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
   - 基礎２ ;  Input/Outputの基礎/Digial/Analog(PWM)
     - GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力 
-    - GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力
+    - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
     - DitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
       - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
       - [PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
