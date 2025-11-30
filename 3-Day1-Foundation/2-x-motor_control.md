@@ -24,6 +24,7 @@ PWMを使ってモータの回転速度を制御できます。マイコンの�
   - 1.5A程度まで対応。
   - 小型ロボットやバッテリー駆動機器に適している。
 
+Freenoveのテキストから引用(3VでL293Dはまずいので、5Vで駆動すべき)<br>
 <img src="assets/Motor_control_L293D.png" width=600>
 L293D仕様書<br>
 https://www.ti.com/jp/lit/ds/symlink/l293d.pdf<br>
