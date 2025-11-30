@@ -49,7 +49,9 @@ print(config)
 
 ### FAT32フォーマット
 
-FAT32にフォーマットするには、Rufusフォーマッタというツールを使うのが楽と思います。
+FAT32にフォーマットするには、Rufusフォーマッタというツールを使うのが楽と思います。<br>
+WebPage： https://rufus.ie/ja/<br>
+<img src="assets/spi_sd_card_schematics.png" width=700>
 
 ### 参考資料
 - MicroPython 標準マニュアル SD-Cardの章(RP2用MicroPythonにはこの章のSD-Cardドライバは同梱されていません)
