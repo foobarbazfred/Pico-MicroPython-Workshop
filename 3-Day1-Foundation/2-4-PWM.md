@@ -5,9 +5,11 @@ RP2350にはDA変換が搭載されていませんので、直接アナログ出
 LEDを点滅、点灯以外に、PWMを使うことで暗く光らせることができます。
 PWMを使ってPWMの設定可能な最も低い周波数で点滅させるプログラム
 ```
+import machine
 from machine import Pin
 from machine import PWM
 PWM_OUTPUT_PIN=28
+machine.freq(125_000_000)
 pwm6 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 # change duty
 pwm6.duty_u16(int(0xffff/16))
