@@ -42,7 +42,7 @@ os.listdir('/sd')
 ```
 import json
 
-with open('/sd/config.json','w') as f:
+with open('/sd/config.json','r') as f:
    config = json.loads(f)
 print(config)
 ```
