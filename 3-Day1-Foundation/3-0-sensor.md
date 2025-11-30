@@ -15,8 +15,8 @@
 
 ### センサ参考文献
 センサ活用を詳しく解説した本<br>
-
-
+実用センサ&回路大事典<br>
+https://cc.cqpub.co.jp/lib/system/doclib_item/1376<br>
 Interface 2025年 8月号　IoTセンサ図鑑[2025年版]<br>
-https://interface.cqpub.co.jp/magazine/202508/
+https://interface.cqpub.co.jp/magazine/202508/<br>
 RPiでセンサを使う方法(サンプルコード、活用事例)<br>
