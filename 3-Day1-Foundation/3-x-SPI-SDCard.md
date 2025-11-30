@@ -4,7 +4,7 @@ SPIを用いてSDカードと接続することができます。SDカードに�
 
 SDカードを利用する上で、注意点があります。MicroPythonのファイルシステムでは、扱えるメディアのフォーマットがFAT12、FAT16、FAT32のいずれかである必要があります。exFATは扱えないので、exFATでフォーマットされたSDカードは読めません。６４GB以上の容量になるとexFATによるフォーマットが一般的ですので、６４GB以上のSDカードを読み書きする場合、ツールを使ってSDカードのフォーマットをFAT32でフォーマットしなおす必要があります。
 
-今回の試作では、2つあるHW SPIのうち、 Channel 1 を使っています。Channel 1のデフォルトピンアサインは、CLK:#, MOSI:#, MISO:# です。指定しなくても、SPI(1)とすると上記ピンが割り当てられますが、確実にピンが割り当てられるよう冗長ですが明示しています。
+今回の試作では、2つあるハードウエアSPIのうち、 Channel 1 を使っています。Channel 1のデフォルトピンアサインは、CLK:#, MOSI:#, MISO:# です。指定しなくても、SPI初期化時、SPI(1)とすると上記ピンが割り当てられますが、確実にピンが割り当てられるよう冗長ですが明示しています。
 
 ### 配線図
 <img src="assets/spi_sd_card_schematics.png" width=700>
@@ -37,6 +37,19 @@ os.listdir('/sd')
 # umount SD Card Volume
 #os.umount('/sd')
 ```
+
+上記操作により、SDカードが/sdディレクトリにマウントされましたので、PCと同様に以下のコードでファイルの読み書きが可能になります。
+```
+import json
+
+with open('/sd/config.json','w') as f:
+   config = json.loads(f)
+print(config)
+```
+
+### FAT32フォーマット
+
+FAT32にフォーマットするには、Rufusフォーマッタというツールを使うのが楽と思います。
 
 ### 参考資料
 - MicroPython 標準マニュアル SD-Cardの章(RP2用MicroPythonにはこの章のSD-Cardドライバは同梱されていません)
