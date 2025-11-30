@@ -24,7 +24,7 @@ pwm0 = PWM(Pin(LED_PIN), freq=2_000, duty_u16=int(0xffff/4))
 while True:
     pwm0.duty_u16(0xFFFF)
     time.sleep(1)
-    pwm0.duty_u16(int(0xffff/16))
+    pwm0.duty_u16(int(0xffff/8))
     time.sleep(1)
 ```
 
