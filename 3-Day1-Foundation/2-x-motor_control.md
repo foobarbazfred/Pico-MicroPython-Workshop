@@ -27,4 +27,6 @@ PWMを使ってモータの回転速度を制御できます。マイコンの�
 <img src="assets/Motor_control_L293D.png" width=600>
 
 Freenoveのテキスト<br>
-https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python/18_L293D_%26_Motor.html
+https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python/18_L293D_%26_Motor.html<br>
+L293Dの説明 WebPage<br>
+https://www.ic-components.jp/blog/L293D-Motor-Driver-IC-Detailed-Pinout,Specs-Datasheet.jsp
