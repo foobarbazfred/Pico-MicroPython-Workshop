@@ -1,157 +1,39 @@
-# CO2センサ(SCD41)の接続
+# SDカードの接続
 
-CO2センサにはSenserion社のCO2センサ(SCD41)が内蔵されています。SCD41は温度、湿度、CO2濃度が計測できる空気質センサです。I2Cによりセンサを制御します。Sensiron用のコンパクトなドライバがないので、今回は最小限のコードを書きました。一般的なセンサはレジスタ用のアドレスが割り振られていて、指定されたアドレスのレジスタにパラメータを書き込んだり、レジスタから値を読み込むことでデバイスとの通信を行います。Sensirionの場合、レジスタの概念がなく、コマンドの送受信でセンサを制御します。
+SPIを用いてSDカードと接続することができます。SDカードには＃＃＃モードと、SPIモードがあり、SDカードの動作モードをSPIモードに切り替えて接続します。SDカードとのやり取りはSDカード用ドライバが提供されており、SDカード用ドライバを用いることで、数行のコードを書くだけでSDカードが利用可能になります。
 
-CO2センサの仕様
-- Senserion SCD41
-- 温度、湿度、CO2濃度
-- I2C接続
-   - デバイスアドレス： 0x62
-   - メモリに割り当てられたレジストをRWするのではなく、センサに制御コマンドを送信して制御する
+SDカードを利用する上で、注意点があります。MicroPythonのファイルシステムでは、扱えるメディアのフォーマットがFAT12、FAT16、FAT32のいずれかである必要があります。exFATは扱えないので、exFATでフォーマットされたSDカードは読めません。６４GB以上の容量になるとexFATによるフォーマットが一般的ですので、６４GB以上のSDカードを読み書きする場合、ツールを使ってSDカードのフォーマットをFAT32でフォーマットしなおす必要があります。
 
 ### 配線図
 <img src="assets/i2c_SCD41.png" width=700>
 
-デバイス接続テスト
+SDカード接続テスト
 ```
-I2C_SDA = 4
-I2C_SCL = 5
-i2c = I2C(id=bus, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
->>> hex(i2c.scan()[0])
-'0x62'
-```
-
-```
-#
-# Driver for SCD41
-#
-
-#// reference documents and source:
-#  https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf
-#  https://github.com/adafruit/Adafruit_CircuitPython_SCD4X/blob/main/adafruit_scd4x.py
-#  https://crates.io/crates/scd4x
-#  https://github.com/hauju/scd4x-rs
-#  https://github.com/adafruit/Adafruit_CircuitPython_SCD4X
-
-
+import os
 from machine import Pin
-from machine import I2C
+from machine import SPI
+import sdcard
 
-SCD41_ADDRESS = 0x62
-
-CMD_START_PERIODIC_MEASURMENT = bytes((0x21, 0xb1,))
-CMD_STOP_PERIODIC_MEASURMENT = bytes((0x3f, 0x86,))
-CMD_READ_MEASUREMENT = bytes((0xec, 0x05,))
-CMD_GET_SERIAL_NUMBER = bytes((0x36, 0x82,))
-CMD_GET_DATA_READY_STATUS =  bytes((0xe4, 0xb8,))
-
-
-# wait for 5 seconds after start periodic measurement
-def init_sensor(i2c):
-    stat = stop_periodic_measurement(i2c)
-    stat = start_periodic_measurement(i2c)
-    return stat
-
-def get_serial_number(i2c, verbose=False):
-    if verbose:
-        print("--- get serial number -----");
-    stat = i2c.writeto(SCD41_ADDRESS, CMD_GET_SERIAL_NUMBER)
-    time.sleep_ms(1)
-    data = i2c.readfrom(SCD41_ADDRESS, 9)  # get (2 bytes  + 1 CRC) * 3
-    return data
-
-def start_periodic_measurement(i2c, verbose=False):
-    if verbose:
-        print("--- start periodic measurement ----");
-    stat = i2c.writeto(SCD41_ADDRESS, CMD_START_PERIODIC_MEASURMENT)
-    return stat
-
-def stop_periodic_measurement(i2c, verbose=False):
-    if verbose:
-        print("--- stop periodic measurement ----");
-    stat = i2c.writeto(SCD41_ADDRESS, CMD_STOP_PERIODIC_MEASURMENT)
-    time.sleep_ms(500)          # wait for Max. command duration
-    return stat
-
-def get_data_ready_status(i2c):
-    stat = i2c.writeto(SCD41_ADDRESS, CMD_GET_DATA_READY_STATUS)
-    time.sleep_ms(1)
-    data = i2c.readfrom(SCD41_ADDRESS, 3)   # get (2 bytes  + 1 CRC) * 3
-    value = (data[0] << 8) | data[1]
-    if value & 0x7ff == 0:   # If the least significant 11 bits of word[0] are: 0 
-       return False          #    -> data not ready 
-    else:
-       return True
-
-def read_measurement(i2c, verbose=False):
-
-    if verbose:
-        print("---- read measure ment -----");
-
-    # check data is ready
-    if get_data_ready_status(i2c) is False:
-       return None, None, None
-
-    stat = i2c.writeto(SCD41_ADDRESS, CMD_READ_MEASUREMENT)
-    time.sleep_ms(1)
-    data = i2c.readfrom(SCD41_ADDRESS, 9)   # get (2 bytes  + 1 CRC) * 3
-
-    #// calculate CO2
-    co2 = (data[0] << 8) | data[1] 
-
-    #// calculate Temperature
-    val = data[3]  << 8 | data[4] 
-    temp = -45.0 + 175.0 * val / 65535.0  #   // 65535 = 0xffff
-
-    #// calculate Humidity
-    val = (data[6]  << 8) | data[7] 
-    hum = 100.0 * val  / 65535.0         # ;  // 65535 = 0xffff
-    return temp, hum, co2
-
-
-#######################################################################
-
-# Sensor I2C Connection Pin Assign
-I2C_SDA = 4
-I2C_SCL = 5
-
-
-def main():
-
-    #
-    # setup
-    #
-    
-    # setup i2c bus for sensor
-    i2c = I2C(0, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
-    
-    # >>> hex(i2c.scan()[0])
-    # '0x62'
-    
-    init_sensor(i2c)
-    time.sleep(5)        # wait until sensor is ready
-
-    #
-    # loop
-    #
-    
-    while True:
-        temp, hum, co2 = read_measurement(i2c)
-        if temp is None:
-            print(f"temp: --.-- C, hum: --.-- %, CO2: ---- ppm")           
-        else:
-            print(f"temp: {temp:.2f}C, hum: {hum:.2F} %, CO2: {co2} ppm")
-        time.sleep(60)
-
-    
-if __name__ == '__main__':    
-   main()    
-    
-
+SPI_MISO = 8
+SD_CARD_CS = 9
+SPI_SCK = 10
+SPI_MOSI = 11
+SPI_BAUD = 1_000_000  # 1MHz
 #
+# setup
 #
-#
+cs = machine.Pin(SD_CARD_CS, Pin.OUT, pull=Pin.PULL_UP)
+spi1 = SPI(1, baudrate=SPI_BAUD, sck=Pin(SPI_SCK), mosi=Pin(SPI_MOSI), miso=Pin(SPI_MISO))
 
+# init SDCard Driver
+sd = sdcard.SDCard(spi=spi1, cs=cs)
+
+# mount SD Card Volume to /sd
+os.mount(sd, '/sd')
+os.listdir('/sd')
+
+# umount SD Card Volume
+#os.umount('/sd')
 ```
 
 ### 参考資料
