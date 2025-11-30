@@ -59,8 +59,8 @@ WebPage： https://rufus.ie/ja/<br>
   - https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.SDCard.html#class-sdcard-secure-digital-memory-card
 - MicroPython 標準マニュアル RP2 ハードウエアSPI
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-spi-bus
-- SD Card SPIモード
-  - https://github.com/Sensirion/python-i2c-scd/tree/master/sensirion_i2c_scd/scd4x
+- SD Card SPIモード解説 (ELM-CHAN氏) 
+  - https://elm-chan.org/docs/mmc/mmc.html
 
 ### SD Card Driver
 https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/storage/sdcard/sdcard.py
