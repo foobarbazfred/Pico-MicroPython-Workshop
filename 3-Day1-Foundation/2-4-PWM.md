@@ -13,7 +13,7 @@ machine.freq(125_000_000)   # set lowest system clock (125MHz)
 pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 ```
 
-PWMを使ってLEDを中間的な明るさで点灯させるプログラム
+PWMを使ってLEDを中間的な明るさで点滅させるプログラム
 ```
 from machine import Pin
 from machine import PWM
@@ -24,7 +24,7 @@ pwm0 = PWM(Pin(LED_PIN), freq=2_000, duty_u16=int(0xffff/4))
 while True:
     pwm0.duty_u16(0xFFFF)
     time.sleep(1)
-    pwm0.duty_u16(int(0xffff/8))
+    pwm0.duty_u16(int(0xffff/4))
     time.sleep(1)
 ```
 
