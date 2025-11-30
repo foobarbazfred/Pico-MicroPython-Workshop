@@ -21,7 +21,7 @@
     - GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力
     - DitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
       - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
-      - （参考）[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)
+      - [PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
       - [PWMを使ってサーボモータ制御(DUTYを変える)](2-5-ServoControl.md)
       - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
     - [DitalでAnalogを表現する-> フルカラーLEDを使う](2-6-NeoPixel.md)
