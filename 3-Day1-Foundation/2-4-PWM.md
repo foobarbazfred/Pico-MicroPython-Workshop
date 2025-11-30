@@ -9,7 +9,7 @@ import machine
 from machine import Pin
 from machine import PWM
 PWM_OUTPUT_PIN=16
-machine.freq(125_000_000)   # set lowest frequency
+machine.freq(125_000_000)   # set lowest system clock (125MHz)
 pwm6 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 # change duty
 pwm6.duty_u16(int(0xffff/16))
