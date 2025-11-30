@@ -41,6 +41,6 @@ while True:
     cl.send(response)
     cl.close()
 ```
-ブラウザで状態を表示するだけではなく、LEDの点灯制御等もできるようにすることも可能です。
-http://src/web_server/rp2_webserver.py
+ブラウザで状態を表示するだけではなく、LEDの点灯制御等もできるようにすることも可能です。<br>
+<a href="src/web_server/rp2_webserver.py">WebServer ソース</a>
 
