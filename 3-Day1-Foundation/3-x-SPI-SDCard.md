@@ -39,13 +39,12 @@ os.listdir('/sd')
 ```
 
 ### 参考資料
-- Sensirion SDC41 Porcut
-  - https://sensirion.com/jp/products/catalog/SCD41
-- Sensirion SCD4x DataSheet
-  - https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf
-- Sensirion Drvier
+- MicroPython 標準マニュアル SD-Cardの章(RP2用MicroPythonにはこの章のSD-Cardドライバは同梱されていません)
+  - https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.SDCard.html#class-sdcard-secure-digital-memory-card
+- MicroPython 標準マニュアル RP2 ハードウエアSPI
+  - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-spi-bus
+- SD Card SPIモード
   - https://github.com/Sensirion/python-i2c-scd/tree/master/sensirion_i2c_scd/scd4x
-
 
 ### SD Card Driver
 https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/storage/sdcard/sdcard.py
