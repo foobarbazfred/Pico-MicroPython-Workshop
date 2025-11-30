@@ -17,7 +17,7 @@
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
         - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
   - 基礎２ ;  Input/Outputの基礎/Digial/Analog(PWM)
-    - GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力 
+    - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
     - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
     - DitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
       - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
