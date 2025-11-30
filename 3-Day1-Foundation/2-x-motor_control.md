@@ -25,7 +25,8 @@ PWMを使ってモータの回転速度を制御できます。マイコンの�
   - 小型ロボットやバッテリー駆動機器に適している。
 
 <img src="assets/Motor_control_L293D.png" width=600>
-
+L293D仕様書<br>
+https://www.ti.com/jp/lit/ds/symlink/l293d.pdf<br>
 Freenoveのテキスト<br>
 https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python/18_L293D_%26_Motor.html<br>
 L293Dの説明 WebPage<br>
