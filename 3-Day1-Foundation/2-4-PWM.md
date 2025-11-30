@@ -9,6 +9,8 @@ import machine
 from machine import Pin
 from machine import PWM
 PWM_OUTPUT_PIN=16
+
+# setup
 machine.freq(125_000_000)   # set lowest system clock (125MHz)
 pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 ```
@@ -19,13 +21,18 @@ from machine import Pin
 from machine import PWM
 import time
 LED_PIN=16
+
+# setup
 pwm0 = PWM(Pin(LED_PIN), freq=2_000, duty_u16=int(0xffff/4))
 
+# loop
 while True:
     pwm0.duty_u16(0xFFFF)
     time.sleep(1)
     pwm0.duty_u16(int(0xffff/4))
     time.sleep(1)
+#
+#
 ```
 
 自動的に点滅するプログラムは以下(sinを使っています)<br>
@@ -47,6 +54,8 @@ while True:
         value = int(MAX_VALUE * math.sin(i/100))    # i/100 means math.pi * 100 -> math.py
         pwm0.duty_u16(value)
         time.sleep(0.01)
+#
+#
 ```
 
 先ほどのボリュームと連動して明るさを調整するプログラムは以下
@@ -58,10 +67,15 @@ from machine import PWM
 import time
 MAX_VALUE = 0xffff
 MAX_VOLT = 3.3
-adc = ADC(Pin(26))     # create ADC object on ADC pin
 
-pwm0 = PWM(Pin(16), freq=2000, duty_u16=0)  # setup PWM
+VR_PIN=26
+LED_PIN=16
 
+# setup
+adc = ADC(Pin(VR_PIN))     # create ADC object on ADC pin
+pwm0 = PWM(Pin(LED_PIN), freq=2000, duty_u16=0)  # setup PWM
+
+# loop
 while True:
     value = adc.read_u16()
     pwm0.duty_u16(value)
