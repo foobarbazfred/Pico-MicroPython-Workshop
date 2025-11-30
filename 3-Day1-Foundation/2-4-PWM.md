@@ -36,7 +36,7 @@ from machine import PWM
 import math
 
 import time
-MAX_VALUE = 0x4000
+MAX_VALUE = 0xFFFF
 LED_PIN=16
 # setup
 pwm0 = PWM(Pin(16), freq=2000, duty_u16=0)  # setup PWM
