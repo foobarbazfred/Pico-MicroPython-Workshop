@@ -24,7 +24,7 @@ PWMを使ってモータの回転速度を制御できます。マイコンの�
   - 1.5A程度まで対応。
   - 小型ロボットやバッテリー駆動機器に適している。
 
-
+<img src="assets/Motor_control_L293D.png" width=600>
 
 Freenoveのテキスト<br>
 https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python/18_L293D_%26_Motor.html
