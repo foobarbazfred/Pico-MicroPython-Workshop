@@ -140,6 +140,6 @@ APIの呼び出し時、lang=jaと設定しているので晴天と漢字で返�
 なお、今回研修用にAWS上でWeatherAPI Proxyを構築しております。WeatherAPIを利用するためのキーの取得が困難な場合は、研修用のWeatherAPI Proxyをご利用ください。
 研修用Weather APIのURLと呼び出し方は以下の通りです
 ```
-https://aaaaaa.com/weather_api?lat=<lat>&lon=<lon>&api_key=<api_key>
+https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy?lat=<lat>&lon=<lon>&api_key=<api_key>
 ```
-api_keyは研修の際にお伝えします。応答JSONはWeatherAPIの仕様と同じです。
+api_keyは研修の際にお伝えします。応答JSONはWeatherAPIの仕様と同じです。マイコンからの利用を想定して応答文字コードはen(English)を指定しています
