@@ -152,7 +152,7 @@ LOCATION=(35.7388919, 139.4607429)
 API_KEY='12345678abcdefg'
 
 lat, lon = LOCATION
-request_url = f"{BASE_URL}?lat={lat}&lon={lon}&appid={API_KEY}"
+request_url = f"{BASE_URL}?lat={lat}&lon={lon}&api_key={API_KEY}"
 response = urequests.get(request_url)
 
 if response.status_code == 200:
@@ -164,4 +164,12 @@ if response.status_code == 200:
     print("wind:", data["wind"]["speed"], "m/s")
 else:
     print("error:", data)
+```
+RP2で実行した結果は以下です
+```
+city: Higashimurayama
+weather: clear sky
+temp: 12.88 C
+hum: 54 %
+wind: 3.09 m/s
 ```
