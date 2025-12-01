@@ -104,5 +104,41 @@ hum: 55 %
 wind: 3.09 m/s
 ```
 MicroPythonでも同様にrequestsモジュールが提供されており、ほぼ同じようなソースコードでAPIを呼び出すことができます。
+MicroPython版天気情報取得プログラム
+```
+import urequests
+BASE_URL='https://api.openweathermap.org/data/2.5/weather'
+
+LOCATION=(35.7388919, 139.4607429)
+API_KEY='12345678abcdefg'
 
 
+lat, lon = LOCATION
+request_url = f"{BASE_URL}?lat={lat}&lon={lon}&appid={API_KEY}&units=metric&lang=ja"
+response = urequests.get(request_url)
+
+if response.status_code == 200:
+    data = response.json()
+    print("city:", data.get("name"))
+    print("weather:", data["weather"][0]["description"])
+    print("temp:", data["main"]["temp"], "C")
+    print("hum:", data["main"]["humidity"], "%")
+    print("wind:", data["wind"]["speed"], "m/s")
+else:
+    print("error:", data)
+```
+実行結果は以下です
+```
+city: Kodaira
+weather: 晴天
+temp: 13.15 C
+hum: 53 %
+wind: 3.09 m/s
+```
+APIの呼び出し時、lang=jaと設定しているので晴天と漢字で返却されています。
+APIキーは共用できないので、直接WeatherAPIを呼び出す場合は、各自でAPIキーを取得してAPIを呼び出してください。
+今回研修用にAWS上でWeatherAPI Proxyを構築しており、各自でAPIキーの取得ができない場合は、研修用のWeatherAPI Proxyをご利用ください。
+研修用Weather APIのURLと呼び出し方は以下の通りです
+```
+https://aaaaaa.com/weather_api?lat=<lat>&lon=<lon>&api_key=<api_key>
+```
