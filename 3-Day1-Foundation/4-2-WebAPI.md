@@ -66,7 +66,7 @@ $ curl  'https://api.openweathermap.org/data/2.5/weather?lat=35.7388919&lon=139.
   "name": "Higashimurayama",
   "cod": 200
 }
-'''
+```
 上記応答文字列中の、weather/main, weather/descriptionが現在の天候です
 C-Pythonで書くと以下となります。
 ```
