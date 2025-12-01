@@ -143,3 +143,25 @@ APIの呼び出し時、lang=jaと設定しているので晴天と漢字で返�
 https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy?lat=<lat>&lon=<lon>&api_key=<api_key>
 ```
 api_keyは研修の際にお伝えします。応答JSONはWeatherAPIの仕様と同じです。マイコンからの利用を想定して応答文字コードはen(English)を指定しています
+MicroPythonからの呼び出し例は以下です
+```
+import urequests
+BASE_URL='https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy'
+
+LOCATION=(35.7388919, 139.4607429)
+API_KEY='12345678abcdefg'
+
+lat, lon = LOCATION
+request_url = f"{BASE_URL}?lat={lat}&lon={lon}&appid={API_KEY}"
+response = urequests.get(request_url)
+
+if response.status_code == 200:
+    data = response.json()
+    print("city:", data.get("name"))
+    print("weather:", data["weather"][0]["description"])
+    print("temp:", data["main"]["temp"], "C")
+    print("hum:", data["main"]["humidity"], "%")
+    print("wind:", data["wind"]["speed"], "m/s")
+else:
+    print("error:", data)
+```
