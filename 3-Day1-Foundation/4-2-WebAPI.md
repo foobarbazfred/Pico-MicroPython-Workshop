@@ -138,11 +138,13 @@ wind: 3.09 m/s
 APIの呼び出し時、lang=jaと設定しているので晴天と漢字で返却されています。APIキーは共用できないので、皆さんがWeatherAPIを呼び出す際は、各自でAPIキーを取得してAPIを呼び出してください。
 
 なお、今回研修用にAWS上でWeatherAPI Proxyを構築しております。WeatherAPIを利用するためのキーの取得が困難な場合は、研修用のWeatherAPI Proxyをご利用ください。
+
 研修用Weather APIのURLと呼び出し方は以下の通りです
 ```
 https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy?lat=<lat>&lon=<lon>&api_key=<api_key>
 ```
 api_keyは研修の際にお伝えします。応答JSONはWeatherAPIの仕様と同じです。マイコンからの利用を想定して応答文字コードはen(English)を指定しています
+
 MicroPythonからの呼び出し例は以下です
 ```
 import urequests
@@ -173,3 +175,4 @@ temp: 12.88 C
 hum: 54 %
 wind: 3.09 m/s
 ```
+緯度経度はGoogleMap等を使うと正確な値を入手できます。調べたい地点の緯度経度を指定すると、現在の天候がAPIにより取得できます。
