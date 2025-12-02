@@ -8,9 +8,8 @@
        -  マイコンプログラミングを取り巻く要素技術（技術マップ）
     -  [マイコン用プログラミング言語](1-x-programming-languages.md)
      - [MicroPython/Python復習](1-x-micropython_summary.md)
-     - 開発環境セットアップ、ツール類紹介、ファイル転送
-     - 
-     - RPi Pico 2W ボードの説明
+     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-x-programming-tools.md)
+     - Raspberry Pi Pico 2 W (略称 RP2) ボードの説明
          -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
      - REPLを用いたボトムアップの試作例
          - Pythonは対話的にPGできます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
