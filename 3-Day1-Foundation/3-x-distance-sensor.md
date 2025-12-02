@@ -10,7 +10,7 @@
    - メモリに割り当てられたレジストをRWするのではなく、センサに制御コマンドを送信して制御する
 
 ### 配線図
-<img src="assets/schematics_hc_sr04.png" width=700>
+<img src="assets/schematics_hc_sr04.png" width=500>
 
 
 HC-SR04は計測を指示するTrig(Trigger)信号と、センサから対象物までの距離をパルス幅で表現したEchoで制御されます。
