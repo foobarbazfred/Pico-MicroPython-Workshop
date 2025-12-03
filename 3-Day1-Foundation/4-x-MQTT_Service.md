@@ -39,28 +39,60 @@ Done
 
 まずは簡単に定期的にメッセージを発行するテストを行います。
 
-- 接続先ブローカ：
-- TOPICS：
-- message: 
+- 接続先ブローカ：broker.emqx.io
+- ポート番号：1883
+- TOPICS： handson/sensor/volume/<user_ID>     #   <user_id>  := 受講者ID（1-16)
+- message: {"value" : <value> }         # <value> := 0 - 100
 
-1秒おきにMQTTブローカにメッセージを送信する例です
+1秒おきにMQTTブローカにメッセージを送信する例です.
 ```
-from umqtt.simple import MQTTClient
+#
+# MQTT Publish Sample
+#   publish random value
+# 
+import time
+import random
 import json
+from umqtt.simple import MQTTClient
 
-MQTT_BROKER = 'test.mosquitto.org'
-MQTT_PORT = 1883
-MQTT_TOPIC = b'test/upy_publish_test'
-MQTT_CLIENT_ID = "client_RP_Pico2W_0001"
+# define MQTT Broker
+BROKER = "broker.emqx.io"
+PORT = 1883
+TOPIC_BASE = "handson/sensor/volume/user"
+MEMBER_ID = 1
+CLIENT_ID = f'rpi_pico_{MEMBER_ID:03d}'
+TOPIC = TOPIC_BASE + f"{MEMBER_ID:03d}"
 
-client = MQTTClient(MQTT_CLIENT_ID, MQTT_BROKER, port = MQTT_PORT, ssl = False)
-client.connect()
-message = {‘client_id’ : MQTT_CLIENT_ID, ‘connect by’ : ‘no SSL, no Auth’}
-payload = json.dumps(message). encode('utf-8')
+def connect():
+    print('Connected to MQTT Broker "%s"' % (server))
+    client = MQTTClient(CLIENT_ID, BROKER, PORT)
+    client.connect()
+    return client
+
+def reconnect():
+    print('Failed to connect to MQTT broker, Reconnecting...' % (server))
+    time.sleep(5)
+    client.reconnect()
+
+# setup
+
+try:
+    client = connect()
+except OSError as e:
+    reconnect()
+
+# loop
+
 while True:
-    client.publish(MQTT_TOPIC, payload)
-    time.sleep(1)
-client.disconnect()
+   value = random.randint(1, 100)  # random number 1-100
+   msg = json.dumps({"value": value})
+   print('send message %s on topic %s' % (msg, TOPIC))
+   client.publish(TOPIC, msg, qos=0)
+   time.sleep(1)
+
+#
+# end of source
+#
 ```
 
    
