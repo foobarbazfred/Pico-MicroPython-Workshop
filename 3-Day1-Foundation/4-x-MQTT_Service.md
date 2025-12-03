@@ -42,7 +42,7 @@ Done
 - 接続先ブローカ：broker.emqx.io
 - ポート番号：1883
 - TOPICS： handson/sensor/volume/<user_ID>     #   <user_id>  := 受講者ID（1-16)
-- message: {"value" : <value> }         # <value> := 0 - 100
+- message: {"value" : ＜value＞ }               # ＜value＞ := 0 - 100
 
 1秒おきにMQTTブローカにメッセージを送信する例です.
 ```
