@@ -50,7 +50,9 @@ python3 -m mpremote connect /dev/ttyS17  fs cp -r  ./lib  :/lib
 ```
 
 ### MicroPython Shellのインストール
-shellコマンドを使えるようにupysh (MicroPython Shell)をインストールします。ネットワークが接続済みであれば、mipコマンドでモジュールをインストールできます。
+shellコマンドを使えるようにupysh (MicroPython Shell)をインストールします。ネットワークが接続済みであれば、mipコマンドでモジュールをインストールできます。<br>
+
+REPLによる操作
 ```
 import mip
 mip.install('upysh')
@@ -67,4 +69,19 @@ pwd, cd(...), mkdir(...), rmdir(...)
 
 MicroPython v1.26.1 on 2025-09-11; Raspberry Pi Pico 2 W with RP2350
 Type "help()" for more information.
+```
+```
+>>> ls
+    <dir> lib
+      745 boot.py
+2,488k free
+
+>>> ls('lib')
+    <dir> umqtt
+     2996 I2C_LCD.py
+     6535 LCD_API.py
+      745 ssl.mpy
+     1645 upysh.mpy
+     2824 upysh2.py
+2,488k free
 ```
