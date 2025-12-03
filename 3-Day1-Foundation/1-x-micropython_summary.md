@@ -3,6 +3,7 @@
   - マイコン専用のモジュール、Pinの取り扱い等 
 - MicroPythonはマイコンを使いこなすためにモジュールが追加されています。周辺I/Oを制御する場合、モジュールを使うことで可能になります
 - 特に重要なのはmachineモジュールです。machineモジュール配下に、Serial/I2C/SPI用Classが提供されています
+- I2CやSPIで接続される周辺機器を制御する場合、下記のクラスを使ってマイコンの周辺I/Oを制御します
 
 <img src="assets/MicroPython_Libraries.png" width=300><br>
 <img src="assets/classes_in_machine_module.png" width=300><br>
