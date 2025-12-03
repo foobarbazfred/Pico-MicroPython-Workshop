@@ -1,12 +1,12 @@
 # マイコンとセンサをシリアルインタフェース(I/F)で接続
 
 センサや表示装置はシリアルI/Fで接続する場合が多いです。主なシリアルI/Fとして以下が挙げられます
-1. UART
-2. I2C
-3. SPI
+1. UART (クロック信号なし、送信、受信の２線)(低速)
+2. I2C (クロック信号、双方向データ信号の2線)(低速)
+4. SPI (クロック信号、送信、受信、チップセレクトの4線)(高速転送可能)
 
 今回の演習ではI2Cを使ってセンサ、表示装置と接続します。
-- I2Cはフィリップス・セミコンダクターズ（現在：NXP セミコンダクターズ）によって規定されたバス仕様であり、２線による接続、マルチデバイス、＃＃＃が特徴です。
+- I2Cはフィリップス・セミコンダクターズ（現在：NXP セミコンダクターズ）によって規定されたバス仕様であり、２線による接続、マルチデバイス接続が特徴です。
 - I2Cデバイスは複数のデバイスが接続できるように設計されており、デバイスが通信したい時は信号線をLに落とすことでデータを送ります。データを送る必要がない時はデバイスは信号線をHI-Zにします。この仕組みにより、マスター側やデバイス側で通信が衝突しても電気的にショートしない仕様になっています。
 - このため基本的にデバイスはプルアップ抵抗が付けられていません。HI-Zだと信号が不安定になるため、I2Cバス用にはプルアップを付ける必要があります。
 - I2Cは双方向バスであり、バスを制御するマスター側（マイコン）とマスターから提示された信号に応じて応答するスレーブ側（センサ等の各種デバイス）に分かれます。
@@ -96,5 +96,8 @@ i2c.writeto_mem(DEV_ADDR, reg_addr, data)
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-i2c-bus
 - クラスI2C
   - https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2C.html#class-i2c-a-two-wire-serial-protocol
-- I2Cバス仕様書 (I2Cバス仕様およびユーザーマニュアル)
+- I2Cバス仕様書 (I2Cバス仕様およびユーザーマニュアル)(NXP)
   - https://www.nxp.com/docs/ja/user-guide/UM10204.pdf
+- SPI解説文
+  - https://www.ti.com/content/dam/videos/external-videos/en-us/6/3816841626001/6163521589001.mp4/subassets/basics-of-spi-serial-communications-presentation.pdf
+  - https://community.nxp.com/t5/NXP-Tech-Blog/SPI%E3%83%90%E3%82%B9%E3%81%AE%E6%A6%82%E8%A6%81-%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%96%E3%83%AD%E3%82%B0/ba-p/2036964?profile.language=ja
