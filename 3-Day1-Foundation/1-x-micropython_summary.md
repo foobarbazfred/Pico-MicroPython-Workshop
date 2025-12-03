@@ -5,6 +5,8 @@
 - 特に重要なのはmachineモジュールです。machineモジュール配下に、Serial/I2C/SPI用Classが提供されています
 - I2CやSPIで接続される周辺機器を制御する場合、下記のクラスを使ってマイコンの周辺I/Oを制御します
 
+<img src="assets/rp2350_block_diagram.png" width=600><br>
+
 <img src="assets/MicroPython_Libraries.png" width=400><br>
 machineモジュール内のクラス一覧<br>
 <img src="assets/classes_in_machine_module.png" width=400><br>
