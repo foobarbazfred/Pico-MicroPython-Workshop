@@ -6,10 +6,10 @@ MicroPythonのプログラミング方法として、(1)REPLによる評価を�
 (1)REPLによる評価を中心とするのは、新しいセンサを使ってみる、ドライバを試作するといった試行錯誤を行う場合に有効です。
 (2)IDEによるソースコード開発は、規模の大きいソフトウエアを開発する場合に適しています。
 
-(1)のREPL中心の操作としてよく使われるのはTera Term等のターミナルソフトです。Raspberry piの環境にupysh.pyを入れておけば、ファイル作成も可能になります。
+(1)のREPL中心の操作としてよく使われるのはTera Term等のターミナルソフトです。Raspberry piの環境にupysh.pyを入れておけば、ファイル作成も可能になります。<br>
 <img src="assets/screen_tera_term.png" width=600>
 
-(2)のソースコード試作中心の場合、よく使われるのはThonnyと思います。Thonnyは統合開発環境であり、コーディング以外にMicroPythonからの出力を表示し、さらに、グラフ化機能も実装されています。
+(2)のソースコード試作中心の場合、よく使われるのはThonnyと思います。Thonnyは統合開発環境であり、コーディング以外にMicroPythonからの出力を表示し、さらに、グラフ化機能も実装されています。<br>
 <img src="assets/screen_thonny.png" width=600>
 
 
