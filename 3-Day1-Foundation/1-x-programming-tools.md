@@ -14,6 +14,7 @@ MicroPythonのプログラミング方法として、(1)REPLによる評価を�
 
 
 ### メンテナンスツール(CLI)
+複数のファイルのバックアップや更新作業を行いたい時、IDE等で１ファイルずつバックアップ、更新を行うのは手間がかかります。このような場合、メンテナンスツールを使うと、作業が自動化できます。
 MicroPython のリモート制御: mpremote<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/reference/mpremote.html#micropython-remote-control-mpremote
 
