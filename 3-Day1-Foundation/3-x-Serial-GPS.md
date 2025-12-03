@@ -16,8 +16,8 @@ GPSの仕様
 [gps_gt-502.py](src/gps_gt-502.py)
 
 ### 参考資料
-- Serial
-  - https://sensirion.com/jp/products/catalog/SCD41
+- 秋月GPSページ
+  - https://akizukidenshi.com/catalog/c/csatellit/
 - GPS Specification
   - https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf
 
