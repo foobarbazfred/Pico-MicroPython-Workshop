@@ -31,6 +31,13 @@ I2C(0, freq=400000, scl=5, sda=4, timeout=50000)
 LCDに文字を表示するには、RAM領域にASCIIコードを書き込む必要があります。プログラムですべて実装するのは大変なので、LCD用ドライバを活用して、プログラム量を減らせられます。
 LCD用ドライバとして＃＃＃、＃＃＃、＃＃＃がありますが、今回使っているキットのメーカが提供するLCDドライバ(I2C_LCD1602)を活用します。
 
+MIPを使えばGitHub上のソースを直接MicroPythonにインストールすることができます。
+```
+import mip
+mip.install(https://raw.githubusercontent.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/refs/heads/master/Python/Python_Libraries/LCD_API.py)
+```
+
+
 LCDの初期化
 ```
 from machine import I2C
