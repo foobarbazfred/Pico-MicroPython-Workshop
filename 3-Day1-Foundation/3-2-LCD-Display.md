@@ -35,7 +35,7 @@ MIPを使えばGitHub上のソースを直接MicroPythonにインストールす
 ```
 import mip
 mip.install('https://raw.githubusercontent.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/refs/heads/master/Python/Python_Libraries/LCD_API.py')
-mi.install('https://raw.githubusercontent.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/refs/heads/master/Python/Python_Libraries/I2C_LCD.py')
+mip.install('https://raw.githubusercontent.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/refs/heads/master/Python/Python_Libraries/I2C_LCD.py')
 ```
 上記URLはLCD DriverのRAWファイルが取得できるURLです。
 
