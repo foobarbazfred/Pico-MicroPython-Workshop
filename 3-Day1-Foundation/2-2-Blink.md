@@ -2,7 +2,7 @@
 Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号をよくご確認ください。
 <img src="assets/pico-2-w-pinout.png" width=800><br>
 
-LEDはGP16に接続します。LEDが点灯するかREPLで試しましょう
+LEDはGP16に接続します。物理的なピン番号とGPIO番号を間違いやすいのでご注意くださ。LEDが点灯するかREPLで試しましょう
 
 <img src="assets/Schematics_LED_SW.png" width=300><br>
 
