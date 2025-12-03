@@ -96,6 +96,7 @@ while True:
 ```
 本当に送信できているのか？を確認するためのIoTダッシュボードのサンプルは以下です。ダウンロードしてブラウザで開いてください。<br>
 [dashboard.html](src/mqtt_dashboard/dashboard.html)<br>
-MQTT Clientとして動作します。トピックとして、handson/sensor/volume　をサブクライブしています。<br>
+MQTT Clientとして動作します。トピックとして、handson/sensor/volume/user001  ～　handson/sensor/volume/user016をサブクライブしています。<br>
+このコードはCopilotに依頼して生成したままです。(自分では何も加工していません)<br>
 <img src="assets/mqtt_dashboard.png" width=600>
    
