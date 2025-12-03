@@ -74,7 +74,10 @@ lcd.clear()
 lcd.move_to(0, 1)
 lcd.putstr("     bye!! ")
 ```
-今後他のデバイスがI2C_0を使うことを想定して、LCDはLCD_1を使います
+今後他のデバイスがI2C_0を使うことを想定して、LCDはLCD_1を使います<br>
+
+<img src="assets/Schematics_LCD.png" width=800>
+
 ```
 from machine import Pin
 from machine import I2C
