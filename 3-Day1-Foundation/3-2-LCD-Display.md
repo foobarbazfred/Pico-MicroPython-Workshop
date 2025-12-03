@@ -79,6 +79,8 @@ lcd.putstr('hello')
 
 The serial-to-parallel IC chip used in this module is PCF8574T (PCF8574AT), and its default I2C address is 0x27(0x3F).
 
-- 参考資料
+- FreeNoveから提供されるLCD用ドライバ
   - https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/blob/master/Python/Python_Libraries/LCD_API.py
+  - https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/blob/master/Python/Python_Libraries/I2C_LCD.py
+- 参考資料
   - https://cdn.sparkfun.com/assets/2/7/5/5/f/st7066.pdf
