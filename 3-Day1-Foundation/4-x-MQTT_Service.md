@@ -37,14 +37,14 @@ Done
 
 ### MQTTライブラリを使ったPublishの例
 
-まずは簡単に定期的にメッセージを発行するテストを行います。
+まずは簡単に定期的にメッセージを発行しましょう。
 
 - 接続先ブローカ：broker.emqx.io
 - ポート番号：1883
 - TOPICS： handson/sensor/volume/<user_ID>     #   <user_id>  := 受講者ID（1-16)
 - message: {"value" : ＜value＞ }               # ＜value＞ := 0 - 100
 
-1秒おきにMQTTブローカにメッセージを送信する例です.
+1秒おきにMQTTブローカにメッセージを送信する例です。メッセージのデータ形式はJSONです
 ```
 #
 # MQTT Publish Sample
