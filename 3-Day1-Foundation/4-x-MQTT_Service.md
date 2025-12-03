@@ -1,7 +1,17 @@
 # MicroPythonからMQTTサービスを使う
 
-MicroPythonにはMQTTを使うためのモジュールが
 
+MQTT(Message Queuing Telemetry Transport)を使うことで、複数拠点に配置したセンサデータの収集や、家庭内に設置した機器を遠隔から制御するアプリケーションが容易に実現できます。MicroPython 用のMQTTライブラリも存在し、MQTTを活用したアプリケーションを簡単につくることができます。
+MicroPython用MQTTライブラリはリポジトリに登録されており、MicroPythonのMIPによりネットワーク経由でインストールすることができます。
+1. まずmipモジュールをインポートします(REPL)
+```
+import mip
+```
+2. mip.install()関数を用いてumqtt.simpeをインストールします
+```
+mip.install(‘umqtt.simple’)
+```
+上記操作によりMicroPythonのFlash(ファイルシステム)にumqtt.simpleがインストールされます。
 
 MicroPythonにはSocketモジュールが存在しており、RP2をWebServerとして稼働させることができます。以下は簡単なWebServerの例です。
 80番ポートでTCPソケットをListenしています。Webブラウザから、RP2のIPに対して、http://192.168.10.100:80 等のURLでアクセスすることで、RP2はTCPのセッションを確立させ、GPIO Pinの状態を取得してHTMLを作成し、Webブラウザに返却します。
