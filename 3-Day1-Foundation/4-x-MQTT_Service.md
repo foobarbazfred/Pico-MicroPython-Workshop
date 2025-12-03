@@ -94,5 +94,8 @@ while True:
 # end of source
 #
 ```
+本当に送信できているのか？を確認するためのIoTダッシュボードのサンプルは以下です。ダウンロードしてブラウザで開いてください。<br>
 
+
+<img src="mqtt_dashboard.png" width=400>
    
