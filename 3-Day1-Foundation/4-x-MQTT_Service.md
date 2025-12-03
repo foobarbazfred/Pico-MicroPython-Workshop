@@ -12,6 +12,38 @@ import mip
 mip.install(‘umqtt.simple’)
 ```
 上記操作によりMicroPythonのFlash(ファイルシステム)にumqtt.simpleがインストールされます。
+以下は実行結果です
+```
+>>> import mip
+>>> dir(mip)
+['__class__', '__name__', 'const', '__dict__', '__file__', '__path__', 'sys', '_CHUNK_SIZE', '__version__', '_check_exists', '_chunk', '_download_file', '_ensure_path_exists', '_install_json', '_install_package', '_rewrite_url', 'allowed_mip_url_prefixes', 'install', 'requests']
+>>> mip.install('umqtt.simple')
+Installing umqtt.simple (latest) from https://micropython.org/pi/v2 to /lib
+Copying: /lib/ssl.mpy
+Copying: /lib/umqtt/simple.mpy
+Done
+```
+ファイルが置かれたか確認します。以下の操作により、 Flash上のファイルシステム内、/lib/umqtt/simple.mpy' が置かれたことが分かります
+```
+>>> ls('lib')
+    <dir> umqtt
+      745 ssl.mpy
+     2824 upysh.py
+2,504k free
+>>> ls('lib/umqtt')
+     2529 simple.mpy
+2,504k free
+```
+
+### MQTTライブラリを使ったPublishの例
+
+まずは簡単に定期的にメッセージを発行するテストを行います。
+
+- 接続先ブローカ：
+- TOPICS：
+- message: 
+
+
 
 MicroPythonにはSocketモジュールが存在しており、RP2をWebServerとして稼働させることができます。以下は簡単なWebServerの例です。
 80番ポートでTCPソケットをListenしています。Webブラウザから、RP2のIPに対して、http://192.168.10.100:80 等のURLでアクセスすることで、RP2はTCPのセッションを確立させ、GPIO Pinの状態を取得してHTMLを作成し、Webブラウザに返却します。
