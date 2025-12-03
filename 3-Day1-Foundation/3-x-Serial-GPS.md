@@ -13,7 +13,7 @@ GPSの仕様
 <img src="assets/Schematics_GPS.png" width=700>
 
 ソース一式
-[]()
+[gps_gt-502.py](src/gps_gt-502.py)
 
 ### 参考資料
 - Serial
