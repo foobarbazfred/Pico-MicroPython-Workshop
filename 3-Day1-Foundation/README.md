@@ -1,0 +1,99 @@
+# １日目セミナー議題
+
+- 1日目の学び
+  - 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて　
+    -  マイコン基礎（簡単なブロック図、有名なマイコン紹介）
+       -  [主要マイコン(マイコンボード)紹介）](1-x-board.md)
+       -  [簡単なブロック図(Raspberry Pi Pico 2)](1-x-microcontroller.md)
+       -  マイコンプログラミングを取り巻く要素技術（技術マップ）
+    -  [マイコン用プログラミング言語](1-x-programming-languages.md)
+     - [MicroPython/Python復習](1-x-micropython_summary.md)
+     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-x-programming-tools.md)
+     - Raspberry Pi Pico 2 W (略称 RP2) ボードの説明
+         -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
+     - REPLを用いたボトムアップの試作例
+         - Pythonは対話的にPGできます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
+         - 最初に使うセンサの場合、REPLで試行錯誤するのがTurnAroundTimeの短縮に効果的
+     - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
+        - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
+  - 基礎２ ;  Input/Outputの基礎/Digial/Analog(PWM)
+    - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
+    - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
+    - DitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
+      - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
+      - [PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
+      - [PWMを使ってサーボモータ制御(DUTYを変える)](2-5-ServoControl.md)
+      - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
+    - [DitalでAnalogを表現する-> フルカラーLEDを使う](2-6-NeoPixel.md)
+    - GPIO AD/DA変換　ハンズオン（全部はできないの選択）
+      - VRで光の明るさが変わる
+      - VRでNeoPixelの色が変わる
+      - VRでサーボモータの角度が変わる
+      - VRで音の高低が変わる
+      - VRとモータドライバでDCモータ制御
+  - 基礎３ ; 周辺機器との接続方法、デバイス活用
+    - マイコンに接続できる周辺機器
+       - [センサ紹介、センサの使い方(データの取得方法)](3-0-sensor.md)
+    - [マイコンと周辺機器との通信インタフェース(I2C, SPI, Serial)](3-1-use-SerialBus.md)
+    - センサ接続　(接続バス　I2C) , デバイスを制御する方法(ドライバ）
+      -  [CO2センサ(I2C接続)](3-x-CO2-sensor.md)
+      -  [ジャイロセンサ(I2C接続)](3-3-6dof.md)
+      -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
+      -  GPS（シリアル接続）
+      -  人感センサ（デジタル1線）
+    - 出力装置
+      - [キャラクタディスプレイ（I2C）](3-2-LCD-Display.md)
+      - グラフィックディスプレイ(SPI)
+      - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
+    - 記憶装置
+      - [SDカード(SPI接続)](3-x-SPI-SDCard.md) 
+    - センサ活用事例ハンズオン（全部はできないの選択）
+      - 温湿度計測結果をLCDに表示
+      - 障害物との距離をLCDに表示
+        -  障害物との距離をLCDと音で表現
+      - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（デジタル版テルミン）
+  - 基礎４ ; インターネット接続、Web API利用, MQTT利用
+    - インターネット接続(Wi-Fi接続)  NTP接続
+    - HTTPを用いた通信とサンプルコード
+      - [天気予報サイトから指定した地点の天気情報を取得](4-2-WebAPI.md)
+    - MQTTを用いた通信とサンプルコード
+    - [RP2をWebServerとして動かす](4-x-WebServer.md)
+    - インターネット活用ハンズオン
+      - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
+      - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
+  - 応用１ ;  IoT PF活用、ビジュアル化
+    - IoT PFにデータをアップロード、計測データ見える化
+
+  ### 時間がまだある場合の補講
+  - 補講１ ； MicroPythonの性能、チューニング、リソース管理
+     - MicroPythonは早いのか遅いのか、C言語と比べて何倍時間がかかるのか
+     - ボトルネックを探す方法、チューニング方法
+     - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良いバッファ最大サイズとは？(Heap
+    メモリサイズの1/3を上限とするが無難)
+  - 補講２ ； PIO...MicroPythonの遅さをハードウエアでカバーする
+     - PIO(Programming IO Interface)とは何か、目的、用途
+     - 内部構造
+     - 使い方
+       - 簡単なLチカ、SW入力
+       - DMAを併用することでデータストリームの高速転送が可能
+       - 応用例：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
+  - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
+    - 手軽にGUIを実現する方法
+      -  IoT PF(ThingsBoard)によるダッシュボード
+      -  Node-REDによるダッシュボード
+      -  RPiPico上でWebServer、ブラウザ上でWidget表示
+    -  音楽や音声を再生する
+      - 音声合成LSIを利用(シリアル接続で発話できる)  
+      - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
+  - 補講４ ； さらにいろんなデバイスを繋ぐ
+    -  SDカードとの接続(FileSystem,File Read/Write）    
+    -　LCDパネル（ビットマップ表示） 
+    -  CMOSカメラとの接続
+      -　デバイス例：Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico    
+  - 補講４ ； マイコンとクラウドサービスとの連携
+  - 補講５ ； マイコンでAI技術をどう活用するか
+    - 活用できるAIの技術とは
+    - どのようにマイコンで活用するか
+      - 構想、試作段階でのAI活用(AIを活用した発想法)
+      - 開発段階でのAI活用(Codingでの活用)
+      - アプリケーションでのAI活用(WebAPIとの連携) 
