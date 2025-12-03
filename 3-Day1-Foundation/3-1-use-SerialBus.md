@@ -98,3 +98,5 @@ i2c.writeto_mem(DEV_ADDR, reg_addr, data)
   - https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2C.html#class-i2c-a-two-wire-serial-protocol
 - I2Cバス仕様書 (I2Cバス仕様およびユーザーマニュアル)
   - https://www.nxp.com/docs/ja/user-guide/UM10204.pdf
+- SPI解説文
+  - https://www.ti.com/content/dam/videos/external-videos/en-us/6/3816841626001/6163521589001.mp4/subassets/basics-of-spi-serial-communications-presentation.pdf
