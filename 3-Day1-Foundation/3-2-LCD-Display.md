@@ -34,11 +34,13 @@ LCD用ドライバとして＃＃＃、＃＃＃、＃＃＃がありますが�
 MIPを使えばGitHub上のソースを直接MicroPythonにインストールすることができます。
 ```
 import mip
-mip.install(https://raw.githubusercontent.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/refs/heads/master/Python/Python_Libraries/LCD_API.py)
+mip.install('https://raw.githubusercontent.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/refs/heads/master/Python/Python_Libraries/LCD_API.py')
+mi.install('https://raw.githubusercontent.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/refs/heads/master/Python/Python_Libraries/I2C_LCD.py')
 ```
+上記URLはLCD DriverのRAWファイルが取得できるURLです。
 
 
-LCDの初期化
+### LCDの初期化
 ```
 from machine import I2C
 from I2C_LCD import I2CLcd
