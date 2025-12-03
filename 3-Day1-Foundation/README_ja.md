@@ -39,7 +39,7 @@
       -  [CO2センサ(I2C接続)](3-x-CO2-sensor.md)
       -  [ジャイロセンサ(I2C接続)](3-3-6dof.md)
       -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
-      -  GPS（シリアル接続）
+      -  [GPS（シリアル接続）](3-x-Serial-GPS.md)
       -  人感センサ（デジタル1線）
     - 出力装置
       - [キャラクタディスプレイ（I2C）](3-2-LCD-Display.md)
