@@ -1,5 +1,6 @@
 # LED 点滅プログラム
 Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号をよくご確認ください。
+<img src="assets/pico-2-w-pinout.png" width=800><br>
 
 LEDはGP16に接続します。LEDが点灯するかREPLで試しましょう
 GP16を出力用に初期化するコードは以下
