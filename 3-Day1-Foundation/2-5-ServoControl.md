@@ -14,8 +14,8 @@
 - 茶：GND(0V)
 - 橙：制御信号(PWM)(3.3V)
 
-<img srg="servo_fig.png" width=600><br>
-<img srg="servo_horn.png" width=600><br>
+<img src="servo_fig.png" width=600><br>
+<img src="servo_horn.png" width=600><br>
 
 
 
