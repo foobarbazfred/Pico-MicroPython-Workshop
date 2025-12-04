@@ -4,8 +4,8 @@ import network
 import time
 import ntptime
 
-SSID = 'AAA'
-PASSWD = 'TTT'
+SSID = 'xxxxxx'
+PASSWD = 'yyyyyyy'
 
 MAX_RETRY = 10
 station = None
