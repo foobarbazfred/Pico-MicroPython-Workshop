@@ -7,13 +7,14 @@ import ntptime
 SSID = 'xxxx'
 PASSWD = 'yyyyy'
 
-MAX_RETRY = 10
+MAX_RETRY = 5
 station = None
 
 def setup_WiFi(id, pwd):
     sta = network.WLAN(network.STA_IF)
     sta.active(True)
     sta.connect(id, pwd)
+    retry_count = 0
     while sta.isconnected() == False:
         time.sleep(1)
         retry_count += 1
