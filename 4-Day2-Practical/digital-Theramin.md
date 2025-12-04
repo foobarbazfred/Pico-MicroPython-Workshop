@@ -12,3 +12,56 @@
 <img src="assets/digital_termin_soft.png" width=600>
 
 ## ソースコード
+```
+import time
+from machine import Pin
+from machine import PWM
+from hc_sr04 import HC_SR04
+
+
+trig = Pin(14, Pin.OUT)
+echo = Pin(15, Pin.IN)
+hc_sr04 = HC_SR04(trig,echo)
+
+# setup PWM output
+PWM_OUT_PIN=16
+freq = 440
+pwm0 = PWM(Pin(PWM_OUT_PIN), freq=freq, duty_u16=0)
+
+MIN_DIST = 0
+MAX_DIST = 30
+
+MIN_HZ = 100
+MAX_HZ = 800
+
+VOLUME = 0x1ff
+
+#
+# convert distance to frequnecy
+#
+def dist2freq(dist):
+    freq = dist / (MAX_DIST-MIN_DIST) * (MAX_HZ - MIN_HZ ) + MIN_HZ
+    return freq
+
+while True:
+    # get distance
+    distance, pulse_width = hc_sr04.measure() 
+    print(f"dist: {distance:0.2f} cm", end="")
+    if distance > MAX_DIST:
+        pwm0.duty_u16(0)
+        print()
+        time.sleep(0.05)
+    else:
+        # convert distance to frequency
+        freq = dist2freq(distance)
+
+        # play sound widh sounder
+        pwm0.freq(int(freq))
+        pwm0.duty_u16(VOLUME)
+        print(f" freq: {freq} Hz")
+        time.sleep(0.05)
+
+# finally; disable PWM
+pwm0.deinit()
+
+```
