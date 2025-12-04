@@ -4,6 +4,12 @@
 ### ソース(Raspberry Pi Pico 2 W)
 空気質センサで温度、湿度、CO2濃度を収集し、MQTTでPublishする
 
+動作例
+```
+temp: 25.28C, hum: 19.47 %, CO2: 506 ppm
+send message {"hum": 19.465934, "co2": 506, "temp": 25.275048} on topic handson/sensor/volume/user001
+```
+
 ```
 import time
 from scd41 import *
