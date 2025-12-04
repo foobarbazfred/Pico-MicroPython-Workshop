@@ -32,6 +32,7 @@ sw.value()
 0の時は押されている時ですのでLEDを点灯させます。それ以外はLEDを消します。
 ```
 while True:
+    print(sw.value())
     if sw.value() == 0:
         led.on()
     else:
