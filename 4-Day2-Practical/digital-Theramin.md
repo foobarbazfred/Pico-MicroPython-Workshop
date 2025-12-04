@@ -6,6 +6,8 @@
 
 ## 機能設計
 - ハードウエア構成
+<img src="assets/digital_termin.png" width=600>
+
 - ソフトウエア構成
 
 ## ソースコード
