@@ -1,7 +1,8 @@
 # 空気質収集とIoTダッシュボード表示
 
 
-センサで空気質情報を収集し、MQTTでPublishする
+### ソース(Raspberry Pi Pico 2 W)
+空気質センサで温度、湿度、CO2濃度を収集し、MQTTでPublishする
 
 ```
 from scd41 import *
