@@ -29,6 +29,9 @@ i2c.scan()
 >>> hex(i2c.scan()[0])
 '0x62'
 ```
+
+SCD41用ドライバソフト
+file: /lib/scd41.py
 ```
 #
 # Driver for SCD41
