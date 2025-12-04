@@ -64,13 +64,13 @@ CLIENT_ID = f'rpi_pico_{MEMBER_ID:03d}'
 TOPIC = TOPIC_BASE + f"{MEMBER_ID:03d}"
 
 def connect():
-    print('Connected to MQTT Broker "%s"' % (server))
+    print(f'Connected to MQTT Broker {BROKER}')
     client = MQTTClient(CLIENT_ID, BROKER, PORT)
     client.connect()
     return client
 
 def reconnect():
-    print('Failed to connect to MQTT broker, Reconnecting...' % (server))
+    print(f'Failed to connect to MQTT broker {BROKER}, Reconnecting...')
     time.sleep(5)
     client.reconnect()
 
