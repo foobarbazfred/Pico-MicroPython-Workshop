@@ -44,6 +44,7 @@ i2c.scan()
 
 from machine import Pin
 from machine import I2C
+import time
 
 SCD41_ADDRESS = 0x62
 
