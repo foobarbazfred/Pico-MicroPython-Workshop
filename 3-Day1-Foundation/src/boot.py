@@ -19,7 +19,7 @@ def setup_WiFi(id, pwd):
         retry_count += 1
         if retry_count > MAX_RETRY:
             print('Connection failed')
-            return station, False
+            return None, False
     print('Connection successful')
     print(station.ifconfig())
     return station, True
