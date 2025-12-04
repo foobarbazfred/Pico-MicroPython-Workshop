@@ -9,14 +9,15 @@
   - 中央（90°） : 約1.5ms 
   - 最大角度（180°） : 約2.4ms 
 
-<img src="assets/servo_fig.png" width=600><br>
+<img src="assets/servo_horn.png" width=600><br>
 
 サーボモータの結線
 - 赤：5V
 - 茶：GND(0V)
 - 橙：制御信号(PWM)(3.3V)
 
-<img src="assets/servo_horn.png" width=600><br>
+<img src="assets/servo_fig.png" width=600><br>
+
 
 
 
