@@ -9,5 +9,6 @@
 <img src="assets/digital_termin.png" width=600>
 
 - ソフトウエア構成
+<img src="assets/digital_termin_soft.png" width=600>
 
 ## ソースコード
