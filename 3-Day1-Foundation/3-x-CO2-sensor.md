@@ -14,6 +14,7 @@ CO2センサの仕様
 
 デバイス接続テスト
 ```
+from machine import I2C
 I2C_SDA = 4
 I2C_SCL = 5
 i2c = I2C(id=bus, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
