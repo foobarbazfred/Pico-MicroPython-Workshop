@@ -10,6 +10,10 @@ from scd41 import *
 I2C_SDA = 4
 I2C_SCL = 5
 
+def mqtt_publish(temp, hum, co2):
+    message = json.dumps({'temp': temp, 'hum' : hum , 'co2' : co2})
+    mqtt.publish(message)
+
 def main():
 
     #
@@ -35,6 +39,7 @@ def main():
             print(f"temp: --.-- C, hum: --.-- %, CO2: ---- ppm")           
         else:
             print(f"temp: {temp:.2f}C, hum: {hum:.2F} %, CO2: {co2} ppm")
+            mqtt_publish(temp, hum, co2)
         time.sleep(60)
 
 if __name__ == '__main__':    
