@@ -10,6 +10,7 @@ file: boot.py
 #
 #
 import network
+import time
 
 SSID = 'xxxxx24G'
 PASSWD = 'xxxxx'
