@@ -14,7 +14,7 @@ LCDを以下で接続してください。(I2C(0)のデフォルトPIN配置）
 先ほど説明に従い、HW I2Cを使いI2C_0でデフォルトで接続してみます。
 ```
 from machine import Pin, I2C
-i2c_1 = I2C(1)
+i2c_1 = I2C(1, scl=Pin(19), sda=Pin(18), freq=400_000)
 ```
 正しく接続できているか、scan関数で確認します
 ```
