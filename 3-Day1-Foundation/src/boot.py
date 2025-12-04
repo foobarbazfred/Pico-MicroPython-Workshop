@@ -17,20 +17,20 @@ def setup_WiFi(id, pwd):
     print('Connection successful')
     print(station.ifconfig())
 
-setup_WiFi(SSID, PASSWD)
+#setup_WiFi(SSID, PASSWD)
 
 # Synchronize system clock using NTP
 # Wait briefly to ensure DNS is ready
 time.sleep(3)
 
 # Try synchronizing  system clock by  NTP
-try:
-    ntptime.settime()
-    print("Time synchronized:", time.localtime())
-except OSError as e:
-    print("NTP sync failed:", e)
+#try:
+#    ntptime.settime()
+#    print("Time synchronized:", time.localtime())
+#except OSError as e:
+#    print("NTP sync failed:", e)
 
-from upysh import *
+#from upysh import *
 #
 #
 #
