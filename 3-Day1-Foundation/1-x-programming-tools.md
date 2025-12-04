@@ -85,3 +85,5 @@ Type "help()" for more information.
      2824 upysh2.py
 2,488k free
 ```
+最も簡単なLチカ<br>
+[2-1-SimpleBlink.md](2-1-SimpleBlink.md)
