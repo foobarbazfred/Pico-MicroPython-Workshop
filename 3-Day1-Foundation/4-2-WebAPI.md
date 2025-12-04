@@ -151,7 +151,7 @@ import urequests
 BASE_URL='https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy'
 
 LOCATION=(35.7388919, 139.4607429)
-API_KEY='_key!2025-12-04_'
+API_KEY='0123aabbbccc'
 
 lat, lon = LOCATION
 request_url = f"{BASE_URL}?lat={lat}&lon={lon}&api_key={API_KEY}"
