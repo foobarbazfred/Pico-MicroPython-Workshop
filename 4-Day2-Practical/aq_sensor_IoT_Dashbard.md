@@ -7,7 +7,8 @@
   - 遠隔地に配置した空気質センサを用いて温度、湿度、CO2濃度をリアルタイムで表示する
   - ダッシュボード形式でグラフ化して見やすくする
 
- ## システム構成
+## システム構成
+<img src="assets/IAQ_sensing_archi.png" width=800>
  
 
 ### ソース(Raspberry Pi Pico 2 W)
