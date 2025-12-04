@@ -21,6 +21,9 @@ I2C_SCL = 5
 BUS=0
 i2c = I2C(id=BUS, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
 ```
+```
+i2c.scan()
+```
 実行結果
 ```
 >>> hex(i2c.scan()[0])
