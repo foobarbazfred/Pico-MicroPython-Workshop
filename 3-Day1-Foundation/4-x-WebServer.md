@@ -44,9 +44,17 @@ while True:
 実際に動かした画面は以下の通りです<br>
 <img src="assets/RP2_as_WebServer.png" width=600>
 
-ブラウザで状態を表示するだけではなく、LEDの点灯制御等もできるようにすることも可能です。<br>
-下記のソースでは、２種類のURLを実装しており、GPIOの状態表示に加え、On/Off制御も可能です。<br>
-<a href="src/web_server/rp2_webserver.py">WebServer ソース</a><br>
+ブラウザで状態を表示するだけではなく、LEDの点灯制御等もできるようにすることも可能です。
+下記のソースでは、３種類のURLを実装しています。<br>(IPは例です。研修でお使いのRaspberry Pi Pico 2 Wに割り当てられたIPで置き換えてください)。
+- http://192.168.10.100:80
+  - Raspberry Pi Pico 2 WのGPIO/LEDの状態表示 
+- http://192.168.10.100:80/status
+  - Raspberry Pi Pico 2 WのGPIO/LEDの状態表示 
+- http://192.168.10.100:80/control
+  -  Raspberry Pi Pico 2 WのGPIO/LEDの状態変更
+
+GPIO/LEDの状態表示に加え、On/Off制御も可能です。<br>
+<a href="src/web_server/rp2_webserver.py">Raspberry Pi Pico 2 WをWebServerとして動作させるソース</a><br>
 <img src="assets/RP2_as_WebServer_kai.png" width=400><br>
 
 現在RP2にどのIPが割り当てられているか？は以下の操作で確認することができます。ですが、boot.pyでの実装では、staの値は関数内に閉じており、参照できません。すみません。
