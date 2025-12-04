@@ -1,28 +1,49 @@
-# Practical Edition (Day 2)
-On the second day, you will create a simple system as a practical exercise. Any kind of circuit or application is fine. Use a microcontroller (Raspberry Pi Pico 2 W) along with sensors or switches as you like. These are called the Pine Course, Bamboo Course, and Plum Course. Pine is not necessarily superior, but it is true that Pine is a bit more complicated. We will start the explanation from the simplest, Plum.
+# 実践編(2日目）
+2日目は実践編として、簡単なシステムを作っていただきます。どんな回路やアプリでも構いません。マイコン(Raspberry Pi Pico 2 W)とセンサやスイッチ等と組み合わせてMicroPythonで制御しましょう。０から作るのは大変と思い、サンプルアプリを３種類用意します。
+これらは、松コース、竹コース、梅コースと呼びます。松が上等とかそういう位置づけではありませんが、松がややこしいのは事実です。
+簡単な機構の梅から説明します
 
-## Fundamental Course
-- Objective: Programming focused on switches, sound, and light
-- Example applications:
-   - Use switches and volume controls to create various patterns of light and sound from LEDs or speakers
-   - Systems focused on sound and light. Can be developed into games
+## 仕様書を作る
+- 厳密な設計書は不要ですが、試作アプリの目指す方向を示し、メンバ間の意思疎通のため最低限の仕様書を作りましょう
+   - 機能仕様書
+      - アプリケーション名（何をするものか分かりやすい名前、あるいは、愛称）
+      - アプリケーションが提供する機能（そのアプリケーションを使うと何が得られるのか？利用者に何をしてくれるのか）
+   - システム設計書
+      - ハードウエアのモジュール設計（Raspberry Pi にどのような周辺装置が接続されるのか） 
+      - ソフトウエアのモジュール設計（大まかなブロック図でOKです）
+      - ネットワークを介してサーバと繋がる場合、何と接続して、どういうデータを流すのか
 
-## Practical Course
-- Objective: Programming that utilizes sensors
-- Example applications:
-   - Use sensors such as motion sensors, temperature/humidity sensors, gyro sensors, etc.
-   - Provide feedback to users with the measured data
-   - Examples of display methods include using a server for gauges, LCD character displays, LED blinking patterns, and brightness changes of LEDs
-   - You can also use Thonny's graphing function
+## 梅コース
+- ねらい：スイッチ、光、音を中心にプログラミング
+- アプリの例
+   - スイッチやボリュームを使って、LEDやスピーカからいろんなパターンで光らせたり音を鳴らす
+   - 音と光にこだわるシステム。ゲームに発展させることも可能
+   - 音ゲー；音ゲーが出してくるLEDパターンに合わせて、ボタン操作をまねる
+   - ボタンによる楽器；2ビットで演奏するデジタルチャルメラ、PWMによる再生、またはI2Sによる再生
+   - [デジタルテルミン；距離センサ＋PWM＋圧電ブザーによる電子楽器](digital-Theramin.md)
 
-## Expert Course
-- Objective: Programming that utilizes networking
-- Example applications:
-   - Use Web APIs to get weather information and display it on an LCD or express it with a servo
-   - Use MQTT for bidirectional communication with microcontrollers placed remotely. You can control LEDs and servos at remote locations
+## 竹コース
+- ねらい：センサを活用したアプリケーション、I2C、SPI、シリアルでセンサや表示装置と接続する
+- アプリの例
+   - CO2センサによる、温湿度、CO2濃度を表示、Thonnyのグラフ機能でグラフ化、一定以上になると、空気質改善の指示が出る
+   - CO2センサで部屋のCO2を計測、一定以上になるとLEDを点灯して扉を開ける（サーボのホーンで代用）、改善されると、LEDが消えて扉が閉じられる    
+   - 人感センサや温湿度センサ、ジャイロセンサ等を使う
+   - 計測されたいろんなデータ、利用者にフィードバックする
+   - 距離センサと圧電サウンダによる、衝突防止装置 (壁に近づきすぎるとピピピと鳴らす、壁との距離に応じて間隔を変える(車のバック衝突機能のような))
+   - ディプレイの方法として、サーバを用いたゲージや、LCDのキャラクタディスプレイ、LEDの点滅の変化、LEDの明るさ変化等
 
-## Legendary Course
-- Objective: Prototyping an IoT system
-- Example applications:
-   - Upload collected sensor data to an IoT platform and visualize temperature, humidity, or human flow
-   - ThingsBoard / Node-RED will be provided as IoT platforms
+## 松コース
+- ねらい：Networkを活用したプログラミング、WebAPIとの接続
+- アプリの例：
+   - WebAPIを使って世界各地の天気情報を取得、LCDで地名と気象情報を表示、サーボで天気、または、気温を表示
+   - 生活を助けてくれる各種WebAPIを活用、情報を取得、提供する
+   - MQTTを使って遠隔に配置したマイコンと双方向通信できる。遠隔地のLEDやサーボを制御できる
+
+## スーパ松コース
+- ねらい：IoT　システムを試作する
+- アプリの例：
+  - IoT PFとしてNode-REDを提供する予定です。ダッシュボードにより計測データをグラフ化できます。
+  - センサで収集したデータをIoT PF にアップロード、温湿度や人の流量を見える化する
+     - [ダッシュボードその１](aq_sensor_IoT_Dashbard.md)
+     - [ダッシュボードその２](aq_sensor_IoT_Dashbard2.md)
+
