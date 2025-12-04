@@ -5,17 +5,49 @@
 空気質センサで温度、湿度、CO2濃度を収集し、MQTTでPublishする
 
 ```
+import time
 from scd41 import *
 
 # Sensor I2C Connection Pin Assign
 I2C_SDA = 4
 I2C_SCL = 5
 
-def mqtt_publish(temp, hum, co2):
-    message = json.dumps({'temp': temp, 'hum' : hum , 'co2' : co2})
-    mqtt.publish(message)
+# mqtt defines
+import json
+from umqtt.simple import MQTTClient
 
+# define MQTT Broker
+BROKER = "broker.emqx.io"
+PORT = 1883
+TOPIC_BASE = "handson/sensor/volume/user"
+MEMBER_ID = 1
+CLIENT_ID = f'rpi_pico_{MEMBER_ID:03d}'
+TOPIC = TOPIC_BASE + f"{MEMBER_ID:03d}"
+
+def connect():
+    print(f'Connected to MQTT Broker {BROKER}')
+    client = MQTTClient(CLIENT_ID, BROKER, PORT)
+    client.connect()
+    return client
+
+def reconnect():
+    print(f'Failed to connect to MQTT broker {BROKER}, Reconnecting...')
+    time.sleep(5)
+    client.reconnect()
+
+def mqtt_publish(temp, hum, co2):
+    msg = json.dumps({'temp': temp, 'hum' : hum , 'co2' : co2})
+    print('send message %s on topic %s' % (msg, TOPIC))
+    client.publish(TOPIC, msg, qos=0)
+
+connect = None
 def main():
+    global connect
+    try:
+        client = connect()
+    except OSError as e:
+        reconnect()
+
 
     #
     # setup
