@@ -4,29 +4,29 @@ import network
 import time
 import ntptime
 
-SSID = 'xxxxx24G'
-PASSWD = 'xxxxx'
+SSID = 'AAA'
+PASSWD = 'TTT'
 
 MAX_RETRY = 10
 station = None
 
 def setup_WiFi(id, pwd):
-    station = network.WLAN(network.STA_IF)
-    station.active(True)
-    station.connect(id, pwd)
-    while station.isconnected() == False:
+    sta = network.WLAN(network.STA_IF)
+    sta.active(True)
+    sta.connect(id, pwd)
+    while sta.isconnected() == False:
         time.sleep(1)
         retry_count += 1
         if retry_count > MAX_RETRY:
             print('Connection failed')
             return None, False
     print('Connection successful')
-    print(station.ifconfig())
-    return station, True
+    print(sta.ifconfig())
+    return sta, True
 
-station, status = setup_WiFi(SSID, PASSWD)
+sta, stat = setup_WiFi(SSID, PASSWD)
 
-if status:
+if stat:
     # Synchronize system clock using NTP
     # Wait briefly to ensure DNS is ready
     time.sleep(3)
