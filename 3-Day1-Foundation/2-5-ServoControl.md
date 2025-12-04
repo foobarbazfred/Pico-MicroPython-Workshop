@@ -14,6 +14,10 @@
 - 茶：GND(0V)
 - 橙：制御信号(PWM)(3.3V)
 
+<img srg="servo_fig.png" width=600><br>
+<img srg="servo_horn.png" width=600><br>
+
+
 
 PWMを使うことで、サーボを簡単に制御できます。サーボのホーンの角度で、疑似的にアナログ値を表現することができます。
 ```
