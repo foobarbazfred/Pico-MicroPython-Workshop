@@ -45,7 +45,7 @@ while True:
 <img src="assets/RP2_as_WebServer.png" width=600>
 
 ブラウザで状態を表示するだけではなく、LEDの点灯制御等もできるようにすることも可能です。
-下記のソースでは、３種類のURLを実装しています。<br>(IPは例です。研修でお使いのRaspberry Pi Pico 2 Wに割り当てられたIPで置き換えてください)。
+下記のソースでは、３種類のURLを実装しています。(IPは例です。研修でお使いのRaspberry Pi Pico 2 Wに割り当てられたIPで置き換えてください)。
 - http://192.168.10.100:80
   - Raspberry Pi Pico 2 WのGPIO/LEDの状態表示 
 - http://192.168.10.100:80/status
