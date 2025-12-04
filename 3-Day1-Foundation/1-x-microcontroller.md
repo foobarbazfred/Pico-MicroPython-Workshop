@@ -7,4 +7,6 @@
 
 
 boot.pyが不適切で文鎮になった場合、以下のページからnukeをDL,インストール<br>
+Resetting Flash memory<br>
+file:  flash_nuke.uf2<br>
 https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#software-utilities
