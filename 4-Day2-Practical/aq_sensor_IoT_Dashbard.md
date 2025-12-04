@@ -40,9 +40,9 @@ def mqtt_publish(temp, hum, co2):
     print('send message %s on topic %s' % (msg, TOPIC))
     client.publish(TOPIC, msg, qos=0)
 
-connect = None
+client = None
 def main():
-    global connect
+    global client
     try:
         client = connect()
     except OSError as e:
@@ -77,4 +77,8 @@ def main():
 
 if __name__ == '__main__':    
    main()    
+
+#
+# end of file
+#
 ```
