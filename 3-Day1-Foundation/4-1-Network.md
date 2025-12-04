@@ -19,7 +19,7 @@ def setup_WiFi(id, pwd):
     station.active(True)
     station.connect(id, pwd)
     while station.isconnected() == False:
-        pass
+        time.sleep(1)
 
     print('Connection successful')
     print(station.ifconfig())
