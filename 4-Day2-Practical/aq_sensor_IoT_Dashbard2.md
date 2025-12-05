@@ -24,4 +24,5 @@ MQTT INノードを使うことで、Subscribeが自動的に行われ、条件�
 
 12/5に導入していたいだたRPiのIPは以下<br>
 http://172.16.86.97:1880<br>
-
+Dashboard UIは以下<br>
+http://172.16.86.97:1880/ui
