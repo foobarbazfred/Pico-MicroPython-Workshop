@@ -1,6 +1,9 @@
 # NeoPixelの制御
 
-NeoPixelはシリアルで制御できるカラーLEDであり、複数直列に接続可能です。（数珠繋ぎに何個でもつなげられる）。
+NeoPixelはシリアルで制御できるカラーLEDであり、複数直列に接続可能です。（数珠繋ぎに何個でもつなげられる）。<br>
+MicroPython DocumentsのNeoPixel説明<br>
+[neopixel-and-apa106-driver](https://docs.micropython.org/en/latest/rp2/quickref.html#neopixel-and-apa106-driver)<br>
+
 組み込みライブラリのNeoPixelではタイミングが守れないためか正常に動作しません。freenoveが提供するNeoPixelドライバはPIOによりタイミング制御されており、誤動作なく正確に動作します。以下に置いていますので、このライブラリを使ってください。<br>
 https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/src/lib/neopixel.py<br>
 mipを使ってインストールすることもできます
