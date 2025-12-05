@@ -11,7 +11,7 @@ LCDを以下で接続してください。(I2C(0)のデフォルトPIN配置）
  scl=5, sda=4,
 ```
 
-先ほど説明に従い、HW I2Cを使いI2C_0でデフォルトで接続してみます。
+先ほど説明に従い、HW I2Cを使いI2C_1で接続してみます。
 ```
 from machine import Pin, I2C
 i2c_1 = I2C(1, scl=Pin(19), sda=Pin(18), freq=400_000)
@@ -22,19 +22,15 @@ i2c_1.scan()
 ```
 以下が実行結果です
 ```
->>> from machine import Pin, I2C
->>> i2c_0 = I2C(0)
->>> i2c_0.scan()
-[39]
->>> hex(i2c_0.scan()[0])
+>>> hex(i2c_1.scan()[0])
 '0x27'
 ```
-IOとしてどのPinを使用するか指定せず、デフォルトにまかせていました。設定内容を確認することもできます
+IOとしてどのPinを使用しているか、i2c_1と入力すると確認できます
 ```
->>> i2c_0
-I2C(0, freq=400000, scl=5, sda=4, timeout=50000)
+>>> i2c_1
+I2C(1, freq=40000, scl=19, sda=18, timeout=50000)
 ```
-上記結果より、SCK:GPIO5、SDA:PGIO4, I2Cバスのクロック50KHz (50_000)であることが分かります。
+上記結果より、I2Cハードブロック１，SCK:GPIO19、SDA:PGIO18, I2Cバスのクロック50KHz (50_000)であることが分かります。
 LCDに文字を表示するには、RAM領域にASCIIコードを書き込む必要があります。プログラムですべて実装するのは大変なので、LCD用ドライバを活用して、プログラム量を減らせられます。
 LCD用ドライバとして＃＃＃、＃＃＃、＃＃＃がありますが、今回使っているキットのメーカが提供するLCDドライバ(I2C_LCD1602)を活用します。
 
@@ -78,6 +74,7 @@ lcd.putstr("     bye!! ")
 
 <img src="assets/Schematics_LCD.png" width=800>
 
+ソース一式をまとめると以下となります
 ```
 from machine import Pin
 from machine import I2C
