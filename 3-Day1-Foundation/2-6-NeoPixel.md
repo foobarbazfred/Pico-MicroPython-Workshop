@@ -42,7 +42,7 @@ led_r = 10
 led_g = 100
 led_b = 100
 np.set_pixel(pos, led_r, led_g, led_b)
-nb.show()
+np.show()
 ```
 消灯は以下です
 ```
