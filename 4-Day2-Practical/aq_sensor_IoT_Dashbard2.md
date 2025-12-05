@@ -6,7 +6,7 @@ MQTT BrokerにPublishされたメッセージをNode-REDを使って見える化
 Node-REDにはグラフ化機能がありそれらを使うことで簡単にダッシュボードを作ることができます。
 
 Node-REDを用いたIoT Dashboard<br>
-<img src="assets/IAQ_sensor_Dashboard.png" width=400><br>
+<img src="assets/Node-RED_3groups_zoom.png" width=400><br>
 
 - Node-REDのフロー<br>
 <img src="assets/Node-RED_flow.png" width=700><br>
