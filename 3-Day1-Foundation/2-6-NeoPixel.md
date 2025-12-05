@@ -21,7 +21,7 @@ import time
 from machine import Pin
 from neopixel2 import myNeopixel
 NUM_LEDS = 8
-PIN_NO = 18
+PIN_NO = 16
 np = myNeopixel(NUM_LEDS, PIN_NO)
 ```
 5番目のLEDを点灯させるプログラム（色は青緑）
