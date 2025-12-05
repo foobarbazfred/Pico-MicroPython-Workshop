@@ -66,6 +66,7 @@ def control(params):
 
 
 import socket
+# get socket address info
 addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
 
 s = socket.socket()

@@ -2,10 +2,15 @@
 
 ### Raspberry Pi Pico 2 WのWifi機能
 
-Raspberry Pi Pico ２ Wには無線機能が搭載されており、Wi-FiやBLEを使うことができます。本講義ではWi-Fiを使ったプログラミングを行います。Wi-Fiネットワークと接続するためのモジュールが提供されています。以下はWiFiに接続するコードの例です
+Raspberry Pi Pico ２ Wには無線機能が搭載されており、Wi-FiやBLEを使うことができます。本講義ではWi-Fiを使ったプログラミングを行います。Wi-Fiネットワークと接続するためのモジュールが提供されています。
+
+boot.pyの全コードは以下を参照ください<br>
+[src/boot.py](src/boot.py)
+<br>
+
+WiFiに接続するコードの例は以下
 
 Wi-Fi接続サンプル
-file: boot.py
 ```
 #
 #
@@ -19,11 +24,12 @@ def setup_WiFi(id, pwd):
     station = network.WLAN(network.STA_IF)
     station.active(True)
     station.connect(id, pwd)
-    while station.isconnected() == False:
-        time.sleep(1)
-
-    print('Connection successful')
-    print(station.ifconfig())
+    time.sleep(1)
+    if station.isconnected() == True:
+        print('Connection successful')
+        print(station.ifconfig())
+    else::
+        print('Connection failed')
 
 setup_WiFi(SSID, PASSWD)
 ```
@@ -64,3 +70,7 @@ time.localtime()
 ```
 (2025, 12, 3, 7, 43, 14, 2, 337)
 ```
+
+boot.pyの全コードは以下を参照ください<br>
+[src/boot.py](src/boot.py)
+<br>

@@ -15,7 +15,7 @@ import mip
 ```
 2. mip.install()関数を用いてumqtt.simpeをインストールします
 ```
-mip.install(‘umqtt.simple’)
+mip.install('umqtt.simple')
 ```
 上記操作によりMicroPythonのFlash(ファイルシステム)にumqtt.simpleがインストールされます。
 以下は実行結果です
