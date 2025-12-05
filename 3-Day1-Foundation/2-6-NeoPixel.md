@@ -69,6 +69,7 @@ while True:
    for pos in range(NUM_LEDS):
        if prev_pos:
            np.set_pixel(prev_pos, 0,0,0)
+           np.show()
        np.set_pixel(pos, led_r, led_g, led_b)
        np.show()
        prev_pos = pos
