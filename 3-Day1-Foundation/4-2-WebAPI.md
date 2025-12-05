@@ -146,7 +146,8 @@ https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherP
 api_keyは研修の際にお伝えします。応答JSONはWeatherAPIの仕様と同じです。マイコンからの利用を想定して応答文字コードはen(English)を指定しています
 Curlで実行する例は以下です
 ```
-curl 'https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy?lat=35.7&lon=139.5&api_key=abcde01235'
+KEY='aaaabbbbccccc123'
+curl "https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy?lat=35.7&lon=139.5&api_key=${KEY}" 
 ```
 
 MicroPythonからの呼び出し例は以下です
