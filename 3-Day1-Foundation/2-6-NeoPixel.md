@@ -6,7 +6,8 @@ https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foun
 
 結線についてはFreeNove様の図を流用しています<br>
 <img src="assets/schematics_NeoPixel.png" width=500><br>
-
+FreeNove様の説明ページ<br>
+https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python/6_NeoPixel.html<br>
 組み込みモジュールとしてすでに導入されているneopixelとの衝突を避けるため、neopixel2.py等と名前を変えてMicroPythonにインストールしてください。
 上記ライブラリが正しく使えているかは以下で確認してください。
 ```
