@@ -23,9 +23,9 @@ MQTT INノードを使うことで、Subscribeが自動的に行われ、条件�
 <img src="assets/Node-RED_gauge_node.png" width=400><br>
 
 Node-REDのソース一式<br>
+[src/Node-RED_flows_3users.json](src/Node-RED_flows_3users.json)
 
-
-12/5に導入していただいたRPiのIPは以下<br>
+12/5に導入していただいたRPiのIP<br>
 http://172.16.86.97:1880<br>
-Dashboard UIは以下<br>
+Dashboard にアクセスするURL<br>
 http://172.16.86.97:1880/ui
