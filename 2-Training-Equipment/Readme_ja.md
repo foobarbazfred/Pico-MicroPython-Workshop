@@ -51,6 +51,6 @@
   - Thonnyを入れておいてもらう
 
 ### メモ
-- MicroBitコンバチボード
-  -  [114877]micro:bitユニバーサル基板
+- micro:bitユニバーサル基板
+  -  製品名：[114877]micro:bitユニバーサル基板
   -  https://akizukidenshi.com/catalog/g/g114877/ 
