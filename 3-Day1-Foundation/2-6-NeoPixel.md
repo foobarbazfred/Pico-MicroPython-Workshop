@@ -4,6 +4,10 @@ NeoPixelはシリアルで制御できるカラーLEDであり、複数直列に
 組み込みライブラリのNeoPixelではタイミングが守れないためか正常に動作しません。freenoveが提供するNeoPixelドライバはPIOによりタイミング制御されており、誤動作なく正確に動作します。以下に置いていますので、このライブラリを使ってください。<br>
 https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/src/lib/neopixel.py
 
+結線についてはFreeNove様の図を流用しています<br>
+<img src="assets/schematics_NeoPixel.png" width=500><br>
+FreeNove様の説明ページ<br>
+https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python/6_NeoPixel.html<br>
 組み込みモジュールとしてすでに導入されているneopixelとの衝突を避けるため、neopixel2.py等と名前を変えてMicroPythonにインストールしてください。
 上記ライブラリが正しく使えているかは以下で確認してください。
 ```
@@ -18,7 +22,7 @@ import time
 from machine import Pin
 from neopixel2 import myNeopixel
 NUM_LEDS = 8
-PIN_NO = 18
+PIN_NO = 16
 np = myNeopixel(NUM_LEDS, PIN_NO)
 ```
 5番目のLEDを点灯させるプログラム（色は青緑）
