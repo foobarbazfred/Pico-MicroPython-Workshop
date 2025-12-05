@@ -49,3 +49,8 @@
 - Node-RED用RPi持ち込み
 - 受講者様PCの準備
   - Thonnyを入れておいてもらう
+
+### メモ
+- MicroBitコンバチボード
+  -  [114877]micro:bitユニバーサル基板
+  -  https://akizukidenshi.com/catalog/g/g114877/ 
