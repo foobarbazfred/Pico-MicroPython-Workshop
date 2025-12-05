@@ -74,4 +74,4 @@ MicroPythonを活用してどのようなアプリを作るか
   - TinyML：TensorFlow Lite for Microcontrollers などを使い、数十KB〜数百KBのモデルを動かす技術。用途は音声認識、ジェスチャー認識、異常検知など。
   - RP2350はTinyMLに十分対応可能で、RP2040よりも性能が向上しているため、より複雑な小型モデルを動かせます。実用的には センサー分類・異常検知・簡易音声認識などが適しています。TensorFlow Lite MicroやCMSIS-NNを使えば、教育・IoT・組込み用途でTinyMLを活用できます。
 - NPU（Neural Processing Unit）を統合したマイコンを使う案
-  - 入手しやすいNPU搭載マイコンとしては、NXP MCX Nシリーズ（FRDM-MCXN947ボード）、STM32N6シリーズ（評価ボードあり） が現実的な選択肢です。どちらも TensorFlow Lite Micro対応で、センサー分類や画像認識などのTinyML用途に適しています。STM32N6はより高性能ですが、NXP MCX Nシリーズの方が教育・評価用に手に入りやすい印象です。
+  - 入手しやすいNPU搭載マイコンとしては、NXP MCX Nシリーズ（FRDM-MCXN947ボード）、STM32N6シリーズ（評価ボードあり） が現実的な選択肢です。どちらも TensorFlow Lite Micro対応で、センサー分類や画像認識などのTinyML用途に適しています。STM32N6はより高性能ですが、NXP MCX Nシリーズの方が教育・評価用に手に入りやすい印象です。最も安価に試せるのは NXP MCX Nシリーズ（FRDM-MCXN947）や Analog Devices MAX78000。どちらも 数千円〜1万円程度で評価ボードが入手可能。
