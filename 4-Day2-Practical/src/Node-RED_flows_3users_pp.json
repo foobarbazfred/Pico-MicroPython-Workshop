@@ -1,0 +1,687 @@
+[
+    {
+        "id": "5455e92d.eb8018",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bfae6e05.8c53d8",
+        "type": "mqtt in",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "topic": "handson/sensor/volume/user001",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "7f43c84.ab71db8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "14b4624d.b3ffb6",
+                "bc7b4357.cc6618",
+                "30a5bb59.fb4e5c",
+                "d82203a7.0f0c"
+            ]
+        ]
+    },
+    {
+        "id": "14b4624d.b3ffb6",
+        "type": "debug",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e47817ff.5e7e9",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "934b952a.ac87f",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "室温(U1)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "bc7b4357.cc6618",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "TEMP抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "e47817ff.5e7e9"
+            ]
+        ]
+    },
+    {
+        "id": "67a59ef1.29252",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "934b952a.ac87f",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "湿度(U1)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "30a5bb59.fb4e5c",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "HUM抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.hum",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "67a59ef1.29252"
+            ]
+        ]
+    },
+    {
+        "id": "fe04be77.ea8c98",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "934b952a.ac87f",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "CO2濃度(U1)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "400",
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 420,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d82203a7.0f0c",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "CO2抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.co2",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 300,
+        "wires": [
+            [
+                "fe04be77.ea8c98"
+            ]
+        ]
+    },
+    {
+        "id": "222a70aa.a6b88",
+        "type": "mqtt in",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "topic": "handson/sensor/volume/user002",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "7f43c84.ab71db8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "bee37677.ad0d88",
+                "4de9fa10.e75edc",
+                "3de7eb41.139aac",
+                "db67aeaa.cbb91"
+            ]
+        ]
+    },
+    {
+        "id": "bee37677.ad0d88",
+        "type": "debug",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fb100acf.b774a8",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "c33c341c.d9eaa8",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "室温(U2)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "4de9fa10.e75edc",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "TEMP抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 500,
+        "wires": [
+            [
+                "fb100acf.b774a8"
+            ]
+        ]
+    },
+    {
+        "id": "d0269ecd.ee4458",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "c33c341c.d9eaa8",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "湿度(U2)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "3de7eb41.139aac",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "HUM抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.hum",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "d0269ecd.ee4458"
+            ]
+        ]
+    },
+    {
+        "id": "b3d392bc.715028",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "c33c341c.d9eaa8",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "CO2濃度(U2)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "400",
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 420,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "db67aeaa.cbb91",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "CO2抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.co2",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 620,
+        "wires": [
+            [
+                "b3d392bc.715028"
+            ]
+        ]
+    },
+    {
+        "id": "7629152b.6c832c",
+        "type": "mqtt in",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "topic": "handson/sensor/volume/user003",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "7f43c84.ab71db8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 720,
+        "wires": [
+            [
+                "e3744ae2.d57d6",
+                "9f0516a8.29b978",
+                "8449803e.3cdbc8",
+                "de33b75d.819c38"
+            ]
+        ]
+    },
+    {
+        "id": "e3744ae2.d57d6",
+        "type": "debug",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2f956576.614aea",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "f855be4f.ea9208",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "室温(U3)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "9f0516a8.29b978",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "TEMP抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 820,
+        "wires": [
+            [
+                "2f956576.614aea"
+            ]
+        ]
+    },
+    {
+        "id": "5ac496b.73195e8",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "f855be4f.ea9208",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "湿度(U3)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "8449803e.3cdbc8",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "HUM抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.hum",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 880,
+        "wires": [
+            [
+                "5ac496b.73195e8"
+            ]
+        ]
+    },
+    {
+        "id": "f4d5e8ea.6becf",
+        "type": "ui_gauge",
+        "z": "5455e92d.eb8018",
+        "name": "",
+        "group": "f855be4f.ea9208",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "CO2濃度(U3)",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "400",
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 420,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "de33b75d.819c38",
+        "type": "change",
+        "z": "5455e92d.eb8018",
+        "name": "CO2抽出",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.co2",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 940,
+        "wires": [
+            [
+                "f4d5e8ea.6becf"
+            ]
+        ]
+    },
+    {
+        "id": "7f43c84.ab71db8",
+        "type": "mqtt-broker",
+        "name": "EMQX",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "934b952a.ac87f",
+        "type": "ui_group",
+        "name": "UserGroup1",
+        "tab": "8ae3a292.6853b8",
+        "order": 1,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c33c341c.d9eaa8",
+        "type": "ui_group",
+        "name": "UserGroup2",
+        "tab": "8ae3a292.6853b8",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f855be4f.ea9208",
+        "type": "ui_group",
+        "name": "UserGroup3",
+        "tab": "8ae3a292.6853b8",
+        "order": 3,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8ae3a292.6853b8",
+        "type": "ui_tab",
+        "name": "ホーム",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
