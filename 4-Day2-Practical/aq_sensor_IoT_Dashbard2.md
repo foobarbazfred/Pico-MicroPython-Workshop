@@ -19,3 +19,7 @@ MQTT INノードを使うことで、Subscribeが自動的に行われ、条件�
 <img src="assets/Node-RED_change_node.png" width=400><br>
 msg.payloadに温度情報を入れて、ゲージノードにメッセージを流します。ゲージノードは上流(Changeノード）から送られてきたメッセージを参照して、ゲージの表示を更新します<br>
 <img src="assets/Node-RED_gauge_node.png" width=400><br>
+
+12/5に導入していたいだたRPiのIPは以下<br>
+http://172.16.86.97:1880/　<br>
+
