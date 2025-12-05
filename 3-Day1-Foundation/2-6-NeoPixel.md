@@ -50,3 +50,27 @@ np.fill(0,0,0)
 np.show()
 ```
 NeoPixelを使ってR/G/Bの色合いで中間値を表現したり、LEDの点灯位置でアナログ的に表現することが可能です。
+
+LEDがぐるぐる回るサンプルは以下です(０の位置が消えないバグが残っています)
+```
+import time
+from machine import Pin
+from neopixel2 import myNeopixel
+NUM_LEDS = 8
+PIN_NO = 16
+np = myNeopixel(NUM_LEDS, PIN_NO)
+
+led_r = 10
+led_g = 100
+led_b = 100
+
+prev_pos = None
+while True:
+   for pos in range(NUM_LEDS):
+       if prev_pos:
+           np.set_pixel(prev_pos, 0,0,0)
+       np.set_pixel(pos, led_r, led_g, led_b)
+       np.show()
+       prev_pos = pos
+       time.sleep(0.05)
+```
