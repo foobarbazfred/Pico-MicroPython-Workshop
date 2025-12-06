@@ -9,3 +9,5 @@ Arducamの特徴は以下です。
 
 ### ドキュメント類
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
+- Arducam-Shield-Mini-5MP-Plus
+  - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Hardware/Arducam-Shield-Mini-5MP-Plus/
