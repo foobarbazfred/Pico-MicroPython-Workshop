@@ -5,3 +5,7 @@ Arducamの特徴は以下です。
 - SPI接続で画像を高速に取り込める
 - RAWモード/JPEGモードの両方に対応
 - 低精度画素に対応
+
+
+### ドキュメント類
+- https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
