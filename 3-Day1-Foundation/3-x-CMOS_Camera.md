@@ -6,9 +6,9 @@ Arducamの特徴は以下です。
 - RAWモード/JPEGモードの両方に対応
 - 低精度画素に対応
 
-Arducam Shield Mini 5MP Plusの外観<br>
-<img src="assets/IMG_Arducam_ShieldMini5MP_Plus.png" width=400><br>
-
+Arducam Shield Miniの外観<br>
+<img src="assets/IMG_Arducam_ShieldMini.png" width=400><br>
+カメラの性能により、2メガピクセル版(上段)と5メガピクセル版(下段)があります
 
 
 ### ドキュメント類
