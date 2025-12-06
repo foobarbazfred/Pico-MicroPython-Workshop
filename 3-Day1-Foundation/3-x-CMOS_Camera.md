@@ -6,6 +6,10 @@ Arducamの特徴は以下です。
 - RAWモード/JPEGモードの両方に対応
 - 低精度画素に対応
 
+Arducam Shield Mini 5MP Plusの外観<br>
+<img src="assets/IMG_Arducam_ShieldMini5MP_Plus.png" width=400><br>
+
+
 
 ### ドキュメント類
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
