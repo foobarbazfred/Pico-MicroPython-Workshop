@@ -10,6 +10,9 @@ Arducam Shield Miniの外観<br>
 <img src="assets/IMG_Arducam_ShieldMini.png" width=400><br>
 カメラの性能により、2メガピクセル版(上段)と5メガピクセル版(下段)があります
 
+### カメラとの接続
+マイコンとカメラとの接続はSPIとI2Cの両方を使います。画像の転送はSPIで行い、カメラ制御はI2Cで行います。
+
 
 ### ドキュメント類
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
