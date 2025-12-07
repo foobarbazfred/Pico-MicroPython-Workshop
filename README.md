@@ -13,3 +13,5 @@
 - Training materials and sample code are managed in this repository.
 - If participants agree, projects created during the seminar will be committed here as works by the attendees.
 - All texts and sample code are open materials (MIT License).
+
+# [japanese version text](Readme_ja.md)
