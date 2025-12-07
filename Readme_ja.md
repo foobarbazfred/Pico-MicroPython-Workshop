@@ -16,6 +16,7 @@
 ## 研修コンテンツ
 - [１日目 基礎編](3-Day1-Foundation/README_ja.md)
 - [２日目 実践編](4-Day2-Practical/README_ja.md)
+- [研修タイムテーブル](1-Workshop%20Guidelines/schedule_ja.md)
 ## 本リポジトリの位置づけ
 - 研修資料、サンプルコードを本リポジトリで管理します
 - また研修で作られた作品について、合意をいただければ受講生の作品としてこちらにCommitします
