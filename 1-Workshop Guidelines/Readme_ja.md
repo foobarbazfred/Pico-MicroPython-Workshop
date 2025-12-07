@@ -1,6 +1,6 @@
 # セミナーの実施方針
 
-- 無線機能を持つマイコン(RPi Pico W)とインタプリタ(MicroPython)を使ったHandsOn
+- 無線機能を持つマイコン(Raspberry Pi Pico 2 W)とインタプリタ(MicroPython)を使ったHandsOn
 - 1日目と2日目の2日コース
 - 1日目の学び
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
