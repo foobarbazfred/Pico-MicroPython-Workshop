@@ -48,3 +48,5 @@
      - [ダッシュボードその２](aq_sensor_IoT_Dashbard2.md)
   - Node-REDのIoT PFを改良することで、MQTT メッセージにより遠隔で機器制御を行うことも可能です
 
+## プロトタイプ開発成果
+- [2025年度講習　受講者様による試作アプリの記録](hands-on-projects)
