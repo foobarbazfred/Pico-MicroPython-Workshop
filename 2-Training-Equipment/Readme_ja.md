@@ -1,6 +1,6 @@
 # 研修用教材
 ## 使用教材
-- マイコンはRaspberry Pi Pico 2Wを使用します
+- マイコンはRaspberry Pi Pico 2 Wを使用します(本資料中、一部でRP2と表記しています)
    - https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
 - プログラミング言語はMicroPythonです(CircuitPythonもありますが今回は使いません)
 - マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置として、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
@@ -12,10 +12,13 @@
    - https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/tree/master/Python
 
 ## 追加教材
+FREENOVE社のStarter Kitでは少し足りないため下記パーツを追加しています
 1. 温湿度センサ；M5Stack用 温湿度CO2センサ（SCD41）
    - 理由：IoTの基本として、空気質の計測が挙げられる。キット一式の中のセンサでもいいのだが、通信バスがI2Cでないのと、CO2を計測したいので、センサを追加したい
 2. SDカードとSDカードスロット
    - 理由: 大規模ストレージの取り扱いを課題に含めたい
+3. 村田製作所製の圧電サウンダ―
+   - 理由：FREENOVE社のStarter Kitにも圧電サウンダ―が入っていますが、テストで使っているとショートしてしまったようであり、信頼性の高い村田製作所製に置き換え
 
 ## ファイル共有の仕組み
 ２日目は実際に手を動かして試作していただく。チーム構成としたい。この時、チームメンバでプログラムや設計書を共有できる仕組みが必要。大学様のネットワーク次第ですが、大学構内ネットワークの縛りがなければGoolgeDrive上等で共有するのも可能
