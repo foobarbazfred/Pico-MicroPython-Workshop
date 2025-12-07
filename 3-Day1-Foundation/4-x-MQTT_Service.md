@@ -47,8 +47,8 @@ Done
 
 - 接続先ブローカ：broker.emqx.io
 - ポート番号：1883
-- TOPICS： handson/sensor/volume/<user_ID>     #   <user_id>  := 受講者ID（1-16)
-- message: {"value" : ＜value＞ }               # ＜value＞ := 0 - 100
+- TOPICS： handson/sensor/volume/<user_ID>     #   <user_id>  := 受講者ID（001-016) (上位0埋め3桁数字)
+- message: {"value" : ＜value＞ }               # ＜value＞ := 0 - 100　(上位0埋めなし、任意の桁数)
 
 1秒おきにMQTTブローカにメッセージを送信する例です。メッセージのデータ形式はJSONです
 ```
