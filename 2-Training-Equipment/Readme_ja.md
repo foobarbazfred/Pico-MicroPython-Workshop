@@ -42,15 +42,3 @@
 - MicroPython Source Code
    - https://github.com/micropython/micropython/tree/master
 
-## 宿題
-- CO2センサを基板に接続するためのピッチ変換（ほっかいろ準備）
-- SDカードリーダソケットとSDカード手配
-- Dupontケーブル追加発注
-- Node-RED用RPi持ち込み
-- 受講者様PCの準備
-  - Thonnyを入れておいてもらう
-
-### メモ
-- micro:bitユニバーサル基板
-  -  製品名：[114877]micro:bitユニバーサル基板
-  -  https://akizukidenshi.com/catalog/g/g114877/ 
