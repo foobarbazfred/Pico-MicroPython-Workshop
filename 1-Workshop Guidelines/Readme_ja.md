@@ -2,7 +2,7 @@
 
 - 無線機能を持つマイコン(Raspberry Pi Pico 2 W)とインタプリタ(MicroPython)を使ったHandsOn
 - 1日目と2日目の2日コース
-- 1日目の学び
+- 1日目の学び　
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
   - MicroPython/Python復習 (Pythonを一度習った前提)
   - 開発環境セットアップ、ツール類紹介、ファイル転送
@@ -11,7 +11,7 @@
   - 基礎１ ;  Input/Outputの基礎/Digial/Analog(PWM)
   - 基礎２ ; センサ活用、センサ接続方法(I2C, Serial)(できたらSPIも)
   - 基礎３ ; インターネット接続、Web API利用, MQTT利用
-- 2日目の学び
+- [2日目の学び](4-Day2-Practical/README_ja.md)
   - Raspberry Pi Pico 2 W、MicroPython と センサ、各種デバイス類を組み合わせたアプリケーション試作(プロト開発)
   - チームワークでモノづくり
   - 作業の流れ
