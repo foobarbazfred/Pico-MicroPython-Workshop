@@ -18,8 +18,8 @@ mip.imstall('https://raw.githubusercontent.com/boochow/MicroPython-ST7735/refs/h
 https://github.com/GuyCarver/MicroPython/tree/master/lib<br>
 fontなしではテキスト表示できないので、公開当時に入手したフォントを仮に以下に置いています。閉鎖された今となってはどのような使用許諾だったのか確認できないので、代替えフォントが入手できればあればそちらに置き換えます。
 
-### Displayの接続とテスト
-DisplayはSPIで接続します。必要な結線は、##,##,##,##です。出力用ということで、RaspberryPi Pico 2 Wの右側のピンを使っています。ピンの割り当てはご都合に合わせて変更可能です。
+### ディスプレイの接続と描画テスト
+RP2とディスプレイはSPIで接続します。必要な結線は、##,##,##,##です。出力用ということで、RaspberryPi Pico 2 Wの右側のピンを使っています。ピンの割り当てはご都合に合わせて変更可能です。
 簡単なテストプログラムを示します。斜線とテキストを表示します。
 
 
