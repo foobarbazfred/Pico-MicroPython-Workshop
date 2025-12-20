@@ -80,7 +80,53 @@ tft.line((WIDTH,0),(0,HEIGHT),TFT.WHITE)
 time.sleep(5)
 tft.fill(TFT.BLACK)
 ```
-フォントが入手できた場合、テストを描画することが可能になります。
+フォントが入手できた場合、テストを描画することが可能になります。<br>
+以下はテキストの描画
+```
+#
+# test program for ST7735
+#
+
+# GP8  SPI1 Rx
+# GP9  SPI1 CSn
+# GP10 SPI1 SCK
+# GP11 SPI1 TX
+# GP12 A0 
+# GP13 CS
+# GP14 RESET
+
+from ST7735 import TFT
+from terminalfont import terminalfont
+from machine import SPI
+from machine import Pin
+import time
+
+PIN_ADC=12
+PIN_CS=13
+PIN_RESET=14
+
+SPI1_BAUD=12_000_000
+PIN_SPI1_SCK=10
+PIN_SPI1_TX=11
+PIN_SPI1_RX=8
+
+spi = SPI(1, baudrate=SPI1_BAUD, sck=Pin(PIN_SPI1_SCK), mosi=Pin(PIN_SPI1_TX), miso=Pin(PIN_SPI1_RX))
+tft=TFT(spi, PIN_ADC, PIN_RESET, PIN_CS)
+
+#
+#
+#
+tft.initr()
+tft.rgb(True)
+tft.fill(TFT.BLACK)
+    
+WIDTH,HEIGHT=tft.size()
+tft.text((int(WIDTH/6), int(HEIGHT/2)), "Hello, World!", TFT.WHITE, terminalfont, 1, nowrap=True)
+
+#
+#
+#
+```
 
 ### ご参考
 https://web.archive.org/　には2022年7月のレポジトリがアーカイブされて参照できました。公開当時のリポジトリに使用許諾は明記されていませんでした。Publicリポジトリを閉鎖されたことを考えると使うのは避けた方がよいのかもしれません。
