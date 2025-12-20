@@ -1,4 +1,4 @@
-# 研修用教材
+# 研修用教材とドキュメント類
 ## 使用教材
 - マイコンはRaspberry Pi Pico 2 Wを使用します(本資料中、一部でRP2と表記しています)
    - https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
@@ -23,8 +23,9 @@ FREENOVE社のStarter Kitでは少し足りないため下記パーツを追加�
 ## ファイル共有の仕組み
 ２日目は実際に手を動かして試作していただく。チーム構成としたい。この時、チームメンバでプログラムや設計書を共有できる仕組みが必要。大学様のネットワーク次第ですが、大学構内ネットワークの縛りがなければGoolgeDrive上等で共有するのも可能
 
-## Document類 (参考資料)
-- https://micropython-docs-ja.readthedocs.io/ja/latest/
+## ドキュメント類 (参考資料)
+- MicroPython言語仕様書
+  - https://micropython-docs-ja.readthedocs.io/ja/latest/
 - https://www.raspberrypi.com/documentation/microcontrollers/micropython.html
 - https://github.com/micropython/micropython
 - https://github.com/micropython/micropython-lib
