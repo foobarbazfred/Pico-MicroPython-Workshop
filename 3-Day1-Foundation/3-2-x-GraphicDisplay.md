@@ -80,7 +80,7 @@ tft.line((WIDTH,0),(0,HEIGHT),TFT.WHITE)
 time.sleep(5)
 tft.fill(TFT.BLACK)
 ```
-フォントが入手できた場合、テストを描画することが可能になります。<br>
+フォントが入手できた場合、テキストを描画することが可能になります。<br>
 以下はテキストの描画
 ```
 #
