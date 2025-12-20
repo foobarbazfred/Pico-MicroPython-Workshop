@@ -131,4 +131,6 @@ tft.text((int(WIDTH/6), int(HEIGHT/2)), "Hello, World!", TFT.WHITE, terminalfont
 ### ご参考
 `https://web.archive.org/`　には2022年7月のレポジトリがアーカイブされて参照できました。公開当時のリポジトリに使用許諾は明記されていませんでした。Publicリポジトリを閉鎖されたことを考えると使うのは避けた方がよいのかもしれません。<br>
 下記の6x8フォントをPython版にポーティングするか。。<br>
-https://github.com/idispatch/raster-fonts/blob/master/font-6x8.c
+https://github.com/idispatch/raster-fonts/blob/master/font-6x8.c<br>
+mcauser氏のリポジトリにterminalfont.pyが公開されておりこれを使うことでテキスト描画が可能<br>
+https://github.com/mcauser/micropython-st7735/tree/master
