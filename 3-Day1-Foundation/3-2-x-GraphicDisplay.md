@@ -134,3 +134,7 @@ tft.text((int(WIDTH/6), int(HEIGHT/2)), "Hello, World!", TFT.WHITE, terminalfont
 https://github.com/idispatch/raster-fonts/blob/master/font-6x8.c<br>
 mcauser氏のリポジトリにterminalfont.pyが公開されておりこれを使うことでテキスト描画が可能<br>
 https://github.com/mcauser/micropython-st7735/tree/master
+```
+import mip
+mip.install('https://raw.githubusercontent.com/mcauser/micropython-st7735/refs/heads/master/terminalfont.py')
+```
