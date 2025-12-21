@@ -11,7 +11,7 @@ https://github.com/boochow/MicroPython-ST7735/tree/master<br>
 mipモジュールのinstall機能を使ってドライバをインストールできます(未テスト)
 ```
 import mip
-mip.imstall('https://raw.githubusercontent.com/boochow/MicroPython-ST7735/refs/heads/master/ST7735.py')
+mip.install('https://raw.githubusercontent.com/boochow/MicroPython-ST7735/refs/heads/master/ST7735.py')
 ```
 上記ドライバは、ST7735を制御する機能だけが実装されており、直線や曲線等のグラフィック描画のみであれば上記ドライバで実現できます。もしディプレイに文字を出す場合は、フォントが必要になります。かつてフォントはGuyGarver氏のリポジトリ(下記)から入手できていましたが、現在はPublicはリポジトリはすべて閉鎖されたようです。<br>
 https://github.com/GuyCarver/MicroPython/tree/master/lib<br>
