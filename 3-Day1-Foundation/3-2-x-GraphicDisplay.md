@@ -15,8 +15,13 @@ mip.install('https://raw.githubusercontent.com/boochow/MicroPython-ST7735/refs/h
 ```
 上記ドライバは、ST7735を制御する機能だけが実装されており、直線や曲線等のグラフィック描画のみであれば上記ドライバで実現できます。もしディプレイに文字を出す場合は、フォントが必要になります。かつてフォントはGuyGarver氏のリポジトリ(下記)から入手できていましたが、現在はPublicはリポジトリはすべて閉鎖されたようです。<br>
 https://github.com/GuyCarver/MicroPython/tree/master/lib<br>
-fontなしではテキスト表示できないので、公開当時に入手したフォントを仮に以下に置いています。公開当時も使用許諾については記載がありませんでした。もし使用許諾が明記された代替えフォントが入手できればあればそちらに置き換えます。
-
+mcauser氏のリポジトリにGuyGarver氏のソースをベースにしたterminalfont.pyが公開されておりこれを使うことでテキスト描画が可能です<br>
+https://github.com/mcauser/micropython-st7735/tree/master<br>
+以下でインストールできます
+```
+import mip
+mip.install('https://raw.githubusercontent.com/mcauser/micropython-st7735/refs/heads/master/terminalfont.py')
+```
 ### ディスプレイの接続と描画テスト
 RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK, SPI_TX, A0(Command/Data Selector), CS, RESETです。出力用デバイスということで、HW SPIチャンネルの2番目(SPI1)用のピンを使っています。ピンの割り当てはご都合に合わせて変更可能です。
 簡単なテストプログラムを示します。画面の塗りつぶしと斜線を表示します。
@@ -80,7 +85,7 @@ tft.line((WIDTH,0),(0,HEIGHT),TFT.WHITE)
 time.sleep(5)
 tft.fill(TFT.BLACK)
 ```
-フォントが入手できた場合、テキストを描画することが可能になります。<br>
+フォントをインストールすることで、テキストの描画が可能になります。<br>
 以下はテキストの描画
 ```
 #
@@ -129,12 +134,6 @@ tft.text((int(WIDTH/6), int(HEIGHT/2)), "Hello, World!", TFT.WHITE, terminalfont
 ```
 
 ### ご参考
-`https://web.archive.org/`　には2022年7月のレポジトリがアーカイブされて参照できました。公開当時のリポジトリに使用許諾は明記されていませんでした。Publicリポジトリを閉鎖されたことを考えると使うのは避けた方がよいのかもしれません。<br>
-下記の6x8フォントをPython版にポーティングするか。。<br>
+他の6x8フォント<br>
 https://github.com/idispatch/raster-fonts/blob/master/font-6x8.c<br>
-mcauser氏のリポジトリにterminalfont.pyが公開されておりこれを使うことでテキスト描画が可能<br>
-https://github.com/mcauser/micropython-st7735/tree/master
-```
-import mip
-mip.install('https://raw.githubusercontent.com/mcauser/micropython-st7735/refs/heads/master/terminalfont.py')
-```
+
