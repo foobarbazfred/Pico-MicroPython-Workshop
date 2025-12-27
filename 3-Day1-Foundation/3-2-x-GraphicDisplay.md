@@ -25,18 +25,17 @@ mip.install('https://raw.githubusercontent.com/mcauser/micropython-st7735/refs/h
 ```
 ### ディスプレイの接続と描画テスト
 RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK, SPI_TX, A0(Command/Data Selector), CS, RESETです。出力用デバイスということで、HW SPIチャンネルの2番目(SPI1)用のピンを使っています。
-```
-PIN_ADC=12
-PIN_CS=13
-PIN_RESET=14
 
-SPI1_BAUD=12_000_000
-PIN_SPI1_SCK=10
-PIN_SPI1_TX=11
-PIN_SPI1_RX=8
-```
+| 機能名 | GP番号 |備考|
+|--|--|--|
+|ADC| 12|Command Data Select|
+|CS| 13|Chip Select|
+|RESET| 14|Reset|
+|SPI_1 SCK| 10|SPI Ch1 Clock|
+|SPI_1 TX| 11|SPI Ch1 MOSI|
+|SPI_1 RX| 8|SPI Ch1 MISO|
 
-ピンの割り当てはご都合に合わせて変更可能です。
+上記のGP番号の割り当てはご都合に合わせて変更可能です。
 簡単なテストプログラムを示します。画面の塗りつぶしと斜線を表示します。
 ```
 #
