@@ -55,19 +55,19 @@ lcd = I2CLcd(i2c, LCD_ADDR, 2, 16)
 テスト；文字列のPrint
 ```
 lcd.clear()
-lcd.move_to(0, 0)   # clearすると0,0に設定されます
+lcd.move_to(0, 0)   # clear関数を実行するとカーソル位置は(0,0)に設定されますが、念のため設定しています
 lcd.putstr("# Hello, World! ")
 ```
 文字列の途中に改行コードが含まれると２行目に改行されて出力されます
 ```
 lcd.clear()
-lcd.move_to(0, 0)   # clearすると0,0に設定されます
+lcd.move_to(0, 0)   # clearすると0,0に設定されますが念のため
 lcd.putstr(" ### Hello and \n  good bye ####")
 ```
 2行目だけ出力したい場合は以下
 ```
 lcd.clear()
-lcd.move_to(0, 1)
+lcd.move_to(0, 1)   # カーソル位置を(0, 1)に設定する
 lcd.putstr("     bye!! ")
 ```
 今後他のデバイスがI2C_0を使うことを想定して、LCDはLCD_1を使います<br>
