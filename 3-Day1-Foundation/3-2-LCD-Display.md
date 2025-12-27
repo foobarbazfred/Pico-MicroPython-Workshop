@@ -70,7 +70,7 @@ lcd.clear()
 lcd.move_to(0, 1)   # カーソル位置を(0, 1)に設定する
 lcd.putstr("     bye!! ")
 ```
-今後他のデバイスがI2C_0を使うことを想定して、LCDはLCD_1を使います<br>
+センサー等、他の入力用デバイスがI2C_0を使うことを想定して、LCDはI2C_1を使います<br>
 
 <img src="assets/Schematics_LCD.png" width=800>
 
