@@ -24,7 +24,19 @@ import mip
 mip.install('https://raw.githubusercontent.com/mcauser/micropython-st7735/refs/heads/master/terminalfont.py')
 ```
 ### ディスプレイの接続と描画テスト
-RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK, SPI_TX, A0(Command/Data Selector), CS, RESETです。出力用デバイスということで、HW SPIチャンネルの2番目(SPI1)用のピンを使っています。ピンの割り当てはご都合に合わせて変更可能です。
+RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK, SPI_TX, A0(Command/Data Selector), CS, RESETです。出力用デバイスということで、HW SPIチャンネルの2番目(SPI1)用のピンを使っています。
+```
+PIN_ADC=12
+PIN_CS=13
+PIN_RESET=14
+
+SPI1_BAUD=12_000_000
+PIN_SPI1_SCK=10
+PIN_SPI1_TX=11
+PIN_SPI1_RX=8
+```
+
+ピンの割り当てはご都合に合わせて変更可能です。
 簡単なテストプログラムを示します。画面の塗りつぶしと斜線を表示します。
 ```
 #
