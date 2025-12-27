@@ -160,7 +160,8 @@ X , Y = (0, 0)
 import framebuf
 
 # create frame buffer for RGB565 pixel and 30x30
-fbuf = framebuf.FrameBuffer(bytearray(W * H * 2), W, H, framebuf.RGB565)
+b_ary = bytearray(W * H * 2)
+fbuf = framebuf.FrameBuffer(b_ary, W, H, framebuf.RGB565)
 
 fbuf.fill(0)
 fbuf.text('MicroPython!', 8, int(H/2), 0xffff)
@@ -169,11 +170,18 @@ fbuf.hline(0, int(H/2) + 8 + 2, W, 0xf0_00) # x.y.w.c
 fbuf.rect(0,0,W,H,0x00ff)
 
 tft.fill(tft.BLACK)
-tft.image(X, Y, X+W-1, Y+H-1, fbuf)
+tft.image(X, Y, X+W-1, Y+H-1, b_ary)
 ```
-いろいろ便利に使えるframebufですが、実際の利用に際して注意が必要です。framebufモジュールでは、グラフィック表示させたい領域分のメモリをbytearray関数を使ってヒープ領域に確保する必要があります。（下記サンプルのbytearray( W * H * 2)の処理）。表示領域が大きくなるにつれ、MicroPythonのピープが減少する問題になるため、framebufモジュールを使うかどうかは、描画したいグラフィックの画素数とヒープメモリの残量を考えて判断する必要があります。下記bytearray確保時、Width * Height * 2　という演算式で領域確保を行っています。*2 と２倍している理由は、1画素あたり2byte使うためです。１画素のカラー表示が、　RGB565と呼ばれる、１画素16bitで表現するためです。1画素あたり何bit使うか？は液晶ディスプレイの設定により決まります。
+いろいろ便利に使えるframebufですが、実際の利用に際して注意が必要です。framebufモジュールでは、グラフィック表示させたい領域分のメモリをbytearray関数を使ってヒープ領域に確保する必要があります。（下記サンプルのb_ary = bytearray(W * H * 2)の処理）。表示領域が大きくなるにつれ、MicroPythonのピープが減少する問題になるため、framebufモジュールを使うかどうかは、描画したいグラフィックの画素数とヒープメモリの残量を考えて判断する必要があります。bytearrayによるバッファ確保時、Width * Height * 2　という演算式で領域確保を行っています。*2 と２倍している理由は、1画素あたり2byte使うためです。１画素のカラー表示が、　RGB565と呼ばれる、１画素16bitで表現するためです。1画素あたり何bit使うか？は液晶ディスプレイの設定により決まります。
 
-
+ご参考に、上記プログラムを実行した後のヒープ空き容量を示します
+```
+>>> gc.mem_free()
+68160                       # 66KBの空き
+>>> len(b_ary)
+40960                       # バッファサイズは40KB (128 x 160 x 2 / 1024)
+```
+len(b_ary)で40960と表示されています。len()で得られる値は配列の長さなので、正確には配列のサイズが40960であり、メモリサイズではありません。概算のため、bytearrayの1要素あたり1byteと仮定して計算しています。bytesは書き換え不可なのでオーバーヘッドほぼない(bytesの長さが消費されるバイト数)と思いますが、bytearrayは書き換え可能な型であり、実際のメモリ消費は40960バイト以上と思われます。
 
 ### ST7735以外のディプレイコントローラについて
 
