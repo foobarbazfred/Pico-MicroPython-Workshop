@@ -74,7 +74,7 @@ lcd.putstr("     bye!! ")
 
 <img src="assets/Schematics_LCD.png" width=800>
 
-ソース一式をまとめると以下となります
+ソース一式をまとめると以下
 ```
 from machine import Pin
 from machine import I2C
