@@ -45,7 +45,7 @@
       - CMOSカメラ
     - 出力装置
       - [キャラクタディスプレイ（I2C）](3-2-LCD-Display.md)
-      - [グラフィックディスプレイ(SPI)](3-2-x-GraphicDisplay.md)
+      - [グラフィックディスプレイ(SPI)](3-2-x-GraphicDisplay_kai.md)  
       - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
     - 記憶装置
       - [SDカード(SPI接続)](3-x-SPI-SDCard.md) 
