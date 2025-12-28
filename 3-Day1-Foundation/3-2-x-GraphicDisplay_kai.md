@@ -139,8 +139,16 @@ import terminalfont
 tft.text(pos_x, pos_y, 'Hello,', terminalfont, COLOR_WHITE, size=1)
 tft.text(pos_x + 10, pos_y + 10, 'World!!', terminalfont, COLOR_WHITE, size=1)
 ```
-
-線の描画以外にイメージを表示することも可能です。RGB565形式の画像を作り、イメージ描画関数を使うことでディスプレイに写真等を描画することが可能です。
+#### 補足
+- 線の描画以外にイメージを表示することも可能です。RGB565形式の画像を作り、イメージ描画関数を使うことでディスプレイに写真等を描画することが可能です
+```
+tft._set_window(POS_X, POS_Y, POS_X + W - 1,POS_Y + H - 1)    # set draw area
+tft.data(image)                                               # set draw image (RGB565 format)
+```
+- rotate関数を使うことで、液晶画面を縦使い、横使いにできます（画像を回転させるオプション）
+```
+tft.rotate(1)
+```
 
 ### MicroPythonのライブラリ、framebufを使う例
 上記プログラムは　TFTライブラリが提供する描画関数を使ってグラフィック表示を行っていました。MicroPythonではグラフィック表示のためのフレームバッファを操作するモジュールが提供されています。フレームバッファ用モジュール(framebuf)を使うと、framebufが提供する描画関数を使ってフレームバッファ内(bytearrayで確保したメモリ領域)に描画データを設定できます。
