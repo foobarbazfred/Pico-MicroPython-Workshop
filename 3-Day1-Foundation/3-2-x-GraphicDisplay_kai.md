@@ -18,16 +18,16 @@ mip.install('https://raw.githubusercontent.com/mcauser/micropython-st7735/refs/h
 上記ドライバは、ST7735を制御して直線や曲線等のグラフィック描画、テキストの描画が必要になります。
 
 ### ディスプレイの接続と描画テスト
-RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK, SPI_TX, A0(Command/Data Selector), CS, RESETです。出力用デバイスということで、HW SPIチャンネルの2番目(SPI1)用のピンを使っています。
+RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK, SPI_TX, DC(Data/Command/ Select(A0)), CS, RESETです。出力用デバイスということで、HW SPIチャンネルの2番目(SPI1)用のピンを使っています。
 
 | 機能名 | GP番号 |備考|
 |--|--|--|
-|ADC| 12|Command Data Select|
+|DC(A0)| 12|Data/Command Select|
 |CS| 13|Chip Select|
 |RESET| 14|Reset|
 |SPI_1 SCK| 10|SPI Ch1 Clock|
 |SPI_1 TX| 11|SPI Ch1 MOSI|
-|SPI_1 RX| 8|SPI Ch1 MISO|
+|SPI_1 RX| 8|SPI Ch1 MISO(接続不要)|
 
 上記のGP番号の割り当てはご都合に合わせて変更可能です。
 簡単なテストプログラムを示します。画面に直線と円、テキスト(Hello, World!!)を描画します
