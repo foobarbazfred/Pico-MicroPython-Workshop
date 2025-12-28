@@ -18,7 +18,7 @@ mip.install('https://raw.githubusercontent.com/mcauser/micropython-st7735/refs/h
 上記操作で、Raspberry Pi Pico 2 WのFlashメモリの/lib配下にドライバとフォントがインストールされます。<br>
 上記ドライバは、ST7735を制御して直線や曲線等のグラフィック描画、テキストの描画が必要になります。
 
-```
+
 ### ディスプレイの接続と描画テスト
 RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK, SPI_TX, A0(Command/Data Selector), CS, RESETです。出力用デバイスということで、HW SPIチャンネルの2番目(SPI1)用のピンを使っています。
 
@@ -148,33 +148,39 @@ tft.text(pos_x + 10, pos_y + 10, 'World!!', terminalfont, COLOR_WHITE, size=1)
 ### MicroPythonのライブラリ、framebufを使う例
 
 上記プログラムは　TFTライブラリが提供する描画関数を使ってグラフィック表示を行っていました。MicroPythonではグラフィック表示のためのフレームバッファを操作するモジュールが提供されています。フレームバッファ用モジュール(framebuf)を使うと、framebufが提供する描画関数を使ってフレームバッファ内(bytearrayで確保したメモリ領域)に描画データを設定できます。
-フレームバッファ内の描画が完了した後、TFTライブラリのimage関数を呼び出して、一度に描画させることが可能です。
-framebufモジュールではフォントも内蔵しており、上記説明したフォントデータのimportも不要です。以下のソースコードは初期化が終わったグラフィックディスプレイ(変数tft)に対して、framebufモジュールでグラフィックやテキストを描画するサンプルです。上記ソースを実行することでtftの初期化が終わっており続けて実行できます。
+フレームバッファ内の描画が完了した後、TFTライブラリのdata関数を呼び出して、一度に描画させることが可能です。
+framebufモジュールではフォントも内蔵しており、上記説明したフォントデータのimportも不要です。以下のソースコードは初期化が終わったグラフィックディスプレイ(変数tft)に対して、framebufモジュールでグラフィックやテキストを描画するサンプルです。上記ソースに続けて実行できます。
 ```
 # 
 # create frame buffer by library framebuf
 #
 
-W = 128   # max Width of LCD
-H = 160   # max Height of LCD
-(X , Y) = (0, 0)
-
 import framebuf
 
-# create frame buffer for RGB565 pixel and 30x30
+# define of frame buffer size
+W = 100  # Width of frame buffer
+H = 30   # Height of frame buffer
+
+# create frame buffer for RGB565, pixel(100 x 30)
 b_ary = bytearray(W * H * 2)
 fbuf = framebuf.FrameBuffer(b_ary, W, H, framebuf.RGB565)
 
+# draw graphics and text into frame buffer
 fbuf.fill(0)
-fbuf.text('MicroPython!', 8, int(H/2), 0xffff)
-fbuf.hline(0, int(H/2) - 4, W, 0xf0_00) # x.y.w.c
-fbuf.hline(0, int(H/2) + 8 + 2, W, 0xf0_00) # x.y.w.c
-fbuf.rect(0,0,W,H,0x00ff)
+fbuf.rect(0,0,W,H,0x00ff,False)
+fbuf.text('MicroPython!', 2, 10 , 0xff00)
 
-tft.fill(tft.BLACK)
-tft.image(X, Y, X+W-1, Y+H-1, b_ary)
+# define draing position in LCD
+(POS_X , POS_Y) = (10, 50)
+
+# show contents of framebuffer to LCD
+tft._set_window(POS_X, POS_Y, POS_X + W - 1,POS_Y + H - 1)
+tft.data(b_ary)
 ```
-いろいろ便利に使えるframebufですが、実際の利用に際して注意が必要です。framebufモジュールでは、グラフィック表示させたい領域分のメモリをbytearray関数を使ってヒープ領域に確保する必要があります。（下記サンプルのb_ary = bytearray(W * H * 2)の処理）。表示領域が大きくなるにつれ、MicroPythonのピープが減少する問題になるため、framebufモジュールを使うかどうかは、描画したいグラフィックの画素数とヒープメモリの残量を考えて判断する必要があります。bytearrayによるバッファ確保時、Width * Height * 2　という演算式で領域確保を行っています。*2 と２倍している理由は、1画素あたり2byte使うためです。１画素のカラー表示が、　RGB565と呼ばれる、１画素16bitで表現するためです。1画素あたり何bit使うか？は液晶ディスプレイの設定により決まります。
+framebufを使うことで、ちらつきを防ぎ、一度に画面の更新が可能になります。また、複数のキャラクタデザインを描画したframebufを切り替えることでアニメーションのような効果を実現することが可能です。
+いろいろ便利に使えるframebufですが、実際の利用に際して注意が必要です。framebufモジュールでは、グラフィック表示させたい領域分のメモリをbytearray関数を使ってヒープ領域に確保する必要があります。（下記サンプルのb_ary = bytearray(W * H * 2)の処理）。表示領域が大きくなるにつれ、MicroPythonのピープが減少する問題になるため、framebufモジュールを使うかどうかは、描画したいグラフィックの画素数とヒープメモリの残量を考えて判断する必要があります。bytearrayによるバッファ確保時、Width * Height * 2　という演算式で領域確保を行っています。*2 と２倍している理由は、1画素あたり2byte使うためです。１画素のカラー表示が、　RGB565と呼ばれる、１画素16bitで表現するためです。1画素あたり何bit使うか？は液晶ディスプレイの設定により決まります。<br>
+framebufモジュールの説明<br>
+https://micropython-docs-ja.readthedocs.io/ja/latest/library/framebuf.html<br>
 
 ご参考に、上記プログラムを実行した後のヒープ空き容量を示します
 ```
