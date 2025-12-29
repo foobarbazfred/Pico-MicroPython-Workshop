@@ -8,7 +8,7 @@
 # https://github.com/ArduCAM/Arduino/blob/master/ArduCAM/ArduCAM.cpp
 #
 
-
+import time
 from machine import I2C
 from machine import Pin
 from ov5642_FIFO import OV5642FIFO
