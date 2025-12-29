@@ -42,7 +42,7 @@
         -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
         -  [GPS（シリアル接続）](3-x-Serial-GPS.md)
         -  人感センサ（デジタル1線）
-      - CMOSカメラ
+      - [CMOSカメラ](3-x-CMOS_Camera.md)
     - 出力装置
       - [キャラクタディスプレイ（I2C）](3-2-LCD-Display.md)
       - [グラフィックディスプレイ(SPI)](3-2-x-GraphicDisplay_kai.md)  
@@ -90,7 +90,7 @@
   - 補講４ ； さらにいろんなデバイスを繋ぐ
     -  SDカードとの接続(FileSystem,File Read/Write）    
     -　LCDパネル（ビットマップ表示） 
-    -  CMOSカメラとの接続
+    -  [CMOSカメラとの接続](3-x-CMOS_Camera.md)
       -　デバイス例：Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico    
   - 補講４ ； マイコンとクラウドサービスとの連携
   - 補講５ ； マイコンでAI技術をどう活用するか
