@@ -108,10 +108,11 @@ while True:
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
 - Arducam-Shield-Mini-5MP-Plus
   - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Hardware/Arducam-Shield-Mini-5MP-Plus/
-  - https://github.com/ArduCAM/Arduino/blob/master/ArduCAM/ArduCAM.cpp
+  - サンプルコード：https://github.com/ArduCAM/Arduino/blob/master/ArduCAM/ArduCAM.cpp
 
 画質をさらに上げるには、細かいパラメータ調整が必要です。より＃＃＃くカメラを制御するには、イメージセンサ(OV5642)の仕様書を参照してレジスタの設定方法を調べる必要があります<br>
 5MP image sensor OV5642<br>
 仕様書は一般公開されておらず、Confidentialの扱いの仕様書が出回っています。入手可能な仕様書へのリンクを直接貼るのは控えます。以下のキーワードで検索してみてください。<br>
-`OmniVision product specification datasheet OV5642`
+`OmniVision product specification datasheet OV5642`<br>
+Arduino用のサンプルコード一式がGitHub上で公開されていますので、ソースコードを読み解くとレジスタの使い方が分かると思われます。
 
