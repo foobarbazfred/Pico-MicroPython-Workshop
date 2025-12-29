@@ -108,6 +108,7 @@ while True:
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
 - Arducam-Shield-Mini-5MP-Plus
   - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Hardware/Arducam-Shield-Mini-5MP-Plus/
+  - https://github.com/ArduCAM/Arduino/blob/master/ArduCAM/ArduCAM.cpp
 
 画質をさらに上げるには、細かいパラメータ調整が必要です。より＃＃＃くカメラを制御するには、イメージセンサ(OV5642)の仕様書を参照してレジスタの設定方法を調べる必要があります<br>
 5MP image sensor OV5642<br>
