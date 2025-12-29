@@ -19,6 +19,14 @@ Arducam Shield Miniの外観<br>
 ### カメラとの接続
 マイコンとカメラとの接続はSPIとI2Cの両方を使います。撮影時の画素やフォーマット等、カメラ制御はI2Cで行います。撮影された画像データはフレームバッファに格納されます。マイコンへの画像データ転送はSPIで行います。
 
+OV5652用ドライバ一式をインストール
+```
+import mip
+PATH = 'https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/heads/main/3-Day1-Foundation/src/lib/'
+for file in ('ov5642.py', 'ov5642_setup.py', 'ov5642_FIFO.py'):
+    mip.install(PATH + file)
+```
+
 
 ### ドキュメント類
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
