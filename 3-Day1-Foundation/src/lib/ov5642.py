@@ -3,6 +3,7 @@
 # file: ov5642.py
 #
 
+import time
 from machine import I2C
 from machine import Pin
 from ov5642_FIFO import OV5642FIFO
