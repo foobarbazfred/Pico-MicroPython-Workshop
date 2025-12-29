@@ -13,7 +13,8 @@ Arducamの特徴は以下です。
 
 Arducam Shield Miniの外観<br>
 <img src="assets/IMG_Arducam_ShieldMini.png" width=400><br>
-カメラの性能により、2メガピクセル版(上段)と5メガピクセル版(下段)があります
+画像は、Arducam Wikiより引用(https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/)<br>
+カメラの性能により、2メガピクセル版(上段)と5メガピクセル版(下段)があります。5メガピクセル版のイメージセンサはOV5642が使われています。
 
 ### カメラとの接続
 マイコンとカメラとの接続はSPIとI2Cの両方を使います。撮影時の画素やフォーマット等、カメラ制御はI2Cで行います。撮影された画像データはフレームバッファに格納されます。マイコンへの画像データ転送はSPIで行います。
@@ -26,6 +27,6 @@ Arducam Shield Miniの外観<br>
 
 画質をさらに上げるには、細かいパラメータ調整が必要です。より＃＃＃くカメラを制御するには、イメージセンサ(OV5642)の仕様書を参照してレジスタの設定方法を調べる必要があります<br>
 5MP image sensor OV5642<br>
-仕様書は一般公開されておらず、Confidentialの扱いの仕様書が出回っています。ここにリンクを直接貼るのは控えます。以下のキーワードで検索してみてください。<br>
-'OmniVision product specification datasheet OV5642'
+仕様書は一般公開されておらず、Confidentialの扱いの仕様書が出回っています。入手可能な仕様書へのリンクを直接貼るのは控えます。以下のキーワードで検索してみてください。<br>
+`OmniVision product specification datasheet OV5642`
 
