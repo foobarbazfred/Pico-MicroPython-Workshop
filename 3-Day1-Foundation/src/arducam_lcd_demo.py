@@ -107,11 +107,14 @@ def show_image():
     tft.data(buf)
 
 def camera_demo():
+    prev_time = time.ticks_ms()
     while True:
         ardu.fifo.clear_done_flag()       
         ardu.fifo.start_capture_and_wait()
         show_image()
-
+        current_time = time.ticks_ms()
+        print('Processing time:', time.ticks_diff(time.ticks_ms(), prev_time),' ms')
+        prev_time = current_time
 
 camera_demo()
 
