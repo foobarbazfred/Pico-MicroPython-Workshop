@@ -1,9 +1,14 @@
 #
 # arducam sensor control (OV5642)
 # file: ov5642.py
+# v0.01 (2025/12/29)
 #
 
-import time
+# reference
+# https://github.com/ArduCAM/Arduino/blob/master/ArduCAM/ArduCAM.cpp
+#
+
+
 from machine import I2C
 from machine import Pin
 from ov5642_FIFO import OV5642FIFO
@@ -76,9 +81,9 @@ class OV5642:
     # arg: lst  ((addr0,val0),(addr1,val1),...,(addr_n,val_n))
     #
     def write_regs(self, lst):
-        print(f'write_regs')
+        #print(f'write_regs')
         for (addr, val) in lst:
-            print(f'{addr:04x}, {val:02x}')
+            #print(f'{addr:04x}, {val:02x}')
             self.write_reg(addr, val)
     
     

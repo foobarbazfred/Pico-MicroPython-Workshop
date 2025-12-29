@@ -1,5 +1,9 @@
 #
-#  ov5642_setup.py
+# setup data for OV5642
+# file: ov5642_setup.py
+# v0.01 (2025/12/29)
+#
+
 #
 # original source:
 #.  file: CF5642C_V1.c
