@@ -113,6 +113,8 @@ while True:
    ardu.fifo.start_capture_and_wait()
    show_image()
 ```
+RP2350(150MHz)の環境で、撮影->描画の処理に900msかかります。撮影性能としては、1fps程度です。
+
 
 ### ドキュメント類
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
