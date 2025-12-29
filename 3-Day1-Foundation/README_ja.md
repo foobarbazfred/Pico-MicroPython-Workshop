@@ -43,6 +43,7 @@
         -  [GPS（シリアル接続）](3-x-Serial-GPS.md)
         -  人感センサ（デジタル1線）
       - [CMOSカメラ](3-x-CMOS_Camera.md)
+        - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico 
     - 出力装置
       - [キャラクタディスプレイ（I2C）](3-2-LCD-Display.md)
       - [グラフィックディスプレイ(SPI)](3-2-x-GraphicDisplay_kai.md)  
@@ -87,11 +88,6 @@
     -  音楽や音声を再生する
       - 音声合成LSIを利用(シリアル接続で発話できる)  
       - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
-  - 補講４ ； さらにいろんなデバイスを繋ぐ
-    -  SDカードとの接続(FileSystem,File Read/Write）    
-    -　LCDパネル（ビットマップ表示） 
-    -  [CMOSカメラとの接続](3-x-CMOS_Camera.md)
-      -　デバイス例：Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico    
   - 補講４ ； マイコンとクラウドサービスとの連携
   - 補講５ ； マイコンでAI技術をどう活用するか
     - 活用できるAIの技術とは
