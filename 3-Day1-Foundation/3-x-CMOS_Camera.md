@@ -27,6 +27,82 @@ for file in ('ov5642.py', 'ov5642_setup.py', 'ov5642_FIFO.py'):
     mip.install(PATH + file)
 ```
 
+### Arducam (OV5642 5MPixel)の制御
+以下にArducamを使った撮影の例を示します。
+```
+from machine import Pin
+from machine import I2C
+from machine import SPI
+from ov5642 import OV5642
+
+ov5642i2c = I2C(scl=Pin(5), sda=Pin(4), freq=9600)
+
+CAM_PIN_CS = 1
+fifo_cs = Pin(CAM_PIN_CS, Pin.OUT)
+
+SPI0_BAUDRATE=10_00_000
+SPI0_MOSI = 3
+SPI0_MISO = 0
+SPI0_SCK = 2
+fifo_spi = SPI(0,SPI0_BAUDRATE,sck=Pin(SPI0_SCK), mosi=Pin(SPI0_MOSI), miso=Pin(SPI0_MISO))
+ardu = OV5642(ov5642i2c, fifo_spi, fifo_cs)
+
+SCREEN_WIDTH=160
+SCREEN_HEIGHT=128
+BYTEPERPIX=2  # RGB565
+
+import gc
+gc.collect()
+buf = bytearray(SCREEN_WIDTH * SCREEN_HEIGHT * 2)
+
+ardu.fifo.clear_done_flag()       
+ardu.fifo.start_capture_and_wait()
+ardu.read_pixels(buf)
+```
+上記操作により、160x128画素、RGB565形式の画像がbufに取り込まれます。現在ドライバの作り込みが不十分なため、高画素のJPEGイメージ等は撮影できません。
+ドライバを作り込めば可能です（サンプルコードを読み解いて、どのレジスタに設定すればよいかが分かれば追加開発可能です）
+非圧縮の画像であるため、MicroPythonでエッジ検出や二値化への変換に利用できます。
+
+撮影した画像をグラフィックディスプレイに表示するコードは以下です。（ソースが長くなるのでグラフィックディスプレイの初期化は省略しています）
+```
+from machine import Pin
+from machine import I2C
+from machine import SPI
+from ov5642 import OV5642
+
+ov5642i2c = I2C(scl=Pin(5), sda=Pin(4), freq=9600)
+CAM_PIN_CS = 1
+fifo_cs = Pin(CAM_PIN_CS, Pin.OUT)
+
+SPI0_BAUDRATE=10_00_000
+SPI0_MOSI = 3
+SPI0_MISO = 0
+SPI0_SCK = 2
+fifo_spi = SPI(0,SPI0_BAUDRATE,sck=Pin(SPI0_SCK), mosi=Pin(SPI0_MOSI), miso=Pin(SPI0_MISO))
+
+ardu = OV5642(ov5642i2c, fifo_spi, fifo_cs)
+
+SCREEN_WIDTH=160
+SCREEN_HEIGHT=128
+BYTEPERPIX=2  # RGB565
+
+tft.rotate(1)   # rotate screen 90 degrees
+
+import gc
+gc.collect()
+buf = bytearray(SCREEN_WIDTH * SCREEN_HEIGHT * 2)
+def show_image():
+    global buf
+    ardu.read_pixels(buf)
+    tft._set_window(0, 0, SCREEN_WIDTH - 1, SCREEN_WIDTH - 1)
+    tft.data(buf)
+
+while True:
+   ardu.fifo.clear_done_flag()       
+   ardu.fifo.start_capture_and_wait()
+   show_image()
+```
+
 
 ### ドキュメント類
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
