@@ -31,7 +31,9 @@ RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK,
 上記のGP番号の割り当てはご都合に合わせて変更可能です。回線図を以下に示します。<br>
 <img src="assets/Schematics_SPI_Graphic_LCD.png" width=800>
 
-簡単なテストプログラムを示します。画面に直線と円、テキスト(Hello, World!!)を描画します
+簡単なテストプログラムを示します。画面に直線と円、テキスト(Hello, World!!)を描画します<br>
+動作例<br>
+<img src="assets/IMG_g_display.png" width=200>
 
 ```
 #
