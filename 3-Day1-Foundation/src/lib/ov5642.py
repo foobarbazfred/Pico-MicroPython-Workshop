@@ -21,14 +21,19 @@ class OV5642:
     def __init__(self, i2c, fifo_spi, fifo_spi_cs):
         self.i2c = i2c
         self.fifo = OV5642FIFO(fifo_spi, fifo_spi_cs)
+        self.setup()
+
+    def setup(self):
         self.write_regs(QVGA_RGB565_PREVIEW)
         self.set_photo_size("QQVGA")
         self.set_flip()
-    
-    def start_capture(self):     #take_picture(self):
+
+    # deprecated, 
+    def start_capture(self): 
         self.fifo.flush_fifo()
         self.fifo.start_capture()
     
+    # deprecated, 
     def take_picture(self):
         self.fifo.take_picture()    
 
