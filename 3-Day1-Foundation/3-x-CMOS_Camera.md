@@ -25,4 +25,7 @@ Arducam Shield Miniの外観<br>
   - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Hardware/Arducam-Shield-Mini-5MP-Plus/
 
 画質をさらに上げるには、細かいパラメータ調整が必要です。より＃＃＃くカメラを制御するには、イメージセンサ(OV5642)の仕様書を参照してレジスタの設定方法を調べる必要があります<br>
-5MP image sensor OV5642
+5MP image sensor OV5642<br>
+仕様書は一般公開されておらず、Confidentialの扱いの仕様書が出回っています。ここにリンクを直接貼るのは控えます。以下のキーワードで検索してみてください。<br>
+'OmniVision product specification datasheet OV5642'
+
