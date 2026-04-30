@@ -10,7 +10,7 @@
     - もしご支援が必要であれば分かる範囲でお手伝いします。自分では解決策が分からない場合、解放のヒントを提供します
     - 完成後、各チーム単位で成果を報告します。工夫した点や大変だった点、気づき、面白さを説明してください
 ## セミナー実施方針
-- [研修実施方針]('1-Workshop Guidelines/Readme_ja.md')
+- [研修実施方針](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/1-Workshop%20Guidelines/Readme_ja.md)
 ## 教材について
 - [教材説明](2-Training-Equipment/Readme_ja.md)
 ## 研修コンテンツ
