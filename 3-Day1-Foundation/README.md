@@ -12,7 +12,7 @@
      - Raspberry Pi Pico 2 W (略称 RP2) ボードの説明
          -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
      - REPLを用いたボトムアップの試作例
-         - Pythonは対話的にPGできます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
+         - Pythonは対話的にプログラムできます。REPL(Read Eval Print Loop)を活用してテストファーストで部品から組み上げましょう（部分から全体へ）
          - 最初に使うセンサの場合、REPLで試行錯誤するのがTurnAroundTimeの短縮に効果的
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
         - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
