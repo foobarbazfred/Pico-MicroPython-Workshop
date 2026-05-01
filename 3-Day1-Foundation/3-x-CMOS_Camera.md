@@ -65,7 +65,7 @@ BYTEPERPIX=2  # RGB565
 
 import gc
 gc.collect()
-buf = bytearray(SCREEN_WIDTH * SCREEN_HEIGHT * 2)
+buf = bytearray(SCREEN_WIDTH * SCREEN_HEIGHT * BYTEPERPIX)
 
 ardu.fifo.clear_done_flag()       
 ardu.fifo.start_capture_and_wait()
@@ -102,7 +102,7 @@ tft.rotate(1)   # rotate screen 90 degrees
 
 import gc
 gc.collect()
-buf = bytearray(SCREEN_WIDTH * SCREEN_HEIGHT * 2)
+buf = bytearray(SCREEN_WIDTH * SCREEN_HEIGHT * BYTEPERPIX)
 def show_image():
     global buf
     ardu.read_pixels(buf)
