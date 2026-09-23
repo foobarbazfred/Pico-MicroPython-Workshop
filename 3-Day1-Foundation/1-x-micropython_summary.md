@@ -7,9 +7,9 @@
 
 <img src="assets/rp2350_block_diagram.png" width=600><br>
 
-<img src="assets/MicroPython_Libraries.png" width=400><br>
+<img src="assets/MicroPython_Libraries.png" width=600><br>
 machineモジュール内のクラス一覧<br>
-<img src="assets/classes_in_machine_module.png" width=400><br>
+<img src="assets/classes_in_machine_module.png" width=600><br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/index.html#micropython-lib-micropython<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.html#classes<br>
 
