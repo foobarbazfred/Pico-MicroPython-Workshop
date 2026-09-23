@@ -1,4 +1,4 @@
-### MicroPython/Python復習 (すでにPythonを習った方を前提)
+### MicroPython概要 (すでにPythonを習った方を前提)
 - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
   - マイコン専用のモジュール、Pinの取り扱い等 
 - MicroPythonはマイコンを使いこなすためにモジュールが追加されています。周辺I/Oを制御する場合、モジュールを使うことで可能になります
