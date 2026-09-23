@@ -1,4 +1,4 @@
-### MicroPython概要 (すでにPythonを習った方を前提)
+### MicroPython概要 (Pythonとの違い)
 - MicroPython特有の注意点を説明　(https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html)
   - マイコン専用のモジュール、Pinの取り扱い等 
 - MicroPythonはマイコンを使いこなすためにモジュールが追加されています。周辺I/Oを制御する場合、モジュールを使うことで可能になります
@@ -7,9 +7,9 @@
 
 <img src="assets/rp2350_block_diagram.png" width=600><br>
 
-<img src="assets/MicroPython_Libraries.png" width=600><br>
+<img src="assets/MicroPython_Libraries.png" width=800><br>
 machineモジュール内のクラス一覧<br>
-<img src="assets/classes_in_machine_module.png" width=600><br>
+<img src="assets/classes_in_machine_module.png" width=800><br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/index.html#micropython-lib-micropython<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.html#classes<br>
 
