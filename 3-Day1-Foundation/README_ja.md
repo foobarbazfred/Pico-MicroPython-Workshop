@@ -46,7 +46,7 @@
         - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico 
     - 出力装置
       - [キャラクタディスプレイ（I2C）](3-2-LCD-Display.md)
-      - [グラフィックディスプレイ(SPI)](3-2-x-GraphicDisplay_kai.md)  
+      - [グラフィックディスプレイ(SPI)](3-2-x-GraphicDisplay.md)  
       - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
     - 記憶装置
       - [SDカード(SPI接続)](3-x-SPI-SDCard.md) 
@@ -95,3 +95,5 @@
       - 構想、試作段階でのAI活用(AIを活用した発想法)
       - 開発段階でのAI活用(Codingでの活用)
       - アプリケーションでのAI活用(WebAPIとの連携) 
+
+※README_ja.mdがマスタ
