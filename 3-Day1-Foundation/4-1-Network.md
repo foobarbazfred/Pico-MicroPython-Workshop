@@ -1,8 +1,8 @@
 # 無線通信
 
-### Raspberry Pi Pico 2 WのWifi機能
+### Raspberry Pi Pico 2 WのWi-Fi機能
 
-Raspberry Pi Pico ２ Wには無線機能が搭載されており、Wi-FiやBLEを使うことができます。本講義ではWi-Fiを使ったプログラミングを行います。Wi-Fiネットワークと接続するためのモジュールが提供されています。
+Raspberry Pi Pico 2 W(Pico2W)には無線機能が搭載されており、Wi-FiやBLEを使うことができます。本講義ではWi-Fiを使ったプログラミングを行います。Wi-Fiネットワークと接続するためのモジュールが提供されています。
 
 boot.pyの全コードは以下を参照ください<br>
 [src/boot.py](src/boot.py)
@@ -40,7 +40,7 @@ Connection successful
 ```
 先頭のIPが割り当てられたIP,続いて、サブネットマスク、デフォルトGWのIP、DNSサーバのIPとなっています。
 
-なお、WiFIは2.5GHz帯のみ使えるようです
+なお、Pico2WのWi-Fiは2.5GHz帯のみ使えるようです
 
 ネットワーク通信ではSSL通信が使われます。SSL通信では接続先サーバの証明書を取得し、偽装したサイトでないかを確認します。この時、証明書の有効期限が適切であるか？証明書の有効期限を確認します。このため、SSL通信のクライアント側では正しい時刻設定がなされている必要があります。
 インターネット上では時刻同期サービスが提供されており、時刻同期用モジュールを使うことで、簡単に時刻同期が行えます。
@@ -60,7 +60,7 @@ try:
 except OSError as e:
     print("NTP sync failed:", e)
 ```
-IPを取得してすぐに時刻同期するとエラーになる場合があるため、Workaround用として、time.sleep(3)を入れています。コードを打つことで正しく同期できかどうかを確認できます
+IPを取得してすぐに時刻同期するとエラーになる場合があるため、Workaround用として、time.sleep(3)を入れています。time.localtime()を実行することで正しく時刻同期できているかを確認できます
 ```
 import time
 time.localtime()
