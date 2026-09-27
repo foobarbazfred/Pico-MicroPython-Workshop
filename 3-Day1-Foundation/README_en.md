@@ -1,0 +1,99 @@
+# Day 1 Seminar Agenda
+
+- Day 1 Learnings
+  - Foundation 1: About microcontrollers, Python, and MicroPython
+    - Microcontroller basics (simple block diagram, well-known microcontrollers introduction)
+       - [Introduction to major microcontrollers (microcontroller boards)](1-x-board.md)
+       - [Simple block diagram (Raspberry Pi Pico 2)](1-x-microcontroller.md)
+       - Supporting technologies around microcontroller programming (technology map)
+    - [Programming languages for microcontrollers](1-x-programming-languages.md)
+    - [MicroPython/Python review](1-x-micropython_summary.md)
+    - [Development environment setup, tool overview, file transfer](1-x-programming-tools.md)
+    - Description of the Raspberry Pi Pico 2 W (abbreviated Pico2W) board
+      - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
+    - Bottom-up prototyping examples using the REPL
+      - Because Python is an interpreted language, it allows interactive programming. The mechanism where you type source code and it runs immediately is called the Read-Eval-Print-Loop (REPL).
+      - When using sensors whose usage is not clear without reading the datasheet, it is efficient to write control programs by experimenting interactively with the REPL.
+    - Using libraries (module installation and library management tools)
+       - Parts extended for microcontroller programming (explained combining software and hardware)
+  - Foundation 2: Basics of Input/Output — Digital / Analog (PWM)
+    - [GPIO digital I/O: OUTPUT LED blinking / INPUT switch input](2-2-Blink.md)
+    - [GPIO analog input: ADC — volume (potentiometer) input](2-3-AnalogValue.md)
+    - Representing analog with digital -> using PWM (Pulse Width Modulation)
+      - [Explanation of PWM, adjust LED brightness with PWM (change DUTY)](2-4-PWM.md)
+      - [Control motor rotation with PWM and a motor driver (change DUTY and output pin)](2-x-motor_control.md) (reference)
+      - [Control a servo motor with PWM (change DUTY)](2-5-ServoControl.md)
+      - [Play sound using PWM (change frequency)](2-6-Beep.md)
+    - [Represent analog with digital -> use full-color LEDs (NeoPixel)](2-6-NeoPixel.md)
+    - GPIO AD/DA hands-on (not all items can be completed; choose some)
+      - VR changes the brightness of light
+      - VR changes the NeoPixel color
+      - [VR changes the servo motor angle](2-5-ServoControl.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B...)
+      - VR changes the pitch of a sound
+      - Control a DC motor with VR and a motor driver
+  - Foundation 3: How to connect peripherals and use devices
+    - Peripherals that can be connected to a microcontroller
+       - [Sensor introduction, how to use sensors (how to obtain data)](3-0-sensor.md)
+    - [Communication interfaces between microcontroller and peripherals (I2C, SPI, UART)](3-1-use-SerialBus.md)
+    - Input devices
+      - Sensor connections (bus: I2C), methods to control devices (drivers)
+        - [CO2 sensor (I2C connection)](3-x-CO2-sensor.md)
+        - [Gyro sensor (I2C connection)](3-3-6dof.md)
+        - [Distance sensor (digital 2-wire)](3-x-distance-sensor.md)
+        - [GPS (UART connection)](3-x-Serial-GPS.md)
+        - PIR motion sensor (digital 1-wire)
+      - [CMOS camera](3-x-CMOS_Camera.md)
+        - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico
+    - Output devices
+      - [Character display (I2C connection)](3-2-LCD-Display.md)
+      - [Graphic display (SPI connection)](3-2-x-GraphicDisplay.md)
+      - [Audio playback via DAC (PCM5100A) (I2S connection)](2-9-i2s_player.md)
+    - Storage devices
+      - [SD card (SPI connection)](3-x-SPI-SDCard.md)
+    - Sensor application hands-on (not all items can be completed; select some)
+      - Display temperature and humidity measurement results on an LCD
+      - Display distance to obstacles on an LCD
+        - Express distance to obstacles using both LCD and sound
+      - Modulate the pitch of the playing sound by the distance measured by the distance sensor (digital theremin)
+  - Foundation 4: Internet connectivity, using Web APIs, using MQTT
+    - [Internet connection (Wi-Fi connection) and NTP](4-1-Network.md)
+    - Communication using HTTP with sample code
+      - [Retrieve weather information for a specified location from a weather forecast site](4-2-WebAPI.md)
+    - [Communication using MQTT with sample code](4-x-MQTT_Service.md)
+    - [Run RP2 as a WebServer](4-x-WebServer.md)
+    - Internet usage hands-on
+      - Access a weather information API, get weather data and display it on an LCD, and use a servo to indicate weather (rain/cloudy/sunny) or temperature
+      - Remotely operate a Raspberry Pi at a distant location (e.g., light up the remote NeoPixel from VR)
+  - Applied 1: Use IoT platforms and visualization
+    - Upload data to an IoT platform and visualize measurement data
+
+  ### Supplementary sessions if time permits
+  - Supplement 1: MicroPython performance, tuning, and resource management
+     - Is MicroPython fast or slow? How many times slower is it compared to C, and how does performance vary by microcontroller type?
+     - How to find bottlenecks and tuning methods
+     - Heap memory management (if used carelessly, MemoryException may interrupt the program (MicroPython may crash)); what is a safe maximum buffer size? (A conservative upper limit is one-third of the heap memory size.)
+  - Supplement 2: PIO...cover MicroPython slowness with hardware
+     - What is PIO (Programmable I/O), its purpose and use cases
+     - Internal structure
+     - How to use it
+       - Simple LED blink and switch input examples
+       - Using DMA together enables high-speed transfer of data streams
+       - Application example: capture MEMS MIC data (PDM data format) into memory without loss
+  - Supplement 3: Make plain microcontrollers shine — display and input device techniques
+    - Easy ways to implement a GUI
+      - Dashboards using IoT platforms (ThingsBoard)
+      - Dashboards using Node-RED
+      - Run a WebServer on RPi Pico and display widgets in a browser
+    - Play music and audio
+      - Use speech-synthesis ICs (speak via serial connection)
+      - Audio playback via I2S (save the audio data on SD and read from SD while sending to a DAC over the I2S bus)
+  - Supplement 4: Integration between microcontrollers and cloud services
+  - Supplement 5: How to use AI techniques with microcontrollers
+    - AI techniques that can be utilized
+    - How to apply AI on microcontrollers
+      - Conceptual and prototyping-stage AI usage (idea generation using AI)
+      - AI usage during development (coding assistance)
+      - AI usage in applications (integration with Web APIs)
+
+
+※ README_ja.md is the master (Japanese source)
