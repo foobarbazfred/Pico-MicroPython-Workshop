@@ -45,3 +45,4 @@ FREENOVE社のStarter Kitでは少し足りないため下記パーツを追加�
 - MicroPython Source Code
    - https://github.com/micropython/micropython/tree/master
 
+※ README_ja.mdがマスタ
