@@ -96,6 +96,7 @@ servo = PWM(Pin(SERVO_PIN), freq=PWM_FREQ_SERVO)
 servo_rotate_horn(servo, 90)
 ```
 
+### ボリュームの回転に合わせてサーボホーンを動かす
 可変抵抗（ボリューム）の軸の回転に連動してサーボのホーンを動かすプログラムは以下
 ```
 from machine import Pin
