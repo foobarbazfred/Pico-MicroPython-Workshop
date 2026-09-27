@@ -27,7 +27,7 @@ https://micropython.org/download/
 - 価格
 - ボードのサイズ
 - 使えるPinの数
-- WiFiが搭載されているか
+- Wi-Fiが搭載されているか
 - BLEが搭載されているか
 - RAMのサイズ、Flashのサイズ
 - 使われているマイコンコアのアーキテクチャ、システムクロック
