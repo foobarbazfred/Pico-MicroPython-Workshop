@@ -24,11 +24,11 @@ def setup_WiFi(id, pwd):
     station = network.WLAN(network.STA_IF)
     station.active(True)
     station.connect(id, pwd)
-    time.sleep(1)
+    time.sleep(1)            # TODO: Avoid fixed 1-second delay; needs improvement
     if station.isconnected() == True:
         print('Connection successful')
         print(station.ifconfig())
-    else::
+    else:
         print('Connection failed')
 
 setup_WiFi(SSID, PASSWD)

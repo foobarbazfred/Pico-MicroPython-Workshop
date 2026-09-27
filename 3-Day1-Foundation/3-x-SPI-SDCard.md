@@ -24,7 +24,7 @@ SPI_BAUD = 1_000_000  # 1MHz
 #
 # setup
 #
-cs = machine.Pin(SD_CARD_CS, Pin.OUT, pull=Pin.PULL_UP)
+cs = Pin(SD_CARD_CS, Pin.OUT, pull=Pin.PULL_UP)
 spi1 = SPI(1, baudrate=SPI_BAUD, sck=Pin(SPI_SCK), mosi=Pin(SPI_MOSI), miso=Pin(SPI_MISO))
 
 # init SDCard Driver
@@ -38,18 +38,18 @@ os.listdir('/sd')
 #os.umount('/sd')
 ```
 
-上記操作により、SDカードが/sdディレクトリにマウントされましたので、PCと同様に以下のコードでファイルの読み書きが可能になります。
+上記操作により、SDカードが/sdディレクトリにマウントされましたので、PCと同様に以下のコードでファイルの読み書きが可能になります。例えば、SDカードにconfig.jsonというファイルがあるとして、JSON形式データを読み込む例を示します。
 ```
 import json
 
-with open('/sd/config.json','r') as f:
-   config = json.loads(f)
+with open('/sd/config.json', 'r') as f:
+   config = json.load(f)
 print(config)
 ```
 
 ### FAT32フォーマット
 
-FAT32にフォーマットするには、Rufusフォーマッタというツールを使うのが楽と思います。<br>
+SDカードをFAT32にフォーマットするには、Rufusフォーマッタというツールを使うのが楽と思います。<br>
 WebPage： https://rufus.ie/ja/<br>
 <img src="assets/rufus_formatting.png" width=400>
 
