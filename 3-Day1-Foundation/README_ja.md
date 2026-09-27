@@ -9,13 +9,13 @@
     -  [マイコン用プログラミング言語](1-x-programming-languages.md)
      - [MicroPython/Python復習](1-x-micropython_summary.md)
      - [開発環境セットアップ、ツール類紹介、ファイル転送](1-x-programming-tools.md)
-     - Raspberry Pi Pico 2 W (略称 RP2) ボードの説明
+     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
          -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
      - REPLを用いたボトムアップの試作例
-         - Pythonは対話的にPGできます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
-         - 最初に使うセンサの場合、REPLで試行錯誤するのがTurnAroundTimeの短縮に効果的
+         - Pythonはインタプリタのため対話的にプログラミングできます。ソースを打ち込んですぐに実行される仕組みは、Read-Eval-Print-Loop(REPL)と呼ばれます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
+         - 仕様書を見ないと使い方が分からないセンサを使う場合、REPLで試行錯誤しながら制御プログラムを書く方法が効率的です
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
-        - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
+        - マイコン用プログラム開発のために機能拡張されている部分（ソフトとハードを合わせて説明） 
   - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
     - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
     - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
