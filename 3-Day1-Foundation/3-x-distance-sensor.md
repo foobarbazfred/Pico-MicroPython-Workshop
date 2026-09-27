@@ -133,9 +133,5 @@ while True:
 
 
 ### 参考資料
-- Sensirion SDC41 Porcut
-  - https://sensirion.com/jp/products/catalog/SCD41
-- Sensirion SCD4x DataSheet
-  - https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf
-- Sensirion Drvier
-  - https://github.com/Sensirion/python-i2c-scd/tree/master/sensirion_i2c_scd/scd4x
+- HC-SR04 DataSheet (sparkfun)
+https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf

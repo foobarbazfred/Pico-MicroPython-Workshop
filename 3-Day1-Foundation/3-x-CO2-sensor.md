@@ -206,7 +206,7 @@ if __name__ == '__main__':
 ```
 
 ### 参考資料
-- Sensirion SDC41 Porcut
+- Sensirion SDC41 Products
   - https://sensirion.com/jp/products/catalog/SCD41
 - Sensirion SCD4x DataSheet
   - https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf

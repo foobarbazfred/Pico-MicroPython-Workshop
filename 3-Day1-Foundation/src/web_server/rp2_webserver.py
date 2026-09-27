@@ -75,7 +75,7 @@ s.listen(1)
 
 print('listening on', addr)
 
-led_status = 'unkown'
+led_status = 'unknown'
 while True:
     cl, addr = s.accept()
     print('client connected from', addr)

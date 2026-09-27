@@ -8,7 +8,7 @@
   - Bottom-up prototyping examples using the REPL
   - Using libraries (installing modules with a package management tool)
   - Basics 1: I/O fundamentals — Digital/Analog (PWM)
-  - Basics 2: Working with sensors, sensor connection methods (I2C, Serial) (SPI if possible)
+  - Basics 2: Working with sensors, sensor connection methods (I2C, UART) (SPI if possible)
   - Basics 3: Internet connectivity, using Web APIs, using MQTT
 - Day 2 learning objectives
   - Prototype application development combining RPi Pico + MicroPython + sensors and various devices

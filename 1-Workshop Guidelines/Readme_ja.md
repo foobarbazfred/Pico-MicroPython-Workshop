@@ -9,7 +9,7 @@
   - REPLを用いたボトムアップの試作例
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
   - 基礎１ ;  Input/Outputの基礎/Digital/Analog(PWM)
-  - 基礎２ ; センサ活用、センサ接続方法(I2C, Serial)(できたらSPIも)
+  - 基礎２ ; センサ活用、センサ接続方法(I2C, UART)(できたらSPIも)
   - 基礎３ ; インターネット接続、Web API利用, MQTT利用
 - [2日目の学び](../4-Day2-Practical/README_ja.md)
   - Raspberry Pi Pico 2 W、MicroPython と センサ、各種デバイス類を組み合わせたアプリケーション試作(プロト開発)

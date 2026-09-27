@@ -34,23 +34,23 @@
   - 基礎３ ; 周辺機器との接続方法、デバイス活用
     - マイコンに接続できる周辺機器
        - [センサ紹介、センサの使い方(データの取得方法)](3-0-sensor.md)
-    - [マイコンと周辺機器との通信インタフェース(I2C, SPI, Serial)](3-1-use-SerialBus.md)
+    - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-use-SerialBus.md)
     - 入力装置 
       - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
         -  [CO2センサ(I2C接続)](3-x-CO2-sensor.md)
         -  [ジャイロセンサ(I2C接続)](3-3-6dof.md)
         -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
-        -  [GPS（シリアル接続）](3-x-Serial-GPS.md)
+        -  [GPS（UART接続）](3-x-Serial-GPS.md)
         -  人感センサ（デジタル1線）
       - [CMOSカメラ](3-x-CMOS_Camera.md)
         - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico 
     - 出力装置
-      - [キャラクタディスプレイ（I2C）](3-2-LCD-Display.md)
-      - [グラフィックディスプレイ(SPI)](3-2-x-GraphicDisplay.md)  
+      - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
+      - [グラフィックディスプレイ(SPI接続)](3-2-x-GraphicDisplay.md)  
       - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
     - 記憶装置
       - [SDカード(SPI接続)](3-x-SPI-SDCard.md) 
-    - センサ活用事例ハンズオン（全部はできないの選択）
+    - センサ活用事例ハンズオン（全部はできないので選択）
       - 温湿度計測結果をLCDに表示
       - 障害物との距離をLCDに表示
         -  障害物との距離をLCDと音で表現
