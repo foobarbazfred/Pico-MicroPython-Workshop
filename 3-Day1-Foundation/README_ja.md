@@ -88,7 +88,7 @@
     -  音楽や音声を再生する
       - 音声合成LSIを利用(シリアル接続で発話できる)  
       - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
-      - DVIでDigitalTVに接続、グラフィック表示
+      - [DVIでDigitalTVに接続、グラフィック表示](https://github.com/foobarbazfred/micropython/tree/main/rp2350-hstx)
   - 補講４ ； マイコンとクラウドサービスとの連携
   - 補講５ ； マイコンでAI技術をどう活用するか
     - 活用できるAIの技術とは
