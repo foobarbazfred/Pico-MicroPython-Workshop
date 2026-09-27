@@ -19,6 +19,7 @@ https://micropython.org/download/
       - Picoシリーズ以外でRP2350を使った省サイズボードもある
    -  STM32系(ボード名：Nucleo)
    -  SAMD系(ARM Cortex-M4Fコア Microchip ATSAMD51P19)(商品 Wio Terminal)
+   -  micro:bit
    -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)（ボード名：Nano 33 BLEはMicroPython稼働）
 
 ### どのボードを選ぶか？選び方
