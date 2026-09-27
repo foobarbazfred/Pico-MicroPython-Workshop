@@ -18,15 +18,15 @@
          - REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
         - マイコン用PG開発用に機能拡張されている部分（ソフトとハードを合わせて説明） 
-  - 基礎２ ;  Input/Outputの基礎/Digial/Analog(PWM)
+  - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
     - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
     - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
-    - DitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
+    - DigitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
       - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
       - [PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
       - [PWMを使ってサーボモータ制御(DUTYを変える)](2-5-ServoControl.md)
       - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
-    - [DitalでAnalogを表現する-> フルカラーLEDを使う](2-6-NeoPixel.md)
+    - [DigitalでAnalogを表現する-> フルカラーLEDを使う](2-6-NeoPixel.md)
     - GPIO AD/DA変換　ハンズオン（全部はできないので選択）
       - VRで光の明るさが変わる
       - VRでNeoPixelの色が変わる

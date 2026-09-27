@@ -8,7 +8,7 @@
   - 開発環境セットアップ、ツール類紹介、ファイル転送
   - REPLを用いたボトムアップの試作例
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
-  - 基礎１ ;  Input/Outputの基礎/Digial/Analog(PWM)
+  - 基礎１ ;  Input/Outputの基礎/Digital/Analog(PWM)
   - 基礎２ ; センサ活用、センサ接続方法(I2C, Serial)(できたらSPIも)
   - 基礎３ ; インターネット接続、Web API利用, MQTT利用
 - [2日目の学び](../4-Day2-Practical/README_ja.md)
