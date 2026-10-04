@@ -35,3 +35,6 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
 <img width="1340" height="904" alt="image" src="https://github.com/user-attachments/assets/fae363ad-925d-4e97-afc4-5657f9eb7563" />
 
 動作テスト用のDummyClientは以下のコードを使ってください。PCやRaspberry Pi OS上のC-Pythonで動作するPythonコードです。
+
+Node-REDによるIoT dashboardのソースコードは以下です。
+
