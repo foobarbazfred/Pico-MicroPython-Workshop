@@ -17,9 +17,10 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
 
 ### Node-REDによるプログラミング
 1. まず、ダッシュボードメニューより、タブとグループを追加します（表示するための場所確保です）
-2. 次に、MQTTブローカに接続して受信するため、MQTTノードをDrag＆Drop、表示用のNode、GaugeNode、GraphNodeをDrag&Drop
-3. MQTTノードで受信されるデータはJSON形式で、以下の値となっているため、changeノードで計測値だけを取り出します。
-4. プログラムが完了すると、右上のデプロイをクリックします。これによりIoT Dashboardが利用可能となります。画面に接続するには、右矢印をクリックします。ブラウザが起動されます。
+2. 次に、MQTTブローカに接続して受信するため、MQTT NodeをDrag＆Dropします。またGUI表示のためのWidgetである、Gauge Node、Graph NodeをDrag&Dropします。
+3. MQTTノードで受信されるデータはJSON形式です。JSON形式データから測定データを取り出したいので、changeノードで計測値だけを取り出します。
+4. MQTT Node、Change Node、Gauge Node、Graph Nodeをwireで接続してデータが流れるようにします。
+5. プログラムが完了すると、右上のデプロイをクリックします。これによりIoT Dashboardが利用可能となります。画面に接続するには、右矢印をクリックします。ブラウザが起動されます。
 
 <img width="810" height="486" alt="image" src="https://github.com/user-attachments/assets/1a4f3965-3c73-48da-b449-34151fda8773" />
 <img width="562" height="406" alt="image" src="https://github.com/user-attachments/assets/b55ef745-420f-48db-b3b7-9fdebb306a8a" />
