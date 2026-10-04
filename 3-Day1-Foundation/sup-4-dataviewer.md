@@ -45,7 +45,7 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
   - PCかRPi上でThingsBoardを稼働させる
   - ThingBoardのダッシュボード機能が利用できる
   - 認証機能があるので、インターネット上での提供は可能、最悪ハックされるリスクも考慮すべき
-  - AWS上のEC2/ECSを契約して稼働させる方法もある
+  - AWS上のEC2/ECSを契約してThingsBoardのCommunity Editionを稼働させる方法もある
 - Streamlit, NiceGUI等を使って自力でIoTダッシュボードを構築
   - Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWevServiceを稼働させる
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
