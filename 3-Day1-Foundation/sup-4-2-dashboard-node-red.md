@@ -1,6 +1,11 @@
 # Node-REDのdashboard機能活用
 
-RP2Wとセンサを接続して計測したデータを表示する方法として、Node-REDのdashboard機能を使う方法があります。要点を絞って説明します。
+RP2Wとセンサを接続して計測したデータを表示する方法として、Node-REDのdashboard機能を使う方法があります。
+動作画面例は以下です。
+<img width="572" height="386" alt="image" src="https://github.com/user-attachments/assets/fae363ad-925d-4e97-afc4-5657f9eb7563" />
+
+
+要点を絞って説明します。
 
 ### 自力でIoTダッシュボードを構築する(Node-RED活用案）
 - Node-RED Dashboard機能を使う
