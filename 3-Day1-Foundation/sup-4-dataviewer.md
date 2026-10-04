@@ -16,7 +16,7 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
 - Adafruit IO
   - 無償利用可能、データ保存期間が短い、ダッシュボード機能あり 
 - ArduinoCloud（https://cloud.arduino.cc/）
-  - Arduinoユーザ囲い込み戦略、接続できるボードはArduinoのみ 
+  - Arduinoユーザ囲い込み戦略、接続できるボードはArduinoのみ、IDE統合型 
 - ThingSpeak
   - 無償利用可能、ストレージ機能は強力だが、ダッシュボード機能は最低限
   - MATLABと組み合わせて使う前提
@@ -26,6 +26,9 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
 - Blynk (https://www.blynk.io/) 
   - 有償サービス、高機能、リッチな画面構築可能、スマフォからの閲覧、マルチテナント対応
   - 無償利用可能
+- Thinger.io (https://thinger.io/)
+  - 有償サービス、高機能、リッチな画面構築可能、スマフォアプリ
+  - 無償利用可能（制限は。。）   
  
 ### 自力でIoTダッシュボードを構築する
 - Node-RED Dashboard機能を使う
