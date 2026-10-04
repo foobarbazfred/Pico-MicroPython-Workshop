@@ -17,6 +17,7 @@ GPSユニットの仕様
 ### 参考資料
 - 秋月GPSページ
   - https://akizukidenshi.com/catalog/c/csatellit/
+  - 商品説明に「シリアル出力タイプ」と書かれているGPUユニットは、UARTで接続可能です
 - GPS(GT-502MGG) Specification
   - https://akizukidenshi.com/goodsaffix/GT-502MGG.pdf
 
