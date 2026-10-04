@@ -8,3 +8,7 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
   - No Codeか、最低限のVisual Programmingでダッシュボードが構築可能
   - セキュリティ面から、サービス提供はローカルネットワーク環境のみに制限すべき(インターネット上でのサービス提供は危険)
   - リモートから参照してもらいたい時はVPN等を構築
+
+### Node-REDの準備
+#### Node-RED DashBoard
+<img width="1132" height="1105" alt="image" src="https://github.com/user-attachments/assets/f5142920-43bf-44e8-ae0d-867797605021" />
