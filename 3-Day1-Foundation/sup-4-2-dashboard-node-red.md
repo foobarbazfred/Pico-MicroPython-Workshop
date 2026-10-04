@@ -27,14 +27,16 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
 <img width="562" height="406" alt="image" src="https://github.com/user-attachments/assets/b55ef745-420f-48db-b3b7-9fdebb306a8a" />
 <img width="611" height="509" alt="image" src="https://github.com/user-attachments/assets/5b55349e-5b55-4c3a-b5ba-e165a9f4b2cc" />
 <img width="642" height="422" alt="image" src="https://github.com/user-attachments/assets/94a0273a-6422-4996-82ff-99b4b12700b8" />
-<img width="1007" height="605" alt="image" src="https://github.com/user-attachments/assets/36e03628-c5a3-4dab-8927-2683febf1893" />
+<img width="704" height="424" alt="image" src="https://github.com/user-attachments/assets/36e03628-c5a3-4dab-8927-2683febf1893" />
 <img width="701" height="431" alt="image" src="https://github.com/user-attachments/assets/584203cb-c3cc-4045-bfd6-5f4c7e9a0af3" />
 
 ### 動作確認
 正しく動作すると以下のように、1秒に一回表示が更新されます。
-<img width="1340" height="904" alt="image" src="https://github.com/user-attachments/assets/fae363ad-925d-4e97-afc4-5657f9eb7563" />
+<img width="714" height="482" alt="image" src="https://github.com/user-attachments/assets/fae363ad-925d-4e97-afc4-5657f9eb7563" />
 
-動作テスト用のDummyClientは以下のコードを使ってください。PCやRaspberry Pi OS上のC-Pythonで動作するPythonコードです。
+### ソースコード一式
+- Node-REDによるIoT dashboardのソースコードは以下です。
+- 動作テスト用のDummyClientは以下のコードを使ってください。PCやRaspberry Pi OS上のC-Pythonで動作するPythonコードです。<br>
+[client_sample_voltage.py](src/mqtt_dashboard/client_sample_voltage.py)
 
-Node-REDによるIoT dashboardのソースコードは以下です。
 
