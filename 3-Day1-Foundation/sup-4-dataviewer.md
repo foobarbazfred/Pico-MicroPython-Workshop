@@ -56,7 +56,7 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
 - ThingsBoardのCommunity Editionを使う
   - PCかRPi上でThingsBoardを稼働させる
   - ThingBoardのダッシュボード機能が利用できる
-  - 認証機能があるので、インターネット上での提供は可能、最悪ハックされるリスクも考慮すべき
-  - AWS上のEC2/ECSを契約してThingsBoardのCommunity Editionを稼働させる方法もある
+  - 認証機能があるので、インターネット上での提供は可能だが、第三者から攻撃されるリスクも考慮すべき
+  - AWSと契約、EC2またはECS上でThingsBoardのCommunity Editionを稼働させる方法もある
 
 上記自前構築の場合、RP2WとPC(またはRaspberryPi)との接続は、USB Serial(仮想COMポート)か、MQTTによる接続を選ぶことができます。MQTT Brokerを介してMQTTでRP2Wと接続することで、遠隔地のRP2Wの計測値を表示することが可能になります。クラウドサービスとして提供されるIoTプラットフォームを採用する場合、RP2WとIoTプラットフォームとの接続はHTTP/HTTPS/MQTTのいずれかになります。
