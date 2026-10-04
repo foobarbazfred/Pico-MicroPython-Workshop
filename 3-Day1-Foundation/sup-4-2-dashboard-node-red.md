@@ -10,5 +10,5 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
   - リモートから参照してもらいたい時はVPN等を構築
 
 ### Node-REDの準備
-#### Node-RED DashBoard
+#### Node-RED dashboardを追加します
 <img width="1132" height="1105" alt="image" src="https://github.com/user-attachments/assets/f5142920-43bf-44e8-ae0d-867797605021" />
