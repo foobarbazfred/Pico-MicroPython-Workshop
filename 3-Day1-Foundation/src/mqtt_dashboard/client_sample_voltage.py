@@ -10,7 +10,7 @@
 #  MQTT Dashboard デモ用のPublish Client
 #
 #   broker: broker.hivemq.com
-#   topic:  org00/sensor/rp01/vr
+#   topic:  __organization__/sensor/rp01/vr    # change __organization__ as 
 #   message:  {"voltage" : <value>} 
 #              <value> := 0.0 - 3.3
 #
@@ -22,7 +22,7 @@ import paho.mqtt.client as mqtt
 
 BROKER = 'broker.hivemq.com'
 PORT = 1883                      # TLSを使うなら 8883 + client.tls_set()
-TOPIC = 'org00/sensor/rp01/vr'
+TOPIC = '__organization__/sensor/rp01/vr'
 MAX_VOL = 3.3
 
 
