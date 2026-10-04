@@ -26,9 +26,6 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
 <img width="611" height="509" alt="image" src="https://github.com/user-attachments/assets/5b55349e-5b55-4c3a-b5ba-e165a9f4b2cc" />
 <img width="963" height="634" alt="image" src="https://github.com/user-attachments/assets/94a0273a-6422-4996-82ff-99b4b12700b8" />
 <img width="1007" height="605" alt="image" src="https://github.com/user-attachments/assets/36e03628-c5a3-4dab-8927-2683febf1893" />
-<img width="1006" height="605" alt="image" src="https://github.com/user-attachments/assets/e8cf2779-dfa8-4e72-99a7-2cf921621a08" />
-
-
 
 ### 動作確認
 正しく動作すると以下のように、1秒に一回表示が更新されます。
