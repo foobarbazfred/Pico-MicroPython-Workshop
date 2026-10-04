@@ -13,12 +13,17 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
 
 ### クラウドサービスとして提供されるIoT プラットフォーム
 認証機能、データストレージ、ダッシュボード機能等が用意されたIoT サービスとして以下が挙げられます
+- Ambient(ambidata.io)
+  - 無償利用可能、有償版もあり
+  - ダッシュボード機能は最低限の機能
+  - WebAPIによるデータPOST(SDKが提供される)
 - Adafruit IO
   - 無償利用可能、データ保存期間が短い、ダッシュボード機能あり 
 - ArduinoCloud（https://cloud.arduino.cc/）
   - Arduinoユーザ囲い込み戦略、接続できるボードはArduinoのみ、IDE統合型 
 - ThingSpeak
   - 無償利用可能、ストレージ機能は強力だが、ダッシュボード機能は最低限
+  - HTTPS,POSTメソッドか、MQTT Publishによるデータ登録
   - MATLABと組み合わせて使う前提
 - ThinsBoard
   - ダッシュボード構築手法が若干古い設計、マルチユーザ対応
