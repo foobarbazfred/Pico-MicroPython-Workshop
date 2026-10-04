@@ -11,7 +11,7 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
 
 ### Node-REDの準備
 #### Node-RED dashboardを追加します
-<img width="1132" height="1105" alt="image" src="https://github.com/user-attachments/assets/f5142920-43bf-44e8-ae0d-867797605021" />
+<img width="566" height="552" alt="image" src="https://github.com/user-attachments/assets/f5142920-43bf-44e8-ae0d-867797605021" />
 パレットにdashboard用Nodeが追加されます
 <img width="275" height="629" alt="image" src="https://github.com/user-attachments/assets/14641cae-3710-45d1-98f2-b842306005f1" />
 
