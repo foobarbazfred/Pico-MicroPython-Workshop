@@ -18,4 +18,4 @@ NiceGUI + Pythonによる自作dashboardの表示例<br>
 
 
 ### ソース一式
-
+- NiceGUIを用いたdashboard 構築　Pythonソース<br>[dashboard_nicegui.py](src/mqtt_dashboard/dashboard_nicegui.py)
