@@ -46,11 +46,6 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
   - Visual Programmingを基本に、最低限のJS Codeによりダッシュボードが構築可能
   - セキュリティ面から、サービス提供はローカルネットワーク環境のみに制限すべき(インターネット上でのサービス提供は危険)
   - 遠隔地からNode-RED dashboardを参照させたい場合はVPN等を構築
-- ThingsBoardのCommunity Editionを使う
-  - PCかRPi上でThingsBoardを稼働させる
-  - ThingBoardのダッシュボード機能が利用できる
-  - 認証機能があるので、インターネット上での提供は可能、最悪ハックされるリスクも考慮すべき
-  - AWS上のEC2/ECSを契約してThingsBoardのCommunity Editionを稼働させる方法もある
 - Streamlit, NiceGUI等を使って自力でIoTダッシュボードを構築
   - Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWevServiceを稼働させる
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
@@ -58,5 +53,10 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
   - セキュリティ面から、インターネット上でのサービス提供は不可
   - ローカルネットワーク環境からの利用に留めるべき
   - IoTダッシュボード試作の学習用途に適する
+- ThingsBoardのCommunity Editionを使う
+  - PCかRPi上でThingsBoardを稼働させる
+  - ThingBoardのダッシュボード機能が利用できる
+  - 認証機能があるので、インターネット上での提供は可能、最悪ハックされるリスクも考慮すべき
+  - AWS上のEC2/ECSを契約してThingsBoardのCommunity Editionを稼働させる方法もある
 
 上記自前構築の場合、RP2WとPC(またはRaspberryPi)との接続は、USB Serial(仮想COMポート)か、MQTTによる接続を選ぶことができます。MQTT Brokerを介してMQTTでRP2Wと接続することで、遠隔地のRP2Wの計測値を表示することが可能になります。クラウドサービスとして提供されるIoTプラットフォームを採用する場合、RP2WとIoTプラットフォームとの接続はHTTP/HTTPS/MQTTのいずれかになります。
