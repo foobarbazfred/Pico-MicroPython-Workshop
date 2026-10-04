@@ -11,8 +11,8 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
 
 ### Node-REDの準備
 #### Node-RED dashboardを追加します
-<img width="566" height="552" alt="image" src="https://github.com/user-attachments/assets/f5142920-43bf-44e8-ae0d-867797605021" />
-パレットにdashboard用Nodeが追加されます
+<img width="566" height="552" alt="image" src="https://github.com/user-attachments/assets/f5142920-43bf-44e8-ae0d-867797605021" /><br>
+パレットにdashboard用Nodeが追加されます<br>
 <img width="275" height="629" alt="image" src="https://github.com/user-attachments/assets/14641cae-3710-45d1-98f2-b842306005f1" />
 
 ### Node-REDによるプログラミング
@@ -21,7 +21,7 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
 3. MQTTノードで受信されるデータはJSON形式で、以下の値となっているため、changeノードで計測値だけを取り出します。
 4. プログラムが完了すると、右上のデプロイをクリックします。これによりIoT Dashboardが利用可能となります。画面に接続するには、右矢印をクリックします。ブラウザが起動されます。
 
-<img width="1012" height="608" alt="image" src="https://github.com/user-attachments/assets/1a4f3965-3c73-48da-b449-34151fda8773" />
+<img width="810" height="486" alt="image" src="https://github.com/user-attachments/assets/1a4f3965-3c73-48da-b449-34151fda8773" />
 <img width="562" height="406" alt="image" src="https://github.com/user-attachments/assets/b55ef745-420f-48db-b3b7-9fdebb306a8a" />
 <img width="611" height="509" alt="image" src="https://github.com/user-attachments/assets/5b55349e-5b55-4c3a-b5ba-e165a9f4b2cc" />
 <img width="963" height="634" alt="image" src="https://github.com/user-attachments/assets/94a0273a-6422-4996-82ff-99b4b12700b8" />
