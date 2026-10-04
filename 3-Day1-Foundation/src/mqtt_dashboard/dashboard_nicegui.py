@@ -30,7 +30,7 @@ from nicegui import app, ui
 BROKER_HOST = 'broker.hivemq.com'
 #BROKER_PORT = 8883
 BROKER_PORT = 1883
-TOPIC = 'org00/sensor/rp01/vr'    # payload: "1.65" または {"voltage": 1.65}
+TOPIC = '__organization__/sensor/rp01/vr'    # payload: "1.65" または {"voltage": 1.65}
 V_MIN, V_MAX = 0.0, 3.3
 MAX_POINTS = 300             # 折れ線に保持する点数(2〜3Hzなら約2分)
 # -------------------------------------------------------------------------
