@@ -85,7 +85,7 @@
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md
 )
       -  IoT PF(ThingsBoard)によるダッシュボード
-      -  Node-REDによるダッシュボード
+      -  [Node-REDによるダッシュボード](sup-4-2-dashboard-node-red.md)
       -  RPiPico上でWebServer、ブラウザ上でWidget表示
     -  音楽や音声を再生する
       - 音声合成LSIを利用(UART接続で発話できる)  
