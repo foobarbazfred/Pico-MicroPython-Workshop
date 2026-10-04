@@ -47,13 +47,14 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
   - セキュリティ面から、サービス提供はローカルネットワーク環境のみに制限すべき(インターネット上でのサービス提供は危険)
   - 遠隔地からNode-RED dashboardを参照させたい場合はVPN等を構築
   - Node-REDをクラウド上で構築・運用できるサービスもある
-- Streamlit, NiceGUI等を使って自力でIoTダッシュボードを構築
+- Streamlit, NiceGUI等を使ってIoTダッシュボードを自作
   - Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWevServiceを稼働させる
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
   - 自由度が高い、初期投資ほぼ０円
   - セキュリティ面から、インターネット上でのサービス提供は不可
   - ローカルネットワーク環境からの利用に留めるべき
-  - IoTダッシュボード試作の学習用途に適する
+  - IoT試作の学びに適する
+    - センサ→マイコン→MQTTブローカ→IoTダッシュボード自作というIoTシステムの実装を通してシステム構築を学べる
 - ThingsBoardのCommunity Editionを使う
   - PCかRPi上でThingsBoardを稼働させる
   - ThingBoardのダッシュボード機能が利用できる
