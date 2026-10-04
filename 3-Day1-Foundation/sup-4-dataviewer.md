@@ -50,7 +50,7 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
 - Streamlit, NiceGUI等を使ってIoTダッシュボードを自作
   - Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWevServiceを稼働させる
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
-  - 自由度が高い、初期投資ほぼ０円
+  - 自分で実装するので自由度が高い、表示対象データの特性に最適化可能
   - セキュリティ面から、インターネット上でのサービス提供は不可
   - ローカルネットワーク環境からの利用に留めるべき
   - IoTプロトタイプ試作の学びに適する
