@@ -21,12 +21,14 @@ RP2Wとセンサを接続して計測したデータを表示する方法とし�
 3. MQTTノードで受信されるデータはJSON形式です。JSON形式データから測定データを取り出したいので、changeノードで計測値だけを取り出します。
 4. MQTT Node、Change Node、Gauge Node、Graph Nodeをwireで接続してデータが流れるようにします。
 5. プログラムが完了すると、右上のデプロイをクリックします。これによりIoT Dashboardが利用可能となります。画面に接続するには、右矢印をクリックします。ブラウザが起動されます。
+6. レイアウトメニューから、各Widgetの配置を調整することもできます
 
 <img width="810" height="486" alt="image" src="https://github.com/user-attachments/assets/1a4f3965-3c73-48da-b449-34151fda8773" />
 <img width="562" height="406" alt="image" src="https://github.com/user-attachments/assets/b55ef745-420f-48db-b3b7-9fdebb306a8a" />
 <img width="611" height="509" alt="image" src="https://github.com/user-attachments/assets/5b55349e-5b55-4c3a-b5ba-e165a9f4b2cc" />
 <img width="642" height="422" alt="image" src="https://github.com/user-attachments/assets/94a0273a-6422-4996-82ff-99b4b12700b8" />
 <img width="1007" height="605" alt="image" src="https://github.com/user-attachments/assets/36e03628-c5a3-4dab-8927-2683febf1893" />
+<img width="701" height="431" alt="image" src="https://github.com/user-attachments/assets/584203cb-c3cc-4045-bfd6-5f4c7e9a0af3" />
 
 ### 動作確認
 正しく動作すると以下のように、1秒に一回表示が更新されます。
