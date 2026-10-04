@@ -1,0 +1,199 @@
+[
+    {
+        "id": "f7046320e7e4d88a",
+        "type": "tab",
+        "label": "フロー 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a01f8d172b6250ab",
+        "type": "mqtt in",
+        "z": "f7046320e7e4d88a",
+        "name": "",
+        "topic": "org00/sensor/rp01/vr",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "efe5f75c56fa1d5f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "adc646acf4940d70"
+            ]
+        ]
+    },
+    {
+        "id": "ee2cf11096ea4a8b",
+        "type": "ui_gauge",
+        "z": "f7046320e7e4d88a",
+        "name": "",
+        "group": "f7d78e7cc87830eb",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 390,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7efd6f0e15b981b5",
+        "type": "ui_chart",
+        "z": "f7046320e7e4d88a",
+        "name": "",
+        "group": "f7d78e7cc87830eb",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adc646acf4940d70",
+        "type": "change",
+        "z": "f7046320e7e4d88a",
+        "name": "JSON形式のMQTTメッセージから測定値取り出し",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.voltage",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "7efd6f0e15b981b5",
+                "ee2cf11096ea4a8b",
+                "27e437e37d282400"
+            ]
+        ]
+    },
+    {
+        "id": "27e437e37d282400",
+        "type": "debug",
+        "z": "f7046320e7e4d88a",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "efe5f75c56fa1d5f",
+        "type": "mqtt-broker",
+        "name": "hivemq",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f7d78e7cc87830eb",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "5c09456c0b46804c",
+        "order": 1,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5c09456c0b46804c",
+        "type": "ui_tab",
+        "name": "VR アナログ電圧モニタ",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
