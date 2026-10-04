@@ -40,7 +40,7 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
   - 有償サービス、高機能、リッチな画面構築可能、スマフォアプリ
   - 無償利用可能（制限は。。）   
  
-### 自力でIoTダッシュボードを構築する
+### 自前でIoTダッシュボードを構築する
 - [Node-RED Dashboard機能を使う](sup-4-2-dashboard-node-red.md)
   - PCかRPi上でNode-REDを稼働させ、Dashboard機能を使ってIoT ダッシュボードを構築する
   - Visual Programmingに加え、最低限のJS Codeによりダッシュボードが構築可能
