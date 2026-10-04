@@ -42,9 +42,10 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
 ### 自力でIoTダッシュボードを構築する
 - [Node-RED Dashboard機能を使う](sup-4-2-dashboard-node-red.md)
   - PCかRPi上でNode-REDを稼働させ、Dashboard機能を使ってIoT ダッシュボードを構築する
-  - No Codeか、最低限のVisual Programmingでダッシュボードが構築可能
+  - Visual Programmingに加え、最低限のJS Codeによりダッシュボードが構築可能
   - セキュリティ面から、サービス提供はローカルネットワーク環境のみに制限すべき(インターネット上でのサービス提供は危険)
   - リモートから参照してもらいたい時はVPN等を構築
+  - MQTT Brokerを介してRP2Wと接続することで、遠隔地のRP2Wの計測値を表示可能
 - ThingsBoardのCommunity Editionを使う
   - PCかRPi上でThingsBoardを稼働させる
   - ThingBoardのダッシュボード機能が利用できる
