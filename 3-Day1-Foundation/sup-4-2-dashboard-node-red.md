@@ -45,7 +45,8 @@ dashboardを構築するための要点を説明します。最後にNode-RED用
 <img width="714" height="482" alt="image" src="https://github.com/user-attachments/assets/fae363ad-925d-4e97-afc4-5657f9eb7563" />
 
 ### ソースコード一式
-- Node-REDによるIoT dashboardのソースコードは以下です。
+- Node-REDによるIoT dashboardのソースコードは以下です。<br>
+[node_red_iot_dashboard_flows.json](src/mqtt_dashboard/node_red_iot_dashboard_flows.json)
 - 動作テスト用のDummyClientは以下のコードを使ってください。PCやRaspberry Pi OS上のC-Pythonで動作するPythonコードです。<br>
 [client_sample_voltage.py](src/mqtt_dashboard/client_sample_voltage.py)
 
