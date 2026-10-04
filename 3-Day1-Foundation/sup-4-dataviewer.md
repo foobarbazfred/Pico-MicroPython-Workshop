@@ -46,7 +46,7 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
   - Visual Programmingを基本に、最低限のJS Codeによりダッシュボードが構築可能
   - セキュリティ面から、サービス提供はローカルネットワーク環境のみに制限すべき(インターネット上でのサービス提供は危険)
   - 遠隔地からNode-RED dashboardを参照させたい場合はVPN等を構築
-  - RP2WとNode-RED(PC/Rapberry Pi)との接続は、USB-Serialか、MQTTによる接続が選択可能
+  - RP2WとNode-RED(PC/Rapberry Pi)との接続は、USB Serial(仮想COMポート)か、MQTTによる接続が選択可能
     - MQTT Brokerを介してMQTTでRP2Wと接続することで、遠隔地のRP2Wの計測値を表示可能
 - ThingsBoardのCommunity Editionを使う
   - PCかRPi上でThingsBoardを稼働させる
