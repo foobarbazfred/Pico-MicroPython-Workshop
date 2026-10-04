@@ -46,6 +46,7 @@ RP2Wとセンサを接続して計測したデータをどう表示するのが�
   - Visual Programmingを基本に、最低限のJS Codeによりダッシュボードが構築可能
   - セキュリティ面から、サービス提供はローカルネットワーク環境のみに制限すべき(インターネット上でのサービス提供は危険)
   - 遠隔地からNode-RED dashboardを参照させたい場合はVPN等を構築
+  - Node-REDをクラウド上で構築・運用できるサービスもある
 - Streamlit, NiceGUI等を使って自力でIoTダッシュボードを構築
   - Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWevServiceを稼働させる
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
