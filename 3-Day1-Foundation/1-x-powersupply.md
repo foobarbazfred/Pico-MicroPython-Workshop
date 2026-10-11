@@ -18,13 +18,12 @@
 * 内部で電圧補正された3.3Vが**36番ピン(3V3)**から出力できます。3.3Vで動作するセンサー等に給電する場合は、36番ピン(3V3 OUT)を使用します。
 
 <img width="855" height="359" alt="image" src="https://github.com/user-attachments/assets/71408a11-6242-4b92-adc5-d4b514254740" />
-
-「Raspberry Pi Pico 2 W Datasheet An RP2350-based microcontroller board with wireless」3.4. Powerchainより引用
+[1] Raspberry Pi Pico 2 W Datasheet ; 3.4. Powerchainより引用
 
 
 <img width="1357" height="1116" alt="image" src="https://github.com/user-attachments/assets/64de529b-32d4-4ec9-9c9a-3040937bb610" />
 
-Figure 2. The pinout of the Pico 2 W board　　1. About Pico 2 W　より引用
+Figure 2. The pinout of the Pico 2 W board  / [1]Raspberry Pi Pico 2 W Datasheet; 1. About Pico 2 W　より引用
 
 ### 参考文献
 1. [Raspberry Pi Pico 2 W Datasheet An RP2350-based microcontroller board with wireless](https://pip.raspberrypi.com/documents/RP-008304-DS)
