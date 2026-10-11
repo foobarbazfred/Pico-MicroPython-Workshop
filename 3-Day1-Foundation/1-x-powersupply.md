@@ -26,4 +26,7 @@
 Figure 2. The pinout of the Pico 2 W board  / [1]Raspberry Pi Pico 2 W Datasheet; 1. About Pico 2 W　より引用
 
 ### 参考文献
+
+電源の接続方法について詳しくは、[1]Raspberry Pi Pico 2 W Datasheetの、3.4. Powerchainの章を参照してください。充電池の接続説明もあります（Using a battery charger）。
+
 1. [Raspberry Pi Pico 2 W Datasheet An RP2350-based microcontroller board with wireless](https://pip.raspberrypi.com/documents/RP-008304-DS)
