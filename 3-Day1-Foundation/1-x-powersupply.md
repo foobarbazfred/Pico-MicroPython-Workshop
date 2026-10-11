@@ -14,3 +14,7 @@ USBとボードを接続した場合、USBケーブルから５Vが供給され�
 「Raspberry Pi Pico 2 W Datasheet An RP2350-based microcontroller board with wireless」3.4. Powerchainより引用
 
 VSYSから電源として入力できる最大電圧が5.5Vなので、電池駆動の場合、この電圧（定格）を超えないよう注意が必要です。
+
+<img width="1357" height="1116" alt="image" src="https://github.com/user-attachments/assets/64de529b-32d4-4ec9-9c9a-3040937bb610" />
+
+Figure 2. The pinout of the Pico 2 W board　　1. About Pico 2 W　より引用
