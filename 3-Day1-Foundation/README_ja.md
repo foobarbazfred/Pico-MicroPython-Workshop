@@ -9,6 +9,7 @@
     -  [マイコン用プログラミング言語](1-x-programming-languages.md)
      - [MicroPython/Python復習](1-x-micropython_summary.md)
      - [開発環境セットアップ、ツール類紹介、ファイル転送](1-x-programming-tools.md)
+     - [ボードへの電源供給方法](1-x-powersupply.md)
      - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
          -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
      - REPLを用いたボトムアップの試作例
