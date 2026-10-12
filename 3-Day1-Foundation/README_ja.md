@@ -44,7 +44,6 @@
         -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
         -  人感センサ（デジタル1線）
         -  発展：[GPS（UART接続）](3-x-Serial-GPS.md)
-
       - 発展：[CMOSカメラ](3-x-CMOS_Camera.md)
         - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico 
     - 出力装置
