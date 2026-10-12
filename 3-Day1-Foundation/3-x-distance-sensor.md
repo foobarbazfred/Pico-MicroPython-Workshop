@@ -108,6 +108,7 @@ while True:
 
 <img src="assets/HC-SR04_LCD.png" width=700>
 
+キャラクタディスプレイの使い方は、[キャラクタディスプレイ](3-2-LCD-Display.md)を参照してください。
 上記ドライバのテストプログラムは以下です (LCD ディスプレイにも対応した版）
 ```
 import time
