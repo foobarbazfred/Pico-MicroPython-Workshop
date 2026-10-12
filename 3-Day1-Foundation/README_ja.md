@@ -4,8 +4,8 @@
   - 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて　
     -  マイコン基礎（簡単なブロック図、有名なマイコン紹介）
        -  [主要マイコン(マイコンボード)紹介）](1-x-board.md)
-       -  [簡単なブロック図(Raspberry Pi Pico 2)](1-x-microcontroller.md)
-       -  マイコンプログラミングを取り巻く要素技術（技術マップ）
+       -  [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-x-microcontroller.md)
+       -  マイコンプログラミング、IoTシステム開発を取り巻く要素技術（技術マップ）
     -  [マイコン用プログラミング言語](1-x-programming-languages.md)
      - [MicroPython/Python復習](1-x-micropython_summary.md)
      - [開発環境セットアップ、ツール類紹介、ファイル転送](1-x-programming-tools.md)
