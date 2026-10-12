@@ -14,7 +14,8 @@ from machine import PWM
 PWM_OUTPUT_PIN=16
 
 # setup
-machine.freq(125_000_000)   # set lowest system clock (125MHz)
+machine.freq(125_000_000)
+# set lowest PWM FREQ 8Hz
 pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 ```
 
