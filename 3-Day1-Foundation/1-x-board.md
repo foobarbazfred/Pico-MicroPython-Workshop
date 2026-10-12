@@ -33,7 +33,7 @@ https://micropython.org/download/
    - その他(Rola, )
 - RAMのサイズ、Flashのサイズ
 - 使われているマイコンコアのアーキテクチャ、システムクロック
-  - コアの種類（ARM、RISC-V, Extensa, etc） 
+  - コアの種類（ARM、RISC-V, Xtensa, etc） 
 - 表示用デバイスが搭載されているか
 - センサ類が搭載されているか（カメラ搭載型もあり）
 - ケースに入っているか
