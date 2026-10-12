@@ -11,7 +11,7 @@ Linux等は動かず、OSなしでアプリケーションを稼働させる小�
 ### MicroPythonが対応しているマイコンボード
 https://micropython.org/download/
 - 商品体系別
-   -  EPS32/ESP32-S2/ESP32-S3 (Tensilica Xtensa Core)
+   -  EPS32/ESP32-S2/ESP32-S3 (Tensilica Xtensa Core)(商品名：M5Stack / M5Stampシリーズ)
       - 高性能だが消費電力が大きい、Wi-Fiモジュール込みのパッケージ、省サイズ化可能
    -  EPS32-C3/ESP32-C5 (RISC-V Core)
       - ESP32より性能低いがRISC-Vコアを使える WiFiモジュール込みパッケージ
@@ -19,7 +19,7 @@ https://micropython.org/download/
       - WiFiモジュールは外付け(RP2350はコアと周辺IOのみ)、ESP32より省電力、ボードサイズはやや大きい、ARM cortex-M (RP2450はRISC-Vも内蔵)
       - Picoシリーズ以外でRP2350を使った省サイズボードもある
    -  STM32系(ARM Cortex-M)(ボード名：Nucleo)
-   -  SAMD系(ARM Cortex-M4Fコア Microchip ATSAMD51P19)(商品 Wio Terminal)
+   -  SAMD系(ARM Cortex-M4Fコア Microchip ATSAMD51P19)(商品名：Wio Terminal)
    -  micro:bit(ARM Cortex-M)
    -  Arduinoもある(Arduinoはマイコンボードであり、開発環境であり、プログラミング言語である)（ボード名：Nano 33 BLEはMicroPython稼働）
 
