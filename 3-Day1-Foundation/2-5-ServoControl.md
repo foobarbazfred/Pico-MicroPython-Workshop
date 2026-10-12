@@ -97,6 +97,9 @@ servo_rotate_horn(servo, 90)
 ```
 
 ### ボリュームの回転に合わせてサーボホーンを動かす
+
+<img src="assets/VR_SERVO.png" width="500">
+
 可変抵抗（ボリューム）の軸の回転に連動してサーボのホーンを動かすプログラムは以下
 ```
 from machine import Pin
