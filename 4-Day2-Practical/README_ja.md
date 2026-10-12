@@ -56,6 +56,7 @@
      - [ダッシュボードその１](aq_sensor_IoT_Dashbard.md)
      - [ダッシュボードその２](aq_sensor_IoT_Dashbard2.md)
   - Node-REDのIoT PFを改良することで、MQTT メッセージにより遠隔で機器制御を行うことも可能です
+  - （Unixが動く普通の）Raspberry Pi 上で、NiceGUIを走らせてGUIを自作することも可能です。[NiceGUIによるGUI実装](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/sup-4-1-dashboard-nicegui.md)
 
 ## プロトタイプ開発成果
 - [2025年度講習　受講者様による試作アプリの記録](hands-on-projects)
