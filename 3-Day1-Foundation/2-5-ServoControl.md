@@ -28,7 +28,7 @@ from machine import Pin
 from machine import PWM
 servo = PWM(Pin(17), freq=50)
 ```
-ホーンの角度はPWMのdutyによって変えることができます
+ホーンの角度はPWMのdutyによって変えることができます。仕様では、角度におうじて、0度：1ms - 90度：1.5ms - 180度：2msとなっていますが、以下のサンプルコードは実際のサーボの動きを反映して設定値を最適化しています。
 ```
 MAX_VALUE = 0xffff
 servo.duty_u16(int(0.5/20 * MAX_VALUE))  # angle : 0 degree
