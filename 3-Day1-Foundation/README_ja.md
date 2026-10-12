@@ -23,9 +23,9 @@
     - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
     - DigitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
       - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
-      - 発展：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
       - [PWMを使ってサーボモータ制御(DUTYを変える)](2-5-ServoControl.md)
       - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
+      - 発展：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
     - [DigitalでAnalogを表現する-> フルカラーLEDを使う](2-6-NeoPixel.md)
     - 演習：GPIO AD/DA変換（全部はできないの選択）
       - [VRで光の明るさが変わる](2-4-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6led%E3%81%AE%E6%98%8E%E3%82%8B%E3%81%95%E3%82%92%E8%AA%BF%E6%95%B4)
@@ -42,13 +42,13 @@
         -  [CO2センサ(I2C接続)](3-x-CO2-sensor.md)
         -  [ジャイロセンサ(I2C接続)](3-3-6dof.md)
         -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
-        -  人感センサ（デジタル1線）
+        -  発展：人感センサ（デジタル1線）
         -  発展：[GPS（UART接続）](3-x-Serial-GPS.md)
       - 発展：[CMOSカメラ](3-x-CMOS_Camera.md)
         - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico 
     - 出力装置
       - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
-      - [グラフィックディスプレイ(SPI接続)](3-2-x-GraphicDisplay.md)  
+      - 発展：[グラフィックディスプレイ(SPI接続)](3-2-x-GraphicDisplay.md)  
       - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
     - 記憶装置
       - 発展：[SDカード(SPI接続)](3-x-SPI-SDCard.md) 
