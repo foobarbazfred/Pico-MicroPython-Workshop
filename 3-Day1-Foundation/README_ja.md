@@ -23,7 +23,7 @@
     - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
     - DigitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
       - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
-      - [PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
+      - 発展：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
       - [PWMを使ってサーボモータ制御(DUTYを変える)](2-5-ServoControl.md)
       - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
     - [DigitalでAnalogを表現する-> フルカラーLEDを使う](2-6-NeoPixel.md)
@@ -42,16 +42,17 @@
         -  [CO2センサ(I2C接続)](3-x-CO2-sensor.md)
         -  [ジャイロセンサ(I2C接続)](3-3-6dof.md)
         -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
-        -  [GPS（UART接続）](3-x-Serial-GPS.md)
         -  人感センサ（デジタル1線）
-      - [CMOSカメラ](3-x-CMOS_Camera.md)
+        -  発展：[GPS（UART接続）](3-x-Serial-GPS.md)
+
+      - 発展：[CMOSカメラ](3-x-CMOS_Camera.md)
         - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico 
     - 出力装置
       - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
       - [グラフィックディスプレイ(SPI接続)](3-2-x-GraphicDisplay.md)  
-      - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
+      - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
     - 記憶装置
-      - [SDカード(SPI接続)](3-x-SPI-SDCard.md) 
+      - 発展：[SDカード(SPI接続)](3-x-SPI-SDCard.md) 
     - 演習：センサ活用事例（全部はできないので選択）
       - 温湿度計測結果をLCDに表示
       - [障害物との距離をLCDに表示](3-x-distance-sensor.md)
