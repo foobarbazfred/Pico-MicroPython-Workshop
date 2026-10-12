@@ -39,8 +39,8 @@ while True:
 #
 ```
 
-自動的に点滅するプログラムは以下(sinを使っています)<br>
-Pythonのrange()は小数点を使えないので、0 -> 3.14の変化を作り出すのに、0 -> 314 で代用しています
+sin関数を使って周期的に明滅するプログラム<br>
+sin関数は、半周するのに0からπまでの値を取ります。一方、Pythonのrange()は小数点を使えないので、ループ時の変数は、0 -> 314 で代用しています
 ```
 from machine import Pin
 from machine import PWM
