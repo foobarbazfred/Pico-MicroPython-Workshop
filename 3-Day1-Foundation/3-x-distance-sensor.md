@@ -80,6 +80,8 @@ class HC_SR04:
             return (distance, pulse_width)
 
 ```
+
+### 応用：対象物までの距離を計測してLCDに表示する
 上記ドライバのテストプログラムは以下です
 ```
 import time
