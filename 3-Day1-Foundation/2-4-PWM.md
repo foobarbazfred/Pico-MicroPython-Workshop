@@ -63,7 +63,7 @@ while True:
 ### ボリュームの回転に合わせてLEDの明るさを調整
 先ほどのボリュームと連動して明るさを調整するプログラムを作りましょう。可変抵抗とLEDを以下の配線図に従って結線してください。
 
-<img src='assets/VR_LED_blink.png' width=300>
+<img src='assets/VR_LED_blink.png' width=500>
 
 VRの値に連動してLEDの明るさを変化させるプログラムは以下です。
 
