@@ -9,9 +9,9 @@ I2Cと8bitバスの変換にはコントローラはPCF8574T (PCF8574AT)が使�
 
 <img src="assets/Schematics_LCD.png" width="600">
 
-LCDを以下で接続してください。(I2C(0)のデフォルトPIN配置）
+LCDを以下で接続してください。(I2C(1)のデフォルトPIN配置）
 ```
- scl=5, sda=4,
+ scl=5, sda=4,  <<  MISS
 ```
 
 先ほど説明に従い、HW I2Cを使いI2C_1で接続してみます。
