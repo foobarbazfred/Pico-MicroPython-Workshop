@@ -54,7 +54,7 @@
       - [SDカード(SPI接続)](3-x-SPI-SDCard.md) 
     - 演習：センサ活用事例（全部はできないので選択）
       - 温湿度計測結果をLCDに表示
-      - [障害物との距離をLCDに表示](schematics_hc_sr04)
+      - [障害物との距離をLCDに表示]([schematics_hc_sr04](3-x-distance-sensor.md#%E6%BC%94%E7%BF%92%E5%AF%BE%E8%B1%A1%E7%89%A9%E3%81%BE%E3%81%A7%E3%81%AE%E8%B7%9D%E9%9B%A2%E3%82%92%E8%A8%88%E6%B8%AC%E3%81%97%E3%81%A6lcd%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B))
         -  障害物との距離をLCDと音で表現
       - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（デジタル版テルミン）
   - 基礎４ ; インターネット接続、Web API利用, MQTT利用
