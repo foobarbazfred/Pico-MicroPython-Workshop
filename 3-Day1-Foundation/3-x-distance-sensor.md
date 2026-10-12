@@ -123,8 +123,8 @@ hc_sr04 = HC_SR04(trig,echo)
 if LCD_AVAILABLE:
    from st7032 import ST7032LCD
    from machine import I2C
-   i2c = I2C(1, scl=Pin(19), sda=Pin(18), freq=10000) # OK??
-   lcd =  ST7032LCD(i2c)
+   i2c_1 = I2C(1, scl=Pin(19), sda=Pin(18), freq=400_000)
+   lcd =  ST7032LCD(i2c_1)
 
 while True:
   distance, pulse_width = hc_sr04.measure()   # 
