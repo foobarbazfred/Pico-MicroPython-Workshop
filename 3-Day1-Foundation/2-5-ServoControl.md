@@ -18,10 +18,11 @@
 
 <img src="assets/servo_fig.png" width=600><br>
 
-
-
-
 PWMを使うことで、サーボを簡単に制御できます。サーボのホーンの角度で、疑似的にアナログ値を表現することができます。
+サーボとの接続回路を以下に示します。サーボの電源は5Vを供給します。ピン番号40番のVBUSからサーボに5Vを供給しています。VBUSはUSBから供給される５V電源に直結されており、5Vを供給できます。VSYSから電源供給することも可能ですが、VSYSの場合、逆流防止ダイオードを介してUSBの5Vと接続されており、若干電圧降下が発生します。
+
+<img src="assets/SERVO.png" width="500">
+
 ```
 from machine import Pin
 from machine import PWM
