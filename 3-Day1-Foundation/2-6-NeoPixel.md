@@ -1,4 +1,4 @@
-# NeoPixelの制御
+# 発展：NeoPixelの制御
 
 NeoPixelはシリアルで制御できるカラーLEDであり、複数直列に接続可能です。（数珠繋ぎに何個でもつなげられる）。<br>
 MicroPython DocumentsのNeoPixel説明<br>
