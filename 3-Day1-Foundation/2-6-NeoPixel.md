@@ -17,7 +17,7 @@ mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Wo
 FreeNove様の説明ページ<br>
 https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python/6_NeoPixel.html<br>
 組み込みモジュールとしてすでに導入されているneopixelとの衝突を避けるため、neopixel2.py等と名前を変えてMicroPythonにインストールしてください。<br>
-upyshを使った場合以下でリネームできます
+upyshを使える場合、以下でリネームできます
 ```
 from upysh import *
 mv('/lib/neopixel.py', '/lib/neopixel2.py')
