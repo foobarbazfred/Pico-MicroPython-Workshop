@@ -1,6 +1,9 @@
 # PWMによるBeep音再生
 
-PWMはDUTYを変えることでモータ制御等を行いますが、周波数を変えることで音階を再生することができます。
+PWMはDUTY（H区間の比率）を変えることでモータ制御等を行いますが、PWMの周波数を変えることで音階を再生することができます。昔のファミコンは矩形波の周波数を変化させてメロディを再生していました。PWMの周波数を変えることで同じ効果が得られます。
+
+<img src="assets/sounder.png"  width="400">
+
 ```
 from machine import Pin
 from machine import PWM
