@@ -114,5 +114,6 @@ HandsOnとして生成ＡＩを活用したアプリ開発をテーマとする�
 - https://wiki.seeedstudio.com/ja/Wio-Terminal-TinyML-TFLM-1/
 
 ## 組み込みアプリに機械学習を組み込むための解説本として、以下が詳細に書かれていて分かりやすいと思います。
-- O'reilly TimyML  https://www.oreilly.com/library/view/tainiemueru/9798341627000/
+- O'reilly TimyML   Pete Warden, Daniel Situnayake ISBN-10 ‏ : ‎ 1492052043
+  https://www.oreilly.com/library/view/tainiemueru/9798341627000/
 
