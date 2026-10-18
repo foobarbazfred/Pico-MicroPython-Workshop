@@ -96,9 +96,8 @@
   - 補講５ ； マイコンでAI技術をどう活用するか
     - 活用できるAIの技術とは
     - どのようにマイコンで活用するか
-      - [構想、要件分析、試作検討でのAI活用(AIを活用した発想法)](sup-5-ai_assisted_development_ja.md)
-      - 開発段階でのAI活用(CodingでのAI活用)
-      - [AIが組み込まれたアプリケーションの開発](sup-5-embedded_ai_ja.md)
+      - [要件分析、試作等、開発段階でのAI活用](sup-5-ai_assisted_development_ja.md)
+      - [AIと連携したアプリケーションの開発](sup-5-embedded_ai_ja.md)
          - WebAPIによるCloud上のAIとマイコンを連携させる
          - マイコンにAIを組み込む、EdgeAI化（マイコン上で学習済み小型モデルを走らせる）
 
