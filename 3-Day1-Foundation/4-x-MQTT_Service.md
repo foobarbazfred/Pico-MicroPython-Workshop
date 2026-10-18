@@ -11,7 +11,7 @@ MQTTサービスを使うためには、MQTTメッセージを中継してくれ
 ### ご参考
 使いやすいMQTTブローカを整理します
 - HiveMQ
-  - 無料で使えるPublic MQTT Brokerサービスがあります 
+  - 無料で使えるPublic MQTT Brokerサービスがあります  https://www.mqtt-dashboard.com/
 - EMQX
   - 無料で使えるPublic MQTT Brokerサービスがあります
   - MEQXは遅延が少ないブローカです
