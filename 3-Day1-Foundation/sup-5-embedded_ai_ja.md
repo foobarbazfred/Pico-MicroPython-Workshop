@@ -65,7 +65,7 @@ Raspberry Pi Pico 2 W （RP2350） などのマイコンとAIを組み合わせ�
 ## 4) 推論ライブラリ・ツール比較（短評）
 - TensorFlow Lite: モバイル・サーバー向け（比較的大きなランタイム）
 - TensorFlow Lite Micro (TFLM): マイコン向け（RTOS / no-OS でも動く軽量ランタイム）
-- Edge Impulse: データ収集〜学習〜デプロイま��を支援するプラットフォーム（組み込み向けに最適化）
+- Edge Impulse: データ収集〜学習〜デプロイまでを支援するプラットフォーム（組み込み向けに最適化）
 - TinyML: 取り組み領域の総称・コミュニティ（TFLM や CMSIS-NN を利用）
 - ulab: MicroPython 上での数値処理ライブラリ
 
