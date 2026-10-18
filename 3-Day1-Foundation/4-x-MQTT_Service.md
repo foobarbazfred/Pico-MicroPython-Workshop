@@ -13,7 +13,7 @@ MQTTサービスを使うためには、MQTTメッセージを中継してくれ
 - HiveMQ
   - 無料で使えるPublic MQTT Brokerサービスがあります  https://www.mqtt-dashboard.com/
 - EMQX
-  - 無料で使えるPublic MQTT Brokerサービスがあります
+  - 無料で使えるPublic MQTT Brokerサービスがあります  https://www.emqx.com/ja/mqtt/public-mqtt5-broker
   - MEQXは遅延が少ないブローカです
 - Shiftr.io
   - 帯域制限ありますがアカウントを登録することで無料で使えます
