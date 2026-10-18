@@ -124,7 +124,7 @@ HandsOnとして生成ＡＩを活用したアプリ開発をテーマとする�
 - https://wiki.seeedstudio.com/ja/Wio-Terminal-TinyML-TFLM-1/
 
 ## 解説本
-組み込みアプリに深層学習を組み込むための解説本として、以下が詳細に書かれていて分かりやすいと思います。PC上のTF(TensorFlow)でモデルを学習させ、量子化でモデルを小型化し、TFLM(TensorFlow Light for Microcontroller)形式に変換して、マイコン上で動作するTFLMに読み込ませます。自分はまだ試していませんが、マイコンのリソースで、WakeWord(Hey Google等の呼びかけに反応)や、人物特定が実現できるらしいです。
+組み込みアプリに深層学習を組み込むための解説本として、以下が詳細に書かれていて分かりやすいと思います。PC上のTF(TensorFlow)でモデルを学習させ、量子化でモデルを小型化し、TFLM(TensorFlow Light Micro)形式に変換して、マイコン上で動作するTFLMに読み込ませます。マイコンのリソースで、WakeWord(Hey Google等の呼びかけに反応)や、人物特定が実現できるらしいです（自分はまだ試していません）。
 - O'reilly TimyML   Pete Warden, Daniel Situnayake ISBN-10 ‏ : ‎ 1492052043
   https://www.oreilly.com/library/view/tainiemueru/9798341627000/
 
