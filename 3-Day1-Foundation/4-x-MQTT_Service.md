@@ -16,7 +16,7 @@ MQTTサービスを使うためには、MQTTメッセージを中継してくれ
   - 無料で使えるPublic MQTT Brokerサービスがあります  https://www.emqx.com/ja/mqtt/public-mqtt5-broker
   - MEQXは遅延が少ないブローカです
 - Shiftr.io
-  - 帯域制限ありますがアカウントを登録することで無料で使えます(Basic Planは0円) 　https://www.shiftr.io/cloud
+  - 帯域制限ありますがアカウントを登録することで無料で使えます(Basic Planは0円)  https://www.shiftr.io/cloud
   - PrivateなMQTT Brokerです
   - Dashboardサービスがあり、Publisher/Describer間の通信状況を確認することができます
 
