@@ -109,6 +109,10 @@ HandsOnとして生成ＡＩを活用したアプリ開発をテーマとする�
 - TinyML: https://www.tinyml.org/
 - ulab（MicroPython向け数値処理）: https://github.com/v923z/micropython-ulab
 - MQTT（軽量メッセージング）: https://mqtt.org/
+- https://www.omron.com/jp/ja/technology/omrontechnics/2025/20250303-kogawara.html
+- https://interface.cqpub.co.jp/wp-content/uploads/pico-147.pdf
+- https://wiki.seeedstudio.com/ja/Wio-Terminal-TinyML-TFLM-1/
 
 ## 組み込みアプリに機械学習を組み込むための解説本として、以下が詳細に書かれていて分かりやすいと思います。
+- O'reilly TimyML  https://www.oreilly.com/library/view/tainiemueru/9798341627000/
 
