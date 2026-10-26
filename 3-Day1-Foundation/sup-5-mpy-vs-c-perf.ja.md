@@ -77,6 +77,9 @@ pin1 = Pin(1, Pin.OUT)
 
 speed_test(pin1)
 ```
+オシロスコープによる周期計測の例<br>
+<img src="assets/speed_by_Python_decorator.png" width=600>
+
 
 ### MicroPython言語 関数化+viper最適化+レジスタ直接書き込み ソース
 ```
