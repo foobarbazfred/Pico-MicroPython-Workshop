@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-### MicroPython言語 REPL版ソース
+### MicroPython言語 REPL版ソース(Pin操作メソッド呼び出し)
 ```
 import machine
 from machine import Pin
@@ -48,7 +48,7 @@ while True:
     pin1.high()
     pin1.low()
 ```
-### MicroPython言語 関数化 ソース
+### MicroPython言語 関数化 ソース(Pin操作メソッド呼び出し)
 ```
 import machine
 from machine import Pin
@@ -63,6 +63,33 @@ pin1 = Pin(1, Pin.OUT)
 
 speed_test(pin1)
 ```
+### MicroPython言語 関数化 ソース(Pin操作関数呼び出し)
+```
+import machine
+from machine import Pin
+
+#SIO_BASE_REG = 0xd0000000
+#SIO_GPIO_OUT_SET_REG_OFFSET = 0x18
+#SIO_GPIO_OUT_CLR_REG_OFFSET = 0x20
+
+_gp1_set():
+    # 0xd0000018 : SIO_GPIO_OUT_SET_REG
+    ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
+
+_gp1_clear():
+    # 0xd0000018 : SIO_GPIO_OUT_SET_REG
+    ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
+
+def _gp1_set_clr():
+    while True:
+        _gp1_set()
+        _gp1_clear()
+
+print(machine.freq())
+pin1 = Pin(1, Pin.OUT)
+_gp1_set_clr()
+```
+
 ### MicroPython言語 関数化＋native最適化 ソース
 ```
 import machine
