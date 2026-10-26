@@ -1,5 +1,7 @@
 # MicroPythonとC言語の性能差
-MicroPythonとC言語との間でどれぐらい性能の差があるのかを単純なGPIOのL/Hを繰り返すプログラムで比較しました。
+MicroPythonとC言語との間でどれぐらい性能の差があるのかを単純なGPIOのL/Hを繰り返すプログラムで比較しました。<br>
+テストプログラムを実行して、オシロスコープを用いて周期を計測しました。以下は例です<br>
+<img src="assets/speed_by_Python_decorator.png" width=600>
 
 ### 考察
 単純に、コンパイル型言語のC言語とインタプリタ型言語のMicroPython を比べるのはどうかとは思いつつ、性能差を把握するため比較
@@ -77,8 +79,7 @@ pin1 = Pin(1, Pin.OUT)
 
 speed_test(pin1)
 ```
-オシロスコープによる周期計測の例<br>
-<img src="assets/speed_by_Python_decorator.png" width=600>
+
 
 
 ### MicroPython言語 関数化+viper最適化+レジスタ直接書き込み ソース
