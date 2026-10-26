@@ -77,7 +77,7 @@ _gp1_set():
     ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
 
 _gp1_clear():
-    # 0xd0000018 : SIO_GPIO_OUT_SET_REG
+    # 0xd0000018 : SIO_GPIO_OUT_CLR_REG
     ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
 
 def _gp1_set_clr():
