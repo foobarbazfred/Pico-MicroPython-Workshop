@@ -1,4 +1,4 @@
-# MicroPythonの抽象化レベルによる性能差、C言語との性能差
+# MicroPythonの抽象化レベルによる性能差、C言語との性能差（作成中）
 MicroPythonとC言語との間でどれぐらい性能の差があるのかを単純なGPIOのL/Hを繰り返すプログラムで比較しました。<br>
 テストプログラムを実行して、オシロスコープを用いて周期を計測しました。以下は例です<br>
 <img src="assets/speed_by_Python_decorator.png" width=600>
