@@ -1,99 +1,105 @@
-# Day 1 Seminar Agenda
+# １日目セミナー議題
 
-- Day 1 Learnings
-  - Foundation 1: About microcontrollers, Python, and MicroPython
-    - Microcontroller basics (simple block diagram, well-known microcontrollers introduction)
-       - [Introduction to major microcontrollers (microcontroller boards)](1-x-board.md)
-       - [Simple block diagram (Raspberry Pi Pico 2)](1-x-microcontroller.md)
-       - Supporting technologies around microcontroller programming (technology map)
-    - [Programming languages for microcontrollers](1-x-programming-languages.md)
-    - [MicroPython/Python review](1-x-micropython_summary.md)
-    - [Development environment setup, tool overview, file transfer](1-x-programming-tools.md)
-    - Description of the Raspberry Pi Pico 2 W (abbreviated Pico2W) board
-      - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
-    - Bottom-up prototyping examples using the REPL
-      - Because Python is an interpreted language, it allows interactive programming. The mechanism where you type source code and it runs immediately is called the Read-Eval-Print-Loop (REPL).
-      - When using sensors whose usage is not clear without reading the datasheet, it is efficient to write control programs by experimenting interactively with the REPL.
-    - Using libraries (module installation and library management tools)
-       - Parts extended for microcontroller programming (explained combining software and hardware)
-  - Foundation 2: Basics of Input/Output — Digital / Analog (PWM)
-    - [GPIO digital I/O: OUTPUT LED blinking / INPUT switch input](2-2-Blink.md)
-    - [GPIO analog input: ADC — volume (potentiometer) input](2-3-AnalogValue.md)
-    - Representing analog with digital -> using PWM (Pulse Width Modulation)
-      - [Explanation of PWM, adjust LED brightness with PWM (change DUTY)](2-4-PWM.md)
-      - [Control motor rotation with PWM and a motor driver (change DUTY and output pin)](2-x-motor_control.md) (reference)
-      - [Control a servo motor with PWM (change DUTY)](2-5-ServoControl.md)
-      - [Play sound using PWM (change frequency)](2-6-Beep.md)
-    - [Represent analog with digital -> use full-color LEDs (NeoPixel)](2-6-NeoPixel.md)
-    - GPIO AD/DA hands-on (not all items can be completed; choose some)
-      - VR changes the brightness of light
-      - VR changes the NeoPixel color
-      - [VR changes the servo motor angle](2-5-ServoControl.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B...)
-      - VR changes the pitch of a sound
-      - Control a DC motor with VR and a motor driver
-  - Foundation 3: How to connect peripherals and use devices
-    - Peripherals that can be connected to a microcontroller
-       - [Sensor introduction, how to use sensors (how to obtain data)](3-0-sensor.md)
-    - [Communication interfaces between microcontroller and peripherals (I2C, SPI, UART)](3-1-use-SerialBus.md)
-    - Input devices
-      - Sensor connections (bus: I2C), methods to control devices (drivers)
-        - [CO2 sensor (I2C connection)](3-x-CO2-sensor.md)
-        - [Gyro sensor (I2C connection)](3-3-6dof.md)
-        - [Distance sensor (digital 2-wire)](3-x-distance-sensor.md)
-        - [GPS (UART connection)](3-x-Serial-GPS.md)
-        - PIR motion sensor (digital 1-wire)
-      - [CMOS camera](3-x-CMOS_Camera.md)
-        - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico
-    - Output devices
-      - [Character display (I2C connection)](3-2-LCD-Display.md)
-      - [Graphic display (SPI connection)](3-2-x-GraphicDisplay.md)
-      - [Audio playback via DAC (PCM5100A) (I2S connection)](2-9-i2s_player.md)
-    - Storage devices
-      - [SD card (SPI connection)](3-x-SPI-SDCard.md)
-    - Sensor application hands-on (not all items can be completed; select some)
-      - Display temperature and humidity measurement results on an LCD
-      - Display distance to obstacles on an LCD
-        - Express distance to obstacles using both LCD and sound
-      - Modulate the pitch of the playing sound by the distance measured by the distance sensor (digital theremin)
-  - Foundation 4: Internet connectivity, using Web APIs, using MQTT
-    - [Internet connection (Wi-Fi connection) and NTP](4-1-Network.md)
-    - Communication using HTTP with sample code
-      - [Retrieve weather information for a specified location from a weather forecast site](4-2-WebAPI.md)
-    - [Communication using MQTT with sample code](4-x-MQTT_Service.md)
-    - [Run RP2 as a WebServer](4-x-WebServer.md)
-    - Internet usage hands-on
-      - Access a weather information API, get weather data and display it on an LCD, and use a servo to indicate weather (rain/cloudy/sunny) or temperature
-      - Remotely operate a Raspberry Pi at a distant location (e.g., light up the remote NeoPixel from VR)
-  - Applied 1: Use IoT platforms and visualization
-    - Upload data to an IoT platform and visualize measurement data
+- 1日目の学び
+  - 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて　
+    -  マイコン基礎（簡単なブロック図、有名なマイコン紹介）
+       -  [主要マイコン(マイコンボード)紹介）](1-x-board.md)
+       -  [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-x-microcontroller.md)
+       -  マイコンプログラミング、IoTシステム開発を取り巻く要素技術（技術マップ）
+    -  [マイコン用プログラミング言語](1-x-programming-languages.md)
+     - [MicroPython/Python復習](1-x-micropython_summary.md)
+     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-x-programming-tools.md)
+     - [ボードへの電源供給方法](1-x-powersupply.md)
+     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
+         -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
+     - REPLを用いたボトムアップの試作例
+         - Pythonはインタプリタのため対話的にプログラミングできます。ソースを打ち込んですぐに実行される仕組みは、Read-Eval-Print-Loop(REPL)と呼ばれます。REPLを活用してテストファーストで部品から組み上げましょう（部分から全体へ）
+         - 仕様書を見ないと使い方が分からないセンサを使う場合、REPLで試行錯誤しながら制御プログラムを書く方法が効率的です
+         - C言語等、コンパイル型言語の場合、特定の関数だけ抜き出して実行することはできませんが、Pythonであればテストしたい関数名をREPLから入力することで直接実行できます
+     - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
+        - マイコン用プログラム開発のために機能拡張されている部分（ソフトとハードを合わせて説明） 
+  - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
+    - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
+    - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
+    - DigitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
+      - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
+      - [PWMを使ってサーボモータ制御(DUTYを変える)](2-5-ServoControl.md)
+      - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
+      - 発展：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
+    - 発展：[DigitalでAnalogを表現する-> フルカラーLED (NoePixel)を使う](2-6-NeoPixel.md)
+    - 演習：GPIO AD/DA変換（全部はできないの選択）
+      - [VRで光の明るさが変わる](2-4-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6led%E3%81%AE%E6%98%8E%E3%82%8B%E3%81%95%E3%82%92%E8%AA%BF%E6%95%B4)
+      - VRでNeoPixelの色が変わる
+      - [VRでサーボモータの角度が変わる](2-5-ServoControl.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%9B%E3%83%BC%E3%83%B3%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99)
+      - VRで音の高低が変わる
+      - VRとモータドライバでDCモータ制御
+  - 基礎３ ; 周辺機器との接続方法、デバイス活用
+    - マイコンに接続できる周辺機器
+       - [センサ紹介、センサの使い方(データの取得方法)](3-0-sensor.md)
+    - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-use-SerialBus.md)
+    - 入力装置 
+      - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
+        -  [CO2センサ(I2C接続)](3-x-CO2-sensor.md)
+        -  [ジャイロセンサ(I2C接続)](3-3-6dof.md)
+        -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
+        -  発展：人感センサ（デジタル1線）
+        -  発展：[GPS（UART接続）](3-x-Serial-GPS.md)
+      - 発展：[CMOSカメラ](3-x-CMOS_Camera.md)
+        - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico 
+    - 出力装置
+      - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
+      - 発展：[グラフィックディスプレイ(SPI接続)](3-2-x-GraphicDisplay.md)  
+      - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
+    - 記憶装置
+      - 発展：[SDカード(SPI接続)](3-x-SPI-SDCard.md) 
+    - 演習：センサ活用事例（全部はできないので選択）
+      - 温湿度計測結果をLCDに表示
+      - [障害物との距離をLCDに表示](3-x-distance-sensor.md)
+        -  障害物との距離をLCDと音で表現
+      - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
+  - 基礎４ ; インターネット接続、Web API利用, MQTT利用
+    - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-Network.md)
+    - HTTPを用いた通信とサンプルコード
+      - [天気予報サイトから指定した地点の天気情報を取得](4-2-WebAPI.md)
+    - [MQTTを用いた通信とサンプルコード](4-x-MQTT_Service.md)
+    - [RP2をWebServerとして動かす](4-x-WebServer.md)
+    - 演習：インターネット活用アプリ試作
+      - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
+      - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
+  - 応用１ ;  IoT PF活用、ビジュアル化
+    - IoT PFにデータをアップロード、計測データ見える化
 
-  ### Supplementary sessions if time permits
-  - Supplement 1: MicroPython performance, tuning, and resource management
-     - Is MicroPython fast or slow? How many times slower is it compared to C, and how does performance vary by microcontroller type?
-     - How to find bottlenecks and tuning methods
-     - Heap memory management (if used carelessly, MemoryException may interrupt the program (MicroPython may crash)); what is a safe maximum buffer size? (A conservative upper limit is one-third of the heap memory size.)
-  - Supplement 2: PIO...cover MicroPython slowness with hardware
-     - What is PIO (Programmable I/O), its purpose and use cases
-     - Internal structure
-     - How to use it
-       - Simple LED blink and switch input examples
-       - Using DMA together enables high-speed transfer of data streams
-       - Application example: capture MEMS MIC data (PDM data format) into memory without loss
-  - Supplement 3: Make plain microcontrollers shine — display and input device techniques
-    - Easy ways to implement a GUI
-      - Dashboards using IoT platforms (ThingsBoard)
-      - Dashboards using Node-RED
-      - Run a WebServer on RPi Pico and display widgets in a browser
-    - Play music and audio
-      - Use speech-synthesis ICs (speak via serial connection)
-      - Audio playback via I2S (save the audio data on SD and read from SD while sending to a DAC over the I2S bus)
-  - Supplement 4: Integration between microcontrollers and cloud services
-  - Supplement 5: How to use AI techniques with microcontrollers
-    - AI techniques that can be utilized
-    - How to apply AI on microcontrollers
-      - Conceptual and prototyping-stage AI usage (idea generation using AI)
-      - AI usage during development (coding assistance)
-      - AI usage in applications (integration with Web APIs)
+  ### 時間がまだある場合の補講
+  - 補講１ ； MicroPythonの性能、チューニング、リソース管理
+     - MicroPythonは早いのか遅いのか、C言語と比べて何倍時間がかかるのか、マイコンの種別による性能差
+     - [MicroPythonとC言語の性能差](sup-5-mpy-vs-c-perf.ja.md)
+     - ボトルネックを探す方法、チューニング方法
+     - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良いバッファ最大サイズとは？(Heap
+    メモリサイズの1/3を上限とするのが無難。その理由は？)
+  - 補講２ ； PIO...MicroPythonの遅さをハードウエアでカバーする
+     - PIO(Programming IO Interface)とは何か、目的、用途
+     - 内部構造
+     - 使い方
+       - 簡単なLチカ、SW入力
+       - DMAを併用することでデータストリームの高速転送が可能
+       - 応用例：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
+  - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
+    - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
+      -  IoT PF(ThingsBoard)によるダッシュボード
+      -  [Node-REDによるダッシュボード](sup-4-2-dashboard-node-red.md)
+      -  [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-x-WebServer.md)
+      -  [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
+    -  音楽や音声を再生する
+      - 音声合成LSIを利用(UART接続で発話できる)  
+      - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
+      - [DVIでDigitalTVに接続、グラフィック表示](https://github.com/foobarbazfred/micropython/tree/main/rp2350-hstx)
+  - 補講４ ； マイコンとクラウドサービスとの連携
+  - 補講５ ； マイコンでAI技術をどう活用するか
+    - 活用できるAIの技術とは
+    - どのようにマイコンで活用するか
+      - [要件分析、試作等、開発段階でのAI活用](sup-5-ai_assisted_development_ja.md)
+      - [AIと連携したアプリケーションの開発](sup-5-embedded_ai_ja.md)
+         - WebAPIによるCloud上のAIとマイコンを連携させる
+         - マイコンにAIを組み込む、EdgeAI化（マイコン上で学習済み小型モデルを走らせる）
 
-
-※ README_ja.md is the master (Japanese source)
+※README_ja.mdがマスタ
