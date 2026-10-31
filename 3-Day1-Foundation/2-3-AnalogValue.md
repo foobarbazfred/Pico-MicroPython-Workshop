@@ -1,11 +1,11 @@
-# アナログ値の取り扱い
+# アナログ値の取り扱い（入力編）
 
-GP26のADC0を使用します。ADCの初期化は以下です
+GP26のADC0を使用します。アナログデジタルコンバータ(ADC)の初期化は以下です
 ```
 from machine import ADC, Pin
 adc = ADC(Pin(26))     # create ADC object on ADC pin
 ```
-値を読み取ってみましょう
+GP26（物理ピン番号は31番ピン）をGNDか3.3Vに接続して値を読み取ってみましょう
 ```
 adc.read_u16()         # read value, 0-65535 across voltage range 0.0v - 3.3v
 ```
