@@ -18,7 +18,7 @@
 ## セミナー実施方針
 - [研修実施方針](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/1-Workshop%20Guidelines/Readme_ja.md)
 ## 教材について
-- [教材説明](2-Training-Equipment/Readme_ja.md)
+- [研修で用いる教材と関連ドキュメント一式](2-Training-Equipment/Readme_ja.md)
 ## 研修コンテンツ
 - [１日目 基礎編](3-Day1-Foundation/README_ja.md)
 - [２日目 実践編](4-Day2-Practical/README_ja.md)
