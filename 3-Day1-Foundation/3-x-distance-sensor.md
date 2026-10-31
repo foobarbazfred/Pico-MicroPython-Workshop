@@ -12,7 +12,7 @@
 勘違いしやすいのは、Trigger信号からEchoまでの時間が応答時間かと思いがちですが、応答にかかった時間はパルス幅で返却されます。マイコン側ではパルス幅を計測することで、対象物までの距離を推定します。
 
 ### 配線図
-<img src="assets/schematics_hc_sr04.png" width=500>
+<img src="assets/schematics_hc-sr04.png" width=500>
 
 
 HC-SR04は計測を指示するTrig(Trigger)信号と、センサから対象物までの距離をパルス幅で表現したEchoで制御されます。
