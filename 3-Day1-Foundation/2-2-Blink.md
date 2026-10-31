@@ -5,7 +5,7 @@ Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号�
 物理的なピン番号とGPIO番号を間違いやすいのでご注意ください。物理的なピン番号は四角で囲って数字を書いています。
 MicroPythonで指定する場合は、全てGPIO番号です。LEDはGP16（物理ピン番号21番）に接続します。LEDが点灯するかREPLで試しましょう
 
-<img src="assets/Schematics_LED_SW.png" width=300><img src="assets/LED_part_illustration.png" width=300><br>
+<img src="assets/Schematics_LED_SW.png" width=300><img src="assets/LED_part_illustration.png" width=200><br>
 
 
 GP16を出力用に初期化するコードは以下
