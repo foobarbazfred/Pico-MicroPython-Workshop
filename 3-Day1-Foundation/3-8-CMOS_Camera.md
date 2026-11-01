@@ -34,7 +34,7 @@ Arducam用ドライバを試作して以下に公開しています。
 OV5652用ドライバ一式のインストール方法
 ```
 import mip
-PATH = 'https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/heads/main/3-Day1-Foundation/src/lib/'
+PATH = 'https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/main/3-Day1-Foundation/src/lib/'
 for file in ('ov5642.py', 'ov5642_setup.py', 'ov5642_FIFO.py'):
     mip.install(PATH + file)
 ```
