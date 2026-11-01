@@ -31,11 +31,11 @@ i2c.scan()
 '0x62'
 ```
 
-SCD41用ドライバソフト
+### SCD41用ドライバソフト
 - Git上のドライバ置き場所 [src/lib/scd41.py](src/lib/scd41.py)
 - MicroPython側での置き場所： /lib/sdc41.py
 
-MicroPythonへのインストール方法
+### MicroPythonへのインストール方法
 1. mpipによりGitHubからインストール
 2. thonnyによりファイル保存することでインストール
 
