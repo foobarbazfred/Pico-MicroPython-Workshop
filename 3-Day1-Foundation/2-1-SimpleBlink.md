@@ -1,7 +1,9 @@
 # 1-1  参考：最もシンプルなLED点滅
 RaspberryPi Pico 2 W上にはLEDが実装されておりプログラムで点滅させることができます。
 
-配線も不要でボード上のLEDを点滅させるプログラムは以下
+<img src="assets/RP2W_onboard_LED_SW.png" width=400>
+
+ボード上のLEDを点滅させるプログラムは以下。
 ```
 from machine import Pin
 import time
