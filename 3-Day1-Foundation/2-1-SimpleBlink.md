@@ -35,3 +35,14 @@ while True:
         led.off()
 ```
 上記いずれも配線が不要ですぐに使えるLEDとスイッチです。
+ご参考にボードの回路図を付けます（MicroPythonから単純にGPIOモジュール等ではアクセスできない位置に配置されています）
+
+LEDの配線図（Wi-Fiコントローラ配下に接続）
+
+<img src="assets/circuit_of_LED.png" width=600>
+
+BOOTSELの配線図(マイコン(RP2350)のQSPI_SS用のピンに接続)
+
+<img src="assets/circuit_of_bootsel.png" width=600>
+
+
