@@ -1,16 +1,23 @@
-### Workshop Guidelines
-- Hands-on using a microcontroller with wireless capability (RPi Pico W) and an interpreter (MicroPython)
-- Two-day course (Day 1 and Day 2)
-- Day 1 learning objectives
-  - Microcontroller basics (simple block diagrams, introduction to well-known microcontrollers)
-  - Review of MicroPython/Python (assumes prior Python experience)
-  - Development environment setup, tool overview, file transfer
-  - Bottom-up prototyping examples using the REPL
-  - Using libraries (installing modules with a package management tool)
-  - Basics 1: I/O fundamentals — Digital/Analog (PWM)
-  - Basics 2: Working with sensors, sensor connection methods (I2C, UART) (SPI if possible)
-  - Basics 3: Internet connectivity, using Web APIs, using MQTT
-- Day 2 learning objectives
-  - Prototype application development combining RPi Pico + MicroPython + sensors and various devices
-  - Simple design, prototyping, and presentations
-  - Team-based creation
+# セミナーの実施方針
+
+- 無線機能を持つマイコン(Raspberry Pi Pico 2 W)とインタプリタ(MicroPython)を使ったセミナーです
+- プログラミング方法や周辺デバイスの制御方法を説明し、皆さんに手を動かして回路を組み立て、プログラムしていただきます
+- 1日目の基礎編と2日目の実践編で構成された2日コースです
+- [1日目の学び](../3-Day1-Foundation/README_ja.md)
+  - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
+  - MicroPython/Python復習 (Pythonを一度習った前提)
+  - 開発環境セットアップ、ツール類紹介、ファイル転送
+  - REPLを用いたボトムアップの試作例
+  - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
+  - 基礎１ ;  Input/Outputの基礎/Digital/Analog(PWM)
+  - 基礎２ ; センサ活用、センサ接続方法(I2C, UART)(できたらSPIも)
+  - 基礎３ ; インターネット接続、Web API利用, MQTT利用
+- [2日目の学び](../4-Day2-Practical/README_ja.md)
+  - チームに分かれてプロトタイプ開発に取り組みます
+  - Raspberry Pi Pico 2 W、MicroPython と センサ、各種デバイス類を組み合わせたアプリケーション試作(プロト開発)
+  - 作業の流れは以下の通り
+    1. チーム決め
+    2. 各チームで簡単な設計（作りたいものを決める、アプリ名を決める、概要設計）
+    3. プレゼンテーション、レビュー
+    4. 各チームで試作していただく。何か不明な点やお困り事があれば都度ご相談いただく。講師はできるだけ支援
+    5. 最後に成果発表（ソフトウエア概要説明、デモ）、意見交換

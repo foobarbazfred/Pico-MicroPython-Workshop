@@ -1,11 +1,11 @@
-# 研修用教材
+# 研修用教材とドキュメント類
 ## 使用教材
 - マイコンはRaspberry Pi Pico 2 W (略称：Pico2W)を使用します(本資料中、RPI Pico,  RP2等と記載している所があります。使う教材は、Pico 2 W のみです)
    - https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
 - プログラミング言語はMicroPythonです(MicroPythonをベースに改良されたCircuitPythonもありますが今回は使いません)
 - マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置として、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
    - https://store.freenove.com/products/fnk0058
-- キットを使う上でのマニュアル類は以下
+- キットを使う上でのマニュアル類は以下（FREENOVE社提供）
    - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
    - https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/blob/master/Python/Python_Tutorial.pdf (PDF)
 - キットに対応するドライバ類は以下
@@ -23,8 +23,9 @@ FREENOVE社のStarter Kitでは少し足りないため下記パーツを追加�
 ## ファイル共有の仕組み
 ２日目は実際に手を動かして試作していただく。チーム構成としたい。この時、チームメンバでプログラムや設計書を共有できる仕組みが必要。大学様のネットワーク次第ですが、大学構内ネットワークの縛りがなければGoolgeDrive上等で共有するのも可能
 
-## Document類 (参考資料)
-- https://micropython-docs-ja.readthedocs.io/ja/latest/
+## ドキュメント類 (参考資料)
+- MicroPython言語仕様書
+  - https://micropython-docs-ja.readthedocs.io/ja/latest/
 - https://www.raspberrypi.com/documentation/microcontrollers/micropython.html
 - https://github.com/micropython/micropython
 - https://github.com/micropython/micropython-lib
