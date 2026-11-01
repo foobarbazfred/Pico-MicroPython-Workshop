@@ -39,22 +39,22 @@
     - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-use-SerialBus.md)
     - 入力装置 
       - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
-        -  [CO2センサ(I2C接続)](3-x-CO2-sensor.md)
+        -  [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
         -  [ジャイロセンサ(I2C接続)](3-3-6dof.md)
-        -  [距離センサ(デジタル2線)](3-x-distance-sensor.md)
+        -  [距離センサ(デジタル2線)](3-7-distance-sensor.md)
         -  発展：人感センサ（デジタル1線）
-        -  発展：[GPS（UART接続）](3-x-Serial-GPS.md)
-      - 発展：[CMOSカメラ](3-x-CMOS_Camera.md)
+        -  発展：[GPS（UART接続）](3-5-Serial-GPS.md)
+      - 発展：[CMOSカメラ](3-8-CMOS_Camera.md)
         - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico 
     - 出力装置
       - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
-      - 発展：[グラフィックディスプレイ(SPI接続)](3-2-x-GraphicDisplay.md)  
+      - 発展：[グラフィックディスプレイ(SPI接続)](3-2-2-GraphicDisplay.md)  
       - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
     - 記憶装置
-      - 発展：[SDカード(SPI接続)](3-x-SPI-SDCard.md) 
+      - 発展：[SDカード(SPI接続)](3-8-SPI-SDCard.md) 
     - 演習：センサ活用事例（全部はできないので選択）
       - 温湿度計測結果をLCDに表示
-      - [障害物との距離をLCDに表示](3-x-distance-sensor.md)
+      - [障害物との距離をLCDに表示](3-7-distance-sensor.md)
         -  障害物との距離をLCDと音で表現
       - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
   - 基礎４ ; インターネット接続、Web API利用, MQTT利用
