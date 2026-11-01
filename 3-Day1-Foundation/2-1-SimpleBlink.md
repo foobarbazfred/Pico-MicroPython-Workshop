@@ -1,4 +1,5 @@
-# 1-1  シンプルなLED点滅プログラム
+# 1-1  参考：最もシンプルなLED点滅
+RaspberryPi Pico 2 W上にはLEDが実装されておりプログラムで点滅させることができます。
 
 配線も不要でボード上のLEDを点滅させるプログラムは以下
 ```
@@ -15,8 +16,8 @@ while True:
     led.off()
     time.sleep(1)
 ```
-
-ボード上のBOOTSELボタンに連動してLEDが点灯するプログラムは以下
+また、ボード上にはBOOTSELボタンがあります。このボタンは起動時のモードを指定するために使いますが、起動後は押しボタンスイッチとして使うことができます。
+BOOLSELボタンに連動してLEDが点灯するプログラムは以下
 ```
 from machine import Pin
 from rp2 import bootsel_button
@@ -31,5 +32,4 @@ while True:
     else:
         led.off()
 ```
-
-上記いずれも配線済みのLEDやボタンを使ってテストしました。次は配線してLEDを点滅させましょう
+上記いずれも配線が不要ですぐに使えるLEDとスイッチです。
