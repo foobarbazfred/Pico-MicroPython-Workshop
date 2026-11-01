@@ -39,7 +39,7 @@ i2c.scan()
 1. mipによりGitHubからインストール
 2. thonnyによりファイル保存することでインストール
 
-mipによるinstall方法
+mipを使ってGitHubからインストールする方法(MicroPythonのREPLで実行してください)
 ```
 import mip
 mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/heads/main/3-Day1-Foundation/src/lib/scd41.py')
