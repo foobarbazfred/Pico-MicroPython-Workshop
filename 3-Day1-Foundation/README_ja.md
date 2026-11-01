@@ -16,6 +16,7 @@
     - マイコン用プログラム開発のために機能拡張されている部分（ソフトとハードを合わせて説明）
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
   - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
+  - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-1-SimpleBlink.md)
   - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
   - DigitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
     - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
