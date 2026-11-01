@@ -45,7 +45,8 @@ import mip
 mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/main/3-Day1-Foundation/src/lib/scd41.py')
 ```
 
-libに配置したscd41モジュールを使うサンプルコード
+### CO2測定プログラム
+libに配置したscd41モジュールを使ってCO2を測定するプログラム
 ```
 from scd41 import *
 
