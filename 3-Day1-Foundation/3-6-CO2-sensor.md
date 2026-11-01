@@ -42,7 +42,7 @@ i2c.scan()
 mipを使ってGitHubからインストールする方法(MicroPythonのREPLで実行してください)
 ```
 import mip
-mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/heads/main/3-Day1-Foundation/src/lib/scd41.py')
+mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/main/3-Day1-Foundation/src/lib/scd41.py')
 ```
 
 libに配置したscd41モジュールを使うサンプルコード
