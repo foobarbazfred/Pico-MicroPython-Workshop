@@ -78,7 +78,7 @@
   - PIO(Programming IO Interface)とは何か、目的、用途
   - 内部構造
   - 使い方
-    - 簡単なLチカ、SW入力
+    - [簡単なLチカ、SW入力](https://github.com/foobarbazfred/learn-rp2350-pio)
     - DMAを併用することでデータストリームの高速転送が可能
     - 応用例：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
   - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
