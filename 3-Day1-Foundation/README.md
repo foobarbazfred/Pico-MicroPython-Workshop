@@ -61,8 +61,8 @@
     - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-Network.md)
     - HTTPを用いた通信とサンプルコード
       - [天気予報サイトから指定した地点の天気情報を取得](4-2-WebAPI.md)
-    - [MQTTを用いた通信とサンプルコード](4-x-MQTT_Service.md)
-    - [RP2をWebServerとして動かす](4-x-WebServer.md)
+    - [MQTTを用いた通信とサンプルコード](4-3-MQTT_Service.md)
+    - [RP2をWebServerとして動かす](4-4-WebServer.md)
     - 演習：インターネット活用アプリ試作
       - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
       - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
