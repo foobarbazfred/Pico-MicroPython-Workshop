@@ -3,13 +3,13 @@
 - 1日目の学び
   - 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて　
     -  マイコン基礎（簡単なブロック図、有名なマイコン紹介）
-       -  [主要マイコン(マイコンボード)紹介）](1-x-board.md)
-       -  [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-x-microcontroller.md)
+       -  [主要マイコン(マイコンボード)紹介）](1-1-board.md)
+       -  [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
        -  マイコンプログラミング、IoTシステム開発を取り巻く要素技術（技術マップ）
-    -  [マイコン用プログラミング言語](1-x-programming-languages.md)
-     - [MicroPython/Python復習](1-x-micropython_summary.md)
-     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-x-programming-tools.md)
-     - [ボードへの電源供給方法](1-x-powersupply.md)
+    -  [マイコン用プログラミング言語](1-3-programming-languages.md)
+     - [MicroPython/Python復習](1-4-micropython_summary.md)
+     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-5-programming-tools.md)
+     - [ボードへの電源供給方法](1-6-powersupply.md)
      - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
          -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
      - REPLを用いたボトムアップの試作例

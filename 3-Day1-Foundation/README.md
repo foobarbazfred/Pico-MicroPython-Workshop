@@ -3,14 +3,13 @@
 - 1日目の学び
   - 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて　
     -  マイコン基礎（簡単なブロック図、有名なマイコン紹介）
-       -  [主要マイコン(マイコンボード)紹介）](1-x-board.md)
-       -  [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-x-microcontroller.md)
+       -  [主要マイコン(マイコンボード)紹介）](1-1-board.md)
+       -  [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
        -  マイコンプログラミング、IoTシステム開発を取り巻く要素技術（技術マップ）
-    -  [マイコン用プログラミング言語](1-x-programming-languages.md)
-     - [MicroPython/Python復習](1-x-micropython_summary.md)
-     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-x-programming-tools.md)
-     - [ボードへの電源供給方法](1-x-powersupply.md)
-     - ボードにMicroPythonファームを焼く方法
+    -  [マイコン用プログラミング言語](1-3-programming-languages.md)
+     - [MicroPython/Python復習](1-4-micropython_summary.md)
+     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-5-programming-tools.md)
+     - [ボードへの電源供給方法](1-6-powersupply.md)
      - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
          -  https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2
      - REPLを用いたボトムアップの試作例
@@ -26,14 +25,14 @@
       - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
       - [PWMを使ってサーボモータ制御(DUTYを変える)](2-5-ServoControl.md)
       - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
-      - 発展：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)（参考）
-    - 発展：[DigitalでAnalogを表現する-> フルカラーLED (NoePixel)を使う](2-6-NeoPixel.md)
+      - 参考：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-x-motor_control.md)
     - 演習：GPIO AD/DA変換（全部はできないの選択）
       - [VRで光の明るさが変わる](2-4-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6led%E3%81%AE%E6%98%8E%E3%82%8B%E3%81%95%E3%82%92%E8%AA%BF%E6%95%B4)
       - VRでNeoPixelの色が変わる
       - [VRでサーボモータの角度が変わる](2-5-ServoControl.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%9B%E3%83%BC%E3%83%B3%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99)
       - VRで音の高低が変わる
       - VRとモータドライバでDCモータ制御
+    - 発展：[DigitalでAnalogを表現する-> フルカラーLED (NoePixel)を使う](2-6-NeoPixel.md)
   - 基礎３ ; 周辺機器との接続方法、デバイス活用
     - マイコンに接続できる周辺機器
        - [センサ紹介、センサの使い方(データの取得方法)](3-0-sensor.md)
