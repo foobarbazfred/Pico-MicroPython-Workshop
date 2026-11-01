@@ -37,10 +37,13 @@ i2c.scan()
 
 ### MicroPythonへのインストール方法
 1. mipによりGitHubからインストール
-```import mip
-mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/heads/main/3-Day1-Foundation/src/lib/neopixel.py')```
 2. thonnyによりファイル保存することでインストール
 
+mipによるinstall方法
+```
+import mip
+mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/heads/main/3-Day1-Foundation/src/lib/scd41.py')
+```
 
 libに配置したscd41モジュールを使うサンプルコード
 ```
