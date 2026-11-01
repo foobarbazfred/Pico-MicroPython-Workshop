@@ -36,7 +36,9 @@ i2c.scan()
 - MicroPython側での置き場所： /lib/sdc41.py
 
 ### MicroPythonへのインストール方法
-1. mpipによりGitHubからインストール
+1. mipによりGitHubからインストール
+```import mip
+mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/refs/heads/main/3-Day1-Foundation/src/lib/neopixel.py')```
 2. thonnyによりファイル保存することでインストール
 
 
