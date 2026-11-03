@@ -74,7 +74,7 @@
 - 補講１ ； MicroPythonの性能、チューニング、リソース管理
   - 性能の考え方、性能改善のアプローチ 
   - [MicroPythonの実行性能を上げる方法](sup-1-1-mpy-perf.md)
-  - [MicroPythonとC言語の性能差](sup-1-1-mpy-vs-c-perf.ja.md)
+  - [MicroPythonとC言語の性能差](sup-1-2-mpy-vs-c-perf.ja.md)
   - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良い配列の最大サイズは？(Heap
     メモリサイズの1/3を上限とするのが無難。その理由は？)
 - 補講２ ； PIO...MicroPythonの遅さをハードウエアでカバーする
