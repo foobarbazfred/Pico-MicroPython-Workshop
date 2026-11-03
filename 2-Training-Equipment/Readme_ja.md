@@ -1,9 +1,9 @@
 # 研修用教材とドキュメント類
 ## 使用教材
-- マイコンはRaspberry Pi Pico 2 W (略称：Pico2W)を使用します(本資料中、RPI Pico,  RP2等と記載している所があります。使う教材は、Pico 2 W のみです)
+- マイコンボードはRaspberry Pi Pico 2 W (略称：Pico2W)を使用します(本資料中、RPI Pico,  RP2等と記載している所があります。本研修で使うマイコンボードは、Pico2W のみです)
    - https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
 - プログラミング言語はMicroPythonです(MicroPythonをベースに改良されたCircuitPythonもありますが今回は使いません)
-- マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置として、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
+- マイコンボード、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置として、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
    - https://store.freenove.com/products/fnk0058
 - キットを使う上でのマニュアル類は以下（FREENOVE社提供）
    - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
@@ -15,10 +15,10 @@
 FREENOVE社のStarter Kitでは少し足りないため下記パーツを追加しています
 1. 温湿度センサ；M5Stack用 温湿度CO2センサ（SCD41）
    - 理由：IoTの基本として、空気質の計測が挙げられる。キット一式の中のセンサでもいいのだが、通信バスがI2Cでないのと、CO2を計測したいので、センサを追加したい
-2. SDカードとSDカードスロット
-   - 理由: 大規模ストレージの取り扱いを課題に含めたい
-3. 村田製作所製の圧電サウンダ―
+2. 村田製作所製の圧電サウンダ―
    - 理由：FREENOVE社のStarter Kitにも圧電サウンダ―が入っていますが、テストで使っているとショートしてしまったようであり、信頼性の高い村田製作所製に置き換え
+3. SDカードとSDカードスロット
+   - 理由: 大規模ストレージの取り扱いを課題に含めたい(講義するかどうかはセミナーの進み具合による）
 
 ## ファイル共有の仕組み
 ２日目は実際に手を動かして試作していただく。チーム構成としたい。この時、チームメンバでプログラムや設計書を共有できる仕組みが必要。大学様のネットワーク次第ですが、大学構内ネットワークの縛りがなければGoolgeDrive上等で共有するのも可能
