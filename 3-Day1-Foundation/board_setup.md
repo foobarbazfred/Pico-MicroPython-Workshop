@@ -7,15 +7,16 @@ Rico2Wを購入後、FLASHに何か書き込まれている可能性がありま
 3. PC側では新しいドライブとして認識されます。新しいドライブ(Dドライブか、Eドライブ)に最新版ファームをコピーします
 4. Rico2Wのボード上のFLASHにファームが焼かれます。
 
-### Thonnyによるインストール手順
-1. Pico2Wのボード上のBOOTSLボタンを押しながらUSBケーブルを使ってPCと接続します。BOOTSELボタンを押した状態で電源投入されると、Pico2Wはマスストレージモードで起動します。
-2. Thonnyを開き、画面右下の[Install MicroPython...]をクリックします。
-    - 認識されている新しいドライブ名、焼きたいファームの情報を指定して、###を押します
-3. ファーム書き込みが完了するとボードが再起動され、ThonnyとPico2Wが再接続されます 
-
 #### MicroPython公式サイト 
 Pico2W用ファームウエアダウンロードページ：https://micropython.org/download/RPI_PICO2_W/<br>
 <img src="assets/firmware_for_Pico2W.png" width=300>
+
+### Thonnyによるインストール手順
+マイコン用プログラミング環境としてThonny IDEがあります。Thonnyのインストール機能を使ってMicroPythonファームを焼くことができます。
+1. Pico2Wのボード上のBOOTSLボタンを押しながらUSBケーブルを使ってPCと接続します。BOOTSELボタンを押した状態で電源投入されると、Pico2Wはマスストレージモードで起動します。
+2. Thonnyを開き、画面右下の[Install MicroPython...]をクリックします。
+    - 認識されている新しいドライブ名、焼きたいファームの情報を指定して、[Install]を押します
+3. ファーム書き込みが完了するとボードが再起動され、ThonnyとPico2Wが再接続されます 
 
 # Pico2WのFLASHを何もない状態に戻す方法
 FLASHメモリに書き込んだboot.pyにバグがありREPLが起動できない場合があります。boot.pyを消すために、MicroPythonファームを再度焼いてもFLASH領域のユーザプログラムが温存され、boot.pyが消えずに残ります（よってREPLで起動できない状態が続きます）。
