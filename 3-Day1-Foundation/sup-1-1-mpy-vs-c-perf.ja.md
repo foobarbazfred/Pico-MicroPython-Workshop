@@ -140,6 +140,26 @@ speed_test(pin1)
 # 250.0KHz/4.000us
 ```
 
+### MicroPython言語 ループ処理関数化＋viper最適化 ソース
+```
+import machine
+from machine import Pin
+
+@micropython.viper
+def speed_test(pin):
+    while True:
+        pin.high()
+        pin.low()
+    
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
+pin1 = Pin(1, Pin.OUT)
+
+speed_test(pin1)
+
+# 
+```
+
 
 ### MicroPython言語 ループ処理関数化＋Pin操作インライン展開+native最適化 
 ```
@@ -161,8 +181,6 @@ _gp1_set_clr()
 
 # 188.7KHz/5.300us
 ```
-
-
 
 ### MicroPython言語 ループ処理関数化＋Pin操作インライン展開+viper最適化
 ```
@@ -186,5 +204,5 @@ print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 _gp1_set_clr()
 
-# 714.3KHz (1.400us)
+# 694.4KHz (1.440us)
 ```
