@@ -87,10 +87,12 @@ import time
 from machine import Pin
 from hc_sr04 import HC_SR04
 
+# setup
 trig = Pin(14, Pin.OUT)
 echo = Pin(15, Pin.IN)
 hc_sr04 = HC_SR04(trig,echo)
 
+# loop
 while True:
   distance, pulse_width = hc_sr04.measure()   # 
   #print(pulse_width)
@@ -117,6 +119,7 @@ import time
 from machine import Pin
 from hc_sr04 import HC_SR04
 
+# setup
 LCD_AVAILABLE = True
 trig = Pin(14, Pin.OUT)
 echo = Pin(15, Pin.IN)
@@ -128,6 +131,7 @@ if LCD_AVAILABLE:
    i2c_1 = I2C(1, scl=Pin(19), sda=Pin(18), freq=400_000)
    lcd =  ST7032LCD(i2c_1)
 
+# loop
 while True:
   distance, pulse_width = hc_sr04.measure()   # 
   #print(pulse_width)
