@@ -66,6 +66,7 @@ print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 
 speed_test(pin1)
+# 192.3KHz/5.200us
 ```
 ### MicroPython言語 関数化 ソース(Pin操作関数呼び出し)
 ```
