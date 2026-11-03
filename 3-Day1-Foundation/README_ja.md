@@ -11,7 +11,7 @@
     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
       - <https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2>
     - [ボードへの電源供給方法](1-6-powersupply.md)
-    - [マイコンボードのセットアップ](board_setup.md)
+    - [マイコンボードにMicroPythonを焼く方法](board_setup.md)
     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-5-programming-tools.md)
   - [REPLを活用したボトムアッププログラミング](1-8-repl-bottom-up.md)
   - [センサを活用した組み込みプログラムの基本構造と作り方](embedded-program-structure.md)
