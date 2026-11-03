@@ -77,11 +77,11 @@ from machine import Pin
 #SIO_GPIO_OUT_SET_REG_OFFSET = 0x18
 #SIO_GPIO_OUT_CLR_REG_OFFSET = 0x20
 
-_gp1_set():
+def _gp1_set():
     # 0xd0000018 : SIO_GPIO_OUT_SET_REG
     ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
 
-_gp1_clear():
+def _gp1_clear():
     # 0xd0000018 : SIO_GPIO_OUT_CLR_REG
     ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
 
