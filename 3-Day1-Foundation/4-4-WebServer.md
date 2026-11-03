@@ -62,3 +62,7 @@ GPIO/LEDの状態表示に加え、On/Off制御も可能です。<br>
 print(sta.ifconfig())
 ```
 シリアルコンソールやThonnyからCtl+DでMicroPythonに対してソフトウエアレベルの再起動をかけると起動時にコンソールに表示されます。その表示で割り当てられたIPをご確認ください。
+
+### ご参考
+本テキストでは、MicroPython の組み込みモジュールを使ってWebServerを実現しています。microdotフレームワークを活用すると簡単にWebServerを実現できます。
+https://microdot.readthedocs.io/
