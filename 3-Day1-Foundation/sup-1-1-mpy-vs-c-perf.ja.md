@@ -51,7 +51,7 @@ while True:
 
 # 73.53KHz/13.600us
 ```
-### MicroPython言語 関数化 ソース(Pin操作メソッド呼び出し)
+### MicroPython言語 ループ処理関数化版ソース
 ```
 import machine
 from machine import Pin
@@ -97,7 +97,7 @@ _gp1_set_clr()
 # 65.79KHz/15.200us
 ```
 
-### MicroPython言語 関数化＋native最適化 ソース
+### MicroPython言語 ループ処理関数化＋native最適化 ソース
 ```
 import machine
 from machine import Pin
