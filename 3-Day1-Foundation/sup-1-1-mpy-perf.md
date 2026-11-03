@@ -1,6 +1,8 @@
 # MicroPythonの性能改善
 MicroPythonで試作した際、データ取り込みや取り込んだデータの処理速度がじゃっかん不足する場合があります。MicroPythonの公式ドキュメントにおいて、高速化手法が紹介されています。
-ドキュメントURL:
+
+MicroPython 性能の最大化
+ドキュメントURL:https://micropython-docs-ja.readthedocs.io/ja/latest/reference/speed_python.html
 
 アルゴリズムやコードを改良して無駄な処理や演算を減らすのが第一優先の取り組み課題ですが、ソースコード上もう削減できないという場合に、実装コードを書き替えたり、native/viper修飾子（デコレータ）による最適化により処理速度を高速化することが可能です。
 このような手法を用いえことで、どの程度処理が早くなるのか処理時間を計測しました。
