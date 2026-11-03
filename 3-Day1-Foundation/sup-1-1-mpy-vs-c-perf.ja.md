@@ -150,9 +150,9 @@ from machine import Pin
 def _gp1_set_clr():
     while True:
         # 0xd0000018 : SIO_GPIO_OUT_SET_REG
-        ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
-        # 0xd0000020 : SIO_GPIO_OUT_CLR_REG
-        ptr32(0xd0000020)[0] = 0x00_02  # 0x00_02 means gpio:1
+        machine.mem32[0xd0000018] = 0x00_02  # 0x00_02 means gpio:1
+        # 0xd0000018 : SIO_GPIO_OUT_CLR_REG
+        machine.mem32[0xd0000020] = 0x00_02  # 0x00_02 means gpio:1
     
 machine.freq(150_000_000)
 print(machine.freq())   # 150_000_000
