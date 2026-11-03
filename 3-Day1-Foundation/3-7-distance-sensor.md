@@ -9,7 +9,11 @@
    - 音の発射はTrigger信号を出力
    - HS-SR04は対象物に超音波を出して戻ってくるまでの時間を計測、かかった時間をEcho信号のパルス幅で返却
  
-勘違いしやすいのは、Trigger信号からEchoまでの時間が応答時間かと思いがちですが、応答にかかった時間はパルス幅で返却されます。マイコン側ではパルス幅を計測することで、対象物までの距離を推定します。
+勘違いしやすいのは、Trigger信号からEchoまでの時間が応答時間かと思いがちですが、応答にかかった時間はEcho信号のパルス幅で表現されます。
+
+<img src="assets/HC-SR04_suppliment.png" width=80%>
+
+マイコン側ではパルス幅を計測することで、対象物までの距離を推定します。
 
 ### 配線図
 <img src="assets/schematics_hc-sr04.png" width=500>
@@ -87,10 +91,12 @@ import time
 from machine import Pin
 from hc_sr04 import HC_SR04
 
+# setup
 trig = Pin(14, Pin.OUT)
 echo = Pin(15, Pin.IN)
 hc_sr04 = HC_SR04(trig,echo)
 
+# loop
 while True:
   distance, pulse_width = hc_sr04.measure()   # 
   #print(pulse_width)
@@ -117,6 +123,7 @@ import time
 from machine import Pin
 from hc_sr04 import HC_SR04
 
+# setup
 LCD_AVAILABLE = True
 trig = Pin(14, Pin.OUT)
 echo = Pin(15, Pin.IN)
@@ -128,6 +135,7 @@ if LCD_AVAILABLE:
    i2c_1 = I2C(1, scl=Pin(19), sda=Pin(18), freq=400_000)
    lcd =  ST7032LCD(i2c_1)
 
+# loop
 while True:
   distance, pulse_width = hc_sr04.measure()   # 
   #print(pulse_width)

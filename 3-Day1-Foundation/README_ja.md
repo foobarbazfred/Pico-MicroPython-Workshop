@@ -12,7 +12,7 @@
     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
       - <https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2>
   - [REPLを活用したボトムアッププログラミング](1-8-repl-bottom-up.md)
-  - センサを活用した組み込みプログラムの基本構造と作り方
+  - [センサを活用した組み込みプログラムの基本構造と作り方](embedded-program-structure.md)
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
     - マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
