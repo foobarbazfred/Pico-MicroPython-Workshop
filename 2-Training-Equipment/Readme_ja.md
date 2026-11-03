@@ -1,9 +1,9 @@
 # 研修用教材とドキュメント類
 ## 使用教材
-- マイコンはRaspberry Pi Pico 2 W (略称：Pico2W)を使用します(本資料中、RPI Pico,  RP2等と記載している所があります。使うマイコンボードは、Pico2W のみです)
+- マイコンを搭載したボードはRaspberry Pi Pico 2 W (略称：Pico2W)を使用します(本資料中、RPI Pico,  RP2等と記載している所があります。使うマイコンボードは、Pico2W のみです)
    - https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
 - プログラミング言語はMicroPythonです(MicroPythonをベースに改良されたCircuitPythonもありますが今回は使いません)
-- マイコン、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置として、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
+- Pico2W、ブレッドボード、センサ類一式がキットとしてまとめられたFREENOVE社のStarter Kitを使用します。表示装置として、LCD、LED、NeoPixel、センサとして空気質センサ、距離センサ等が含まれます。
    - https://store.freenove.com/products/fnk0058
 - キットを使う上でのマニュアル類は以下（FREENOVE社提供）
    - https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python.html
