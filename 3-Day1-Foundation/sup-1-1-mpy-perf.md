@@ -1,42 +1,20 @@
-# MicroPythonの抽象化レベルによる性能差、C言語との性能差（作成中）
-MicroPythonとC言語との間でどれぐらい性能の差があるのかを単純なGPIOのL/Hを繰り返すプログラムで比較しました。<br>
+# MicroPythonの性能改善
+MicroPythonで実装した際、速度が足りない場合があります。高速化手法がありどの程度早くなるのか単純なGPIOのL/Hを繰り返すプログラムで処理時間を計測しました。<br>
 テストプログラムを実行して、オシロスコープを用いて周期を計測しました。以下は例です<br>
 <img src="assets/speed_by_Python_decorator.png" width=600>
 
 ### 考察
-単純に、コンパイル型言語のC言語とインタプリタ型言語のMicroPython を比べるのはどうかとは思いつつ、性能差を把握するため比較
 
-| |	C言語	| MP言語:REPL	|MP言語:関数化	| MP言語:関数化+native最適化	| MP言語:関数化+viper最適化+レジスタ直接書き込み|
-|---|----|----|----|----|----|
-|パルスの周期|	34.4ns (29MHz)	|21.6us(46KHz)	|5us (200KHz)	|4.1us(244KHz)|	1.44us(694KHz)|
-|処理時間比	|1|	628倍|	145倍|	119倍|	42倍|
+|  *  | REPL	|ループ処理関数化	| ループ関数化+PIN操作関数・レジスタ化	| ループ関数化+PIN操作インライン展開|
+|---|----|----|----|----|
+|パルスの周期|	73.53KHz / 13.600us	|192.3KHz / 5.200us	|65.79KHz/15.200us | 142.9KHz/7.00us|
+|処理時間比	|1|	628倍|	145倍|	119倍|
 
-- クロックは150MHzに設定
-- 関数化+viperはGPIOレジスタに直接書き込むコードを使っています
+- システムクロックは150MHzに設定
+- 評価に使用したMicroPythonファームバージョン：MicroPython v1.29.0 on 2026-08-24; Raspberry Pi Pico 2 W with RP2350
 
-### C言語ソース
-```
-#include "pico/stdlib.h"
-#include "hardware/clocks.h"  
-#define OUT_PIN  1   // GPIO:1  for output
 
-int main() {
-
-    // set systemclock to 150MHz
-    set_sys_clock_khz(150000, true);
-
-    // setup GPIO for output
-    gpio_init(OUT_PIN);
-    gpio_set_dir(OUT_PIN, GPIO_OUT);
-
-    while (true) {
-       gpio_put(OUT_PIN, 1);   // H
-       gpio_put(OUT_PIN, 0);   // L
-    }
-}
-```
-
-### MicroPython REPL版(Pin操作メソッド呼び出し)
+### MicroPython REPL版
 ```
 import machine
 from machine import Pin
@@ -68,7 +46,7 @@ pin1 = Pin(1, Pin.OUT)
 speed_test(pin1)
 # 192.3KHz/5.200us
 ```
-### MicroPython ループ処理関数化＋Pin操作レジスタ化
+### MicroPython ループ処理関数化＋Pin操作関数・レジスタ化
 ```
 import machine
 from machine import Pin
