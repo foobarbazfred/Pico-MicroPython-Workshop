@@ -41,7 +41,8 @@ int main() {
 import machine
 from machine import Pin
 
-print(machine.freq())
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 
 while True:
@@ -58,7 +59,8 @@ def speed_test(pin):
         pin.high()
         pin.low()
     
-print(machine.freq())
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 
 speed_test(pin1)
@@ -85,7 +87,8 @@ def _gp1_set_clr():
         _gp1_set()
         _gp1_clear()
 
-print(machine.freq())
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 _gp1_set_clr()
 ```
@@ -101,7 +104,8 @@ def speed_test(pin):
         pin.high()
         pin.low()
     
-print(machine.freq())
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 
 speed_test(pin1)
@@ -126,7 +130,8 @@ def _gp1_set_clr():
         # 0xd0000020 : SIO_GPIO_OUT_CLR_REG
         ptr32(0xd0000020)[0] = 0x00_02  # 0x00_02 means gpio:1
 
-print(machine.freq())
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 _gp1_set_clr()
 ```
