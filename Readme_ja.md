@@ -13,7 +13,7 @@
 ## 本セミナーを通して学べること
 - MicroPythonによるマイコン制御
 - マイコンとセンサを組み合わせた試作方法
-- IoTシステムにつながるプロトタイプ開発方法
+- IoTシステムに適用できるプロトタイプ開発
 - マイコン、MicroPython、センサ類を活用した教材作りのヒント
 ## セミナー実施方針
 - [研修実施方針](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/1-Workshop%20Guidelines/Readme_ja.md)
