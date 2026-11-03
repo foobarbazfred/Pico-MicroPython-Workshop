@@ -19,7 +19,7 @@
   - 出力：モータやディスプレイ、警告灯等を使って出力します。HTTPやMQTTを使って測定値をIoT PFにアップロードする場合もあります
  
 #### ソースコードの例
-[aaa](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/3-7-distance-sensor.md#%E6%BC%94%E7%BF%92%E5%AF%BE%E8%B1%A1%E7%89%A9%E3%81%BE%E3%81%A7%E3%81%AE%E8%B7%9D%E9%9B%A2%E3%82%92%E8%A8%88%E6%B8%AC%E3%81%97%E3%81%A6lcd%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B)
+[演習：対象物までの距離を計測してLCDに表示する](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/3-7-distance-sensor.md#%E6%BC%94%E7%BF%92%E5%AF%BE%E8%B1%A1%E7%89%A9%E3%81%BE%E3%81%A7%E3%81%AE%E8%B7%9D%E9%9B%A2%E3%82%92%E8%A8%88%E6%B8%AC%E3%81%97%E3%81%A6lcd%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B)
 
 ## アプリの作り方
 1. 構造設計
