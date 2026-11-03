@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-### MicroPython言語 REPL版ソース(Pin操作メソッド呼び出し)
+### MicroPython REPL版(Pin操作メソッド呼び出し)
 ```
 import machine
 from machine import Pin
@@ -51,7 +51,7 @@ while True:
 
 # 73.53KHz/13.600us
 ```
-### MicroPython言語 ループ処理関数化版ソース
+### MicroPython ループ処理関数化
 ```
 import machine
 from machine import Pin
@@ -68,7 +68,7 @@ pin1 = Pin(1, Pin.OUT)
 speed_test(pin1)
 # 192.3KHz/5.200us
 ```
-### MicroPython言語 関数化 ソース(Pin操作関数呼び出し)
+### MicroPython ループ処理関数化＋Pin操作レジスタ化
 ```
 import machine
 from machine import Pin
@@ -97,28 +97,7 @@ _gp1_set_clr()
 # 65.79KHz/15.200us
 ```
 
-### MicroPython言語 ループ処理関数化＋native最適化 ソース
-```
-import machine
-from machine import Pin
-
-@micropython.native
-def speed_test(pin):
-    while True:
-        pin.high()
-        pin.low()
-    
-machine.freq(150_000_000)
-print(machine.freq())   # 150_000_000
-pin1 = Pin(1, Pin.OUT)
-
-speed_test(pin1)
-
-# 250.0KHz/4.000us
-```
-
-
-MicroPython言語 (レジスタによるPin操作、インライン展開)
+### MicroPython ループ処理関数化＋Pin操作インライン展開
 ```
 import machine
 from machine import Pin
@@ -141,8 +120,51 @@ _gp1_set_clr()
 # 142.9KHz/7.00us
 ```
 
+### MicroPython言語 ループ処理関数化＋native最適化 ソース
+```
+import machine
+from machine import Pin
 
-### MicroPython言語 関数化+viper最適化+レジスタ直接書き込み ソース
+@micropython.native
+def speed_test(pin):
+    while True:
+        pin.high()
+        pin.low()
+    
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
+pin1 = Pin(1, Pin.OUT)
+
+speed_test(pin1)
+
+# 250.0KHz/4.000us
+```
+
+
+### MicroPython言語 ループ処理関数化＋native最適化 
+```
+import machine
+from machine import Pin
+
+@micropython.native
+def _gp1_set_clr():
+    while True:
+        # 0xd0000018 : SIO_GPIO_OUT_SET_REG
+        ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
+        # 0xd0000020 : SIO_GPIO_OUT_CLR_REG
+        ptr32(0xd0000020)[0] = 0x00_02  # 0x00_02 means gpio:1
+    
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
+pin1 = Pin(1, Pin.OUT)
+_gp1_set_clr()
+
+
+```
+
+
+
+### MicroPython言語 ループ処理関数化＋Pin操作インライン展開+viper最適化
 ```
 import machine
 from machine import Pin
