@@ -15,10 +15,9 @@ GPIO操作をレジスタ直接操作した場合の高速化効果（逆効果�
 native/ viper 最適化による高速化
 |*| ループ処理関数化|<- + PIN操作関数・レジスタ化 | <- + PIN操作インライン展開|
 |--|--|--|--|
-|修飾なし|xx|xx|xx|
-|native最適化|xx|xx|xx|
-|viper最適化|xx|xx|xx|
-
+|修飾なし|73.53KHz|192.3KHz|142.9KHz|
+|native最適化|250.0KHz|xx|188.7KHz|
+|viper最適化|252.5KHz|xx|694.4KHz|
 
 - システムクロックは150MHzに設定
 - 評価に使用したMicroPythonファームバージョン：MicroPython v1.29.0 on 2026-08-24; Raspberry Pi Pico 2 W with RP2350
