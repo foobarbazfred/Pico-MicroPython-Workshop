@@ -157,7 +157,7 @@ pin1 = Pin(1, Pin.OUT)
 
 speed_test(pin1)
 
-# 
+# 252.5KHz/3.960us
 ```
 
 
