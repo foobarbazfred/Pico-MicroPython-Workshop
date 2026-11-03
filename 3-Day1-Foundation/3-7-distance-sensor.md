@@ -11,9 +11,9 @@
  
 勘違いしやすいのは、Trigger信号からEchoまでの時間がセンサから対象物までの往復時間かと思いがちですが、音波の往復にかかった時間はEcho信号のパルス幅で表現されます。
 
-<img src="assets/HC-SR04_suppliment.png" width=80%>
+<img src="assets/HC-SR04_suppliment.png" width=80%><br>(図はHC-SR04 DataSheetより引用)
 
-マイコン側ではパルス幅を計測することで、対象物までの距離を推定します。
+マイコン側ではパルス幅を計測することで、対象物までの距離を推定します。マイコンのマクロ秒計測関数(time.ticks_us())でパルス幅を測定します。
 
 ### 配線図
 <img src="assets/schematics_hc-sr04.png" width=500>
