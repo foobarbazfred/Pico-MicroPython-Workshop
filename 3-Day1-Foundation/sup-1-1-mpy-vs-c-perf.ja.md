@@ -94,6 +94,7 @@ machine.freq(150_000_000)
 print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 _gp1_set_clr()
+# 65.79KHz/15.200us
 ```
 
 ### MicroPython言語 関数化＋native最適化 ソース
