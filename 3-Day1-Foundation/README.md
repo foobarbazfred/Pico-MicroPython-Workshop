@@ -12,8 +12,9 @@
     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
       - <https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2>
   - [REPLを活用したボトムアッププログラミング](1-8-repl-bottom-up.md)
+  - [センサを活用した組み込みプログラムの基本構造と作り方](embedded-program-structure.md)
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
-    - マイコン用プログラム開発のために機能拡張されている部分（ソフトとハードを合わせて説明）
+    - マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
   - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
   - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-1-SimpleBlink.md)
@@ -72,7 +73,7 @@
   - MicroPythonは早いのか遅いのか、C言語と比べて何倍時間がかかるのか、マイコンの種別による性能差
   - [MicroPythonとC言語の性能差](sup-1-1-mpy-vs-c-perf.ja.md)
   - ボトルネックを探す方法、チューニング方法
-  - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良いバッファ最大サイズとは？(Heap
+  - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良い配列の最大サイズは？(Heap
     メモリサイズの1/3を上限とするのが無難。その理由は？)
 - 補講２ ； PIO...MicroPythonの遅さをハードウエアでカバーする
   - PIO(Programming IO Interface)とは何か、目的、用途
