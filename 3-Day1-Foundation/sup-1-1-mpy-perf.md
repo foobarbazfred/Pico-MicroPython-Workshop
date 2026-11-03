@@ -19,7 +19,8 @@ while True:
     pin.high()
     pin.low()
 ```
-以下はオシロスコープによる1周期測定例です<br>
+以下はオシロスコープによる1周期測定例例<br>
+ループが１周実行されるごとに１パルスが生成される。パルス幅（周波数）がループの速度を表す。
 <img src="assets/speed_by_Python_decorator.png" width=600>
 
 ### 計測結果整理
