@@ -11,5 +11,5 @@ Pico2W用ファームウエアダウンロードページ：https://micropython.
 <img src="assets/firmware_for_Pico2W.png" width=300>
 
 # Pico2WのFLASHを何もない状態に戻す方法
-boot.pyにバグがありREPLが起動できない場合があります。この場合、MicroPythonファームを再度焼いてもFLASH領域のユーザプログラムが温存される場合があります。この場合、boot.pyが消えずに残ります（よってREPLで起動できない状態が続きます）
+boot.pyにバグがありREPLが起動できない場合があります。boot.pyを消すために、MicroPythonファームを再度焼いてもFLASH領域のユーザプログラムが温存され、boot.pyが消えずに残ります（よってREPLで起動できない状態が続きます）。
 このような場合、flash_nuke.uf2、または、nuke_universal.uf2を焼くことで、FLASH領域の内容が初期状態に戻ります。初期状態にした後、MicroPythonファームを焼くことでユーザプログラムが無い状態に更新できます。
