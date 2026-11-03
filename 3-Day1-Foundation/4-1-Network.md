@@ -3,6 +3,15 @@
 ### Raspberry Pi Pico 2 WのWi-Fi機能
 
 Raspberry Pi Pico 2 W(Pico2W)には無線機能が搭載されており、Wi-FiやBLEを使うことができます。本講義ではWi-Fiを使ったプログラミングを行います。Wi-Fiネットワークと接続するためのモジュールが提供されています。
+Pico2Wをネットワークに接続することで、モジュールのインストールもネットワーク経由で行うことが可能になります。ネットワーク経由でモジュールをインストールするには、###コマンドを使用します。
+```
+import mip
+mip.install(<ライブラリ名>)
+```
+```
+import mip
+mip.install(<ソースが公開されているURLパス>)
+```
 
 boot.pyの全コードは以下を参照ください<br>
 [src/boot.py](src/boot.py)
