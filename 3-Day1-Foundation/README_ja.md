@@ -72,9 +72,8 @@
 ## 時間がまだある場合の補講
 
 - 補講１ ； MicroPythonの性能、チューニング、リソース管理
-  - MicroPythonは早いのか遅いのか、C言語と比べて何倍時間がかかるのか、マイコンの種別による性能差
+  - [MicroPythonの実行性能を上げる方法](sup-1-1-mpy-perf.md)
   - [MicroPythonとC言語の性能差](sup-1-1-mpy-vs-c-perf.ja.md)
-  - ボトルネックを探す方法、チューニング方法
   - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良い配列の最大サイズは？(Heap
     メモリサイズの1/3を上限とするのが無難。その理由は？)
 - 補講２ ； PIO...MicroPythonの遅さをハードウエアでカバーする
