@@ -16,8 +16,8 @@ native/ viper 最適化による高速化
 |*| ループ処理関数化|<- + PIN操作関数・レジスタ化 | <- + PIN操作インライン展開|
 |--|--|--|--|
 |修飾なし|73.53KHz|192.3KHz|142.9KHz|
-|native最適化|250.0KHz|xx|188.7KHz|
-|viper最適化|252.5KHz|xx|694.4KHz|
+|native最適化|250.0KHz|50.51KHz|188.7KHz|
+|viper最適化|252.5KHz|217.4KHz|694.4KHz|
 
 - システムクロックは150MHzに設定
 - 評価に使用したMicroPythonファームバージョン：MicroPython v1.29.0 on 2026-08-24; Raspberry Pi Pico 2 W with RP2350
