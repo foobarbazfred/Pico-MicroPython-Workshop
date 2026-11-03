@@ -112,6 +112,8 @@ print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 
 speed_test(pin1)
+
+# 250.0KHz/4.000us
 ```
 
 
