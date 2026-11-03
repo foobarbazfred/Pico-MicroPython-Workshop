@@ -1,7 +1,7 @@
 # Pico2Wのセットアップ
 Rico2Wを購入後、FLASHに何か書き込まれている可能性がありますが、以下の手順でMicroPythonプログラム（ファームウエア）をPico2W上のFLASHメモリに焼きます
 
-1. 最新版のMciroPythonファームウエアをMicroPython公式サイトからPCにダウンロードします
+1. 最新版のMciroPythonファームウエアをMicroPython公式サイトからPCにダウンロードします<br> MicroPython公式サイト Pico2W用ファームページ：https://micropython.org/download/RPI_PICO2_W/
 2. Pico2Wのボード上のBOOTSLボタンを押しながらUSBケーブルを使ってPCと接続します。BOOTSELボタンを押した状態で電源投入されると、Pico2Wはマスストレージモードで起動します。
 3. PC側では新しいドライブとして認識されます。新しいドライブ(Dドライブか、Eドライブ)に最新版ファームをコピーします
 4. Rico2Wのボード上のFLASHにファームが焼かれます。
