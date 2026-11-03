@@ -48,6 +48,8 @@ pin1 = Pin(1, Pin.OUT)
 while True:
     pin1.high()
     pin1.low()
+
+# 73.53KHz/13.600us
 ```
 ### MicroPython言語 関数化 ソース(Pin操作メソッド呼び出し)
 ```
