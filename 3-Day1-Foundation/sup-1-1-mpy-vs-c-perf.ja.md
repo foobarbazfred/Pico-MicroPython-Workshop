@@ -83,7 +83,7 @@ def _gp1_set():
 
 def _gp1_clear():
     # 0xd0000018 : SIO_GPIO_OUT_CLR_REG
-    machine.mem32[0xd0000018] = 0x00_02  # 0x00_02 means gpio:1
+    machine.mem32[0xd0000020] = 0x00_02  # 0x00_02 means gpio:1
 
 def _gp1_set_clr():
     while True:
