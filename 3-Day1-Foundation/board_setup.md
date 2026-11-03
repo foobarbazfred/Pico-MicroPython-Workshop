@@ -1,10 +1,14 @@
 # Pico2Wのセットアップ
 Rico2Wを購入後、FLASHに何か書き込まれている可能性がありますが、以下の手順でMicroPythonプログラム（ファームウエア）をPico2W上のFLASHメモリに焼きます
 
-1. 最新版のMciroPythonファームウエアをMicroPython公式サイトからPCにダウンロードします<br> MicroPython公式サイト Pico2W用ファームページ：https://micropython.org/download/RPI_PICO2_W/
+1. 最新版のMciroPythonファームウエアをMicroPython公式サイトからPCにダウンロードします
 2. Pico2Wのボード上のBOOTSLボタンを押しながらUSBケーブルを使ってPCと接続します。BOOTSELボタンを押した状態で電源投入されると、Pico2Wはマスストレージモードで起動します。
 3. PC側では新しいドライブとして認識されます。新しいドライブ(Dドライブか、Eドライブ)に最新版ファームをコピーします
 4. Rico2Wのボード上のFLASHにファームが焼かれます。
+
+#### MicroPython公式サイト 
+Pico2W用ファームウエアダウンロードページ：https://micropython.org/download/RPI_PICO2_W/<br>
+<img src="assets/firmware_for_Pico2W.png" width=300>
 
 # Pico2WのFLASHを何もない状態に戻す方法
 boot.pyにバグがありREPLが起動できない場合があります。この場合、MicroPythonファームを再度焼いてもFLASH領域のユーザプログラムが温存される場合があります。この場合、boot.pyが消えずに残ります（よってREPLで起動できない状態が続きます）
