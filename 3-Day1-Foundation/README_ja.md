@@ -14,7 +14,7 @@
   - [REPLを活用したボトムアッププログラミング](1-8-repl-bottom-up.md)
   - センサを活用した組み込みプログラムの基本構造と作り方
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
-    - マイコン用プログラム開発のために標準のPython(C-Python)から拡張されている部分（ソフトとハードを合わせて説明）
+    - マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
   - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
   - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-1-SimpleBlink.md)
