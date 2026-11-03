@@ -118,6 +118,29 @@ speed_test(pin1)
 ```
 
 
+MicroPython言語 (レジスタによるPin操作、インライン展開)
+```
+import machine
+from machine import Pin
+
+#SIO_BASE_REG = 0xd0000000
+#SIO_GPIO_OUT_SET_REG_OFFSET = 0x18
+#SIO_GPIO_OUT_CLR_REG_OFFSET = 0x20
+
+def _gp1_set_clr():
+    while True:
+        # 0xd0000018 : SIO_GPIO_OUT_SET_REG
+        machine.mem32[0xd0000018] = 0x00_02  # 0x00_02 means gpio:1
+        # 0xd0000018 : SIO_GPIO_OUT_CLR_REG
+        machine.mem32[0xd0000020] = 0x00_02  # 0x00_02 means gpio:1
+
+machine.freq(150_000_000)
+print(machine.freq())   # 150_000_000
+pin1 = Pin(1, Pin.OUT)
+_gp1_set_clr()
+# 142.9KHz/7.00us
+```
+
 
 ### MicroPython言語 関数化+viper最適化+レジスタ直接書き込み ソース
 ```
@@ -142,27 +165,4 @@ pin1 = Pin(1, Pin.OUT)
 _gp1_set_clr()
 
 # 714.3KHz (1.400us)
-```
-
-MicroPython言語 関数化 ソース(Pin操作インライン展開)
-```
-import machine
-from machine import Pin
-
-#SIO_BASE_REG = 0xd0000000
-#SIO_GPIO_OUT_SET_REG_OFFSET = 0x18
-#SIO_GPIO_OUT_CLR_REG_OFFSET = 0x20
-
-def _gp1_set_clr():
-    while True:
-        # 0xd0000018 : SIO_GPIO_OUT_SET_REG
-        machine.mem32[0xd0000018] = 0x00_02  # 0x00_02 means gpio:1
-        # 0xd0000018 : SIO_GPIO_OUT_CLR_REG
-        machine.mem32[0xd0000020] = 0x00_02  # 0x00_02 means gpio:1
-
-machine.freq(150_000_000)
-print(machine.freq())   # 150_000_000
-pin1 = Pin(1, Pin.OUT)
-_gp1_set_clr()
-# xx.xxKHz/xx.xxus
 ```
