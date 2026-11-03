@@ -79,11 +79,11 @@ from machine import Pin
 
 def _gp1_set():
     # 0xd0000018 : SIO_GPIO_OUT_SET_REG
-    ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
+    machine.mem32[0xd0000018] = 0x00_02  # 0x00_02 means gpio:1
 
 def _gp1_clear():
     # 0xd0000018 : SIO_GPIO_OUT_CLR_REG
-    ptr32(0xd0000018)[0] = 0x00_02  # 0x00_02 means gpio:1
+    machine.mem32[0xd0000018] = 0x00_02  # 0x00_02 means gpio:1
 
 def _gp1_set_clr():
     while True:
