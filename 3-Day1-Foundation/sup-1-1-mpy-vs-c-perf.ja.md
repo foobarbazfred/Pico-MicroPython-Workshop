@@ -141,7 +141,7 @@ speed_test(pin1)
 ```
 
 
-### MicroPython言語 ループ処理関数化＋native最適化 
+### MicroPython言語 ループ処理関数化＋Pin操作インライン展開+native最適化 
 ```
 import machine
 from machine import Pin
@@ -159,7 +159,7 @@ print(machine.freq())   # 150_000_000
 pin1 = Pin(1, Pin.OUT)
 _gp1_set_clr()
 
-
+# 188.7KHz/5.300us
 ```
 
 
