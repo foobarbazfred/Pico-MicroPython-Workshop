@@ -49,6 +49,15 @@
       - メール送信、SNS等へのPUSH通知、etc  
 
 ## マイコンを使った実現方法、デザインパターン
+
+|デザインパターン|パターン名|構成図|特徴|
+|--|--|--|--|
+|1|マイコンとセンサ表示装置のみ|<img src="assets/archi_type_01.png" width=500>|ネットワーク接続なし、Stand Alone動作<br>出力結果を得るためマイコン装置まで行く|
+|2|WebServer機能を持つマイコン|<img src="assets/archi_type_02.png" width=500>|WebServerによりブラウザから閲覧可能<br>複数メンバが同一LAN内から出力結果参照可|
+|3|MQTTを介した情報発信|<img src="assets/archi_type_03.png" width=500>|MQTT Brokerを介することで、遠隔地のメンバが参照可能|
+|4|IoT PFによるデータ蓄積、演算、判断|<img src="assets/archi_type_04.png" width=500>||
+
+
 ### マイコンとセンサ、表示装置だけで実現
 - ネットワーク接続なしでStand Aloneで動作させる
 - セキュリティの観点で安全
