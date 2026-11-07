@@ -4,7 +4,7 @@
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
     - [主要マイコン(マイコンボード)紹介）](1-1-board.md)
     - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
-    - マイコンプログラミング、IoTシステム開発を取り巻く要素技術（技術マップ）
+    - [マイコン活用アプリ、IoTシステム実現へのアプローチ](1-2-5-architecture.md)
   - [マイコン用プログラミング言語](1-3-programming-languages.md)
     - [MicroPython/Python復習](1-4-micropython_summary.md)
   - マイコンボードのセットアップ、接続方法
