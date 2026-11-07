@@ -6,7 +6,7 @@ Linux等のOSなしでユーザプログラムを単体で実行させる小規�
 | Arduino 系      | Arduino Uno / Nano / Nano 33 BLE | 豊富なシールド、C/C++中心だがMicroPythonも対応可能(Nano 33 BLEのみ)      | ロボット、教育      |
 | ESP 系          | ESP32 / ESP8266                  | Wi-Fi/Bluetooth内蔵、安価<br> マイコンコアはXtensa | IoT、スマート家電   |
 | STM32 系        | Nucleo / Blue Pill               | 高性能Arm Cortex-M、ピン数多め                  | モーター制御、高精度計測 |
-| 教育・学習向け        | micro:bit                   | LEDやボタン内蔵、簡単にプログラム可能                   | 初学者、学校教育     |
+| その他（教育・学習用）  | micro:bit                   | LEDやボタン内蔵、簡単にプログラム可能                   | 初学者、学校教育     |
 
 ### MicroPythonが対応しているマイコンボード
 https://micropython.org/download/
