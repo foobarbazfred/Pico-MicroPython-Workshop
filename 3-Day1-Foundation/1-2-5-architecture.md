@@ -54,7 +54,7 @@
 |--|--|--|
 |1：マイコンとセンサ表示装置のみ|<img src="assets/archi_type_01.png" width=500>|・ネットワーク接続なし、Stand Alone動作<br>・出力結果を得るためマイコン装置まで行く|
 |2：WebServer機能を持つマイコン|<img src="assets/archi_type_02.png" width=500>|・WebServerによりブラウザから閲覧可能<br>・同一LAN内から複数メンバ出力結果参照可<br>・努力次第でグラフ化可能|
-|3：MQTTを介した情報発信|<img src="assets/archi_type_03.png" width=500>|・MQTT Brokerを介することで、遠隔地のメンバが参照可能<br>・MQTT Clientによるデータ表示<br>JSによるビューア(手作り)|
+|3：MQTTを介した情報発信|<img src="assets/archi_type_03.png" width=500>|・MQTT Brokerを介することで、遠隔地のメンバが参照可能<br>・MQTT Clientによるデータ表示<br>・JSによるデータビューア(手作り)|
 |4：IoT PFによるデータ蓄積、演算、判断|<img src="assets/archi_type_04.png" width=500>|・IoT PFを契約してデータ蓄積、一覧化、演算、判断が可能|
 
 
