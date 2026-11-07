@@ -1,4 +1,4 @@
-# マイクロコントローラのハードウエアブロック
+# マイクロコントローラ(RP2350)のハードウエアブロック
 
 <img src="assets/rp2350_block_diagram.png" width=600><br>
 <img src="assets/bus_fabric_rp2350.png" width=600><br>
