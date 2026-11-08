@@ -10,7 +10,7 @@ ThingsBoardはクラウド版を使う場合、基本有償ですが、Community
 
 Docker composeによるThingsBoardサービスの立ち上げ例を示します。Ubuntu環境で動作確認しています。
 
-1. データ永続化のため、コンテナから外部ストレージとして使うディレクトリを作成します
+1. データ永続化のため、コンテナから外部ストレージとして使うディレクトリを作成します。ディレクトリ名は任意ですが、ymlファイルのvolume用ディレクトリ指定と同じ名前でなくてはいけません。
 ```
 mkdir -p ${HOME}/.mytb-data && sudo chown -R 799:799 ${HOME}/.mytb-data
 mkdir -p ${HOME}/.mytb-logs && sudo chown -R 799:799 ${HOME}/.mytb-logs
