@@ -8,7 +8,8 @@ ThingsBoardはクラウド版を使う場合、基本有償ですが、Community
 
 ## Dockerを使ったThingsBoard構築例
 
-Docker composeによるThingsBoardサービスの立ち上げ例を示します。
+Docker composeによるThingsBoardサービスの立ち上げ例を示します。Ubuntu環境で動作確認しています。
+
 1. データ永続化のため、コンテナから外部ストレージとして使うディレクトリを作成します
 ```
 mkdir -p ${HOME}/.mytb-data && sudo chown -R 799:799 ${HOME}/.mytb-data
