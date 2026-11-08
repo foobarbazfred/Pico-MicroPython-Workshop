@@ -50,7 +50,8 @@ http://<サーバのIP>:8080/
 
 ### デバイスの登録
 ThingsBoardに接続したいデバイス(RP2350 / RaspberryPi Pico 2W等)をThingsBoardに登録します。<br>
-<img src="assets/ThingsBoard_add_device.png" width=400><br>
+<img src="assets/ThignsBoard_add_device.png" width=400><br>
+          
 
 デバイスを登録することにより、アクセスURLが振り出されます。<br>
 以下は接続テスト用URLです。POST用ＵＲＬの中で、v1に続く文字列がデバイス専用に振り出されたトークンです。
