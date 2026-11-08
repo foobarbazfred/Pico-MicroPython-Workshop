@@ -52,5 +52,10 @@ ThingsBoardに接続したいデバイス(RP2350 / RaspberryPi Pico 2W等)をThi
 ```
 curl -v -X POST http://192.168.10.125:8080/api/v1/U8xxxxxxxRXg/telemetry --header Content-Type:application/json --data "{temperature:25}"
 ```
+MQTT接続テスト用のパラメータは以下です
+```
+mosquitto_pub -d -q 1 -h 192.168.10.125 -p 1883 -t v1/devices/me/telemetry -u "U8xxxxxxxxxXg" -m "{temperature:25}"
+```
+
 ## Dashboardの作成
 収集されたデータを一覧表示したり、グラフ化できるよう、ダッシュボードを作成します。以下は作成が終わって収集データが表示される例です。<br>
