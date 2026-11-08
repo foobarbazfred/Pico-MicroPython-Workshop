@@ -49,7 +49,10 @@ http://<サーバのIP>:8080/
 [start the platform](https://thingsboard.io/docs/installation/docker/#step-3-start-the-platform)
 
 ### デバイスの登録
-ThingsBoardに接続したいデバイス(RP2350 / RaspberryPi Pico 2W等)をThingsBoardに登録します。デバイスを登録することにより、アクセスURLが振り出されます。<br>
+ThingsBoardに接続したいデバイス(RP2350 / RaspberryPi Pico 2W等)をThingsBoardに登録します。<br>
+<img src="assets/ThingsBoard_add_device.png" width=400><br>
+
+デバイスを登録することにより、アクセスURLが振り出されます。<br>
 以下は接続テスト用URLです。POST用ＵＲＬの中で、v1に続く文字列がデバイス専用に振り出されたトークンです。
 ```
 curl -v -X POST http://192.168.10.125:8080/api/v1/U8xxxxxxxRXg/telemetry --header Content-Type:application/json --data "{temperature:25}"
