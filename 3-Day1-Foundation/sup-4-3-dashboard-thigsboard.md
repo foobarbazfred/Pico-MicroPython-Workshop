@@ -13,6 +13,8 @@ Docker composeによるThingsBoardサービスの立ち上げ例を示します�
 mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
 mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
 ```
+UID:GIDを799:799にしているのは、Dockerコンテナ内でThingsBoardのプロセスが799:799で動作しており、ファイルR/W時に権限違反を起こさないため
+
 2. Docker compose用のymlファイルを作成します。<br>
 file:docker-compose.yml (ミニマム版)
 ```
