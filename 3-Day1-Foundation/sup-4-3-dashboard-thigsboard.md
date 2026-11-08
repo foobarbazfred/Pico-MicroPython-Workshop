@@ -11,8 +11,8 @@ ThingsBoardはクラウド版を使う場合、基本有償ですが、Community
 Docker composeによるThingsBoardサービスの立ち上げ例を示します。
 1. データ永続化のため、コンテナから外部ストレージとして使うディレクトリを作成します
 ```
-mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
-mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
+mkdir -p ${HOME}/.mytb-data && sudo chown -R 799:799 ${HOME}/.mytb-data
+mkdir -p ${HOME}/.mytb-logs && sudo chown -R 799:799 ${HOME}/.mytb-logs
 ```
 UID:GIDを799:799にしているのは、Dockerコンテナ内でThingsBoardのプロセスが799:799で動作しており、ファイルR/W時に権限違反を起こさないため
 
@@ -31,10 +31,10 @@ services:
     environment:
       TB_QUEUE_TYPE: in-memory
     volumes:
-      - ~/.mytb-data:/data
-      - ~/.mytb-logs:/var/log/thingsboard
+      - ${HOME}/.mytb-data:/data
+      - ${HOME}/.mytb-logs:/var/log/thingsboard
 ```
-3. イメージをビルドしてコンテナを起動します
+3. ymlファイルに指定したthingsboardイメージ取得してコンテナを起動します
 ```
 docker compose up -d
 ```
