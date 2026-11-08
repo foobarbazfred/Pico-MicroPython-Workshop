@@ -59,3 +59,5 @@ mosquitto_pub -d -q 1 -h 192.168.10.125 -p 1883 -t v1/devices/me/telemetry -u "U
 
 ## Dashboardの作成
 収集されたデータを一覧表示したり、グラフ化できるよう、ダッシュボードを作成します。以下は作成が終わって収集データが表示される例です。<br>
+<img src="assets/ThigsBoard_DashBoard.png" width=500><br>
+接続テスト用URLを使ってデータをPOSTしています。
