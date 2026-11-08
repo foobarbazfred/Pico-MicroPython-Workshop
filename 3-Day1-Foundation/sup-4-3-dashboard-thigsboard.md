@@ -14,9 +14,8 @@ mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
 mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
 ```
 2. Docker compose用のymlファイルを作成します。<br>
-file:docker-compose.yml
+file:docker-compose.yml (ミニマム版)
 ```
-version: '3.0'
 services:
   mytb:
     restart: always
