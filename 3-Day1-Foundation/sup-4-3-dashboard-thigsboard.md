@@ -38,8 +38,15 @@ services:
 docker compose up -d
 ```
 4. コンテナが起動されますので、ブラウザからThingsBoardのログイン画面にアクセスします
+
+
 ```
 http://<サーバのIP>:8080/
 ```
 サービス起動後のログインIDは以下を参照してください
 [start the platform](https://thingsboard.io/docs/installation/docker/#step-3-start-the-platform)
+
+## デバイスの登録
+ThingsBoardに接続したいデバイス(RP2350 / RaspberryPi Pico 2W等)をThingsBoardに登録します。デバイスを登録することにより、アクセスURLが振り出されます。
+## Dashboardの作成
+収集されたデータを一覧表示したり、グラフ化できるよう、ダッシュボードを作成します。以下は作成が終わって収集データが表示される例です。<br>
