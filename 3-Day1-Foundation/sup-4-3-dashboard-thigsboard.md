@@ -9,7 +9,7 @@ Docker composeによるThingsBoardサービスの立ち上げ例を示します�
 mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
 mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
 ```
-2. Docker compose用のymlファイルを作成します。
+2. Docker compose用のymlファイルを作成します。<br>
 file:docker-compose.yml
 ```
 version: '3.0'
