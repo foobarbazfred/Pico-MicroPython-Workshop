@@ -41,3 +41,5 @@ docker compose up -d
 ```
 http://<サーバのIP>:8080/
 ```
+サービス起動後のログインIDは以下を参照してください
+[start the platform](https://thingsboard.io/docs/installation/docker/#step-3-start-the-platform)
