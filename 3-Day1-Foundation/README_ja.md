@@ -86,7 +86,7 @@
     - 応用例：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
   - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
-      - IoT PF(ThingsBoard)によるダッシュボード
+      - [IoT PF(ThingsBoard)によるダッシュボード](sup-4-3-dashboard-thigsboard.md)
       - [Node-REDによるダッシュボード](sup-4-2-dashboard-node-red.md)
       - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-x-WebServer.md)
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
