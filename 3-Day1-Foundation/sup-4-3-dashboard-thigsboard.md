@@ -4,6 +4,7 @@ ThingsBoardはクラウド版を使う場合、基本有償ですが、Community
 - [GitHub](https://github.com/thingsboard/thingsboard)
 - [ThingsBoard CE版Installガイド](https://thingsboard.io/docs/user-guide/install/installation-options/)
 
+いきなりインターネットからアクセス可能になるようサーバを立ち上げるのはセキュリティリスクが高いのでまずはローカルネットワーク内でThingsBoardサービスを構築してテストされることをお勧めします。
 
 ## Dockerを使ったThingsBoard構築例
 
