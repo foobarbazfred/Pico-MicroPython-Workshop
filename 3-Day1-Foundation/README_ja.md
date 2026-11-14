@@ -80,7 +80,7 @@
     メモリサイズの1/3を上限とするのが無難。その理由は？)
 - 補講２ ； PIO...MicroPythonの遅さをハードウエアでカバーする
   - PIO(Programming IO Interface)とは何か、目的、用途
-  - 内部構造
+  - [内部構造](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/README_ja.md)
   - 使い方
     - [簡単なLチカ、SW入力](https://github.com/foobarbazfred/learn-rp2350-pio)
     - DMAを併用することでデータストリームの高速転送が可能
