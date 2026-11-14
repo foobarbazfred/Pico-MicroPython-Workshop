@@ -38,8 +38,9 @@
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#uart-serial-bus 
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-spi-bus
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-i2c-bus
-- クラスI2C
-  - https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2C.html#class-i2c-a-two-wire-serial-protocol
+- MicroPython ライブラリ説明
+  - https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.UART.html
+  - https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2C.html
 - I2Cバス仕様書 (I2Cバス仕様およびユーザーマニュアル)(NXP)
   - https://www.nxp.com/docs/ja/user-guide/UM10204.pdf
 - SPI解説文
