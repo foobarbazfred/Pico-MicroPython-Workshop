@@ -17,6 +17,21 @@
 
 演習では主にI2Cを使ってセンサ、表示装置と接続します。
 
+### 周辺デバイスとシリアルIF
+各種周辺デバイスに採用されているシリアルIFの種類を整理します
+- UART
+  - 低速CMOSカメラ
+  - GPS
+- I2C
+  - 温度センサ、気圧センサ等各種センサ
+  - CMOSカメラ(センサ部制御)
+  - キャラクタ液晶ディスプレイ
+- SPI
+  - 各種センサ(DOFセンサ等)
+  - CMOSカメラ(フレームバッファ付き)(データ転送)
+  - グラフィック液晶ディスプレイ     
+
+
 ## 参考情報
 - MicroPython Documents; RP2 用クイックリファレンス
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-i2c-bus
