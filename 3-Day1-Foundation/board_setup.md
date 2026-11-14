@@ -12,7 +12,7 @@ Pico2W用ファームウエアダウンロードページ：https://micropython.
 <img src="assets/firmware_for_Pico2W.png" width=300>
 
 #### BOOTSEL ボタン
-<img src="assets/bootsel_button_on_pico2w.png‎" width=100>
+<img src="assets/bootsel_button_on_pico2w.png" width=100>
 
 ### Thonnyによるインストール手順
 マイコン用プログラミング環境としてThonny IDEがあります。Thonnyのインストール機能を使ってMicroPythonファームを焼くことができます。
