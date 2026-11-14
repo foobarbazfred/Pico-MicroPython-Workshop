@@ -50,7 +50,7 @@
   - 出力装置
     - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
     - 発展：[グラフィックディスプレイ(SPI接続)](3-2-2-GraphicDisplay.md)  
-    - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
+    - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md) (補講３と共通)
   - 記憶装置
     - 発展：[SDカード(SPI接続)](3-8-SPI-SDCard.md)
   - 演習：センサ活用事例（全部はできないので選択）
@@ -92,7 +92,8 @@
       - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-4-WebServer.md)
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
     - 音楽や音声を再生する
-      - 音声合成LSIを利用(UART接続で発話できる)  
+      - 音声合成LSIを利用(UART接続で発話できる)
+        - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
       - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
       - [DVIでDigitalTVに接続、グラフィック表示](https://github.com/foobarbazfred/micropython/tree/main/rp2350-hstx)
 - 補講４ ； マイコンとクラウドサービスとの連携
