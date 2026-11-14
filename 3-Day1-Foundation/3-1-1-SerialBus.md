@@ -5,8 +5,8 @@
 |シリアルインタフェース仕様名|接続信号(*)|特徴|
 |--|--|--|
 |UART<br>(Universal Asynchronous Receiver/Transmitter)|送信信号(TX)、受信信号(RX)|クロックが不要<br>一対一通信<br>全二重通信|
-|I2C<br>(Inter-Integrated Circuit)|クロック(SCL)、送受信信号(SDA)|クロック必要<br>１本の信号線で送受信を切り替える<br>複数のターゲットが接続可能<br>半二重通信|
-|SPI<br>(Serial Peripheral Interface)|クロック(SCLK)、送信信号(MOSI)、受信信号(MISO)、CS|クロック必要<br>送信用信号と、受信用信号が分かれる<br>複数のターゲットが接続可能<br>高速通信可能<br>全二重通信|
+|I2C<br>(Inter-Integrated Circuit)|クロック(SCL)、送受信信号(SDA)|クロック必要<br>１本の信号線で送受信を切り替える<br>SCL/SDAを共有することで複数のターゲットが接続可能<br>半二重通信|
+|SPI<br>(Serial Peripheral Interface)|クロック(SCLK)、送信信号(MOSI)、受信信号(MISO)、CS|クロック必要<br>送信用信号と、受信用信号が分かれる<br>SCLK/MOSI/MISOを共有することで複数のターゲットが接続可能<br>高速通信可能<br>全二重通信|
 
 *:接続信号のうち、電源、GNDは除いています
 
