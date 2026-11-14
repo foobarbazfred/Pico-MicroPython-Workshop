@@ -85,11 +85,11 @@
     - [簡単なLチカ、SW入力](https://github.com/foobarbazfred/learn-rp2350-pio)
     - DMAを併用することでデータストリームの高速転送が可能
     - 応用例：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
-  - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
+- 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
       - [IoT PF(ThingsBoard)によるダッシュボード](sup-4-3-dashboard-thigsboard.md)
       - [Node-REDによるダッシュボード](sup-4-2-dashboard-node-red.md)
-      - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-x-WebServer.md)
+      - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-4-WebServer.md)
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
     - 音楽や音声を再生する
       - 音声合成LSIを利用(UART接続で発話できる)  
