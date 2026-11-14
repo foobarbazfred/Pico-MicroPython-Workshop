@@ -11,6 +11,9 @@ Rico2Wを購入後、FLASHに何か書き込まれている可能性がありま
 Pico2W用ファームウエアダウンロードページ：https://micropython.org/download/RPI_PICO2_W/<br>
 <img src="assets/firmware_for_Pico2W.png" width=300>
 
+#### BOOTSEL ボタン
+<img src="assets/bootsel_button_on_pico2w.png‎" width=100>
+
 ### Thonnyによるインストール手順
 マイコン用プログラミング環境としてThonny IDEがあります。Thonnyのインストール機能を使ってMicroPythonファームを焼くことができます。
 1. Pico2Wのボード上のBOOTSLボタンを押しながらUSBケーブルを使ってPCと接続します。BOOTSELボタンを押した状態で電源投入されると、Pico2Wはマスストレージモードで起動します。
