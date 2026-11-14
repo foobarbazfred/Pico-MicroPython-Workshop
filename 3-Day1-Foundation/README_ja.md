@@ -86,6 +86,7 @@
     - [簡単なLチカ、SW入力](https://github.com/foobarbazfred/learn-rp2350-pio)
     - DMAを併用することでデータストリームの高速転送が可能
     - 応用例：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
+  - [PIO命令セット](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/instruction_ja.md) 
 - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
       - [IoT PF(ThingsBoard)によるダッシュボード](sup-4-3-dashboard-thigsboard.md)
