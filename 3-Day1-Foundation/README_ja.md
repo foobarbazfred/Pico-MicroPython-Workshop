@@ -93,8 +93,8 @@
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
     - 音楽や音声を再生する
       - 音声合成LSIを利用(UART接続で発話できる)
-        - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
       - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
+        - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
       - [DVIでDigitalTVに接続、グラフィック表示](https://github.com/foobarbazfred/micropython/tree/main/rp2350-hstx)
 - 補講４ ； マイコンとクラウドサービスとの連携
 - 補講５ ； マイコンでAI技術をどう活用するか
