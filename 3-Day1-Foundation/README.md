@@ -4,7 +4,7 @@
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
     - [主要マイコン(マイコンボード)紹介）](1-1-board.md)
     - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
-    - マイコンプログラミング、IoTシステム開発を取り巻く要素技術（技術マップ）
+    - [マイコン活用アプリ、IoTシステム実現へのアプローチ](1-2-5-architecture.md)
   - [マイコン用プログラミング言語](1-3-programming-languages.md)
     - [MicroPython/Python復習](1-4-micropython_summary.md)
   - マイコンボードのセットアップ、接続方法
@@ -30,13 +30,14 @@
     - [VRで光の明るさが変わる](2-4-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3>%81%A6led%E3%81%AE%E6%98%8E%E3%82%8B%E3%81%95%E3%82%92%E8%AA%BF%E6%95%B4)
     - [VRでサーボモータの角度が変わる](2-5-ServoControl.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%9B%E3%83%BC%E3%83%B3%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99)
     - VRで音の周波数が変わる
-    - 参考：VRとモータドライバでDCモータ制御(提案のみ)
+    - 参考：VRとモータドライバでDCモータ制御(紹介のみ)
   - 発展：[DigitalでAnalogを表現する-> フルカラーLED (NoePixel)を使う](2-10-NeoPixel.md)
     - VRでNeoPixelの色が変わる
 - 基礎３ ; 周辺機器との接続方法、デバイス活用
   - マイコンに接続できる周辺機器
     - [センサ紹介、センサの使い方(データの取得方法)](3-0-sensor.md)
-  - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-use-SerialBus.md)
+  - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-1-SerialBus.md)
+    - [I2Cについて](3-1-2-SerialBus-i2c.md)
   - 入力装置
     - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
@@ -86,7 +87,7 @@
     - 応用例：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
   - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
-      - IoT PF(ThingsBoard)によるダッシュボード
+      - [IoT PF(ThingsBoard)によるダッシュボード](sup-4-3-dashboard-thigsboard.md)
       - [Node-REDによるダッシュボード](sup-4-2-dashboard-node-red.md)
       - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-x-WebServer.md)
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
