@@ -1,5 +1,5 @@
 # Pico2Wのセットアップ
-Rico2Wを購入後、FLASHに何か書き込まれている可能性がありますが、以下の手順でMicroPythonプログラム（ファームウエア）をPico2W上のFLASHメモリに焼きます
+Pico2Wを購入後、FLASHに何か書き込まれている可能性がありますが、以下の手順でMicroPythonプログラム（ファームウエア）をPico2W上のFLASHメモリに焼きます
 
 ### WindowsOSのファイルエクスプローラーを使ったインストール手順
 1. 最新版のMciroPythonファームウエアをMicroPython公式サイトからPCにダウンロードします
@@ -12,6 +12,7 @@ Pico2W用ファームウエアダウンロードページ：https://micropython.
 <img src="assets/firmware_for_Pico2W.png" width=300>
 
 #### BOOTSEL ボタン
+BOOTSELボタンはボードの5番ピン付近にある押しボタンです。BOOTSLボタンを押しながら電源を投入するとPico2Wはストレージモードで起動されます。<br>
 <img src="assets/bootsel_button_on_pico2w.png" width=100>
 
 ### Thonnyによるインストール手順
