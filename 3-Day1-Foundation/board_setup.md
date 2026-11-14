@@ -1,5 +1,5 @@
 # Pico2Wのセットアップ
-Rico2Wを購入後、FLASHに何か書き込まれている可能性がありますが、以下の手順でMicroPythonプログラム（ファームウエア）をPico2W上のFLASHメモリに焼きます
+Pico2Wを購入後、FLASHに何か書き込まれている可能性がありますが、以下の手順でMicroPythonプログラム（ファームウエア）をPico2W上のFLASHメモリに焼きます
 
 ### WindowsOSのファイルエクスプローラーを使ったインストール手順
 1. 最新版のMciroPythonファームウエアをMicroPython公式サイトからPCにダウンロードします
@@ -11,16 +11,20 @@ Rico2Wを購入後、FLASHに何か書き込まれている可能性がありま
 Pico2W用ファームウエアダウンロードページ：https://micropython.org/download/RPI_PICO2_W/<br>
 <img src="assets/firmware_for_Pico2W.png" width=300>
 
+#### BOOTSEL ボタン
+BOOTSELボタンはボードの5番ピン付近にある押しボタンです。BOOTSLボタンを押しながら電源を投入するとPico2Wはストレージモードで起動されます。<br>
+<img src="assets/bootsel_button_on_pico2w.png" width=100>
+
 ### Thonnyによるインストール手順
 マイコン用プログラミング環境としてThonny IDEがあります。Thonnyのインストール機能を使ってMicroPythonファームを焼くことができます。
-1. Pico2Wのボード上のBOOTSLボタンを押しながらUSBケーブルを使ってPCと接続します。BOOTSELボタンを押した状態で電源投入されると、Pico2Wはマスストレージモードで起動します。
+1. Pico2Wのボード上のBOOTSLボタンを押しながらUSBケーブルを挿入してPCと接続します。上記説明したのと同様に、BOOTSELボタンを押した状態で電源を投入することで、Pico2Wがマスストレージモードで起動されます。
 2. Thonnyを開き、画面右下の[Install MicroPython...]をクリックします。
     - 認識されている新しいドライブ名、焼きたいファームの情報を指定して、[Install]を押します
 3. ファーム書き込みが完了するとボードが再起動され、ThonnyとPico2Wが再接続されます 
 
 # Pico2WのFLASHを何もない状態に戻す方法
-FLASHメモリに書き込んだboot.pyにバグがありREPLが起動できない場合があります。boot.pyを消すために、MicroPythonファームを再度焼いてもFLASH領域のユーザプログラムが温存され、boot.pyが消えずに残ります（よってREPLで起動できない状態が続きます）。
-このような場合、FLASHにnuke_universal.uf2を焼くことで、FLASH領域の内容が初期状態に戻ります。焼く手順は上記MicroPythonファームを焼く手順と同じです。nuke_universl.uf2を焼いてFLASHを初期状態にした後、再度MicroPythonファームを焼くことでユーザプログラムが無い状態に更新できます。
+Pico2WのFLASHメモリに書き込んだboot.pyに致命的なバグがありREPLが起動できない場合があります。boot.pyを消そうとしてMicroPythonファームを再度焼いてもFLASH領域のユーザプログラムが温存されるため、boot.pyが消えずに残ります（よってREPLで起動できない状態が続きます）。
+このような場合、FLASHにnuke_universal.uf2を焼くことで、FLASH領域の内容が初期状態に戻ります。焼く手順は上記MicroPythonファームを焼く手順と同じです。nuke_universl.uf2を焼いてFLASHを初期状態にした後、再度MicroPythonファームを焼くことでFLASH上のユーザプログラムが無い状態に戻すことができます。
 
 #### nuke DLサイト(GitHub) 
 GitHub：https://github.com/raspberrypi/pico-sdk-prebuilts/releases
