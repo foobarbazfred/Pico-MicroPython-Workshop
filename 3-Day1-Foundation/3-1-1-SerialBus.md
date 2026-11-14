@@ -14,8 +14,8 @@
 |IF仕様名|接続信号|特徴|
 |--|--|--|
 |UART<br>(Universal Asynchronous Receiver/Transmitter)|送信信号(TX)、受信信号(RX)、GND|クロックが不要<br>一対一通信<br>全二重通信|
-|I2C<br>(Inter-Integrated Circuit)|クロック(SCL)、送受信信号(SDA)、GND|クロック必要<br>１本ので信号線で送受信を切り替える<br>マルチマスタ、マルチデバイス可<br>半二重通信|
-|SPI<br>(Serial Peripheral Interface)|クロック(SCLK)、送信信号(MOSI)、受信信号(MISO)、CS、GND|クロック必要<br>送信用信号と、受信用信号が分かれる<br>マルチデバイス可<br>全二重通信|
+|I2C<br>(Inter-Integrated Circuit)|クロック(SCL)、送受信信号(SDA)、GND|クロック必要<br>１本の信号線で送受信を切り替える<br>マルチマスタ、マルチデバイス可<br>半二重通信|
+|SPI<br>(Serial Peripheral Interface)|クロック(SCLK)、送信信号(MOSI)、受信信号(MISO)、CS、GND|クロック必要<br>送信用信号と、受信用信号が分かれる<br>マルチデバイス可<br>全二重通信<br>高速通信可能|
 
 
 
