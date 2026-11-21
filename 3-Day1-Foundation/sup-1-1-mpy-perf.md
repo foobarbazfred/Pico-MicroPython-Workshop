@@ -1,5 +1,5 @@
 # MicroPythonの性能改善
-MicroPythonで試作した際、データ取り込みや取り込んだデータの処理速度が若干不足する場合があります。MicroPythonの公式ドキュメントにおいて、高速化手法が紹介されています。
+MicroPythonで試作した際、データ取り込みや取り込んだデータの処理速度が若干不足する場合があります。MicroPythonの公式ドキュメントに高速化手法が紹介されています。
 
 MicroPython 性能の最大化
 ドキュメントURL:https://micropython-docs-ja.readthedocs.io/ja/latest/reference/speed_python.html
