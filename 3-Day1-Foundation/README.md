@@ -16,7 +16,7 @@
   - [REPLを活用したボトムアッププログラミング](1-8-repl-bottom-up.md)
   - [センサを活用した組み込みプログラムの基本構造と作り方](embedded-program-structure.md)
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
-    - マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）
+    - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-4-micropython_summary.md)
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
   - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
   - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-1-SimpleBlink.md)
@@ -78,7 +78,7 @@
   - [MicroPythonとC言語の性能差](sup-1-2-mpy-vs-c-perf.md)
   - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良い配列の最大サイズは？(Heap
     メモリサイズの1/3を上限とするのが無難。その理由は？)
-- 補講２ ； PIO...MicroPythonの遅さをハードウエアでカバーする
+- 補講２ ； PIO...MicroPythonの遅さをハードウェアでカバーする
   - PIO(Programming IO Interface)とは何か、目的、用途
   - [内部構造](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/README_ja.md)
   - [PIO学習パス](https://github.com/foobarbazfred/learn-rp2350-pio/blob/main/how_to_learn_pio_ja.md)
@@ -105,6 +105,6 @@
     - [要件分析、試作等、開発段階でのAI活用](sup-5-ai_assisted_development_ja.md)
     - [AIと連携したアプリケーションの開発](sup-5-embedded_ai_ja.md)
       - WebAPIによるCloud上のAIとマイコンを連携させる
-      - マイコンにAIを組み込む、EdgeAI化（マイコン上で学習済み小型モデルを走らせる）
+      - マイコンにAIを組み込む、Edge AI化（マイコン上で学習済み小型モデルを走らせる）
 
 ※README_ja.mdがマスタ
