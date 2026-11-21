@@ -8,7 +8,7 @@ NiceGUI + Pythonによる自作dashboardの表示例<br>
 
 ### 自前でIoTダッシュボードを構築する (NiceGUI編)
 - Streamlit, NiceGUI等を使ってIoTダッシュボードを自作
-- Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWevServiceを稼働させる
+- Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWebServiceを稼働させる
 - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
 - 自分で実装するので自由度が高い、表示対象データの特性に最適化可能
 - セキュリティ面から、インターネット上でのサービス提供は不可
