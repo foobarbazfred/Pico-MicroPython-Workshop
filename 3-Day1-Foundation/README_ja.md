@@ -105,6 +105,6 @@
     - [要件分析、試作等、開発段階でのAI活用](sup-5-ai_assisted_development_ja.md)
     - [AIと連携したアプリケーションの開発](sup-5-embedded_ai_ja.md)
       - WebAPIによるCloud上のAIとマイコンを連携させる
-      - マイコンにAIを組み込む、EdgeAI化（マイコン上で学習済み小型モデルを走らせる）
+      - マイコンにAIを組み込む、Edge AI化（マイコン上で学習済み小型モデルを走らせる）
 
 ※README_ja.mdがマスタ
