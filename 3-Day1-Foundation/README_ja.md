@@ -78,7 +78,7 @@
   - [MicroPythonとC言語の性能差](sup-1-2-mpy-vs-c-perf.md)
   - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良い配列の最大サイズは？(Heap
     メモリサイズの1/3を上限とするのが無難。その理由は？)
-- 補講２ ； PIO...MicroPythonの遅さをハードウエアでカバーする
+- 補講２ ； PIO...MicroPythonの遅さをハードウェアでカバーする
   - PIO(Programming IO Interface)とは何か、目的、用途
   - [内部構造](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/README_ja.md)
   - [PIO学習パス](https://github.com/foobarbazfred/learn-rp2350-pio/blob/main/how_to_learn_pio_ja.md)
