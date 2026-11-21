@@ -18,7 +18,7 @@ https://micropython-docs-ja.readthedocs.io/ja/latest/library/index.html#micropyt
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.html#classes<br>
 
 
-　- ユーザのプログラムがセンサ等を制御する場合のソフトウエア、ハードウエアの構成を以下に示します。I2C/SPIはデバイスと接続する役割を提供しますが、センサをどのように制御するか？は制御用ソフトウエアが必要です。これらはドライバと呼ばれます。ドライバは自作することもできますが、有名な周辺機器（LCD ディスプレイ、各種センサ類）であれば、GitHub等で公開されており、そのまま使うこともできます。<br>
+　- ユーザのプログラムがセンサ等を制御する場合のソフトウェア、ハードウェアの構成を以下に示します。I2C/SPIはデバイスと接続する役割を提供しますが、センサをどのように制御するか？は制御用ソフトウェアが必要です。これらはドライバと呼ばれます。ドライバは自作することもできますが、有名な周辺機器（LCD ディスプレイ、各種センサ類）であれば、GitHub等で公開されており、そのまま使うこともできます。<br>
  <img src="assets/peripheral_device_control.png" width=800>
 
 ソースコードの例：<br>
