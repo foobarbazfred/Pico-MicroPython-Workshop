@@ -7,7 +7,7 @@
 - 音を発射して戻ってくるまでの時間を使って距離を計算する（計算はマイコン側で行う）
 - HC-SR04の制御方法
    - 音の発射はTrigger信号を出力
-   - HS-SR04は対象物に超音波を出して戻ってくるまでの時間を計測、かかった時間をEcho信号のパルス幅で返却
+   - HC-SR04は対象物に超音波を出して戻ってくるまでの時間を計測、かかった時間をEcho信号のパルス幅で返却
  
 勘違いしやすいのは、Trigger信号からEchoまでの時間がセンサから対象物までの往復時間かと思いがちですが、音波の往復にかかった時間はEcho信号のパルス幅で表現されます。
 
@@ -74,7 +74,7 @@ class HC_SR04:
                 echo_off = True
                 break
 
-        # measure time of Level H and calcurate distance
+        # measure time of Level H and calculate distance
         if not echo_off:
             print('internal error, can not find signal; ECHO L')
             return -1
