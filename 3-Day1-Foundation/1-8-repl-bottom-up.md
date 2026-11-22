@@ -60,6 +60,7 @@ Raspberry Pi Pico 2W用にビルドされたMicroPythonファームには上記�
 >>> dir(machine.Pin)
 ['__class__', '__name__', 'value', 'ALT', 'ALT_CORESIGHT_TRACE', 'ALT_GPCK', 'ALT_HSTX', 'ALT_I2C', 'ALT_PIO0', 'ALT_PIO1', 'ALT_PIO2', 'ALT_PWM', 'ALT_SIO', 'ALT_SPI', 'ALT_UART', 'ALT_UART_AUX', 'ALT_USB', 'ALT_XIP_CS1', 'IN', 'IRQ_FALLING', 'IRQ_RISING', 'OPEN_DRAIN', 'OUT', 'PULL_DOWN', 'PULL_UP', '__bases__', '__dict__', 'board', 'cpu', 'high', 'init', 'irq', 'low', 'off', 'on', 'toggle']
 ```
+プログラミングを始める時は、解説書やプログラミングガイドブックを見て機能を理解する必要がありますが、プログラミング中に、どうだっけ？と正しい関数名が分からなくなった時、調べたいモジュールをロードしてdir()関数で内部のシンボルを一覧表示させるとで、使いたい関数を見つけることができます。
 
 #### REPLによる即時実行活用
 
