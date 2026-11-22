@@ -107,6 +107,6 @@
       - WebAPIによるCloud上のAIとマイコンを連携させる
       - マイコンにAIを組み込む、Edge AI化（マイコン上で学習済み小型モデルを走らせる）
       - PC上で画像認識まで行い、MQTT経由でマイコンに伝える
-        - [PCのカメラに向かって手をかざす、手の位置とグーパーを判定してMQTT Publishするサンプルコード]()
+        - [PCのカメラに向かって手をかざす、手の位置とグーパーを判定してMQTT Publishするサンプルコード](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/src/hand_gesture.html)
 
 ※README_ja.mdがマスタ
