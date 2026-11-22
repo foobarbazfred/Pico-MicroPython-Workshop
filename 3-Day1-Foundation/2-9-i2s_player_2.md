@@ -2,8 +2,8 @@
 
 非圧縮の音データを送受信するための仕様として、I2S (Inter-IC Sound)があります。これはNXPにより策定された仕様であり、下記の信号線で音データが送信されます。
 - 16bit/24bit長の音データ : SD (SDATA)
-- L/Rのいずれであるかを示すCLK: WS (LRCLK/WDCLK)
-- 1bitの音信号を示すCLK:  SCK (SCLK)
+- L/Rのいずれであるかを示すクロック: WS (LRCLK/WDCLK)
+- 1bitの音信号を示すクロック:  SCK (SCLK)
 - MasterClock (SYSCLK/MCLK)
 
 https://en.wikipedia.org/wiki/I2S
