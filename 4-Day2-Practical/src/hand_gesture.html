@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+   PC内蔵カメラで手の形と位置を判定、MQTT BrokerにPublishするサンプルコード
+　 扱える手の形は、グー(rock)か、パー(paper)
+　 手の位置は画面左上を(0,0)として横方向はX,縦方向はY,画面右下は、(1,1)
+   MQTT Broker：test.mosquitto.org
+　 Topics: up_workshop/ex_01/hand-gesture/position
+   Message: {"hand_position":[0.2,0.1],"gesture":"paper"} , {"hand_position":[0.2,0.1],"gesture":"rock"}
+-->
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -34,7 +42,7 @@ import { HandLandmarker, FilesetResolver } from
 // ===== 設定 =====
 const MIRROR = true;                                     // 鏡像表示に合わせて左右を判定
 const BROKER = "wss://test.mosquitto.org:8081";          // 公開ブローカー（WebSocket over TLS）
-const HAND_TOPIC = "aaa/bbb/hand-gesture/position";      // 自分専用の名前に変更推奨
+const HAND_TOPIC = "up_workshop/ex_01/hand-gesture/position";      // 自分専用の名前に変更推奨
 const POSITION_INTERVAL_MS = 200;                        // 位置の通常送信間隔
 
 const GESTURE_LABELS = { paper: "パー", rock: "グー" };
