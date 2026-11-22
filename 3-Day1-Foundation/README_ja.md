@@ -38,6 +38,7 @@
     - [センサ紹介、センサの使い方(データの取得方法)](3-0-sensor.md)
   - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-1-SerialBus.md)
     - [I2Cについて](3-1-2-SerialBus-i2c.md)
+    - [SPIについて](3-4-SerialBus_SPI.md)
   - 入力装置
     - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
