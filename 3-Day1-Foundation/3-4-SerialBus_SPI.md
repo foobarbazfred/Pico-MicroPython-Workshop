@@ -9,7 +9,9 @@ SPI（Serial Peripheral Interface）バスは周辺機器との接続で使わ�
 
 SPIバスの仕様上、マスタ・スレーブ間のデータの送受信(物理層)は規定されていますが、データをどう扱うのか（論理層）については規定されていません。例えば、センサがレジスタを持つ場合、センサのレジスタに値を書き込むのか、センサのレジスタから値を読み込むのか、SPIバスの仕様には定義されていません。このような使い方はデバイス各社がデータの扱いを独自に決めて運用しています。
 
-SPIバスによる制御例としてSDカードの制御を行います。またキットには、RFID-RC522が含まれています。このRFID-RS522は、＃＃＃、＃＃であり、I2C, SPI両方のバス接続に対応しています。
+SPIバスによる制御例としてSDカードの制御を行います。またキットには、RFID-RC522が含まれています。このRFID-RC522は、＃＃＃、＃＃であり、I2C, SPI両方のバス接続に対応しています。
 
+### 参考資料
 https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-spi-bus<br>
 https://github.com/vtt-info/MicroPython_MFRC522/tree/main
+https://docs.freenove.com/projects/fnk0058/en/latest/fnk0058/codes/Python/28_RFID.html
