@@ -25,8 +25,11 @@ DACから音を出す場合、デジタル化された音データを作る必�
 ```
 #
 # Sample Source for BB PCM5100A DAC
-#  v0.01 (2025/12/29 15:00)
 #
+#  v0.01 (2025/12/29 15:00)
+#  v0.02 (2026/11/22 18:00) 
+#     Bug fix  : CONST NAME fixed (SAMPLE_SIZE_IN_BITS -> SAMPLE_SIZE_IN_SOUND)
+#     Refactor : add volume variation,  MID_VOLUME(0x7F)
 
 import os
 import time
@@ -43,7 +46,7 @@ I2S_ID = 0
 BUFFER_LENGTH_IN_BYTES = 1024
 
 SAMPLE_RATE_IN_HZ = 8_000      # The lowest supported sample rate of PCM5100A (8KHz)
-SAMPLE_SIZE_IN_SOUND = 16       # 16bits/one sound(L or R)
+SAMPLE_SIZE_IN_SOUND = 16      # 16bits/one sound(L or R)
 FORMAT = I2S.MONO              # 
 
 # frequence define
@@ -58,7 +61,8 @@ FREQ_C5 = 523
 
 
 #
-MAX_VOLUME = 0xff
+MAX_VOLUME = 0xFF
+MID_VOLUME = 0x7F
 LOW_VOLUME = 0x15
 
 
@@ -84,9 +88,9 @@ def make_tone_signed_16b(sample_rate, frequency, volume = MAX_VOLUME):
     samples = array.array('h', [0] * samples_per_cycle)  # 'h' : signed short (2bytes)
     # value_range : max value of posivtive value  ; -tone_value_range -- 0 -- +tone_value_range
     if volume == MAX_VOLUME:
-        tone_value_range = (pow(2, (SAMPLE_SIZE_IN_BITS - 1)) - 1)
+        tone_value_range = (pow(2, (SAMPLE_SIZE_IN_SOUND - 1)) - 1)
     else:
-        tone_value_range = (pow(2, (SAMPLE_SIZE_IN_BITS - 1)) - 1) * volume // MAX_VOLUME
+        tone_value_range = (pow(2, (SAMPLE_SIZE_IN_SOUND - 1)) - 1) * volume // MAX_VOLUME
     #print('tone_value_range', tone_value_range)
     for i in range(samples_per_cycle):
         samples[i] = int(tone_value_range * math.sin(2 * math.pi * i / samples_per_cycle))
@@ -95,10 +99,10 @@ def make_tone_signed_16b(sample_rate, frequency, volume = MAX_VOLUME):
 
 def sound_test_play_CEG():
 
-    tone_C4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C4, LOW_VOLUME)
-    tone_E4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_E4, LOW_VOLUME)
-    tone_G4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_G4, LOW_VOLUME)
-    tone_C5 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C5, LOW_VOLUME)
+    tone_C4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C4, MID_VOLUME)
+    tone_E4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_E4, MID_VOLUME)
+    tone_G4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_G4, MID_VOLUME)
+    tone_C5 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C5, MID_VOLUME)
 
     for _ in range(3):
         # play C4
@@ -153,7 +157,6 @@ sound_test_volume_change()
 # end of file
 #
 ```
-BUG:SAMPLE_SIZE_IN_BITSは不定、SAMPLE_SIZE_IN_SOUNDにすべきでは？
 
 https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/src/lib/I2S_sample4.py<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2S.html<br>
