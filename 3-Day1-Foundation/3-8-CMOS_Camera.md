@@ -124,9 +124,10 @@ RP2350(150MHz)の環境で、撮影->描画の処理に900msかかります。�
   - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Hardware/Arducam-Shield-Mini-5MP-Plus/
   - サンプルコード：https://github.com/ArduCAM/Arduino/blob/master/ArduCAM/ArduCAM.cpp
 
-画質をさらに上げるには、細かいパラメータ調整が必要です。より＃＃＃くカメラを制御するには、イメージセンサ(OV5642)の仕様書を参照してレジスタの設定方法を調べる必要があります<br>
+画質をさらに上げるには、細かいパラメータ調整が必要です。イメージセンサを精密に制御するには、イメージセンサ(OV5642)の仕様書を参照してレジスタの設定方法を調べる必要があります<br>
 5MP image sensor OV5642<br>
 仕様書は一般公開されておらず、NDA契約した？開発者向けのConfidentialの仕様書しかなようです。インターネット上で探すと仕様書を見つけることができますがConfidential扱いであることを考慮して、リンクを直接貼るのは控えます。以下のキーワードで検索してみてください。<br>
 `OmniVision product specification datasheet OV5642`<br>
+Gemini等の生成AIに、「OmniVision　OV5642の仕様書を入手したい」と問いかけると入手先を提案してくれます。
 Arduino用のサンプルコード一式がGitHub上で公開されています。ソースコードを読み解くとレジスタの使い方が分かると思われます。
 
