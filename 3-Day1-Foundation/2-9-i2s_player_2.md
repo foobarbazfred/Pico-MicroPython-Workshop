@@ -11,7 +11,7 @@ https://en.wikipedia.org/wiki/I2S
 I2Sは、DigitalMICやADC（Analog to Digital Converter）とマイコンの接続、マイコンとDAC（Digital to Analog Converter）との接続で使われます。<br>
 I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データフォーマット）を考慮する必要があります。データ表現形式は、DAC等のデバイスによって決まります。例えば、I2Sで制御できるスピーカ、M5StickC Plus用 Speaker 2 Hatには、MAX98357デジタルオーディオが搭載されています。
 
-<img src="">
+<img src="assets/fig_SPK2.png" width=40%>
 
 
 
