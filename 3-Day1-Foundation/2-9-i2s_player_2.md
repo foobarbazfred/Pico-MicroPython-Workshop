@@ -9,7 +9,16 @@
 https://en.wikipedia.org/wiki/I2S
 
 I2Sは、DigitalMICやADC（Analog to Digital Converter）とマイコンの接続、マイコンとDAC（Digital to Analog Converter）との接続で使われます。<br>
-I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データフォーマット）を考慮する必要があります。データ表現形式は、DAC等のデバイスによって決まります。例えば、I2Sで制御できるスピーカ、M5StickC Plus用 Speaker 2 Hatには、MAX98357デジタルオーディオが搭載されています。MAX98357はI2S形式でデジタル音声信号を入力することができる、DAC機能内蔵の小型D級アンプICです。MAX98357の仕様は、サンプリングレートは 8kHz ～ 96kHzであり、1音のビット幅（データ解像度）はI2S / 左詰めモード時、 16ビット、24ビット、32ビットに対応できます。どのようなレート、ビット幅かは、DAC側で自動判別します。
+I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データフォーマット）を考慮する必要があります。データ表現形式は、DAC等のデバイスによって決まります。例えば、I2Sで制御できるスピーカ、M5StickC Plus用 Speaker 2 Hatには、MAX98357デジタルオーディオが搭載されています。
+
+<img src="">
+
+
+
+
+https://shop.m5stack.com/products/m5stickcplus-speaker-2-hat-max98357　より引用
+
+MAX98357はI2S形式でデジタル音声信号を入力することができる、DAC機能内蔵の小型D級アンプICです。MAX98357の仕様は、サンプリングレートは 8kHz ～ 96kHzであり、1音のビット幅（データ解像度）はI2S / 左詰めモード時、 16ビット、24ビット、32ビットに対応できます。どのようなレート、ビット幅かは、DAC側で自動判別します。
 
 <img src="assets/Schematics_i2s_spaker.png" width=400>
 
