@@ -52,6 +52,7 @@
     - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
     - 発展：[グラフィックディスプレイ(SPI接続)](3-2-2-GraphicDisplay.md)  
     - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md) (補講３と共通)
+    - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生](2-9-i2s_player_2.md)
   - 記憶装置
     - 発展：[SDカード(SPI接続)](3-9-SPI-SDCard.md)
   - 演習：センサ活用事例（全部はできないので選択）
