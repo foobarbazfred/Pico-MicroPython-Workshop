@@ -19,7 +19,7 @@ MAX98357はI2S形式でデジタル音声信号を入力することができる
 
 MAX98357の仕様は、サンプリングレートは 8kHz ～ 96kHzであり、1音のビット幅（データ解像度）はI2S / 左詰めモード時、 16ビット、24ビット、32ビットに対応できます。どのようなレート、ビット幅かは、DAC側で自動判別します。
 
-<img src="assets/Schematics_i2s_spaker.png" width=400>
+<img src="assets/Schematics_i2s_spaker.png" width=600>
 
 #### サンプルコード（１）
 440Hzの音を段々大きくしながら再生するプログラム。サンプリングレート 8KHz、ビット幅16bitで音データを作成して、I2Sを使ってSpeaker2にデータ送信
