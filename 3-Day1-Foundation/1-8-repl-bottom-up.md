@@ -13,7 +13,7 @@ Type "help()" for more information.
 >>>
 ```
 画面内に、`>>>` と出ていますが、これは入力待ちを表しています。
-help()と出ているのでhelp()と打ってみます。
+help()と出ているので`help()`と打ってみます。
 ```
 Welcome to MicroPython!
 For online docs please visit http://docs.micropython.org/
@@ -23,7 +23,7 @@ are in the 'rp2' module.
 For further help on a specific object, type help(obj)
 For a list of available modules, type help('modules')
 ```
-すぐに使える組み込みモジュールを知りたい場合、help('modules')と打ち込みます。
+すぐに使えるモジュールを知りたい場合、`help('modules')`と打ち込みます。
 ```
 >>> help('modules')
 __main__          asyncio/__init__  hashlib           rp2
@@ -48,7 +48,7 @@ Plus any modules on the filesystem
 ```
 Raspberry Pi Pico 2W用にビルドされたMicroPythonファームには上記モジュールがすでに入って配布されていることが分かります。
 上記モジュール類はimport文によりMicroPython実行環境に取り込むことで利用可能になります。
-組み込み用にマイコンごとにカスタマイズされているモジュールがmachineモジュールです。仕様書を見てもいいのですが、ざっと知りたい場合、import machineでモジュールを取り込んでから、dir(machine)と打つと内部シンボルが表示されますので、どのような機能が提供されているのか把握できます。
+組み込み用にマイコンごとにカスタマイズされているモジュールがmachineモジュールです。仕様書を見てもいいのですが、ざっと知りたい場合、`import machine`でモジュールを取り込んでから、`dir(machine)`と打つと内部シンボルが表示されますので、どのような機能が提供されているのか把握できます。
 ```
 >>> import machine
 >>> dir(machine)
