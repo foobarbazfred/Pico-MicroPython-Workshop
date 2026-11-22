@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>手の位置・ジェスチャー → MQTT Publish</title>
+<style>
+  body { font-family: sans-serif; text-align: center; background: #111; color: #eee; margin: 0; padding: 16px; }
+  h2 { margin: 8px 0; }
+  #label { font-size: 2.2em; margin: 8px 0; min-height: 1.2em; }
+  #hand { font-size: 1.1em; margin: 4px 0; color: #ffd27f; }
+  #status { font-size: 0.9em; color: #9c9; margin: 4px 0 12px; }
+  #wrap { position: relative; display: inline-block; }
+  video, canvas { width: 640px; height: 480px; }
+  video { transform: scaleX(-1); }
+  canvas { position: absolute; left: 0; top: 0; transform: scaleX(-1); }
+</style>
+<!-- MQTT.js（ブラウザ用） -->
+<script src="https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js"></script>
+</head>
+<body>
+<h2>手の位置・ジェスチャー → MQTT Publish</h2>
+<div id="label">起動中…</div>
+<div id="hand">手の情報: —</div>
+<div id="status">MQTT: 未接続</div>
+<div id="wrap">
+  <video id="video" autoplay playsinline></video>
+  <canvas id="canvas" width="640" height="480"></canvas>
+</div>
+
+<script type="module">
+import { HandLandmarker, FilesetResolver } from
+  "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/+esm";
+
+// ===== 設定 =====
+const MIRROR = true;                                     // 鏡像表示に合わせて左右を判定
+const BROKER = "wss://test.mosquitto.org:8081";          // 公開ブローカー（WebSocket over TLS）
+const HAND_TOPIC = "aaa/bbb/hand-gesture/position";      // 自分専用の名前に変更推奨
+const POSITION_INTERVAL_MS = 200;                        // 位置の通常送信間隔
+
+const GESTURE_LABELS = { paper: "パー", rock: "グー" };
+
+// ===== 要素 =====
+const video = document.getElementById("video");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const labelEl = document.getElementById("label");
+const handEl = document.getElementById("hand");
+const statusEl = document.getElementById("status");
+
+// ===== MQTT =====
+const client = mqtt.connect(BROKER, {
+  clientId: "hand-" + Math.random().toString(16).slice(2, 8),
+});
+client.on("connect", () => { statusEl.textContent = "MQTT: 接続済み（" + BROKER + "）"; });
+client.on("reconnect", () => { statusEl.textContent = "MQTT: 再接続中…"; });
+client.on("offline", () => { statusEl.textContent = "MQTT: オフライン"; });
+client.on("error", err => { statusEl.textContent = "MQTT エラー: " + err.message; });
+
+// ===== 手の位置とジェスチャー =====
+// 手のひら中心（手首と各指の付け根の平均）を 0〜1 で返す
+function palmCenter(lm) {
+  const idx = [0, 5, 9, 13, 17];
+  let x = 0, y = 0;
+  for (const i of idx) { x += lm[i].x; y += lm[i].y; }
+  return { x: x / idx.length, y: y / idx.length };
+}
+
+// "paper" / "rock" / null を返す
+function handGesture(lm) {
+  const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+  const wrist = lm[0];
+  // [付け根PIP, 指先TIP]：人差し指〜小指
+  const pairs = [[6, 8], [10, 12], [14, 16], [18, 20]];
+
+  // パー：全部の指先が付け根より手首から遠い
+  const open = pairs.every(([pip, tip]) =>
+    dist(wrist, lm[tip]) > dist(wrist, lm[pip]) * 1.2);
+  // グー：全部の指先が付け根より手首に近い
+  const closed = pairs.every(([pip, tip]) =>
+    dist(wrist, lm[tip]) < dist(wrist, lm[pip]) * 1.0);
+
+  if (open) return "paper";
+  if (closed) return "rock";
+  return null;
+}
+
+const round2 = v => Math.round(v * 100) / 100;
+const clamp01 = v => Math.min(1, Math.max(0, v));
+
+let lastGesture = null, lastPositionPublish = 0;
+
+// ジェスチャーが変わった時は即送信、それ以外は一定間隔で送信
+function publishHand(lm, gesture) {
+  const c = palmCenter(lm);
+  const x = round2(clamp01(MIRROR ? 1 - c.x : c.x));
+  const y = round2(clamp01(c.y));
+
+  const now = Date.now();
+  const gestureChanged = gesture !== lastGesture;
+  if ((gestureChanged || now - lastPositionPublish >= POSITION_INTERVAL_MS) && client.connected) {
+    const payload = JSON.stringify({ hand_position: [x, y], gesture });
+    client.publish(HAND_TOPIC, payload, { qos: 0 });
+    lastPositionPublish = now;
+    lastGesture = gesture;
+  }
+  const text = GESTURE_LABELS[gesture] ?? "判定なし";
+  handEl.textContent = `手の情報: (${x}, ${y})  ${text}`;
+  labelEl.textContent = text;
+}
+
+// ===== MediaPipe + カメラ =====
+async function main() {
+  const vision = await FilesetResolver.forVisionTasks(
+    "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm"
+  );
+  const handLandmarker = await HandLandmarker.createFromOptions(vision, {
+    baseOptions: {
+      modelAssetPath:
+        "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
+      delegate: "GPU",
+    },
+    runningMode: "VIDEO",
+    numHands: 1,
+  });
+
+  const stream = await navigator.mediaDevices.getUserMedia({
+    video: { width: 640, height: 480 }, audio: false,
+  });
+  video.srcObject = stream;
+  await video.play();
+  labelEl.textContent = "手をカメラに向けてください";
+
+  let lastTime = -1;
+  function loop() {
+    const now = performance.now();
+    if (video.readyState >= 2 && now !== lastTime) {
+      lastTime = now;
+      const result = handLandmarker.detectForVideo(video, now);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (result.landmarks.length > 0) {
+        const lm = result.landmarks[0];
+        const gesture = handGesture(lm);
+        const c = palmCenter(lm);
+
+        // 手のひら中心を描画（パー=橙、グー=水色、判定なし=灰）
+        ctx.fillStyle = gesture === "paper" ? "orange" : gesture === "rock" ? "cyan" : "gray";
+        ctx.beginPath();
+        ctx.arc(c.x * canvas.width, c.y * canvas.height, 8, 0, Math.PI * 2);
+        ctx.fill();
+
+        publishHand(lm, gesture);
+      } else {
+        labelEl.textContent = "手が見えません";
+        handEl.textContent = "手の情報: —";
+        // 次に手が現れたとき、同じ値でも送信されるようにリセット
+        lastGesture = null;
+      }
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+}
+
+main().catch(err => {
+  labelEl.textContent = "エラー: " + err.message;
+  console.error(err);
+});
+</script>
+</body>
+</html>
