@@ -153,6 +153,7 @@ sound_test_volume_change()
 # end of file
 #
 ```
+BUG:SAMPLE_SIZE_IN_BITSは不定、SAMPLE_SIZE_IN_SOUNDにすべきでは？
 
 https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/3-Day1-Foundation/src/lib/I2S_sample4.py<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.I2S.html<br>
