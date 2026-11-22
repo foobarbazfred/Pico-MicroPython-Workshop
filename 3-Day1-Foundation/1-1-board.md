@@ -17,7 +17,7 @@ https://micropython.org/download/
       - ESP32より性能低いがRISC-Vコアを使える Wi-Fiモジュール込みパッケージ
       - C5 / C6 シリーズはIEEE 802.15.4(Zigbee、Thread)も搭載
    -  Raspberry Pi Pico シリーズ (ARM Cortex-M/ マイコン名はRP2350) (Pico Pico W, Pico 2, Pico 2 W いずれも稼働）
-      - WiFiモジュールは外付け(RP2350はコアと周辺IOのみ)、ESP32より省電力、ボードサイズはやや大きい、ARM cortex-M (RP2450はRISC-Vも内蔵)
+      - WiFiモジュールは外付け(RP2350はコアと周辺IOのみ)、ESP32より省電力、ボードサイズはやや大きい、ARM cortex-M (RP2350はRISC-Vも内蔵)
       - Picoシリーズ以外でRP2350を使った省サイズボードもある
    -  STM32系(ARM Cortex-M)(ボード名：Nucleo)
    -  SAMD系(ARM Cortex-M4Fコア Microchip ATSAMD51P19)(商品名：Wio Terminal)
