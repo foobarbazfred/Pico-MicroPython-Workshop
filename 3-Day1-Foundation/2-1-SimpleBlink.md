@@ -1,5 +1,5 @@
 # 1-1  参考：最もシンプルなLED点滅
-RaspberryPi Pico 2 W上にはLEDが実装されておりプログラムで点滅させることができます。
+RaspberryPi Pico 2 W上にはLEDが実装されておりプログラムから点灯、消灯を制御できます。
 
 <img src="assets/RP2W_onboard_LED_SW.png" width=400>
 
