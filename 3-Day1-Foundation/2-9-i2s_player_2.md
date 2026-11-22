@@ -13,6 +13,8 @@ I2Sを用いてデバイスと接続する場合、I2Sで規定される信号�
 
 <img src="assets/Schematics_i2s_spaker.png" width=400>
 
+#### サンプルコード（１）
+440Hzの音を段々大きくしながら再生するプログラム
 ```
 #
 # i2s sin wave play test 
@@ -79,7 +81,7 @@ for volume in range(0x00, 0xFF, 0x10):
     print(tone_data)
     for _ in range(int(freq/8)):   # play for 0.12sec
         _ = audio_out.write(tone_data)
-    time.sleep(0.1)
+    time.sleep(1)
 
 #machine.reset()
 ```
