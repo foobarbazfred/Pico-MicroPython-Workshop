@@ -33,7 +33,7 @@ i2c.scan()
 
 ### SCD41用ドライバソフト
 - Git上のドライバ置き場所 [src/lib/scd41.py](src/lib/scd41.py)
-- MicroPython側での置き場所： /lib/sdc41.py
+- MicroPython側での置き場所： /lib/scd41.py
 
 ### MicroPythonへのインストール方法
 1. mipによりGitHubからインストール
@@ -87,7 +87,7 @@ if __name__ == '__main__':
 ```
 
 ### 参考資料
-- Sensirion SDC41 Products
+- Sensirion SCD41 Products
   - https://sensirion.com/jp/products/catalog/SCD41
 - Sensirion SCD4x DataSheet
   - https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf
