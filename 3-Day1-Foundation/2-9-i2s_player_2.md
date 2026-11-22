@@ -1,4 +1,4 @@
-# I2SによるDAコンバータとの接続
+# I2SによるDAコンバータ(MAX98357)との接続
 
 非圧縮の音データを送受信するための仕様として、I2S (Inter-IC Sound)があります。これはNXPにより策定された仕様であり、下記の信号線で音データが送信されます。
 - 16bit/24bit長の音データ : SD (SDATA)
@@ -9,7 +9,15 @@
 https://en.wikipedia.org/wiki/I2S
 
 I2Sは、DigitalMICやADC（Analog to Digital Converter）とマイコンの接続、マイコンとDAC（Digital to Analog Converter）との接続で使われます。<br>
-I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データフォーマット）を考慮する必要があります。データ表現形式は、DAC等のデバイスによって決まります。例えば、I2Sで制御できるスピーカ、M5StickC Plus用 Speaker 2 Hatには、MAX98357デジタルオーディオが搭載されています。MAX98357はI2S形式でデジタル音声信号を入力することができる、DAC機能内蔵の小型D級アンプICです。MAX98357の仕様は、サンプリングレートは 8kHz ～ 96kHzであり、1音のビット幅（データ解像度）はI2S / 左詰めモード時、 16ビット、24ビット、32ビットに対応できます。どのようなレート、ビット幅かは、DAC側で自動判別します。
+I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データフォーマット）を考慮する必要があります。データ表現形式は、DAC等のデバイスによって決まります。例えば、I2Sで制御できるスピーカ、M5StickC Plus用 Speaker 2 Hatには、MAX98357デジタルオーディオが搭載されています。<br>
+<img src="assets/fig_SPK2.png" width=40%><br>
+https://shop.m5stack.com/products/m5stickcplus-speaker-2-hat-max98357　より引用
+
+MAX98357はI2S形式でデジタル音声信号を入力することができる、DAC機能内蔵の小型D級アンプICです。I2Sのバス仕様は以下<br>
+<img src="assets/specification_max98357A_I2S_timing_diagram.png" width=100%><br>
+[DataSheet](https://www.analog.com/media/en/technical-documentation/data-sheets/max98357a-max98357b.pdf) より引用
+
+MAX98357の仕様は、サンプリングレートは 8kHz ～ 96kHzであり、1音のビット幅（データ解像度）はI2S / 左詰めモード時、 16ビット、24ビット、32ビットに対応できます。どのようなレート、ビット幅かは、DAC側で自動判別します。
 
 <img src="assets/Schematics_i2s_spaker.png" width=400>
 
