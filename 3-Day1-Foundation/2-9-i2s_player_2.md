@@ -14,7 +14,7 @@ I2Sを用いてデバイスと接続する場合、I2Sで規定される信号�
 https://shop.m5stack.com/products/m5stickcplus-speaker-2-hat-max98357　より引用
 
 MAX98357はI2S形式でデジタル音声信号を入力することができる、DAC機能内蔵の小型D級アンプICです。I2Sのバス仕様は以下<br>
-<img src="assets/specification_max98357A_I2S_timing_diagram.png" width=70%><br>
+<img src="assets/specification_max98357A_I2S_timing_diagram.png" width=100%><br>
 [DataSheet](https://www.analog.com/media/en/technical-documentation/data-sheets/max98357a-max98357b.pdf) より引用
 
 MAX98357の仕様は、サンプリングレートは 8kHz ～ 96kHzであり、1音のビット幅（データ解像度）はI2S / 左詰めモード時、 16ビット、24ビット、32ビットに対応できます。どのようなレート、ビット幅かは、DAC側で自動判別します。
