@@ -1,12 +1,12 @@
 # I2SによるDAコンバータとの接続
 
-デジタル化された音データを送受信するための仕様として、I2S (Inter-IC Sound)があります。これはNXPにより策定された仕様であり、下記の信号線で音データが送信されます。I2Sは、Digital MICやADC（Analog to Digital Converter）、DAC（Digital to Analog Converter）とマイコンとの接続で使われます。
-- 16bit/24bit長の音データ : SD(Serial Data) (SDATA/DIN(Audio Data input))
-- L/Rのいずれの音であるかを示すCLK: WS(Word Select) (LRCLK/WDCLK/LCK(Audio Data Word Clock Input))
-- 音データを構成する1bitと同期するクロック:  SCK (Continuous Serial Clock) (SCLK/BCK(Bit Clock Input))
+デジタル化された音データを送受信するための仕様として、I2S (Inter-IC Sound)があります。これはNXPにより策定された仕様であり、下記の信号線で音データが送信されます。I2Sは、デジタル マイクやADC（Analog to Digital Converter）、DAC（Digital to Analog Converter）とマイコンとの接続で使われます。
+- 16bit/24bit長の音データ : SD(Serial Data) 別名(SDATA/DIN(Audio Data input))
+- L/Rのいずれの音であるかを示すクロック: WS(Word Select) 別名(LRCLK/WDCLK/LCK(Audio Data Word Clock Input))
+- 音データを構成する1bitと同期するクロック:  SCK (Continuous Serial Clock) 別名(SCLK/BCK(Bit Clock Input))
 
 https://en.wikipedia.org/wiki/I2S<br>
-I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データ仕様）を考慮する必要があります。I2Sを用いて送受信するデータ仕様は、DAC等のデバイスによって決まります。開発キットに含まれるDACは、Burr-Brown社製のPCM5100Aという製品でありデータ仕様は以下です。（刻印はBB(Burr-Brown)となっていますが、Burr-Brown社はテキサス・インスツルメンツ社(TI)に買収されました。現在はTI社から同じ型番で供給されています。）
+I2Sを用いてデバイスと接続する場合、I2Sで規定される信号線の仕様に加え、IS2上で送受信するデータの表現形式（データ仕様）を考慮する必要があります。I2Sを用いて送受信するデータ仕様は、DAC等のデバイスによって決まります。開発キットに含まれるDACは、Burr-Brown社製のPCM5100Aという製品でありデータ仕様は以下です。（IC上の刻印はBB(Burr-Brown)となっていますが、Burr-Brown社はテキサス・インスツルメンツ社(TI)に買収されました。現在はTI社から同じ型番で供給されています。）
 
 |パラメータ|指定可能な値|
 |--|--|
