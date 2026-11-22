@@ -55,3 +55,33 @@ Raspberry Pi Pico 2W用にビルドされたMicroPythonファームには上記�
 ['__class__', '__name__', 'ADC', 'I2C', 'I2CTarget', 'I2S', 'PWM', 'PWRON_RESET', 'Pin', 'RTC', 'SPI', 'Signal', 'SoftI2C', 'SoftSPI', 'Timer', 'UART', 'USBDevice', 'WDT', 'WDT_RESET', '__dict__', 'bitstream', 'bootloader', 'deepsleep', 'dht_readinto', 'disable_irq', 'enable_irq', 'freq', 'idle', 'lightsleep', 'mem16', 'mem32', 'mem8', 'mem_backup', 'reset', 'reset_cause', 'soft_reset', 'time_pulse_us', 'unique_id']
 ```
 出力結果を見ると、machineモジュール内に、I2C,SPI,UART,Pin,ADC等、ハードウエア制御用のクラスが格納されていることが分かります。
+REPLでは入力した文や式は即時実行されます。以下は変数ｘと変数yに文字列を入力してprint関数で出力する例です。
+```
+>>> x = 'hello'
+>>> print(x)
+hello
+>>> y='good bye'
+>>> print(x + ',' + y)
+hello,good bye
+>>> print(x + ', ' + y)
+hello, good bye
+```
+for文も直接入力で実行できます。
+```
+>>> for x in range(10):
+...     print(x)
+...
+...
+...
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+REPLで関数を定義して実行して、エラーを確認して、修正して。。。という風に、試作、エラー、テスト、修正をREPL内で繰り返した後、完成形をソースファイルとして残すような開発も可能です。
