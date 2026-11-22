@@ -55,7 +55,7 @@ Raspberry Pi Pico 2W用にビルドされたMicroPythonファームには上記�
 ['__class__', '__name__', 'ADC', 'I2C', 'I2CTarget', 'I2S', 'PWM', 'PWRON_RESET', 'Pin', 'RTC', 'SPI', 'Signal', 'SoftI2C', 'SoftSPI', 'Timer', 'UART', 'USBDevice', 'WDT', 'WDT_RESET', '__dict__', 'bitstream', 'bootloader', 'deepsleep', 'dht_readinto', 'disable_irq', 'enable_irq', 'freq', 'idle', 'lightsleep', 'mem16', 'mem32', 'mem8', 'mem_backup', 'reset', 'reset_cause', 'soft_reset', 'time_pulse_us', 'unique_id']
 ```
 出力結果を見ると、machineモジュール内に、I2C,SPI,UART,Pin,ADC等、ハードウエア制御用のクラスが格納されていることが分かります。
-さらにPinについてどのような機能があるのか知りたい場合、`dir(machine.Pin)`と入力することで、machine.Pinクラスが有するシンボルを知ることができます。表示されるシンボルを見ていると、toggleやon, off、value等の関数が提供されていることが分かります。また、PULL_DOWN, PULL_UP, OPEN_DRAIN等のPin動作モードを指定するシンボルがあることも分かります。
+さらにPinについてどのような機能があるのか知りたい場合、`dir(machine.Pin)`と入力することで、machine.Pinクラスが有するシンボルを知ることができます。表示されるシンボルを見ていると、toggleやon, off、value等の関数が提供されていることが分かります。また、PULL_DOWN, PULL_UP, OPEN_DRAIN等のPin動作モードを指定するシンボル（定数定義）があることも分かります。
 ```
 >>> dir(machine.Pin)
 ['__class__', '__name__', 'value', 'ALT', 'ALT_CORESIGHT_TRACE', 'ALT_GPCK', 'ALT_HSTX', 'ALT_I2C', 'ALT_PIO0', 'ALT_PIO1', 'ALT_PIO2', 'ALT_PWM', 'ALT_SIO', 'ALT_SPI', 'ALT_UART', 'ALT_UART_AUX', 'ALT_USB', 'ALT_XIP_CS1', 'IN', 'IRQ_FALLING', 'IRQ_RISING', 'OPEN_DRAIN', 'OUT', 'PULL_DOWN', 'PULL_UP', '__bases__', '__dict__', 'board', 'cpu', 'high', 'init', 'irq', 'low', 'off', 'on', 'toggle']
