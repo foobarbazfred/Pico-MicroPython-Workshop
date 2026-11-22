@@ -13,8 +13,8 @@
 - 複数のデバイスが接続されることを前提としているため、デバイスは基本的にプルアップ抵抗が付けられていません。HI-Zのままだと信号レベルが不安定になるため、I2Cバス用にはプルアップを付ける必要があります。
   - 使いやすさを優先して、プルアップ抵抗内蔵型のセンサもあります
 
- I2Cバスの仕様は以下の通り<br>
- <img src="assets/specification_i2c_bus.png" width=100%> <br>
+ I2Cバス概要<br>
+ <img src="assets/specification_i2c_bus.png" width=80%> <br>
  [I2Cバス仕様書 (I2Cバス仕様およびユーザーマニュアル)(NXP)](https://www.nxp.com/docs/ja/user-guide/UM10204.pdf)より引用
  
 
