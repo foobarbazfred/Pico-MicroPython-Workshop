@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!--
     hand_gesture.html をテストするためのビューアHTML
+    MQTT Broker：test.mosquitto.org
+　  Topics: up_workshop/ex_01/hand-gesture/position
+    Message: {"hand_position":[0.2,0.1],"gesture":"paper"} , {"hand_position":[0.2,0.1],"gesture":"rock"}
 -->
 <html lang="ja">
 <head>
@@ -55,7 +58,7 @@
 <script>
 // ===== 設定（送信側と合わせる）=====
 const BROKER = "wss://test.mosquitto.org:8081";
-const HAND_TOPIC = "aaa/bbb/hand-gesture/position";
+const HAND_TOPIC = "up_workshop/ex_01/hand-gesture/position";   # "aaa/bbb/hand-gesture/position";
 const MAX_LOG = 50;
 
 const GESTURE_LABELS = { paper: "✋ パー", rock: "✊ グー" };
