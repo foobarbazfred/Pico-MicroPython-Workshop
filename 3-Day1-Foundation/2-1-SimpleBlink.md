@@ -19,7 +19,7 @@ while True:
     time.sleep(1)
 ```
 また、ボード上にはBOOTSELボタンがあります。このボタンは起動時のモードを指定するために使いますが、起動後は押しボタンスイッチとして使うことができます。
-BOOLSELボタンに連動してLEDが点灯するプログラムは以下
+BOOTSELボタンに連動してLEDが点灯するプログラムは以下
 ```
 from machine import Pin
 from rp2 import bootsel_button
