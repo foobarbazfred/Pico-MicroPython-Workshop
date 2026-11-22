@@ -11,10 +11,11 @@ Linux等のOSなしでユーザプログラムを単体で実行させる小規�
 ### MicroPythonが対応しているマイコンボード
 https://micropython.org/download/
 - 商品体系別
-   -  EPS32/ESP32-S2/ESP32-S3 (Tensilica Xtensa Core)(商品名：M5Stack / M5Stampシリーズ)
+   -  EPS32 / ESP32-S2 / ESP32-S3 (Tensilica Xtensa Core)(商品名：M5Stack / M5Stampシリーズ)
       - 高性能だが消費電力が大きい、Wi-Fiモジュール込みのパッケージ、省サイズ化可能
-   -  EPS32-C3/ESP32-C5 (RISC-V Core)
-      - ESP32より性能低いがRISC-Vコアを使える WiFiモジュール込みパッケージ
+   -  EPS32-C3 / ESP32-C5 / ESP32-C6 (RISC-V Core)
+      - ESP32より性能低いがRISC-Vコアを使える Wi-Fiモジュール込みパッケージ
+      - C5 / C6 シリーズはIEEE 802.15.4(Zigbee、Thread)も搭載
    -  Raspberry Pi Pico シリーズ (ARM Cortex-M/ マイコン名はRP2350) (Pico Pico W, Pico 2, Pico 2 W いずれも稼働）
       - WiFiモジュールは外付け(RP2350はコアと周辺IOのみ)、ESP32より省電力、ボードサイズはやや大きい、ARM cortex-M (RP2450はRISC-Vも内蔵)
       - Picoシリーズ以外でRP2350を使った省サイズボードもある
