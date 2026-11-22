@@ -53,7 +53,7 @@
     - 発展：[グラフィックディスプレイ(SPI接続)](3-2-2-GraphicDisplay.md)  
     - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md) (補講３と共通)
   - 記憶装置
-    - 発展：[SDカード(SPI接続)](3-8-SPI-SDCard.md)
+    - 発展：[SDカード(SPI接続)](3-9-SPI-SDCard.md)
   - 演習：センサ活用事例（全部はできないので選択）
     - 温湿度計測結果をLCDに表示
     - [障害物との距離をLCDに表示](3-7-distance-sensor.md)
