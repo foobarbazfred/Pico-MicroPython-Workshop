@@ -4,7 +4,7 @@ Linux等のOSなしでユーザプログラムを単体で実行させる小規�
 | -------------- | -------------------------------- | -------------------------------------- | ------------ |
 | Raspberry Pi 系 | Pico / Pico W / Pico 2 / Pico 2 W | 安価で小型、WはWi-Fi内蔵、Armコア  <br> Pico 2は、Arm Cortex-M33 ×2 と RISC-V Hazard3 ×2のデュアルコア構成       | センサー制御、IoT   |
 | Arduino 系      | Arduino Uno / Nano / Nano 33 BLE | 豊富なシールド、C/C++中心だがMicroPythonも対応可能(Nano 33 BLEのみ)      | ロボット、教育      |
-| ESP 系          | ESP32 / ESP8266                  | Wi-Fi/Bluetooth内蔵、安価<br> マイコンコアはXtensa | IoT、スマート家電   |
+| ESP 系          | ESP32-DevKitC /<br>ESP32S3 / ESP32C3/ ESP32C6              | Wi-Fi/Bluetooth内蔵、安価<br> マイコンコアはXtensa、または RISC-V | IoT、スマート家電   |
 | STM32 系        | Nucleo / Blue Pill               | 高性能Arm Cortex-M、ピン数多め                  | モーター制御、高精度計測 |
 | その他（教育・学習用）  | micro:bit                   | LEDやボタン内蔵、簡単にプログラム可能                   | 初学者、学校教育     |
 
