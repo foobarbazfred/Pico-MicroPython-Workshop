@@ -35,11 +35,11 @@ i2c.scan()
 - Git上のドライバ置き場所 [src/lib/scd41.py](src/lib/scd41.py)
 - MicroPython側での置き場所： /lib/scd41.py
 
-### MicroPythonへのインストール方法
+### ドライバをMicroPython環境(/lib)にインストールする方法
 1. mipによりGitHubからインストール
-2. thonnyによりファイル保存することでインストール
+2. プログラミングツール、Thonnyを使ってファイル保存することによりインストール
 
-mipを使ってGitHubからインストールする方法(MicroPythonのREPLで実行してください)
+mipを使ってGitHubからインストールする方法(MicroPythonのREPLで実行してください。ネットワークに接続されている必要があります)
 ```
 import mip
 mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/main/3-Day1-Foundation/src/lib/scd41.py')
