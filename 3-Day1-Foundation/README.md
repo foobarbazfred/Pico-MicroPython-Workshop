@@ -38,6 +38,7 @@
     - [センサ紹介、センサの使い方(データの取得方法)](3-0-sensor.md)
   - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-1-SerialBus.md)
     - [I2Cについて](3-1-2-SerialBus-i2c.md)
+    - [SPIについて](3-4-SerialBus_SPI.md)
   - 入力装置
     - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
@@ -51,8 +52,9 @@
     - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
     - 発展：[グラフィックディスプレイ(SPI接続)](3-2-2-GraphicDisplay.md)  
     - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md) (補講３と共通)
+    - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生](2-9-i2s_player_2.md)
   - 記憶装置
-    - 発展：[SDカード(SPI接続)](3-8-SPI-SDCard.md)
+    - 発展：[SDカード(SPI接続)](3-9-SPI-SDCard.md)
   - 演習：センサ活用事例（全部はできないので選択）
     - 温湿度計測結果をLCDに表示
     - [障害物との距離をLCDに表示](3-7-distance-sensor.md)
@@ -106,5 +108,7 @@
     - [AIと連携したアプリケーションの開発](sup-5-embedded_ai_ja.md)
       - WebAPIによるCloud上のAIとマイコンを連携させる
       - マイコンにAIを組み込む、Edge AI化（マイコン上で学習済み小型モデルを走らせる）
+      - PC上で画像認識まで行い、MQTT経由でマイコンに伝える
+        - [PCのカメラに向かって手をかざす、手の位置とグーパーを判定してMQTT Publishするサンプルコード](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/src/hand_gesture.html)
 
 ※README_ja.mdがマスタ
