@@ -1,5 +1,5 @@
 # LED 点滅プログラム
-Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号(図中、GP<nn>と表記)をよくご確認ください。
+Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号(図中、GPnn(nnは数字)と表記)をよくご確認ください。
 <img src="assets/pico-2-w-pinout.png" width=800><br>
 
 物理的なピン番号とGPIO番号を間違いやすいのでご注意ください。物理的なピン番号は四角で囲って数字を書いています。
