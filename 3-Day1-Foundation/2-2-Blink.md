@@ -60,7 +60,9 @@ while True:
         led.off()
 ```
 ### ご参考
-<img src="" width=60%>
-IOパッドの構成図<br>
+####GPIO構成図<br>
+GPIO構成図中にGPIOという名のブロックがありますが、これはマイコン側からL/Hのレベル設定を行えるSIO(Single-cycle IO)とご理解ください<br>
+<img src="assets/structure_of_GPIO.png" width=60%><br>
+####IOパッドの構成図<br>
 <img src="assets/diagram_of_a_simgle_IO_pad.png" width=60%>
 
