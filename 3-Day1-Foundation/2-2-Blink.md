@@ -60,11 +60,11 @@ while True:
         led.off()
 ```
 ### ご参考
-GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pinにおいて、##や＃＃等、複数の機能を切り替えて使えるためです。<br>
+GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pinにおいて、UART、 I2C、SPI等、複数の機能を切り替えて使えるためです。<br>
 <img src="assets/gpio_functions.png" width=80%><br>
-ハードウエアの観点では、セレクタがあり、どの機能を割り当てるか選ぶことができます。MicroPythonからGPIOを使う上で、機能選択は自動的に行われており機能の切り替えを意識する必要はありません。
 
 #### GPIO構成図<br>
+以下はGPIOの構成を表した図です。セレクタがあり、Pinにどの機能を割り当てるか選ぶことができます。MicroPythonからGPIOを使う上で、機能選択は自動的に行われており機能の切り替えを意識する必要はありません。
 GPIO構成図中にGPIOという名のブロックがありますが、これはマイコン側からL/Hのレベル設定を行えるSIO(Single-cycle IO)とご理解ください<br>
 <img src="assets/structure_of_GPIO.png" width=60%><br>
 #### IOパッドの構成図<br>
