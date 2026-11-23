@@ -24,16 +24,16 @@ https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.html#classe
 ソースコードの例：<br>
 [CO2センサ活用](3-x-CO2-sensor.md)
 
-- MicroPythonかCircuitPythonか？
-    - CircuitPythonはMicroPythonから派生した言語で、Adafruit社が開発メンテナンス
-    - 基本的なPythonの仕様は同じだが提供されるモジュールが異なる。同等のモジュールでもメソッド（関数）の仕様が異なる
-    - CircuitPythonはAdafruit社が販売するセンサとペアで制御用モジュール（通称：ドライバ）が提供される場合が多い
-    - MicroPythonを基本に使い、使いたいセンサのドライバがCircuitPython版しかない場合、CircuitPythonを選択するのが良いのでは
-    - CircuitPython版ドライバをMicroPython版にポーティングするのも可能（自力で頑張る）
-    - USBキーボード等、USBデバイスを試作するには、USBデバイス用のライブラリが充実しているCircuitPythonを使うのが望ましい
-
-
 #### MicroPython/CircuitPython比較
+
+- MicroPythonかCircuitPythonか？
+  - CircuitPythonはMicroPythonから派生した言語で、Adafruit社が開発メンテナンス
+  - 基本的なPythonの仕様は同じだが提供されるモジュールが異なる。同等のモジュールでもメソッド（関数）の仕様が異なる
+  - CircuitPythonはAdafruit社が販売するセンサをサポートする形で、センサ用の制御モジュール（通称：ドライバ）が提供される場合が多い
+  - Adafruit社がセンサ用ドライバ類を体系的に管理
+　- USBキーボード等、USBデバイスを試作するには、USBデバイス用のライブラリが充実しているCircuitPythonを使うのが望ましい
+  - MicroPythonを基本に使い、使いたいセンサのドライバがCircuitPython版しかない場合、CircuitPythonを選択するのが良いのでは。あるいは、CircuitPython版ドライバをMicroPython版にポーティングすることも可能
+    
 MicroPythonの組み込みモジュール一覧
 ```
 MicroPython v1.29.0 on 2026-08-24; Raspberry Pi Pico 2 W with RP2350
