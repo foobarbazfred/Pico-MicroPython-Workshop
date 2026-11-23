@@ -11,7 +11,7 @@ adc.read_u16()         # read value, 0-65535 across voltage range 0.0v - 3.3v
 ```
 GP26にかかっている電圧が0Vの場合、adc.read_u16()の値は0になります。一方、電圧が3.3Vの場合、65535(0xffff)となります。<br>
 <img src="assets/ad_convert_graph.png" width="400"><br>
-ADCを使うことにより0Vから3.3Vの間で変化する電圧を数値化することができます。回路を変更して可変抵抗を使って0Vから3.3Vまでの電圧を発生させてみます。回路図は以下です
+ADCを使うことにより0Vから3.3Vの間で変化する電圧を数値化することができます。回路を変更して可変抵抗を使って0Vから3.3Vまでの電圧を発生させてみます。回路図は以下です。可変抵抗にかける電圧は3.3Vを使ってください。誤って5Vを接続しないように注意してください。
 
 <img width="394" height="479" alt="image" src="assets/analog-value-circuit.png">
 
