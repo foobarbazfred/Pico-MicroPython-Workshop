@@ -59,3 +59,8 @@ while True:
     else:
         led.off()
 ```
+### ご参考
+<img src="" width=60%>
+
+<img src="" width=60%>
+
