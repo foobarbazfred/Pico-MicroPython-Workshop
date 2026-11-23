@@ -1,10 +1,13 @@
 # １日目セミナーテーマ
 
 - 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて
+  - センサを活用したプロト開発、IoTプロト開発に向けて
+     - 通信機能付きマイコンを使ってどのようなシステムが試作できるか
+     - [センサを活用した組み込みプログラムの基本構造と作り方](embedded-program-structure.md)
+     - [マイコン活用アプリ、IoTシステム実現へのアプローチ](1-2-5-architecture.md) 
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
     - [主要マイコン(マイコンボード)紹介）](1-1-board.md)
     - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
-    - [マイコン活用アプリ、IoTシステム実現へのアプローチ](1-2-5-architecture.md)
   - [マイコン用プログラミング言語](1-3-programming-languages.md)
     - [MicroPython/Python復習](1-4-micropython_summary.md)
   - マイコンボードのセットアップ、接続方法
@@ -14,7 +17,6 @@
     - [マイコンボードにMicroPythonを焼く方法](board_setup.md)
     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-5-programming-tools.md)
   - [REPLを活用したボトムアッププログラミング](1-8-repl-bottom-up.md)
-  - [センサを活用した組み込みプログラムの基本構造と作り方](embedded-program-structure.md)
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
     - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-4-micropython_summary.md)
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
@@ -87,7 +89,8 @@
   - 使い方
     - [簡単なLチカ、SW入力](https://github.com/foobarbazfred/learn-rp2350-pio)
     - DMAを併用することでデータストリームの高速転送が可能
-    - 応用例：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
+    - ご参考：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
+    - ご参考：[MQTTで情報共有する早押し対戦ゲーム](https://github.com/foobarbazfred/mqtt-rendaoh-2025)
   - [PIO命令セット](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/instruction_ja.md) 
 - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
