@@ -27,7 +27,7 @@ https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.html#classe
 #### MicroPython/CircuitPython比較
 
 - MicroPythonかCircuitPythonか？
-  - CircuitPythonはMicroPythonから派生した言語で、Adafruit社が開発メンテナンス
+  - CircuitPythonはMicroPythonから派生した言語で、Adafruit社が開発メンテナンス<br>[Welcome to CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython)
   - 基本的なPythonの仕様は同じだが提供されるモジュールが異なる。同等のモジュールでもメソッド（関数）の仕様が異なる
   - CircuitPythonはAdafruit社が販売するセンサをサポートする形で、センサ用の制御モジュール（通称：ドライバ）が提供される場合が多い
   - Adafruit社がセンサや表示デバイス用のドライバを体系的に管理<br>[Adafruit CircuitPython Library Bundle](https://docs.circuitpython.org/projects/bundle/en/latest/drivers.html)
