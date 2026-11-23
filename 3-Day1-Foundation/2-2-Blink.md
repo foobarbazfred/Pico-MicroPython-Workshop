@@ -60,6 +60,8 @@ while True:
         led.off()
 ```
 ### ご参考
+GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、あるGPにおいて、
+
 #### GPIO構成図<br>
 GPIO構成図中にGPIOという名のブロックがありますが、これはマイコン側からL/Hのレベル設定を行えるSIO(Single-cycle IO)とご理解ください<br>
 <img src="assets/structure_of_GPIO.png" width=60%><br>
