@@ -60,13 +60,15 @@ while True:
         led.off()
 ```
 ### ご参考
-GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pinにおいて、UART、 I2C、SPI等、複数の機能を切り替えて使えるためです。<br>
+GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pin(PAD)に対して、UART、 I2C、SPI等、複数の機能から一つを切り替えて使えるためです。<br>
 <img src="assets/gpio_functions.png" width=80%><br>
 
-#### GPIO構成図<br>
-以下はGPIOの構成を表した図です。セレクタがあり、Pinにどの機能を割り当てるか選ぶことができます。MicroPythonからGPIOを使う上で、機能選択は自動的に行われており機能の切り替えを意識する必要はありません。
+#### GPIO構成図
+以下はGPIOの構成を表した図です。GPIO内に機能を選択するセレクタ(図中Muxing)があり、PADにどの機能を割り当てるか選ぶことができます。MicroPythonからGPIOを使う上で、機能選択は自動的に行われており機能の切り替えを意識する必要はありません。
 GPIO構成図中にGPIOという名のブロックがありますが、これはマイコン側からL/Hのレベル設定を行えるSIO(Single-cycle IO)とご理解ください<br>
 <img src="assets/structure_of_GPIO.png" width=60%><br>
-#### IOパッドの構成図<br>
+#### IOパッド構成図
+以下はIOパッドの構成図です。PULL UP/PULL DOWN用抵抗が接続されていることが分かります。
 <img src="assets/diagram_of_a_simgle_IO_pad.png" width=60%>
 
+Raspberry Pi | RP2350 Datasheetより引用
