@@ -62,6 +62,7 @@ while True:
 ### ご参考
 GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pin(PAD)に対して、UART、 I2C、SPI等、複数の機能から一つを切り替えて使えるためです。<br>
 <img src="assets/gpio_functions.png" width=80%><br>
+どの機能をどのPinに割り当てるのか、自由に割り当てられるのではなく、上記図の通り、各Pinには選択できる機能が決められています。Pin配置の図を見て、目的の機能を選択できるPinを選んでデバイスを接続する必要があります。
 
 #### GPIO構成図
 以下はGPIOの構成を表した図です。GPIO内に機能を選択するセレクタ(図中Muxing)があり、PADにどの機能を割り当てるか選ぶことができます。MicroPythonからGPIOを使う上で、機能選択は自動的に行われており機能の切り替えを意識する必要はありません。
