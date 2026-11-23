@@ -61,6 +61,6 @@ while True:
 ```
 ### ご参考
 <img src="" width=60%>
-
-<img src="" width=60%>
+IOパッドの構成図<br>
+<img src="assets/diagram_of_a_simgle_IO_pad.png" width=60%>
 
