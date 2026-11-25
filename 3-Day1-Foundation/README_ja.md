@@ -2,7 +2,7 @@
 
 - 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて
   - センサを活用したプロト開発、IoTプロト開発に向けて
-     - [通信機能付きマイコンを使ってどのようなシステムが試作できるか](1-0-microcontroller-prototyping-systems.md)
+     - [マイコンを使ってどのようなシステムが作れるか](1-0-microcontroller-prototyping-systems.md)
      - [扱うデータとプログラムの基本構造](1-xx-data-and-program-structure.md)
      - [ネットワーク機能を持つマイコンシステムのデザインパターン](1-xx-architecuture-design-pattern.md)
      - [マイコン用アプリ開発の流れ](1-x-software-development-flow.md) 
