@@ -4,8 +4,8 @@
   - センサを活用したプロト開発、IoTプロト開発に向けて
      - [通信機能付きマイコンを使ってどのようなシステムが試作できるか](1-0-microcontroller-prototyping-systems.md)
      - [扱うデータとプログラムの基本構造](1-xx-data-and-program-structure.md)
-     - [アーキテクチャデザインパターン](embedded-program-structure.md)
-     - [マイコン用アプリ開発の流れ](1-2-5-architecture.md) 
+     - [ネットワーク機能を持つマイコンシステムのデザインパターン](embedded-program-structure.md)
+     - [マイコン用アプリ開発の流れ](1-x-software-development-flow.md) 
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
     - [主要マイコン(マイコンボード)紹介）](1-1-board.md)
     - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
