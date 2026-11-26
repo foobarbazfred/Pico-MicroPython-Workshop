@@ -7,10 +7,10 @@
      - [マイコン用アプリ開発の流れ](1-x-software-development-flow.md) 
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
     - [主要マイコン(マイコンボード)紹介）](1-1-board.md)
-    - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
   - [マイコン用プログラミング言語](1-3-programming-languages.md)
     - [MicroPython/Python復習](1-4-micropython_summary.md)
   - マイコンボードのセットアップ、接続方法
+    - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
       - <https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2>
     - [ボードへの電源供給方法](1-6-powersupply.md)
