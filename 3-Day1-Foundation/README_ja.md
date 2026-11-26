@@ -67,7 +67,7 @@
   - [通信機能を活かしたアプリケーションのデザインパターン](1-xx-architecuture-design-pattern.md)
   - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-Network.md)
   - HTTPを用いた通信とサンプルコード
-    - [天気予報サイトから指定した地点の天気情報を取得](4-2-WebAPI.md)
+    - [指定した場所の天気情報を天気予報サイトから取得](4-2-WebAPI.md)
   - [MQTTを用いた通信とサンプルコード](4-3-MQTT_Service.md)
   - [RP2をWebServerとして動かす](4-4-WebServer.md)
   - 演習：インターネット活用アプリ試作
