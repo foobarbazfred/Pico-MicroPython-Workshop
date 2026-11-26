@@ -4,14 +4,13 @@
   - センサを活用したプロト開発、IoTプロト開発に向けて
      - [マイコンを使ってどのようなシステムが作れるか](1-0-microcontroller-prototyping-systems.md)
      - [扱うデータとプログラムの基本構造](1-xx-data-and-program-structure.md)
-     - [通信機能を持つマイコンシステムのデザインパターン](1-xx-architecuture-design-pattern.md)
      - [マイコン用アプリ開発の流れ](1-x-software-development-flow.md) 
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
     - [主要マイコン(マイコンボード)紹介）](1-1-board.md)
-    - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
   - [マイコン用プログラミング言語](1-3-programming-languages.md)
     - [MicroPython/Python復習](1-4-micropython_summary.md)
   - マイコンボードのセットアップ、接続方法
+    - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
       - <https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2>
     - [ボードへの電源供給方法](1-6-powersupply.md)
@@ -42,6 +41,7 @@
   - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-1-SerialBus.md)
     - [I2Cについて](3-1-2-SerialBus-i2c.md)
     - [SPIについて](3-4-SerialBus_SPI.md)
+    - センサや周辺機器を簡単に制御できるドライバ
   - 入力装置
     - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
@@ -64,9 +64,10 @@
       - 障害物との距離をLCDと音で表現
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
 - 基礎４ ; インターネット接続、Web API利用, MQTT利用
+  - [通信機能を活かしたアプリケーションのデザインパターン](1-xx-architecuture-design-pattern.md)
   - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-Network.md)
   - HTTPを用いた通信とサンプルコード
-    - [天気予報サイトから指定した地点の天気情報を取得](4-2-WebAPI.md)
+    - [指定した場所の天気情報を天気予報サイトから取得](4-2-WebAPI.md)
   - [MQTTを用いた通信とサンプルコード](4-3-MQTT_Service.md)
   - [RP2をWebServerとして動かす](4-4-WebServer.md)
   - 演習：インターネット活用アプリ試作
