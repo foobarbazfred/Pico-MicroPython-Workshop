@@ -1,4 +1,4 @@
-# マイクロコントローラ(RP2350)のハードウェアブロック
+# Raspberry Pi Pico 2 Wとマイクロコントローラ(RP2350)
 
 <img src="assets/pico-2-w-pinout.png" width=800><br>
 <img src="assets/rp2350_block_diagram.png" width=600><br>
