@@ -43,8 +43,11 @@ while True:
     else:
         led.off()
 ```
-
+file:2-2-f-blink.py
 ```
+#
+# file:2-2-f-blink.py
+# 
 from machine import Pin
 
 # setup
