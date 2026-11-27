@@ -1,15 +1,18 @@
 # MicroPythonでMQTTサービスを使う
 
-
+## MQTT概要
 MQTT(Message Queuing Telemetry Transport)を使うことで、複数拠点に配置したセンサデータの収集や、家庭内に設置した機器を遠隔から制御するアプリケーションが容易に実現できます。
 <img src="assets/about_MQTT.png" width=1200>
 
 記事を発行するPublisherに加え、記事を受け取るSubscriberも実現可能です
 
+## MQTT ブローカ
+
 MQTTサービスを使うためには、MQTTメッセージを中継してくれるMQTTブローカが必要になります。通信する範囲がローカルネットワーク内で収まるのであれば、ラズパイ等にMQTT ブローカを構築することが可能です。インターネットを介して遠隔地とメッセージを送受信するには、インターネット上で運用されるMQTTブローカが必要です。
 インターネット上で無料で運用されているMQTTブローカは複数ありますが、今回は比較的遅延の少ない、EMQXのPublicMQTTブローカを用います。<br>
 <img src="assets/MQTT_Broker_EMQX.png" width=600>
 
+## 無料で使えるMQTT ブローカ
 
 ### ご参考
 使いやすいMQTTブローカを整理します
@@ -21,6 +24,8 @@ MQTTサービスを使うためには、MQTTメッセージを中継してくれ
   - 帯域制限ありますがアカウントを登録することで無料で使えます(Basic Planは0円)  https://www.shiftr.io/cloud
   - PrivateなMQTT Brokerです
   - Dashboardサービスがあり、Publisher/Describer間の通信状況を確認することができます
+
+## MicroPythonで使えるMQTTライブラリ
 
 MicroPython 用のMQTTライブラリも存在し、MQTTを活用したアプリケーションを簡単につくることができます。
 MicroPython用MQTTライブラリはリポジトリに登録されており、MicroPythonのMIPによりネットワーク経由でインストールすることができます。
