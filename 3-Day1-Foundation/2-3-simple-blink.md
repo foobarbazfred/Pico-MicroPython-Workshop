@@ -38,8 +38,6 @@ while True:
         led.on()
     else:
         led.off()
-#
-#
 ```
 上記いずれも配線が不要ですぐに使えるLEDとスイッチです。
 
