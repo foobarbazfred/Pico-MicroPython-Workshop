@@ -1,4 +1,4 @@
-# MQTT　メッセージを発光(publish)
+# MQTT　メッセージを発行(publish)
 
 ## MQTTライブラリを使ったPublish
 
