@@ -32,7 +32,7 @@ file: 2-4-f-adc-sample.py
 ```
 #
 # file: 2-4-f-adc-sample.py
-# 機能：ボリュームで設定された電圧をAD変換によりデジタルで出力するサンプル
+# 機能：ボリュームで設定された電圧をAD変換し、値と推定電圧を表示するサンプル
 #
 from machine import ADC, Pin
 import time
