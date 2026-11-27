@@ -19,3 +19,5 @@ NiceGUI + Pythonによる自作dashboardの表示例<br>
 
 ### ソース一式
 - NiceGUIを用いたdashboard 構築　Pythonソース<br>[dashboard_nicegui.py](src/mqtt_dashboard/dashboard_nicegui.py)
+
+上記ソースはRaspberry Pi(Linuxが動く版)やWSL内のUbuntuで実行してください。実行に際して、NiceGUIパッケージが必要です。
