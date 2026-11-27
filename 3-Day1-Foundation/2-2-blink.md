@@ -43,8 +43,14 @@ while True:
     else:
         led.off()
 ```
+これまでの処理をまとめた、押しボタンスイッチ（GP15）を押している間だけLED（GP16）を点灯する全体プログラムは以下の通りです。
 
+file:2-2-f-blink.py
 ```
+#
+# file:2-2-f-blink.py
+# 概要: 押しボタンスイッチの入力に応じてLEDを点灯/消灯する基本プログラム
+#
 from machine import Pin
 
 # setup
@@ -58,6 +64,8 @@ while True:
         led.on()
     else:
         led.off()
+#
+#
 ```
 ### 捕捉説明
 GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pin(PAD)に対して、UART、 I2C、SPI等、複数の機能から一つを切り替えて使えるためです。<br>
