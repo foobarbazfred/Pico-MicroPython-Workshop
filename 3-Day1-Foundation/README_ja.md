@@ -68,12 +68,12 @@
   - [通信機能を活かしたアプリケーションのデザインパターン](4-1-design-pattern.md)
   - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-WiFi-setup.md)
   - HTTPによる通信とサンプルコード
-    - [指定した場所の天気情報を天気予報サイトから取得](4-3-web-API.md)
+    - [指定した場所の天気情報を天気予報サイトから取得](4-10-web-API.md)
   - MQTTによる通信とサンプルコード
-    - [MQTT概要](4-4-MQTT-service.md)
-    - MQTT メッセージ送信
+    - [MQTT概要](4-20-MQTT-service.md)
+    - [MQTT メッセージ送信](4-21-MQTT-service.md)
     - MQTT メッセージ受信
-  - [RP2をWebServerとして動かす](4-5-web-server.md)
+  - [RP2をWebServerとして動かす](4-30-web-server.md)
   - 演習：インターネット活用アプリ試作
     - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
     - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
