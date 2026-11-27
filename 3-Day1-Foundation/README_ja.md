@@ -48,7 +48,7 @@
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
       - [ジャイロセンサ(I2C接続)](3-7-motion-sensor.md)
       - [距離センサ(デジタル2線)](3-8-distance-sensor.md)
-      - 参考：人感センサ（デジタル1線）
+      - 参考：[人感センサ（デジタル1線）](3-11-pir-sensor.md)
       - 参考：[GPS（UART接続）](3-9-GPS.md)
     - 参考：[CMOSカメラ](3-10-CMOS-camera.md)
       - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico
