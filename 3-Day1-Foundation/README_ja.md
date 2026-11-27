@@ -37,30 +37,30 @@
     - VRでNeoPixelの色が変わる
 - 基礎３ ; 周辺機器との接続方法、デバイス活用
   - マイコンに接続できる周辺機器
-    - [センサ紹介、センサの使い方(データの取得方法)](3-0-sensor.md)
-  - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-1-1-SerialBus.md)
+    - [センサ紹介、センサの使い方(データの取得方法)](3-1-sensors.md)
+  - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-2-serial-bus.md)
     - [I2Cについて](3-1-2-SerialBus-i2c.md)
-    - [SPIについて](3-4-SerialBus_SPI.md)
+    - [SPIについて](3-4-SPI-bus.md)
     - センサや周辺機器を簡単に制御できるドライバ
   - 入力装置
     - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
-      - [ジャイロセンサ(I2C接続)](3-3-6dof.md)
-      - [距離センサ(デジタル2線)](3-7-distance-sensor.md)
+      - [ジャイロセンサ(I2C接続)](3-7-motion-sensor.md)
+      - [距離センサ(デジタル2線)](3-8-distance-sensor.md)
       - 発展：人感センサ（デジタル1線）
-      - 発展：[GPS（UART接続）](3-5-Serial-GPS.md)
-    - 参考：[CMOSカメラ](3-8-CMOS_Camera.md)
+      - 発展：[GPS（UART接続）](3-9-GPS.md)
+    - 参考：[CMOSカメラ](3-10-CMOS-camera.md)
       - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico
   - 出力装置
-    - [キャラクタディスプレイ（I2C接続）](3-2-LCD-Display.md)
-    - 発展：[グラフィックディスプレイ(SPI接続)](3-2-2-GraphicDisplay.md)  
-    - 発展：[DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md) (補講３と共通)
-    - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生](2-9-i2s_player_2.md)
+    - [キャラクタディスプレイ（I2C接続）](3-20-LCD-display.md)
+    - 発展：[グラフィックディスプレイ(SPI接続)](3-21-graphic-display.md)  
+    - 発展：[DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md) (補講３と共通)
+    - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生](3-32-sound-player-max98357.md)
   - 記憶装置
-    - 発展：[SDカード(SPI接続)](3-9-SPI-SDCard.md)
+    - 発展：[SDカード(SPI接続)](3-40-SD-card.md)
   - 演習：センサ活用事例（全部はできないので選択）
     - 温湿度計測結果をLCDに表示
-    - [障害物との距離をLCDに表示](3-7-distance-sensor.md)
+    - [障害物との距離をLCDに表示](3-8-distance-sensor.md)
       - 障害物との距離をLCDと音で表現
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
 - 基礎４ ; インターネット接続、Web API利用, MQTT利用
@@ -103,7 +103,7 @@
     - 音楽や音声を再生する
       - 音声合成LSIを利用(UART接続で発話できる)
       - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
-        - [DAC(PCM5100A)による音再生(I2S接続)](2-9-i2s_player.md)
+        - [DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md)
       - [DVIでDigitalTVに接続、グラフィック表示](https://github.com/foobarbazfred/micropython/tree/main/rp2350-hstx)
 - 補講４ ； マイコンとクラウドサービスとの連携
 - 補講５ ； マイコンでAI技術をどう活用するか
