@@ -55,7 +55,13 @@ np.show()
 NeoPixelを使ってR/G/Bの色合いで中間値を表現したり、LEDの点灯位置でアナログ的に表現することが可能です。
 
 LEDがぐるぐる回るサンプルは以下です
+
+file: 2-9-ex-neopixel-rotate.py
 ```
+#
+# file: 2-9-ex-neopixel-rotate.py
+# 機能：8個のNeoPixelの点灯位置を順番に切り替え、光が回転するように見せるサンプル
+#
 import time
 from machine import Pin
 from neopixel2 import myNeopixel
