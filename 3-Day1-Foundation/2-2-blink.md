@@ -8,7 +8,7 @@ MicroPythonで指定する場合は、全てGPIO番号です。LEDはGP16（物�
 #### 回路図
 <img src="assets/Schematics_LED_SW.png" width=400><br>
 #### 実体配線図
-ご参考に実体配線図も示します。押しボタンスイッチはどの端子がOn/Offされるのか分かりづらいので取り付け方にご注意ください。
+ご参考に実体配線図も示します。押しボタンスイッチはどの端子間でオン／オフされるのか分かりづらいので取り付け方にご注意ください。
 <img src="assets/breadboard_wiring_diagram_LED_SW.png" width=400><img src="assets/LED_part_illustration.png" width=150><br>
 
 GP16を出力用に初期化するコードは以下です。REPLにより対話的に実行してみましょう。もしエラーが出ている場合はご連絡ください。
