@@ -27,7 +27,7 @@ while True:
 
 
 ### ご参考
-* [RP2350 Datasheet(Errata - RP2350-E9) (Appendix D: D.5. GPIO D.5.1. RP2350-E9)](https://pip.raspberrypi.com/documents/RP-008373-DS-rp2350-datasheet.pdf)　
-* [PaPIRs(VZ) 5m EKMC1601112仕様書](https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-247460.pdf)
-* [焦電型赤外線人感センサ Q&A集2025](https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-250616.pdf)
+* [RP2350 Datasheet(Errata - RP2350-E9) (Appendix D: D.5. GPIO D.5.1. RP2350-E9)(PDF)](https://pip.raspberrypi.com/documents/RP-008373-DS-rp2350-datasheet.pdf)　
+* [PaPIRs(VZ) 5m EKMC1601112仕様書(PDF)](https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-247460.pdf)
+* [焦電型赤外線人感センサ Q&A集2025(PDF)](https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-250616.pdf)
 
