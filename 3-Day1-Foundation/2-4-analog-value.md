@@ -17,7 +17,13 @@ ADCを使うことにより0Vから3.3Vの間で変化する電圧を数値化�
 
 上記回路図において、可変抵抗を回転させると、可変抵抗の中央の端子は０Vから3.3Vまで変化します。この電圧がGP26/ADC0にかかります。マイコンではAD変換により、かかっている電圧を0-65535の値で表現します。
 アナログ値を取得して一定周期でprintするプログラムとしてまとめると以下です
+
+file: 2-4-f-adc-sample.py
 ```
+#
+# file: 2-4-f-adc-sample.py
+# 機能：ボリュームで設定された電圧をAD変換、変換結果を表示するサンプル
+#
 from machine import ADC, Pin
 import time
 adc = ADC(Pin(26))     # create ADC object on ADC pin
@@ -29,10 +35,10 @@ while True:
 ```
 推定電圧も含めたサンプルコードは以下
 
-file: 2-4-f-adc-sample.py
+file: 2-4-f-adc-volt.py
 ```
 #
-# file: 2-4-f-adc-sample.py
+# file: 2-4-f-adc-volt.py
 # 機能：ボリュームで設定された電圧をAD変換し、値と推定電圧を表示するサンプル
 #
 from machine import ADC, Pin
