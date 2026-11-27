@@ -77,7 +77,13 @@ lcd.putstr("     bye!! ")
 
 
 ソース一式をまとめると以下
+
+file: 3-20-f-lcd-display.py
 ```
+#
+# file: 3-20-f-lcd-display.py
+# 機能：I2C接続のキャラクタ液晶ディスプレイ(16×2)を初期化し、文字列を表示するサンプル
+#
 from machine import Pin
 from machine import I2C
 from I2C_LCD import I2CLcd
