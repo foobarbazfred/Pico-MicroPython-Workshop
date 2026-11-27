@@ -3,7 +3,8 @@
 人感センサを使うことで、人が近づいたことを検知することができます。例えば、以下は焦電型赤外線センサー PaPIRs(VZ) 5m EKMC1601112です。
 
 出力はデジタル１本のL/Hであり、人が近づいたら1(3.3V)になります。マイコン側からの設定等は不要です。
-回路図は以下です。人を検知しない時、内蔵されている＃＃＃がオープンになっていますので、抵抗でプルダウンしてLに落とす必要があります。RP2350のGPIOにはPull Up機能、Pull Down機能がありますが、erratum RP2350-E9で示されるように、Pull Down機能が正しく動作しません。今回は、10KΩの外付け抵抗で0VにPull Downしています。
+回路図は以下です。
+PaPIRsのデジタル出力はFETドレイン出力（ハイサイドのオープンドレイン）であす。未検知時の出力レベルをLowに確定させるためにセンサーの外側にプルダウン抵抗が必要です。RP2350のGPIOにはPull Up機能、Pull Down機能がありますが、erratum RP2350-E9で示されるように、Pull Down機能が正しく動作しません。今回は、100KΩの外付け抵抗でLowにPull Downしています。
 
 簡単なテストプログラムは以下です
 ```
@@ -31,6 +32,8 @@ wnile True:
 
 
 #### ご参考
-erratum RP2350-E9「Bank 0 pull-down resistors latching behavior」
+erratum RP2350-E9「Bank 0 pull-down resistors latching behavior」<br>
 PaPIRs(VZ) 5m EKMC1601112仕様書<br>
-https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-247460.pdf
+https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-247460.pdf<br>
+焦電型赤外線人感センサ Q&A集2025<br>
+https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-250616.pdf<br>
