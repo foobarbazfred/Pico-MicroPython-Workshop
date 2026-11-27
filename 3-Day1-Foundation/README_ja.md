@@ -5,10 +5,10 @@
      - [マイコンを使ってどのようなシステムが作れるか](1-1-mcu-applications.md)
      - [扱うデータとプログラムの基本構造](1-2-data-and-program-structure.md)
      - [マイコン用アプリ開発の流れ](1-3-software-development-flow.md) 
-  - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
+  - マイコン基礎
     - [主要マイコン(マイコンボード)紹介）](1-4-board.md)
-  - [マイコン用プログラミング言語](1-5-programming-languages.md)
-    - [MicroPython/Python復習](1-6-micropython-summary.md)
+    - [マイコン用プログラミング言語](1-5-programming-languages.md)
+       - [MicroPython/Python復習](1-6-micropython-summary.md)
   - マイコンボードのセットアップ、接続方法
     - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-7-rp2350-summary.md)
     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
