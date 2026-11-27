@@ -1,6 +1,7 @@
 # １日目セミナーテーマ
 
-- 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて
+### 基礎１：マイコンについて、Pythonについて、MicroPythonについて
+
   - センサを活用したプロト開発、IoTプロト開発に向けて
      - [マイコンを使ってどのようなシステムが作れるか](1-1-mcu-applications.md)
      - [扱うデータとプログラムの基本構造](1-2-data-and-program-structure.md)
@@ -21,7 +22,7 @@
      - [REPLを活用したボトムアッププログラミング](1-12-repl-bottom-up.md)
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
         - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
-- 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
+### 基礎２：Input/Outputの基礎/Digital/Analog(PWM)
   - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-blink.md)
   - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-3-simple-blink.md)
   - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-4-analog-value.md)
@@ -37,7 +38,7 @@
     - 参考：ボリュームとモータドライバでDCモータ制御(紹介のみ)
   - 発展：[DigitalでAnalogを表現する-> フルカラーLED (NoePixel)を使う](2-9-NeoPixel.md)
     - ボリュームでNeoPixelの色が変わる
-- 基礎３ ; 周辺機器との接続方法、デバイス活用
+### 基礎３：周辺機器との接続方法、デバイス活用
   - マイコンに接続できる周辺機器
     - [センサ紹介、センサの使い方(データの取得方法)](3-1-sensors.md)
   - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-2-serial-bus.md)
@@ -65,7 +66,8 @@
     - [障害物との距離をLCDに表示](3-8-distance-sensor.md)
       - 障害物との距離をLCDと音で表現
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
-- 基礎４ ; インターネット接続、Web API利用, MQTT利用
+    - 
+### 基礎４：インターネット接続、Web API利用, MQTT利用
   - [通信機能を活かしたアプリケーションのデザインパターン](4-1-design-pattern.md)
   - [インターネット接続(Wi-Fi接続)  NTP接続](4-2-WiFi-setup.md)
   - WebAPIと接続して情報取得
@@ -84,13 +86,13 @@
 
 ## 時間がまだある場合の補講
 
-- 補講１ ； MicroPythonの性能、チューニング、リソース管理
+- 補講１：MicroPythonの性能、チューニング、リソース管理
   - 性能の考え方、性能改善のアプローチ 
   - [MicroPythonの実行性能を上げる方法](sup-1-2-mpy-perf.md)
   - [MicroPythonとC言語の性能差](sup-1-3-mpy-vs-c-perf.md)
   - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良い配列の最大サイズは？(Heap
     メモリサイズの1/3を上限とするのが無難。その理由は？)
-- 補講２ ； PIO...MicroPythonの遅さをハードウェアでカバーする
+- 補講２：PIO...MicroPythonの遅さをハードウェアでカバーする
   - PIO(Programming IO Interface)とは何か、目的、用途
   - [内部構造](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/README_ja.md)
   - [PIO学習パス](https://github.com/foobarbazfred/learn-rp2350-pio/blob/main/how_to_learn_pio_ja.md)
@@ -100,7 +102,7 @@
     - 参考：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
     - 参考：[MQTTで情報共有する早押し対戦ゲーム](https://github.com/foobarbazfred/mqtt-rendaoh-2025)
   - [PIO命令セット](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/instruction_ja.md) 
-- 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
+- 補講３：地味なマイコンを華やかにする　表示装置、入力装置の工夫
     - [センサデータを視覚的に表示する方法](sup-3-dataviewer.md)
       - [IoT PF(ThingsBoard)によるダッシュボード](sup-3-1-dashboard-thigsboard.md)
       - [Node-REDによるダッシュボード](sup-3-2-dashboard-node-red.md)
@@ -112,8 +114,8 @@
         - [DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md)(基礎４と共通)
         - 参考：再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信
       - [DVIでDigitalTVに接続、グラフィック表示](https://github.com/foobarbazfred/micropython/tree/main/rp2350-hstx)
-- 補講４ ； マイコンとクラウドサービスとの連携
-- 補講５ ； マイコンでAI技術をどう活用するか
+- 補講４：マイコンとクラウドサービスとの連携
+- 補講５：マイコンでAI技術をどう活用するか
   - 活用できるAIの技術とは
   - どのようにマイコンで活用するか
     - [要件分析、試作等、開発段階でのAI活用](sup-5-1-AI-assisted-development.md)
