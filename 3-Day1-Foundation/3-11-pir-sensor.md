@@ -3,15 +3,15 @@
 人感センサを使うことで、人が近づいたことを検知することができます。例えば、以下は焦電型赤外線センサー PaPIRs(VZ) 5m EKMC1601112です。
 
 出力はデジタル１本のL/Hであり、人が近づいたら1(3.3V)になります。マイコン側からの設定等は不要です。
-本来の回路図は以下です。
-PaPIRsのデジタル出力はFETドレイン出力（ハイサイドのオープンドレイン）です。未検知時の出力レベルをLowに確定させるためにセンサーの外側にプルダウン抵抗が必要です。、47KΩから100KΩの外付け抵抗でLowにPull Downします。簡単なテストプログラムは以下です
+
+PaPIRsのデジタル出力はFETドレイン出力（ハイサイドのオープンドレイン）です。未検知時の出力レベルをLowに確定させるためにセンサーの外側にプルダウン抵抗が必要です。47KΩから100KΩの外付け抵抗でLowにPull Downします。本来の回路図と簡単なテストプログラムは以下です
 ```
 #
 # test program for Pyroelectric Infrared Sensor
 #
 import time
 from machine import Pin
-PIR_SENSOR_PIN = 16
+PIR_SENSOR_PIN = 0
 
 # setup
 sensor_pin = Pin(PIR_SENSOR_PIN, Pin.IN)
@@ -21,11 +21,11 @@ while True:
     if(sensor_pin.value() == 1):
         print('detect human')
     else:
-        print('detect none')
+        print('not detected')
     time.sleep(1)
 
 ```
-本来はこの回路で動作しますが、RP2350-E9 erratumで示されるように、Pull Down機能が正しく動作しません。代替手段としてAD変換して電圧を検知します。
+本来は上記回路とテストプログラムで動作しますが、RP2350-E9 erratumで示されるように、RP2350のGPIOに回路上の問題があり、Pull Down機能が正しく動作しません。代替手段としてAD変換して電圧を検知します。
 
 
 
