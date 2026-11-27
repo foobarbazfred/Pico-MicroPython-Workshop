@@ -5,10 +5,10 @@
      - [マイコンを使ってどのようなシステムが作れるか](1-1-mcu-applications.md)
      - [扱うデータとプログラムの基本構造](1-2-data-and-program-structure.md)
      - [マイコン用アプリ開発の流れ](1-3-software-development-flow.md) 
-  - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
+  - マイコン基礎
     - [主要マイコン(マイコンボード)紹介）](1-4-board.md)
-  - [マイコン用プログラミング言語](1-5-programming-languages.md)
-    - [MicroPython/Python復習](1-6-micropython-summary.md)
+    - [マイコン用プログラミング言語](1-5-programming-languages.md)
+       - [MicroPython/Python復習](1-6-micropython-summary.md)
   - マイコンボードのセットアップ、接続方法
     - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-7-rp2350-summary.md)
     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
@@ -16,9 +16,10 @@
     - [ボードへの電源供給方法](1-8-powersupply.md)
     - [マイコンボードにMicroPythonを焼く方法](1-9-board-setup.md)
     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-10-programming-tools.md)
-  - [REPLを活用したボトムアッププログラミング](1-11-repl-bottom-up.md)
-  - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
-    - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
+  - MicroPythonプログラミング
+     - [REPLを活用したボトムアッププログラミング](1-11-repl-bottom-up.md)
+     - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
+        - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
   - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-blink.md)
   - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-3-simple-blink.md)
@@ -39,7 +40,7 @@
   - マイコンに接続できる周辺機器
     - [センサ紹介、センサの使い方(データの取得方法)](3-1-sensors.md)
   - [マイコンと周辺機器との通信インタフェース(I2C, SPI, UART)](3-2-serial-bus.md)
-    - [I2Cについて](3-1-2-SerialBus-i2c.md)
+    - [I2Cについて](3-3-I2C-bus.md)
     - [SPIについて](3-4-SPI-bus.md)
     - センサや周辺機器を簡単に制御できるドライバ
   - 入力装置
@@ -64,12 +65,15 @@
       - 障害物との距離をLCDと音で表現
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
 - 基礎４ ; インターネット接続、Web API利用, MQTT利用
-  - [通信機能を活かしたアプリケーションのデザインパターン](4-1-architecuture-design-pattern.md)
-  - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-Network.md)
-  - HTTPを用いた通信とサンプルコード
-    - [指定した場所の天気情報を天気予報サイトから取得](4-2-WebAPI.md)
-  - [MQTTを用いた通信とサンプルコード](4-3-MQTT_Service.md)
-  - [RP2をWebServerとして動かす](4-4-WebServer.md)
+  - [通信機能を活かしたアプリケーションのデザインパターン](4-1-design-pattern.md)
+  - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-WiFi-setup.md)
+  - HTTPによる通信とサンプルコード
+    - [指定した場所の天気情報を天気予報サイトから取得](4-10-web-API.md)
+  - MQTTによる通信とサンプルコード
+    - [MQTT概要](4-20-MQTT-service.md)
+    - [MQTT メッセージ送信](4-21-MQTT-publish.md)
+    - MQTT メッセージ受信
+  - [RP2をWebServerとして動かす](4-30-web-server.md)
   - 演習：インターネット活用アプリ試作
     - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
     - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
@@ -98,7 +102,7 @@
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
       - [IoT PF(ThingsBoard)によるダッシュボード](sup-4-3-dashboard-thigsboard.md)
       - [Node-REDによるダッシュボード](sup-4-2-dashboard-node-red.md)
-      - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-4-WebServer.md)
+      - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-5-web-server.md)
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
     - 音楽や音声を再生する
       - 音声合成LSIを利用(UART接続で発話できる)
