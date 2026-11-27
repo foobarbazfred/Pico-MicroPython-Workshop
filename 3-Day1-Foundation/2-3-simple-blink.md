@@ -21,7 +21,7 @@ while True:
 また、ボード上にはBOOTSELボタンがあります。このボタンは起動時のモードを指定するために使いますが、起動後は押しボタンスイッチとして使うことができます。
 BOOTSELボタンに連動してLEDが点灯するプログラムは以下
 
-file : [src/2-3-f-simple-blink.py](2-3-f-simple-blink.py)
+file : [src/2-3-f-simple-blink.py](src/2-3-f-simple-blink.py)
 ```
 #
 # file:2-3-f-simple-blink.py
