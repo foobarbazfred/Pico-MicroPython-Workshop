@@ -30,9 +30,10 @@ https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.html#classe
   - CircuitPythonはMicroPythonから派生した言語で、Adafruit社が開発メンテナンス<br>[Welcome to CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython)
   - 基本的なPythonの仕様は同じだが提供されるモジュールが異なる。同等のモジュールでもメソッド（関数）の仕様が異なる
   - CircuitPythonはAdafruit社が販売するセンサをサポートする形で、センサ用の制御モジュール（通称：ドライバ）が提供される場合が多い
-  - Adafruit社がセンサや表示デバイス用のドライバを体系的に管理<br>[Adafruit CircuitPython Library Bundle](https://docs.circuitpython.org/projects/bundle/en/latest/drivers.html)
-  - USBキーボード等、USBデバイスを試作するには、USBデバイス用のライブラリが充実しているCircuitPythonを使うのが望ましい
-  - MicroPythonを基本に使い、使いたいセンサのドライバがCircuitPython版しかない場合、CircuitPythonを選択するのが良いのでは。あるいは、CircuitPython版ドライバをMicroPython版にポーティングすることも可能
+  - Adafruit社がセンサや表示デバイス用のドライバを体系的に管理<br>[Adafruit CircuitPython Library Bundle](https://docs.circuitpython.org/projects/bundle/en/latest/drivers.html)<br>[環境センサ用ドライバ類](https://docs.circuitpython.org/projects/bundle/en/latest/drivers.html#environmental-sensors)
+  - USBキーボード等、USBデバイスを試作するには、USBデバイス用のライブラリが充実しているCircuitPythonで実装するがお勧め
+  - MicroPythonを基本に使い、使いたいセンサのドライバがCircuitPython版しかない場合、CircuitPythonを選択するのが良いのでは。
+     - CircuitPython版ドライバをMicroPython版にポーティングすることも可能
     
 MicroPythonの組み込みモジュール一覧
 ```
