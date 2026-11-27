@@ -28,10 +28,8 @@ while True:
 本来は上記回路とテストプログラムで動作しますが、RP2350-E9 erratumで示されるように、RP2350のGPIOに回路上の問題があり、Pull Down機能が正しく動作しません。代替手段としてAD変換して電圧を検知します。
 
 
+### ご参考
+* [RP2350 Datasheet (Appendix D: Errata - RP2350-E9)](https://pip.raspberrypi.com/documents/RP-008373-DS-rp2350-datasheet.pdf)
+* [PaPIRs(VZ) 5m EKMC1601112仕様書](https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-247460.pdf)
+* [焦電型赤外線人感センサ Q&A集2025](https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-250616.pdf)
 
-#### ご参考
-RP2350-E9 erratum: input pin can become latched at about ~2V<br>
-PaPIRs(VZ) 5m EKMC1601112仕様書<br>
-https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-247460.pdf<br>
-焦電型赤外線人感センサ Q&A集2025<br>
-https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-250616.pdf<br>
