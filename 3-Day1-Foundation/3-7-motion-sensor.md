@@ -37,7 +37,13 @@ MPU-6050用のドライバが提供されていますのでこれを使用しま
 ```
  self.i2c = I2C(id=bus, scl=Pin(sclpin), sda=Pin(sdapin), freq=400000)
 ```
+
+file:  3-7-f-motion-sensor.py
 ```
+#
+# file: 3-7-f-motion-sensor.py
+# 機能：6軸モーションセンサ(MPU6050)から加速度と角速度を読み取り、シリアルコンソールに表示するサンプル
+#
 from mpu6050 import MPU6050
 import time
 
@@ -59,7 +65,13 @@ while True:
     time.sleep(1)
 ```
 
+応用例として、加速度をLCDに表示するサンプルは以下です。
+file: 3-7-ex-motion-lcd.py
 ```
+#
+# file: 3-7-ex-motion-lcd.py
+# 機能：6軸モーションセンサ(MPU6050)から取得した加速度の値をI2C接続のLCDディスプレイに表示するサンプル
+#
 import time
 from machine import Pin
 from machine import I2C
@@ -92,7 +104,7 @@ while True:
 
 
 ```
-## 組み合わせ例
+## モーションセンサの応用例
 1. モーションセンサとLCDキャラクタディスプレイ
    - モーションセンサを傾けると、傾きに応じてディスプレイの表示が左右に揺れる
 2. モーションセンサとカラーLED
