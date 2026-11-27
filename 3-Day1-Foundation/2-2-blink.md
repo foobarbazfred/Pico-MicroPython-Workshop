@@ -66,8 +66,6 @@ while True:
         led.on()
     else:
         led.off()
-#
-#
 ```
 ### 補足説明
 GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pin(PAD)に対して、UART、 I2C、SPI等、複数の機能から一つを切り替えて使えるためです。<br>
