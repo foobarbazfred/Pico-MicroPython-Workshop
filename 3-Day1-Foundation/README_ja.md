@@ -71,7 +71,7 @@
     - [指定した場所の天気情報を天気予報サイトから取得](4-10-web-API.md)
   - MQTTによる通信とサンプルコード
     - [MQTT概要](4-20-MQTT-service.md)
-    - [MQTT メッセージ送信](4-21-MQTT-service.md)
+    - [MQTT メッセージ送信](4-21-MQTT-publish.md)
     - MQTT メッセージ受信
   - [RP2をWebServerとして動かす](4-30-web-server.md)
   - 演習：インターネット活用アプリ試作
