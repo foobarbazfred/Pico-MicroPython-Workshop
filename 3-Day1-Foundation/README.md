@@ -48,17 +48,17 @@
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
       - [ジャイロセンサ(I2C接続)](3-7-motion-sensor.md)
       - [距離センサ(デジタル2線)](3-8-distance-sensor.md)
-      - 発展：人感センサ（デジタル1線）
-      - 発展：[GPS（UART接続）](3-9-GPS.md)
+      - 参考：[人感センサ（デジタル1線）](3-11-pir-sensor.md)
+      - 参考：[GPS（UART接続）](3-9-GPS.md)
     - 参考：[CMOSカメラ](3-10-CMOS-camera.md)
       - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico
   - 出力装置
     - [キャラクタディスプレイ（I2C接続）](3-20-LCD-display.md)
     - 発展：[グラフィックディスプレイ(SPI接続)](3-21-graphic-display.md)  
     - 発展：[DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md) (補講３と共通)
-    - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生](3-32-sound-player-max98357.md)
+    - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生(I2S接続)](3-32-sound-player-max98357.md)
   - 記憶装置
-    - 発展：[SDカード(SPI接続)](3-40-SD-card.md)
+    - 発展：[SDカードの利用(SPI接続)](3-40-SD-card.md)
   - 演習：センサ活用事例（全部はできないので選択）
     - 温湿度計測結果をLCDに表示
     - [障害物との距離をLCDに表示](3-8-distance-sensor.md)
@@ -67,17 +67,18 @@
 - 基礎４ ; インターネット接続、Web API利用, MQTT利用
   - [通信機能を活かしたアプリケーションのデザインパターン](4-1-design-pattern.md)
   - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-WiFi-setup.md)
-  - HTTPによる通信とサンプルコード
+  - WebAPIと接続して情報取得
     - [指定した場所の天気情報を天気予報サイトから取得](4-10-web-API.md)
-  - MQTTによる通信とサンプルコード
+  - MQTTによるメッセージ送受信
     - [MQTT概要](4-20-MQTT-service.md)
     - [MQTT メッセージ送信](4-21-MQTT-publish.md)
     - MQTT メッセージ受信
-  - [RP2をWebServerとして動かす](4-30-web-server.md)
+  - [IoT プラットフォームの利用](4-30-IoT-PF.md)
+  - [Pico2WをWebServerとして動かす](4-40-web-server.md)
   - 演習：インターネット活用アプリ試作
     - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
     - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
-  - 発展：IoT PF活用、ビジュアル化
+  - 参考：IoT PF活用、ビジュアル化
     - IoT PFにデータをアップロード、計測データ見える化
 
 ## 時間がまだある場合の補講
@@ -95,8 +96,8 @@
   - 使い方
     - [簡単なLチカ、SW入力](https://github.com/foobarbazfred/learn-rp2350-pio)
     - DMAを併用することでデータストリームの高速転送が可能
-    - ご参考：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
-    - ご参考：[MQTTで情報共有する早押し対戦ゲーム](https://github.com/foobarbazfred/mqtt-rendaoh-2025)
+    - 参考：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
+    - 参考：[MQTTで情報共有する早押し対戦ゲーム](https://github.com/foobarbazfred/mqtt-rendaoh-2025)
   - [PIO命令セット](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/instruction_ja.md) 
 - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
@@ -121,3 +122,6 @@
         - [PCのカメラに向かって手をかざす、手の位置とグーパーを判定してMQTT Publishするサンプルコード](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/src/hand_gesture.html)
 
 ※README_ja.mdがマスタ
+#### 補足
+- リスト中、参考：と書いている項目は、十分テストできていない、または全員分のパーツがないため、紹介に留める章です。未テストの場合はその旨記載しています
+- 発展：と書いている項目は、時間があれば説明、演習する章です
