@@ -66,7 +66,7 @@
     - [障害物との距離をLCDに表示](3-8-distance-sensor.md)
       - 障害物との距離をLCDと音で表現
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
-    - 
+      
 ### 基礎４：インターネット接続、Web API利用, MQTT利用
   - [通信機能を活かしたアプリケーションのデザインパターン](4-1-design-pattern.md)
   - [インターネット接続(Wi-Fi接続)  NTP接続](4-2-WiFi-setup.md)
