@@ -30,7 +30,7 @@ from machine import Pin
 from machine import PWM
 servo = PWM(Pin(17), freq=50)
 ```
-ホーンの角度はPWMのdutyによって変えることができます。仕様では、角度におうじて、0度：1ms - 90度：1.5ms - 180度：2msとなっていますが、以下のサンプルコードは実際のサーボの動きを反映して設定値を最適化しています。
+ホーンの角度はPWMのdutyによって変えることができます。仕様では、角度に応じて、0度：1ms - 90度：1.5ms - 180度：2msとなっていますが、以下のサンプルコードは実際のサーボの動きを反映して設定値を最適化しています。
 ```
 MAX_VALUE = 0xffff
 servo.duty_u16(int(0.5/20 * MAX_VALUE))  # angle : 0 degree
@@ -38,7 +38,14 @@ servo.duty_u16(int(1.5/20 * MAX_VALUE))  # angle : 90 degrees
 servo.duty_u16(int(2.4/20 * MAX_VALUE))  # angle : 180 degrees
 ```
 指定された角度にアームを回転させるプログラム（関数化）
+
+file: servo_rotate_PWM.py
 ```
+#
+# file: servo_rotate_PWM.py
+# 概要：PWMによるサーボ制御サンプルコード
+#      アームの角度を0度から180度まで回転させる
+
 #
 # servo control function
 #
@@ -91,6 +98,10 @@ def servo_test():
 
 サーボ制御関数は共通ライブラリ、mylib.pyに入れていますので以下のコードで利用できます。
 ```
+#
+# file: servo_sample_w_lib.py
+# 機能：mylib内で定義された servo制御関数、servo_rotate_horn()を使ったサンプルコード
+#
 from mylib import servo_rotate_horn
 from mylib import PWM_FREQ_SERVO       # 50Hz
 
@@ -104,7 +115,14 @@ servo_rotate_horn(servo, 90)
 <img src="assets/VR_SERVO.png" width="500">
 
 可変抵抗（ボリューム）の軸の回転に連動してサーボのホーンを動かすプログラムは以下
+
+file: servo_volume_control.py
 ```
+#
+# file: servo_volume_control.py
+# 機能：可変抵抗（ボリューム）のアナログ入力値をAD変換でデジタル化、得られた値をサーボの回転角度に変換して
+#      サーボのホーンを回転させる
+#
 from machine import Pin
 from machine import ADC
 from machine import PWM
