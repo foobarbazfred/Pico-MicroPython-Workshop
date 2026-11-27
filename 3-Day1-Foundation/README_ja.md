@@ -24,7 +24,7 @@
         - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
 ### 基礎２：Input/Outputの基礎/Digital/Analog(PWM)
   - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-blink.md)
-  - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-3-simple-blink.md)
+  - 参考：[配線が要らない最もシンプルなLED点滅](2-3-simple-blink.md)
   - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-4-analog-value.md)
   - DigitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
     - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-5-PWM.md)
