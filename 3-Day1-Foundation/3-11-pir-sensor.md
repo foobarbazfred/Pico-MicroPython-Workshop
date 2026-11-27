@@ -30,7 +30,7 @@ while True:
 
 
 #### ご参考
-RP2350-E9 erratum: input pin can become latched at about ~2V
+RP2350-E9 erratum: input pin can become latched at about ~2V<br>
 PaPIRs(VZ) 5m EKMC1601112仕様書<br>
 https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-247460.pdf<br>
 焦電型赤外線人感センサ Q&A集2025<br>
