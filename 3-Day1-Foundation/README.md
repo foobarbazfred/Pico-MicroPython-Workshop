@@ -17,7 +17,7 @@
     - [マイコンボードにMicroPythonを焼く方法](1-9-board-setup.md)
     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-10-programming-tools.md)
   - MicroPythonプログラミング
-     - [REPLを活用したボトムアッププログラミング](1-11-repl-bottom-up.md)
+     - [REPLを活用したボトムアッププログラミング](1-12-repl-bottom-up.md)
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
         - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
@@ -48,9 +48,9 @@
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
       - [ジャイロセンサ(I2C接続)](3-7-motion-sensor.md)
       - [距離センサ(デジタル2線)](3-8-distance-sensor.md)
-      - 参考：[人感センサ（デジタル1線）](3-11-pir-sensor.md)
-      - 参考：[GPS（UART接続）](3-9-GPS.md)
-    - 参考：[CMOSカメラ](3-10-CMOS-camera.md)
+      - 参考：[人感センサ（デジタル1線）](3-9-pir-sensor.md)
+      - 参考：[GPS（UART接続）](3-10-GPS.md)
+    - 参考：[CMOSイメージセンサ(カメラ)](3-11-CMOS-camera.md)
       - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico
   - 出力装置
     - [キャラクタディスプレイ（I2C接続）](3-20-LCD-display.md)
@@ -66,7 +66,7 @@
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
 - 基礎４ ; インターネット接続、Web API利用, MQTT利用
   - [通信機能を活かしたアプリケーションのデザインパターン](4-1-design-pattern.md)
-  - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-WiFi-setup.md)
+  - [インターネット接続(Wi-Fi接続)  NTP接続](4-2-WiFi-setup.md)
   - WebAPIと接続して情報取得
     - [指定した場所の天気情報を天気予報サイトから取得](4-10-web-API.md)
   - MQTTによるメッセージ送受信
@@ -85,8 +85,8 @@
 
 - 補講１ ； MicroPythonの性能、チューニング、リソース管理
   - 性能の考え方、性能改善のアプローチ 
-  - [MicroPythonの実行性能を上げる方法](sup-1-1-mpy-perf.md)
-  - [MicroPythonとC言語の性能差](sup-1-2-mpy-vs-c-perf.md)
+  - [MicroPythonの実行性能を上げる方法](sup-1-2-mpy-perf.md)
+  - [MicroPythonとC言語の性能差](sup-1-3-mpy-vs-c-perf.md)
   - Heapメモリの管理（無節操に使うとMemory Exceptionでプログラムが中断(MicroPythonが落ちる?)）、作って良い配列の最大サイズは？(Heap
     メモリサイズの1/3を上限とするのが無難。その理由は？)
 - 補講２ ； PIO...MicroPythonの遅さをハードウェアでカバーする
@@ -100,11 +100,11 @@
     - 参考：[MQTTで情報共有する早押し対戦ゲーム](https://github.com/foobarbazfred/mqtt-rendaoh-2025)
   - [PIO命令セット](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/instruction_ja.md) 
 - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
-    - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
-      - [IoT PF(ThingsBoard)によるダッシュボード](sup-4-3-dashboard-thigsboard.md)
-      - [Node-REDによるダッシュボード](sup-4-2-dashboard-node-red.md)
+    - [センサデータを視覚的に表示する方法](sup-3-dataviewer.md)
+      - [IoT PF(ThingsBoard)によるダッシュボード](sup-3-1-dashboard-thigsboard.md)
+      - [Node-REDによるダッシュボード](sup-3-2-dashboard-node-red.md)
       - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-5-web-server.md)
-      - [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
+      - [Python+NiceGUIによるオリジナルダッシュボード](sup-3-4-dashboard-nicegui.md)
     - 音楽や音声を再生する
       - 音声合成LSIを利用(UART接続で発話できる)
       - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
@@ -114,7 +114,7 @@
 - 補講５ ； マイコンでAI技術をどう活用するか
   - 活用できるAIの技術とは
   - どのようにマイコンで活用するか
-    - [要件分析、試作等、開発段階でのAI活用](sup-5-ai_assisted_development_ja.md)
+    - [要件分析、試作等、開発段階でのAI活用](sup-5-1-AI-assisted-development.md)
     - [AIと連携したアプリケーションの開発](sup-5-embedded_ai_ja.md)
       - WebAPIによるCloud上のAIとマイコンを連携させる
       - マイコンにAIを組み込む、Edge AI化（マイコン上で学習済み小型モデルを走らせる）
