@@ -122,3 +122,6 @@
         - [PCのカメラに向かって手をかざす、手の位置とグーパーを判定してMQTT Publishするサンプルコード](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/src/hand_gesture.html)
 
 ※README_ja.mdがマスタ
+#### 補足
+- リスト中、参考：と書いている項目は、十分テストできていない、または全員分のパーツがないため、紹介に留める章です。未テストの場合はその旨記載しています
+- 発展：と書いている項目は、時間があれば説明、演習する章です
