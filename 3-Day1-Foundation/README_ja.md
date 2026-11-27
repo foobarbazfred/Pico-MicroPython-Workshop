@@ -70,7 +70,8 @@
   - HTTPによる通信とサンプルコード
     - [指定した場所の天気情報を天気予報サイトから取得](4-3-web-API.md)
   - MQTTによる通信とサンプルコード
-    - [MQTTを用いた通信とサンプルコード](4-4-MQTT-service.md)
+    - [MQTT概要](4-4-MQTT-service.md)
+    - MQTT メッセージ送信
     - MQTT メッセージ受信
   - [RP2をWebServerとして動かす](4-5-web-server.md)
   - 演習：インターネット活用アプリ試作
