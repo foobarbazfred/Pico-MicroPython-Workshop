@@ -64,12 +64,12 @@
       - 障害物との距離をLCDと音で表現
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
 - 基礎４ ; インターネット接続、Web API利用, MQTT利用
-  - [通信機能を活かしたアプリケーションのデザインパターン](4-1-architecuture-design-pattern.md)
-  - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-Network.md)
+  - [通信機能を活かしたアプリケーションのデザインパターン](4-1-design-pattern.md)
+  - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-WiFi-setup.md)
   - HTTPを用いた通信とサンプルコード
-    - [指定した場所の天気情報を天気予報サイトから取得](4-2-WebAPI.md)
-  - [MQTTを用いた通信とサンプルコード](4-3-MQTT_Service.md)
-  - [RP2をWebServerとして動かす](4-4-WebServer.md)
+    - [指定した場所の天気情報を天気予報サイトから取得](4-3-web-aPI.md)
+  - [MQTTを用いた通信とサンプルコード](4-4-MQTT-service.md)
+  - [RP2をWebServerとして動かす](4-5-web-server.md)
   - 演習：インターネット活用アプリ試作
     - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
     - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
@@ -98,7 +98,7 @@
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
       - [IoT PF(ThingsBoard)によるダッシュボード](sup-4-3-dashboard-thigsboard.md)
       - [Node-REDによるダッシュボード](sup-4-2-dashboard-node-red.md)
-      - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-4-WebServer.md)
+      - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-5-web-server.md)
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-4-1-dashboard-nicegui.md)
     - 音楽や音声を再生する
       - 音声合成LSIを利用(UART接続で発話できる)
