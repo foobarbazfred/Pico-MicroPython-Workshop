@@ -4,7 +4,13 @@ PWMはDUTY（H区間の比率）を変えることでモータ制御等を行い
 
 <img src="assets/sounder.png"  width="400">
 
+
+file: 2-7-f-beep-by-pwm.py
 ```
+#
+# file: 2-7-f-beep-by-pwm.py
+# 機能：PWMの周波数を300Hzから2000Hzまで変化させ、圧電サウンダから音を鳴らすサンプル
+#
 from machine import Pin
 from machine import PWM
 import time
