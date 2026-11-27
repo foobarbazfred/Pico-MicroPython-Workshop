@@ -47,7 +47,7 @@ while True:
 ```
 これまでは部分的にREPLを使ってコードを追加しながらプログラムしました。全体をまとめた押しボタンスイッチ（GP15）を押している間だけLED（GP16）を点灯するプログラムは以下の通りです。
 
-file : [2-2-f-blink.py](src/2-2-f-blink.py)
+file : [src/2-2-f-blink.py](src/2-2-f-blink.py)
 ```
 #
 # file:2-2-f-blink.py
