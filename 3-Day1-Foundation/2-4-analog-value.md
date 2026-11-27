@@ -28,6 +28,7 @@ while True:
     time.sleep(0.5)
 ```
 推定電圧も含めたサンプルコードは以下
+
 file: 2-4-f-adc-sample.py
 ```
 #
