@@ -47,7 +47,13 @@ mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Wo
 
 ### CO2測定プログラム
 libに配置したscd41モジュールを使ってCO2を測定するプログラム
+
+file: 3-6-f-co2-sensor.py
 ```
+#
+# file: 3-6-f-co2-sensor.py
+# 機能：I2C接続のCO2センサ(SCD41)から温度・湿度・CO2濃度を定期的に読み取り表示するサンプル
+#
 from scd41 import *
 
 # Sensor I2C Connection Pin Assign
