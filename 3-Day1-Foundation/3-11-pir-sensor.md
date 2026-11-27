@@ -13,7 +13,7 @@ PaPIRsのデジタル出力はFETドレイン出力（ハイサイドのオー�
 #
 import time
 from machine import Pin
-PIR_SENSOR_PIN = 0
+PIR_SENSOR_PIN = 16
 
 # setup
 sensor_pin = Pin(PIR_SENSOR_PIN, Pin.IN)
