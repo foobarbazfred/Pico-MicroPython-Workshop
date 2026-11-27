@@ -17,6 +17,7 @@
     - [マイコンボードにMicroPythonを焼く方法](1-9-board-setup.md)
     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-10-programming-tools.md)
   - MicroPythonプログラミング
+     - [プログラミングの方法](1-11-how-to-programming.md) 
      - [REPLを活用したボトムアッププログラミング](1-12-repl-bottom-up.md)
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
         - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
@@ -30,12 +31,12 @@
     - [PWMを使って音再生(周波数を変える)](2-7-beep-by-PWM.md)
     - 参考：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-8-motor-control-by-PWM.md)
   - 演習：GPIO AD/DA変換（全部はできないの選択）
-    - [VRで光の明るさが変わる](2-5-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3>%81%A6led%E3%81%AE%E6%98%8E%E3%82%8B%E3%81%95%E3%82%92%E8%AA%BF%E6%95%B4)
-    - [VRでサーボモータの角度が変わる](2-6-servo-control-by-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%9B%E3%83%BC%E3%83%B3%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99)
-    - VRで音の周波数が変わる
-    - 参考：VRとモータドライバでDCモータ制御(紹介のみ)
+    - [ボリュームで光の明るさが変わる](2-5-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3>%81%A6led%E3%81%AE%E6%98%8E%E3%82%8B%E3%81%95%E3%82%92%E8%AA%BF%E6%95%B4)
+    - [ボリュームでサーボモータの角度が変わる](2-6-servo-control-by-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%9B%E3%83%BC%E3%83%B3%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99)
+    - ボリュームで音の周波数が変わる
+    - 参考：ボリュームとモータドライバでDCモータ制御(紹介のみ)
   - 発展：[DigitalでAnalogを表現する-> フルカラーLED (NoePixel)を使う](2-9-NeoPixel.md)
-    - VRでNeoPixelの色が変わる
+    - ボリュームでNeoPixelの色が変わる
 - 基礎３ ; 周辺機器との接続方法、デバイス活用
   - マイコンに接続できる周辺機器
     - [センサ紹介、センサの使い方(データの取得方法)](3-1-sensors.md)
@@ -74,7 +75,7 @@
     - [MQTT メッセージ送信](4-21-MQTT-publish.md)
     - MQTT メッセージ受信
   - [IoT プラットフォームの利用](4-30-IoT-PF.md)
-  - [Pico2WをWebServerとして動かす](4-40-web-server.md)
+  - [Pico2W上でWebServer構築、ブラウザ上でWidget表示](4-40-web-server.md)（補講３と共通）
   - 演習：インターネット活用アプリ試作
     - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
     - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
@@ -103,12 +104,13 @@
     - [センサデータを視覚的に表示する方法](sup-3-dataviewer.md)
       - [IoT PF(ThingsBoard)によるダッシュボード](sup-3-1-dashboard-thigsboard.md)
       - [Node-REDによるダッシュボード](sup-3-2-dashboard-node-red.md)
-      - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-5-web-server.md)
+      - [Pico2W上でWebServer構築、ブラウザ上でWidget表示](4-40-web-server.md)(基礎４と共通) 
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-3-4-dashboard-nicegui.md)
     - 音楽や音声を再生する
-      - 音声合成LSIを利用(UART接続で発話できる)
-      - I2Sによる音再生(再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信)
-        - [DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md)
+      - 参考：音声合成LSIを利用(UART接続で発話できる)
+      - I2Sによる音再生
+        - [DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md)(基礎４と共通)
+        - 参考：再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信
       - [DVIでDigitalTVに接続、グラフィック表示](https://github.com/foobarbazfred/micropython/tree/main/rp2350-hstx)
 - 補講４ ； マイコンとクラウドサービスとの連携
 - 補講５ ； マイコンでAI技術をどう活用するか
