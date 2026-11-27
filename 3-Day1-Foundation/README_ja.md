@@ -17,9 +17,8 @@
     - [マイコンボードにMicroPythonを焼く方法](1-9-board-setup.md)
     - [開発環境セットアップ、ツール類紹介、ファイル転送](1-10-programming-tools.md)
   - MicroPythonプログラミング
+     - [プログラミングの方法](1-11-how-to-programming.md) 
      - [REPLを活用したボトムアッププログラミング](1-12-repl-bottom-up.md)
-     - [プログラミングの方法](how-to-programming.md) 
-     - [REPLを活用したボトムアッププログラミング](1-11-repl-bottom-up.md)
      - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
         - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
