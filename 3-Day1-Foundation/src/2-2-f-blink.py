@@ -1,6 +1,7 @@
 #
 # file:2-2-f-blink.py
-# 
+# 概要: 押しボタンスイッチの入力に応じてLEDを点灯/消灯する基本プログラム
+#
 from machine import Pin
 
 # setup
