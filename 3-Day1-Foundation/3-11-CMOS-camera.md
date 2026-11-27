@@ -41,7 +41,7 @@ for file in ('ov5642.py', 'ov5642_setup.py', 'ov5642_FIFO.py'):
 ```
 
 ### Arducam (OV5642 5MPixel)のサンプルコード
-以下にArducamを使った撮影の例を示します。
+以下にArducamを使った撮影の例を示します。バッファに取り込むところまでのプログラムです。どのような画像が撮影できたのかを確認するには、画像データをLCDに表示する、または、PC上に表示する機能を追加する必要があります。
 
 file: 3-11-f-arducam-sample.py
 ```
