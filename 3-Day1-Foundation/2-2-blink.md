@@ -1,4 +1,4 @@
-# LED 点滅プログラム（通称Lチカ）
+# 2-2 LED 点滅プログラム（通称Lチカ）
 
 Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号(図中、GPnn(nnは数字)と表記)をよくご確認ください。
 <img src="assets/pico-2-w-pinout.png" width=800><br>
