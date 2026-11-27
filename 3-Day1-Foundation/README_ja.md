@@ -20,20 +20,20 @@
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
     - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
-  - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
-  - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-1-SimpleBlink.md)
-  - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-3-AnalogValue.md)
+  - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-blink.md)
+  - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-3-simple-blink.md)
+  - [GPIO アナログ入力  AD変換　ボリューム(可変抵抗)入力](2-4-analog-value.md)
   - DigitalでAnalogを表現する-> PWM(Pulse Width Modulation)を使う
-    - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-4-PWM.md)
-    - [PWMを使ってサーボモータ制御(DUTYを変える)](2-5-ServoControl.md)
-    - [PWMを使って音再生(周波数を変える)](2-6-Beep.md)
-    - 参考：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-7-motor_control.md)
+    - [PWMの説明、PWMを使ってLEDの明るさ調整(DUTYを変える)](2-5-PWM.md)
+    - [PWMを使ってサーボモータ制御(DUTYを変える)](2-6-servo-control-by-PWM.md)
+    - [PWMを使って音再生(周波数を変える)](2-7-beep-by-PWM.md)
+    - 参考：[PWMとモータドライバを使ってモータ回転制御(DUTYと出力ピンを変える)](2-8-motor-control-by-PWM.md)
   - 演習：GPIO AD/DA変換（全部はできないの選択）
-    - [VRで光の明るさが変わる](2-4-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3>%81%A6led%E3%81%AE%E6%98%8E%E3%82%8B%E3%81%95%E3%82%92%E8%AA%BF%E6%95%B4)
-    - [VRでサーボモータの角度が変わる](2-5-ServoControl.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%9B%E3%83%BC%E3%83%B3%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99)
+    - [VRで光の明るさが変わる](2-5-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3>%81%A6led%E3%81%AE%E6%98%8E%E3%82%8B%E3%81%95%E3%82%92%E8%AA%BF%E6%95%B4)
+    - [VRでサーボモータの角度が変わる](2-6-servo-control-by-PWM.md#%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%81%AE%E5%9B%9E%E8%BB%A2%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%9B%E3%83%BC%E3%83%B3%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99)
     - VRで音の周波数が変わる
     - 参考：VRとモータドライバでDCモータ制御(紹介のみ)
-  - 発展：[DigitalでAnalogを表現する-> フルカラーLED (NoePixel)を使う](2-10-NeoPixel.md)
+  - 発展：[DigitalでAnalogを表現する-> フルカラーLED (NoePixel)を使う](2-9-NeoPixel.md)
     - VRでNeoPixelの色が変わる
 - 基礎３ ; 周辺機器との接続方法、デバイス活用
   - マイコンに接続できる周辺機器
