@@ -23,7 +23,15 @@ MAX98357の仕様は、サンプリングレートは 8kHz ～ 96kHzであり、
 
 #### サンプルコード（１）
 440Hzの音を段々大きくしながら再生するプログラム。サンプリングレート 8KHz、ビット幅16bitで音データを作成して、I2Sを使ってSpeaker2にデータ送信
+
+file:  3-32-f-sound-player-max98357.py
 ```
+#
+# file: 3-32-f-sound-player-max98357.py
+# 機能：I2S接続のD級アンプ内蔵DAC(MAX98357)へ440Hzの正弦波データを送信し、
+# 音量を段階的に上げながら再生するサンプル
+#
+
 #
 # i2s sin wave play test 
 # ok  (signed value)
