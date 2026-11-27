@@ -19,9 +19,9 @@ sensor_pin = Pin(PIR_SENSOR_PIN, Pin.IN)
 # loop
 while True:
     if(sensor_pin.value() == 1):
-        print('detect human')
+        print('Detected')
     else:
-        print('not detected')
+        print('Not detected')
     time.sleep(1)
 
 ```
