@@ -10,7 +10,13 @@ SDカードを利用する上で、注意点があります。MicroPythonのフ�
 <img src="assets/spi_sd_card_schematics.png" width=700>
 
 SDカード接続テスト
+
+file: 3-40-mount-SD-card.py
 ```
+#
+# file: 3-40-mount-SD-card.py
+# 機能：SPIでSDカードを制御し、/sd ディレクトリにマウントする
+#
 import os
 from machine import Pin
 from machine import SPI
