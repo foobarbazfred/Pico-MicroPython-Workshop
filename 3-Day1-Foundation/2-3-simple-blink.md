@@ -20,7 +20,13 @@ while True:
 ```
 また、ボード上にはBOOTSELボタンがあります。このボタンは起動時のモードを指定するために使いますが、起動後は押しボタンスイッチとして使うことができます。
 BOOTSELボタンに連動してLEDが点灯するプログラムは以下
+
+file:2-3-f-simple-blink.py
 ```
+#
+# file:2-3-f-simple-blink.py
+# 概要: ボード上の押しボタンスイッチの入力に応じてボード上のLEDを点灯/消灯するプログラム
+#
 from machine import Pin
 from rp2 import bootsel_button
 
@@ -33,6 +39,8 @@ while True:
         led.on()
     else:
         led.off()
+#
+#
 ```
 上記いずれも配線が不要ですぐに使えるLEDとスイッチです。
 ご参考にボードの回路図を付けます（MicroPythonから単純にGPIOモジュール等ではアクセスできない位置に配置されています）
