@@ -75,7 +75,7 @@
     - [MQTT メッセージ送信](4-21-MQTT-publish.md)
     - MQTT メッセージ受信
   - [IoT プラットフォームの利用](4-30-IoT-PF.md)
-  - [Pico2WをWebServerとして動かす](4-40-web-server.md)
+  - [Pico2W上でWebServer構築、ブラウザ上でWidget表示](4-40-web-server.md)
   - 演習：インターネット活用アプリ試作
     - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
     - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
@@ -104,7 +104,7 @@
     - [センサデータを視覚的に表示する方法](sup-3-dataviewer.md)
       - [IoT PF(ThingsBoard)によるダッシュボード](sup-3-1-dashboard-thigsboard.md)
       - [Node-REDによるダッシュボード](sup-3-2-dashboard-node-red.md)
-      - [RPiPico上でWebServer構築、ブラウザ上でWidget表示](4-5-web-server.md)
+      - [Pico2W上でWebServer構築、ブラウザ上でWidget表示](4-40-web-server.md)(基礎４と同じ) 
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-3-4-dashboard-nicegui.md)
     - 音楽や音声を再生する
       - 音声合成LSIを利用(UART接続で発話できる)
