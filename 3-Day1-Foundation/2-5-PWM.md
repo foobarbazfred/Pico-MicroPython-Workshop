@@ -27,6 +27,8 @@ PWM_OUTPUT_PIN=16
 machine.freq(125_000_000)
 # set lowest PWM FREQ 8Hz
 pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
+#
+#
 ```
 
 PWMを使ってLEDを中間的な明るさで点滅させるプログラム
