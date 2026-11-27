@@ -62,7 +62,7 @@
   - 記憶装置
     - 発展：[SDカードの利用(SPI接続)](3-40-SD-card.md)
   - 演習：センサ活用事例（全部はできないので選択）
-    - 温湿度計測結果をLCDに表示
+    - 温湿度等の空気質測定結果をLCDに表示
     - [障害物との距離をLCDに表示](3-8-distance-sensor.md)
       - 障害物との距離をLCDと音で表現
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
