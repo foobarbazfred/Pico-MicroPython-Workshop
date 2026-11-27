@@ -56,9 +56,9 @@
     - [キャラクタディスプレイ（I2C接続）](3-20-LCD-display.md)
     - 発展：[グラフィックディスプレイ(SPI接続)](3-21-graphic-display.md)  
     - 発展：[DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md) (補講３と共通)
-    - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生](3-32-sound-player-max98357.md)
+    - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生(I2S接続)](3-32-sound-player-max98357.md)
   - 記憶装置
-    - 発展：[SDカード(SPI接続)](3-40-SD-card.md)
+    - 発展：[SDカードの利用(SPI接続)](3-40-SD-card.md)
   - 演習：センサ活用事例（全部はできないので選択）
     - 温湿度計測結果をLCDに表示
     - [障害物との距離をLCDに表示](3-8-distance-sensor.md)
