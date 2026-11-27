@@ -3,10 +3,14 @@
 人感センサを使うことで、人が近づいたことを検知することができます。例えば、以下は焦電型赤外線センサー PaPIRs(VZ) 5m EKMC1601112です。出力はデジタル１本のL/Hであり、人が近づいたら1(3.3V)になります。マイコン側からの設定等は不要です。<br>
 <img src="assets/figure_pir_sensor.png" width=30%><br>
 PaPIRsのデジタル出力はFETドレイン出力（ハイサイドのオープンドレイン）です。未検知時の出力レベルをLowに確定させるためにセンサーの外側にプルダウン抵抗が必要です。出力最大電流が100μAなので、47kΩから100kΩの外付け抵抗でLowにPull Downします。回路図と簡単なテストプログラムは以下です
+
+file: 3-9-f-pir-sensor.py
 ```
 #
-# test program for Pyroelectric Infrared Sensor
+# file: 3-9-f-pir-sensor.py
+# 機能：焦電型赤外線人感センサ(PaPIRs)の出力を読み取り、人の検知状態を定期的に表示するサンプル
 #
+
 import time
 from machine import Pin
 PIR_SENSOR_PIN = 0
