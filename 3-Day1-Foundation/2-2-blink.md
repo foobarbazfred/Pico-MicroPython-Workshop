@@ -72,7 +72,7 @@ while True:
 ### 補足説明
 GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pin(PAD)に対して、UART、 I2C、SPI等、複数の機能から一つを切り替えて使えるためです。<br>
 <img src="assets/gpio_functions.png" width=80%><br>
-どの機能をどのPinに割り当てるのか、自由に割り当てられるのではなく、上記図の通り、各Pinには選択できる機能が決められています。Pin配置の図を見て、目的の機能を選択できるPinを選んでデバイスを接続する必要があります。
+どの機能をどのPinに割り当てるかは自由に決められるわけではなく、上記図の通り、各Pinで選べる機能があらかじめ決まっています。ピン配置図を見て、使いたい機能に対応したPin（GP番号）を選び、デバイスを接続してください。
 
 #### GPIO構成図
 以下はGPIOの構成を表した図です。GPIO内に機能を選択するセレクタ(図中Muxing)があり、PADにどの機能を割り当てるか選ぶことができます。MicroPythonからGPIOを使う上で、機能選択は自動的に行われており機能の切り替えを意識する必要はありません。
@@ -84,6 +84,6 @@ GPIO構成図中にGPIOという名のブロックがありますが、これは
 
 Raspberry Pi | RP2350 Datasheetより引用
 
-#### GPIO のプルダウン問題
+#### 補足説明：GPIO のプルダウン問題
 RP2350-E9 erratumで示されるように、RP2350のGPIOに回路上の問題があり、GPIO入力パッドは一度Highになると約2.1V付近でラッチ（保持）される寄生リーク電流の問題があります。ラッチ状態を解除してLowに戻すには低い抵抗値による強いプルダウンが必要です(自分が試した結果では、内蔵プルダウンだけではLに落ちず、Hに張り付いたままでした)。
 - [RP2350 Datasheet(Errata - RP2350-E9) (Appendix D: D.5. GPIO D.5.1. RP2350-E9)(PDF)](https://pip.raspberrypi.com/documents/RP-008373-DS-rp2350-datasheet.pdf)
