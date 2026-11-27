@@ -48,8 +48,8 @@
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
       - [ジャイロセンサ(I2C接続)](3-7-motion-sensor.md)
       - [距離センサ(デジタル2線)](3-8-distance-sensor.md)
-      - 発展：人感センサ（デジタル1線）
-      - 発展：[GPS（UART接続）](3-9-GPS.md)
+      - 参考：人感センサ（デジタル1線）
+      - 参考：[GPS（UART接続）](3-9-GPS.md)
     - 参考：[CMOSカメラ](3-10-CMOS-camera.md)
       - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico
   - 出力装置
@@ -78,7 +78,7 @@
   - 演習：インターネット活用アプリ試作
     - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
     - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
-  - 発展：IoT PF活用、ビジュアル化
+  - 参考：IoT PF活用、ビジュアル化
     - IoT PFにデータをアップロード、計測データ見える化
 
 ## 時間がまだある場合の補講
@@ -96,8 +96,8 @@
   - 使い方
     - [簡単なLチカ、SW入力](https://github.com/foobarbazfred/learn-rp2350-pio)
     - DMAを併用することでデータストリームの高速転送が可能
-    - ご参考：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
-    - ご参考：[MQTTで情報共有する早押し対戦ゲーム](https://github.com/foobarbazfred/mqtt-rendaoh-2025)
+    - 参考：MEMS MIC(データフォーマットPDM)のデータをロス無しでメモリに取り込む
+    - 参考：[MQTTで情報共有する早押し対戦ゲーム](https://github.com/foobarbazfred/mqtt-rendaoh-2025)
   - [PIO命令セット](https://github.com/foobarbazfred/micropython/blob/main/rp2350_pio/instruction_ja.md) 
 - 補講３ ； 地味なマイコンを華やかにする　表示装置、入力装置の工夫
     - [センサデータを視覚的に表示する方法](sup-4-dataviewer.md)
