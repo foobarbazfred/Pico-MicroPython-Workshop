@@ -85,8 +85,14 @@ class HC_SR04:
 
 ```
 
-上記ドライバのテストプログラムは以下です
+上記ドライバを使った距離測定プログラムは以下です
+
+3-8-f-distance-sensor.py
 ```
+#
+# file: 3-8-f-distance-sensor.py
+# 機能：超音波距離センサ(HC-SR04)で対象物までの距離とパルス幅を計測し、シリアルコンソールに表示するサンプル
+#
 import time
 from machine import Pin
 from hc_sr04 import HC_SR04
@@ -118,7 +124,13 @@ while True:
 
 キャラクタディスプレイの使い方は、[キャラクタ液晶ディスプレイの利用](3-2-LCD-Display.md)を参照してください。
 上記ドライバのテストプログラムは以下です (LCD ディスプレイにも対応した版）
+
+file:  3-8-ex-distance-lcd.py
 ```
+#
+# file: 3-8-ex-distance-lcd.py
+# 機能：超音波距離センサ(HC-SR04)で計測した距離とパルス幅をI2C接続のLCDディスプレイに表示する演習サンプル
+#
 import time
 from machine import Pin
 from hc_sr04 import HC_SR04
