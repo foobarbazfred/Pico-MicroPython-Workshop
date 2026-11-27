@@ -74,7 +74,7 @@
     - [MQTT メッセージ送信](4-21-MQTT-publish.md)
     - MQTT メッセージ受信
   - [IoT プラットフォームの利用](4-30-IoT-PF.md)
-  - [RP2をWebServerとして動かす](4-30-web-server.md)
+  - [RP2をWebServerとして動かす](4-40-web-server.md)
   - 演習：インターネット活用アプリ試作
     - 気象情報提供APIにアクセス、天気情報を得てLCDに表示、サーボで天気（雨・曇り・晴）や気温を示す
     - 遠隔地のRPiをリモート操作 (VRで先方のNeoPixelを光らせる 等)
