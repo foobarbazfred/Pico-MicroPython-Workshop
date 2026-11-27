@@ -107,7 +107,7 @@
       - [Pico2W上でWebServer構築、ブラウザ上でWidget表示](4-40-web-server.md)(基礎４と共通) 
       - [Python+NiceGUIによるオリジナルダッシュボード](sup-3-4-dashboard-nicegui.md)
     - 音楽や音声を再生する
-      - 音声合成LSIを利用(UART接続で発話できる)
+      - 参考：音声合成LSIを利用(UART接続で発話できる)
       - I2Sによる音再生
         - [DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md)(基礎４と共通)
         - 参考：再生したいデータをSDに保存、SDから読み込みながらI2Sバス経由でDACに送信
