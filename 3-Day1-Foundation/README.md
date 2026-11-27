@@ -2,23 +2,23 @@
 
 - 基礎１ ; マイコンについて、Pythonについて、MicroPythonについて
   - センサを活用したプロト開発、IoTプロト開発に向けて
-     - [マイコンを使ってどのようなシステムが作れるか](1-0-microcontroller-prototyping-systems.md)
-     - [扱うデータとプログラムの基本構造](1-xx-data-and-program-structure.md)
-     - [マイコン用アプリ開発の流れ](1-x-software-development-flow.md) 
+     - [マイコンを使ってどのようなシステムが作れるか](1-1-mcu-applications.md)
+     - [扱うデータとプログラムの基本構造](1-2-data-and-program-structure.md)
+     - [マイコン用アプリ開発の流れ](1-3-software-development-flow.md) 
   - マイコン基礎（簡単なブロック図、有名なマイコン紹介）
-    - [主要マイコン(マイコンボード)紹介）](1-1-board.md)
-  - [マイコン用プログラミング言語](1-3-programming-languages.md)
-    - [MicroPython/Python復習](1-4-micropython_summary.md)
+    - [主要マイコン(マイコンボード)紹介）](1-4-board.md)
+  - [マイコン用プログラミング言語](1-5-programming-languages.md)
+    - [MicroPython/Python復習](1-6-micropython-summary.md)
   - マイコンボードのセットアップ、接続方法
-    - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-2-microcontroller.md)
+    - [簡単なブロック図(Raspberry Pi Pico 2 W (RP2350))](1-7-rp2350-summary.md)
     - Raspberry Pi Pico 2 W (略称 Pico2W) ボードの説明
       - <https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#quick-reference-for-the-rp2>
-    - [ボードへの電源供給方法](1-6-powersupply.md)
-    - [マイコンボードにMicroPythonを焼く方法](board_setup.md)
-    - [開発環境セットアップ、ツール類紹介、ファイル転送](1-5-programming-tools.md)
-  - [REPLを活用したボトムアッププログラミング](1-8-repl-bottom-up.md)
+    - [ボードへの電源供給方法](1-8-powersupply.md)
+    - [マイコンボードにMicroPythonを焼く方法](1-9-board-setup.md)
+    - [開発環境セットアップ、ツール類紹介、ファイル転送](1-10-programming-tools.md)
+  - [REPLを活用したボトムアッププログラミング](1-11-repl-bottom-up.md)
   - ライブラリ活用(ライブラリ管理ツールによるモジュールインストール)
-    - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-4-micropython_summary.md)
+    - [マイコン用プログラム開発のために標準のPython(CPython)から拡張されている部分（ソフトとハードを合わせて説明）](1-6-micropython-summary.md)
 - 基礎２ ;  Input/Outputの基礎/Digital/Analog(PWM)
   - [GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-2-Blink.md)
   - 参考：配線不要な[GPIO デジタル入出力  OUTPUT LED点滅 / INPUT  スイッチ入力](2-1-SimpleBlink.md)
@@ -64,7 +64,7 @@
       - 障害物との距離をLCDと音で表現
     - 距離センサで得た距離に連動して再生中の音の周波数を上下させる（[デジタル版テルミン](https://github.com/foobarbazfred/Pico-MicroPython-Workshop/blob/main/4-Day2-Practical/digital-Theramin.md)）
 - 基礎４ ; インターネット接続、Web API利用, MQTT利用
-  - [通信機能を活かしたアプリケーションのデザインパターン](1-xx-architecuture-design-pattern.md)
+  - [通信機能を活かしたアプリケーションのデザインパターン](4-1-architecuture-design-pattern.md)
   - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-Network.md)
   - HTTPを用いた通信とサンプルコード
     - [指定した場所の天気情報を天気予報サイトから取得](4-2-WebAPI.md)
