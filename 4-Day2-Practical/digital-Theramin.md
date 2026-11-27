@@ -12,7 +12,13 @@
 <img src="assets/digital_termin_soft.png" width=600>
 
 ## ソースコード
+
+file: digital_theremin.py
 ```
+#
+# file: digital_theremin.py
+# 機能：距離センサにより手のひらまでの距離を計算、距離を音程に変換して、PWMにより圧電サウンダで音階を再生する
+#
 import time
 from machine import Pin
 from machine import PWM
