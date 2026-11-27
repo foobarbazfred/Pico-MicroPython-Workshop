@@ -35,7 +35,14 @@ RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK,
 動作例<br>
 <img src="assets/IMG_g_display.png" width=200>
 
+file: 3-21-f-graphic-display.py
 ```
+#
+# file: 3-21-f-graphic-display.py
+# 機能：SPI接続のグラフィックディスプレイ(ST7735)を初期化し、
+# 塗りつぶし・図形・テキストを描画するサンプル
+#
+
 #
 # test program for Graphic Display with ST7735 Driver 
 # original source is https://github.com/mcauser/micropython-st7735/blob/master/test.py
@@ -157,7 +164,15 @@ tft.rotate(1)
 ### MicroPythonのライブラリ、framebufを使う例
 上記プログラムは　TFTライブラリが提供する描画関数を使ってグラフィック表示を行っていました。MicroPythonではグラフィック表示のためのバイト型配列（フレームバッファ）を操作するモジュール、framebufが提供されています。framebufを使うことで、フレームバッファ内に直線や円を描く関数を使って描画することができます。フレームバッファ内の描画が完了した後、TFTライブラリのdata関数を呼び出して、高速に表示させることが可能です。framebufモジュールではフォントも内蔵しており、上記説明したフォントデータのimportも不要です。以下のサンプルでは、フレームバッファを確保した後、framebufモジュールが提供する関数を使って四角やテキストを描画し、ST7735の関数dataを使って一度に表示しています。
 下記サンプルは、上記プログラムを実行した後に実行してください（サンプルコードが短くなるよう、ST7735の初期化処理は省略しています）。
+
+file: 3-21-f-st7735-framebuf.py
 ```
+#
+# file: 3-21-f-st7735-framebuf.py
+# 機能：framebufモジュールで作成したRGB565フレームバッファに図形とテキストを描画し、
+# ST7735へ転送表示するサンプル
+#
+
 # 
 # create frame buffer by library framebuf
 #
@@ -185,7 +200,8 @@ tft._set_window(POS_X, POS_Y, POS_X + W - 1,POS_Y + H - 1)
 tft.data(b_ary)
 ```
 framebufを使うことで、ちらつきを防ぎ、一度に画面の更新が可能になります。また、複数のキャラクタデザインを描画したframebufを切り替えることでアニメーションのような効果を実現することが可能です。
-便利に使えるframebufですが、実際の利用に際してメモリ利用量の観点で注意が必要です。framebufモジュールでは、グラフィック表示させたい領域分のメモリをbytearray関数を使ってヒープ領域に確保する必要があります。（下記サンプルのb_ary = bytearray(W * H * 2)が確保するコード）。表示領域が大きくなるにつれ、MicroPythonのヒープが減少する問題につながるため、framebufモジュールを使うかどうかは、描画したいグラフィックの画素数とヒープメモリの残量を考えて判断する必要があります。bytearrayによるバッファ確保時、Width * Height * 2　という演算式で領域確保を行っています。*2 と２倍している理由は、1画素あたり2byte使うためです。一般的に、１画素のカラー表示は、RGB565と呼ばれる、１画素あたり16bitで表現する仕様が用いられます。1画素あたり何bit使うか？は液晶ディスプレイの設定により決まります。カラーでなくモノクロ表示の場合、1画素あたりのビット数を減らすことができます。<br>
+便利に使えるframebufですが、実際の利用に際してメモリ利用量の観点で注意が必要です。framebufモジュールでは、グラフィック表示させたい領域分のメモリをbytearray関数を使ってヒープ領域に確保する必要があります。（下記サンプルのb_ary = bytearray(W * H * 2)が確保するコード）。表示領域が大きくなるにつれ、MicroPythonのヒープが減少する問題につながるため、framebufモジュールを使うかどうかは、描画したいグラフィックの画素数とヒープメモリの残量を考えて判断する必要があります。bytearrayによるバッファ確保時、Width * Height * 2　という演算式で領域確保を行っています。*2 と２倍している理由は、1画素あたり2byte使うためです。一般的に、１画素のカラー表示は、RGB565と呼ばれる、１画素あたり16bitで表現する仕様が用いられます。1画素あたり何bit使うか？は液晶ディスプレイの設定により決まります。カラーでなくモノクロ表示の場合、1画素あたりのビット数を減らすことができます。
+
 framebufモジュールの説明<br>
 https://micropython-docs-ja.readthedocs.io/ja/latest/library/framebuf.html<br>
 
