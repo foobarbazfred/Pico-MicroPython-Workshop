@@ -43,11 +43,13 @@ while True:
     else:
         led.off()
 ```
+これまでの処理をまとめた、押しボタンスイッチ（GP15）を押している間だけLED（GP16）を点灯する全体プログラムは以下の通りです。
+
 file:2-2-f-blink.py
 ```
 #
 # file:2-2-f-blink.py
-# 
+# 概要: 押しボタンスイッチの入力に応じてLEDを点灯/消灯する基本プログラム
 from machine import Pin
 
 # setup
