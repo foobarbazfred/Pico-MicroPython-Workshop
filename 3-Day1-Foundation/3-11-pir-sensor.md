@@ -19,7 +19,7 @@ PIR_SENSOR_PIN = 0
 sensor_pin = Pin(PIR_SENSOR_PIN, Pin.IN)
 
 # loop
-wnile True:
+while True:
     if(sensor_pin.value() == 1):
         print('detect human')
     else:
