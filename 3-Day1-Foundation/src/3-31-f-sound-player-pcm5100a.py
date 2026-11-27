@@ -1,0 +1,138 @@
+#
+# file: 3-31-f-sound-player-pcm5100a.py
+# 機能：I2S接続のDAC(PCM5100A)へ正弦波データを送信し、音階(ド・ミ・ソ・ド)と音量変化を再生するサンプル
+#
+
+#
+# Sample Source for BB PCM5100A DAC
+#
+#  v0.01 (2025/12/29 15:00)
+#  v0.02 (2026/11/22 18:00) 
+#     Bug fix  : CONST NAME fixed (SAMPLE_SIZE_IN_BITS -> SAMPLE_SIZE_IN_SOUND)
+#     Refactor : add volume variation,  MID_VOLUME(0x7F)
+
+import os
+import time
+import math
+import array
+from machine import Pin
+from machine import I2S
+
+SCK_PIN = 16   # Serial Clock
+WS_PIN = 17    # L/R Clock (Word Select Clock)
+SD_PIN = 18    # Serial Data
+
+I2S_ID = 0
+BUFFER_LENGTH_IN_BYTES = 1024
+
+SAMPLE_RATE_IN_HZ = 8_000      # The lowest supported sample rate of PCM5100A (8KHz)
+SAMPLE_SIZE_IN_SOUND = 16      # 16bits/one sound(L or R)
+FORMAT = I2S.MONO              # 
+
+# frequence define
+FREQ_C4 = 262
+FREQ_D4 = 294
+FREQ_E4 = 330
+FREQ_F4 = 349
+FREQ_G4 = 393
+FREQ_A4 = 440
+FREQ_B4 = 494
+FREQ_C5 = 523
+
+
+#
+MAX_VOLUME = 0xFF
+MID_VOLUME = 0x7F
+LOW_VOLUME = 0x15
+
+
+#
+# setup I2S
+#
+audio_out = I2S(I2S_ID, sck = Pin(SCK_PIN), ws = Pin(WS_PIN), sd = Pin(SD_PIN),
+          mode = I2S.TX, bits = SAMPLE_SIZE_IN_SOUND, format = FORMAT, rate = SAMPLE_RATE_IN_HZ,
+          ibuf = BUFFER_LENGTH_IN_BYTES,
+)
+
+
+#
+# create a buffer containing the pure tone samples
+#
+
+
+#
+# make wave table for 1 pulse (specificed frequency)
+#
+def make_tone_signed_16b(sample_rate, frequency, volume = MAX_VOLUME):
+    samples_per_cycle = sample_rate // frequency
+    samples = array.array('h', [0] * samples_per_cycle)  # 'h' : signed short (2bytes)
+    # value_range : max value of posivtive value  ; -tone_value_range -- 0 -- +tone_value_range
+    if volume == MAX_VOLUME:
+        tone_value_range = (pow(2, (SAMPLE_SIZE_IN_SOUND - 1)) - 1)
+    else:
+        tone_value_range = (pow(2, (SAMPLE_SIZE_IN_SOUND - 1)) - 1) * volume // MAX_VOLUME
+    #print('tone_value_range', tone_value_range)
+    for i in range(samples_per_cycle):
+        samples[i] = int(tone_value_range * math.sin(2 * math.pi * i / samples_per_cycle))
+    return samples
+
+
+def sound_test_play_CEG():
+
+    tone_C4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C4, MID_VOLUME)
+    tone_E4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_E4, MID_VOLUME)
+    tone_G4 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_G4, MID_VOLUME)
+    tone_C5 = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, FREQ_C5, MID_VOLUME)
+
+    for _ in range(3):
+        # play C4
+        for _ in range(int(FREQ_C4 / 8)):    # play for 0.125sec
+            _ = audio_out.write(tone_C4)
+        
+        # play E4
+        for _ in range(int(FREQ_E4 / 8)):   # play for  0.125sec
+            _ = audio_out.write(tone_E4)
+        
+        # play G4
+        for _ in range(int(FREQ_G4 / 8)):    # play for 0.125sec
+            _ = audio_out.write(tone_G4)
+       
+        time.sleep(0.25)  # no sound for 0.5
+
+    # play C5
+    for _ in range(int(FREQ_C5/3)):    # play for 0.3sec
+        _ = audio_out.write(tone_C5)
+
+
+def sound_test_volume_change():
+    freq = FREQ_A4
+    for volume in range(0x00, MAX_VOLUME, 0x10):
+        tone_data = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, freq, volume)
+        print(f'vol: {volume:02x}')
+        print(tone_data)
+        for _ in range(freq*2):   # play for 2sec (play 440 * 2 times (440Hz wave))
+            _ = audio_out.write(tone_data)
+        time.sleep(0.1)
+
+    # max volume
+    print(f'vol: {MAX_VOLUME:02x}')
+    tone_data = make_tone_signed_16b(SAMPLE_RATE_IN_HZ, freq)
+    print(tone_data)
+    for _ in range(freq*2):   # play for 2sec (play 440 * 2 times (440Hz wave))
+        _ = audio_out.write(tone_data)
+    
+
+
+print('sound play test  C->E->G->C')
+sound_test_play_CEG()
+
+print('volume test')
+sound_test_volume_change()
+
+#
+#machine.reset()
+#
+
+#
+# end of file
+#
