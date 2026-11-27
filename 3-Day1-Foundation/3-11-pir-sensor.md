@@ -29,5 +29,8 @@ wnile True:
 
 
 
+
 #### ご参考
-erratum RP2350-E9「Bank 0 pull-down resistorsのlatching behavior」
+erratum RP2350-E9「Bank 0 pull-down resistors latching behavior」
+PaPIRs(VZ) 5m EKMC1601112仕様書<br>
+https://industrial.panasonic.com/cdbs/www-data/pdf/EWA0000/ast-ind-247460.pdf
