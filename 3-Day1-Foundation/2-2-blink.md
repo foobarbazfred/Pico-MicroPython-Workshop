@@ -1,9 +1,10 @@
-# LED 点滅プログラム
+# LED 点滅プログラム（通称Lチカ）
+
 Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号(図中、GPnn(nnは数字)と表記)をよくご確認ください。
 <img src="assets/pico-2-w-pinout.png" width=800><br>
 
 物理的なピン番号とGPIO番号を間違いやすいのでご注意ください。物理的なピン番号は四角で囲って数字を書いています。
-MicroPythonで指定する場合は、全てGPIO番号です。LEDはGP16（物理ピン番号21番）に接続します。LEDが点灯するかREPLで試しましょう
+MicroPythonで指定する場合は、全てGPIO番号です。LEDはGP16（物理ピン番号21番）に接続します。LEDが点灯するかREPLで試しましょう。
 
 #### 回路図
 <img src="assets/Schematics_LED_SW.png" width=400><br>
@@ -29,7 +30,7 @@ GP15を入力用に初期化するコードは以下です。通常はスイッ�
 from machine import Pin
 sw = Pin(15, Pin.IN, Pin.PULL_UP)
 ```
-押しボタンを押して値が0になるか確認しましょう
+押しボタンを押して値が0になるか確認しましょう。
 ```
 sw.value()
 ```
@@ -80,8 +81,7 @@ GPIO構成図中にGPIOという名のブロックがありますが、これは
 <img src="assets/structure_of_GPIO.png" width=60%><br>
 #### IOパッド構成図
 以下はIOパッドの構成図です。プルアップ／プルダウン用抵抗が接続されていることが分かります。
-<img src="assets/diagram_of_a_simgle_IO_pad.png" width=60%>
-
+<img src="assets/diagram_of_a_simgle_IO_pad.png" width=60%><br>
 Raspberry Pi | RP2350 Datasheetより引用
 
 #### 補足説明：GPIO のプルダウン問題
