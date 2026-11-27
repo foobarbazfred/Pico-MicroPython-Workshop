@@ -3,7 +3,7 @@ Raspberry Pi Pico 2 W(略称、Pico2W)のボード上にはLEDが実装されて
 
 <img src="assets/RP2W_onboard_LED_SW.png" width=400>
 
-ボード上のLEDを点滅させるプログラムは以下。
+ボード上のLEDを点滅させるプログラムは以下です。`time.sleep(1)`により1秒待たせています。
 ```
 from machine import Pin
 import time
