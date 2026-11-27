@@ -67,9 +67,9 @@
 - 基礎４ ; インターネット接続、Web API利用, MQTT利用
   - [通信機能を活かしたアプリケーションのデザインパターン](4-1-design-pattern.md)
   - [インターネット接続(Wi-Fi接続)  NTP接続](4-1-WiFi-setup.md)
-  - HTTPによる通信とサンプルコード
+  - WebAPIと接続して情報取得
     - [指定した場所の天気情報を天気予報サイトから取得](4-10-web-API.md)
-  - MQTTによる通信とサンプルコード
+  - MQTTによるメッセージ送受信
     - [MQTT概要](4-20-MQTT-service.md)
     - [MQTT メッセージ送信](4-21-MQTT-publish.md)
     - MQTT メッセージ受信
