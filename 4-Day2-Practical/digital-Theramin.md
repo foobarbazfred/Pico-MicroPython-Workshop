@@ -78,4 +78,5 @@ pwm0.deinit()
 
 
 ### 参考資料
-https://ja.wikipedia.org/wiki/%E3%83%86%E3%83%AB%E3%83%9F%E3%83%B3
+- ウィキペディア：テルミン
+  - https://ja.wikipedia.org/wiki/%E3%83%86%E3%83%AB%E3%83%9F%E3%83%B3
