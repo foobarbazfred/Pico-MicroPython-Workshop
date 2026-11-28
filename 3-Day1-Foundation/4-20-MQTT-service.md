@@ -16,14 +16,12 @@ MQTTサービスを使うためには、MQTTメッセージを中継してくれ
 
 ### ご参考
 使いやすいMQTTブローカを整理します
-- HiveMQ
-  - 無料で使えるPublic MQTT Brokerサービスがあります  https://www.mqtt-dashboard.com/
-- EMQX
-  - 無料で使えるPublic MQTT Brokerサービスがあります  https://www.emqx.com/ja/mqtt/public-mqtt5-broker
-- Shiftr.io
-  - 帯域制限ありますがアカウントを登録することで無料で使えます(Basic Planは0円)  https://www.shiftr.io/cloud
-  - PrivateなMQTT Brokerです
-  - Dashboardサービスがあり、Publisher/Describer間の通信状況を確認することができます
+
+| サービス名 | 特徴　| URL |
+|--|--|--|
+|HiveMQ|無料で使えるPublic MQTT Brokerサービスがあります|https://www.mqtt-dashboard.com/|
+|EMQX|無料で使えるPublic MQTT Brokerサービスがあります|https://www.emqx.com/ja/mqtt/public-mqtt5-broker|
+|Shiftr.io|アカウント登録が必要です。帯域制限ありますが無料で使えます(Basic Planは0円) <br>PrivateなMQTT Brokerです<br>Dashboardサービスがあり、Publisher/Describer間の通信状況を確認することができます|https://www.shiftr.io/cloud|
 
 ## MicroPythonで使えるMQTTライブラリ
 
