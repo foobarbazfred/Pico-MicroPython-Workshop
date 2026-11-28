@@ -19,7 +19,7 @@ PWMを使ってPWMの設定可能な低い周波数(8Hz @システムクロッ�
 file : [src/2-5-f-led-blink-pwm.py](src/2-5-f-led-blink-pwm.py)
 ```
 #
-# file: 2-5-f-led-blink-pwm.py
+# file : 2-5-f-led-blink-pwm.py
 # 機能：PWMの最低周波数(8Hz @125MHz)とデューティ比50%でLEDを点滅させるサンプル
 #
 import machine
@@ -33,12 +33,12 @@ machine.freq(125_000_000)
 pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 ```
 
-PWMを使ってLEDを中間的な明るさで点滅させるプログラムは以下です。
+PWMを使ってLEDの明るさを周期的に変化させるプログラムは以下です。
 
 file : [src/2-5-f-led-dimming-pwm.py](src/2-5-f-led-dimming-pwm.py)
 ```
 #
-# file: 2-5-f-led-dimming-pwm.py
+# file : 2-5-f-led-dimming-pwm.py
 # 機能：PWMのデューティ比を切り替えてLEDの明るさ（100%と25%）を変化させるサンプル
 #
 from machine import Pin
@@ -63,7 +63,7 @@ sin関数は、１周するのに0から2πまでの値を取ります。一方�
 file : [src/2-5-ex-led-blink-pwm-sin.py](src/2-5-ex-led-blink-pwm-sin.py)
 ```
 #
-# file: 2-5-ex-led-blink-pwm-sin.py
+# file : 2-5-ex-led-blink-pwm-sin.py
 # 機能：sin関数を使ってPWMのデューティ比を連続変化させ、LEDを滑らかに明滅させるサンプル
 #
 from machine import Pin
@@ -93,7 +93,7 @@ VRの値に連動してLEDの明るさを変化させるプログラムは以下
 file : [src/2-5-ex-led-control-vr-pwm.py](src/2-5-ex-led-control-vr-pwm.py)
 ```
 #
-# file: 2-5-ex-led-control-vr-pwm.py
+# file : 2-5-ex-led-control-vr-pwm.py
 # 機能：ボリューム（可変抵抗）のAD変換値に連動してPWMのデューティ比を変え、LEDの明るさを調整するサンプル
 #
 from machine import Pin
