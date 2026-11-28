@@ -67,7 +67,7 @@
   - Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWebServiceを稼働させる
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
   - NiceGUIを使ってIoTダッシュボードを自作する方法は以下のドキュメントをご参照ください
-    - [xx](sup-3-4-dashboard-nicegui.md)
+    - [NiceGUI+Python+MQTT ClientによるDashboard実装](sup-3-4-dashboard-nicegui.md)
   - 本方式の利点、欠点 
      - 自分で実装するので自由度が高い、表示対象データの特性に最適化可能
      - セキュリティ面から、インターネット上でのサービス提供は不可
