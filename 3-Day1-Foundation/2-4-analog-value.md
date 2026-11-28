@@ -37,7 +37,7 @@ while True:
 ```
 推定電圧も含めたサンプルコードは以下
 
-file: 2-4-f-adc-volt.py
+file : [src/2-4-f-adc-volt.py](src/2-4-f-adc-volt.py)
 ```
 #
 # file: 2-4-f-adc-volt.py
