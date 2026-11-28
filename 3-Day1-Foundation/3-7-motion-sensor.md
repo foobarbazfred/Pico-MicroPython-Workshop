@@ -71,7 +71,7 @@ while True:
 
 応用例として、加速度をLCDに表示するサンプルは以下です。
 
-file : [src/3-7-ex-motion-lcd.py](src/3-7-ex-motion-lcd.py])
+file : [src/3-7-ex-motion-lcd.py](src/3-7-ex-motion-lcd.py)
 ```
 #
 # file: 3-7-ex-motion-lcd.py
