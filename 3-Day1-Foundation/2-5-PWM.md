@@ -14,7 +14,7 @@ MicroPythonにはPWMを簡単に取り扱うための関数が用意されてい
 
 <img src='assets/LED_blink.png' width=400>
 
-PWMを使ってPWMの設定可能な最も低い周波数(8Hz @システムクロック125MHz)、duty:50%で点滅させるプログラムは以下です。
+PWMを使ってPWMの設定可能な低い周波数(8Hz @システムクロック125MHz)、duty:50%で点滅させるプログラムは以下です。
 
 file : [src/2-5-f-led-blink-pwm.py](src/2-5-f-led-blink-pwm.py)
 ```
@@ -35,10 +35,10 @@ pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 
 PWMを使ってLEDを中間的な明るさで点滅させるプログラムは以下です。
 
-file: [src/2-5-f-led-dimming-pwd.py](src/2-5-f-led-dimming-pwd.py)
+file: [src/2-5-f-led-dimming-pwm.py](src/2-5-f-led-dimming-pwm.py)
 ```
 #
-# file: 2-5-f-led-dimming-pwd.py
+# file: 2-5-f-led-dimming-pwm.py
 # 機能：PWMのデューティ比を切り替えてLEDの明るさ（100%と25%）を変化させるサンプル
 #
 from machine import Pin
@@ -60,7 +60,7 @@ while True:
 sin関数を使って周期的に明滅するプログラム<br>
 sin関数は、半周するのに0からπまでの値を取ります。一方、Pythonのrange()は小数点を使えないので、ループ時の変数は、0 -> 314 で代用し、sin関数に渡す時に1/100で戻しています。
 
-file: 2-5-ex-led-blink-pwm-sin.py
+file : [src/2-5-ex-led-blink-pwm-sin.py](src/2-5-ex-led-blink-pwm-sin.py)
 ```
 #
 # file: 2-5-ex-led-blink-pwm-sin.py
@@ -90,7 +90,7 @@ while True:
 
 VRの値に連動してLEDの明るさを変化させるプログラムは以下です。
 
-file: 2-5-ex-led-control-vr-pwm.py
+file : [src/2-5-ex-led-control-vr-pwm.py](src/2-5-ex-led-control-vr-pwm.py)
 ```
 #
 # file: 2-5-ex-led-control-vr-pwm.py
