@@ -1,5 +1,5 @@
 #
-# file: 2-5-f-led-dimming-pwd.py
+# file: 2-5-f-led-dimming-pwm.py
 # 機能：PWMのデューティ比を切り替えてLEDの明るさ（100%と25%）を変化させるサンプル
 #
 from machine import Pin
