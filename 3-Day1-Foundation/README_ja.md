@@ -56,7 +56,7 @@
       - Arducam 5MP Plus OV5642 Mini Module Camera Shield SPI Camera Module for Arduino UNO Mega2560 Board & Raspberry Pi Pico
   - 出力装置
     - [キャラクタディスプレイ（I2C接続）](3-20-LCD-display.md)
-    - 発展：[グラフィックディスプレイ(SPI接続)](3-21-graphic-display.md)  
+    - 参考：[グラフィックディスプレイ(SPI接続)](3-21-graphic-display.md)  
     - 発展：[DAC(PCM5100A)による音再生(I2S接続)](3-31-sound-player-pcm5100a.md) (補講３と共通)
     - 参考：[M5StickC Plus用 Speaker 2 Hat(DAC(MAX98357))による音再生(I2S接続)](3-32-sound-player-max98357.md)
   - 記憶装置
