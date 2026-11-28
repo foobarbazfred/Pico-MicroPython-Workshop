@@ -54,6 +54,5 @@ while True:
     estim_vol = MAX_VOLT * value / MAX_VALUE
     print(value, hex(value), estim_vol, 'V')
     time.sleep(0.5)
-#
 ```
 抵抗を操作して、AD変換された結果と推定される電圧を確認しましょう。このように、ボリュームの軸の回転に応じてAD変換された結果が変化します。この結果を使ってサーボモータや、LEDの明るさ、色合いを変更することで、ユーザのボリューム操作と、表示装置の連動が可能になります。
