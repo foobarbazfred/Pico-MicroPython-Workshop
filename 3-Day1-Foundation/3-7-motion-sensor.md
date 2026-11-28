@@ -37,7 +37,7 @@ MPU-6050用のドライバが提供されていますのでこれを使用しま
 
 一般的なI2Cバス初期化例：
 ```
- self.i2c = I2C(id=bus, scl=Pin(sclpin), sda=Pin(sdapin), freq=400000)
+ sensor_i2c = I2C(id=bus, scl=Pin(sclpin), sda=Pin(sdapin), freq=20_000)
 ```
 
 file : [src/3-7-f-motion-sensor.py](src/3-7-f-motion-sensor.py)
