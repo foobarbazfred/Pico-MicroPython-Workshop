@@ -9,7 +9,11 @@ Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号(
 <img src="assets/Schematics_LED_SW.png" width=400><br>
 #### 実体配線図
 ご参考に実体配線図も示します。押しボタンスイッチはどの端子間でオン／オフされるのか分かりづらいので取り付け方にご注意ください。
-<img src="assets/breadboard_wiring_diagram_LED_SW.png" width=400><img src="assets/LED_part_illustration.png" width=150><br>
+<img src="assets/breadboard_wiring_diagram_LED_SW.png" width=400><img src="assets/LED_part_illustration.png" width=150>
+<img src="assets/" width=200>
+
+
+<br>
 
 GP16を出力用に初期化するコードは以下です。REPLにより対話的に実行してみましょう。もしエラーが出ている場合はご連絡ください。
 ```
