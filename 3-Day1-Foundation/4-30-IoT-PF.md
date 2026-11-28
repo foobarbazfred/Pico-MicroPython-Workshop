@@ -55,12 +55,14 @@
     - [ThingsBoardによるIoT プラットフォーム実装](sup-3-1-dashboard-thigsboard.md) 
 
 ### ローカルＰＣ上にIoTダッシュボードを構築する
-- [Node-RED Dashboard機能を使う](sup-4-2-dashboard-node-red.md)
+- Node-REDが提供する Dashboard機能を使う
   - PCかRPi上でNode-REDを稼働させ、Dashboard機能を使ってIoT ダッシュボードを構築する
   - Visual Programmingを基本に、最低限のJS Codeによりダッシュボードが構築可能
   - セキュリティ面から、サービス提供はローカルネットワーク環境のみに制限すべき(インターネット上でのサービス提供は危険)
   - 遠隔地からNode-RED dashboardを参照させたい場合はVPN等を構築
   - Node-REDをクラウド上で構築・運用できるサービスもある
+  - Node-REDによるDashbard機能利用は以下のドキュメントをご参照ください
+    - [z](sup-3-2-dashboard-node-red.md) 
 - Streamlit, NiceGUI等を使ってIoTダッシュボードを自作
   - Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWebServiceを稼働させる
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
