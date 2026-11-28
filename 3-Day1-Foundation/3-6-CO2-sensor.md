@@ -46,7 +46,7 @@ mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Wo
 ```
 
 ### CO2測定プログラム
-libに配置したscd41モジュールを使ってCO2を測定するプログラム
+libに配置したscd41モジュールを使ってCO2を測定するプログラムです。１分おきに空気質の情報をシリアルコンソールに出力します。
 
 file : [src/3-6-f-co2-sensor.py](src/3-6-f-co2-sensor.py)
 ```
