@@ -65,9 +65,11 @@ while True:
 # end of source
 #
 ```
-本当に送信できているのか？を確認するためのIoTダッシュボードのサンプルは以下です。ダウンロードしてブラウザで開いてください。<br>
-[dashboard.html](src/mqtt_dashboard/dashboard.html)<br>
-上記HTMLファイルをブラウザで表示すると、JavaScriptが実行され、MQTT Clientとして動作します。トピックとして、handson/sensor/volume/user001  ～　handson/sensor/volume/user016をサブスクライブしています。<br>
-このコードはCopilotに依頼して生成したままです。(JS苦手なので生成AIに丸投げで自分では何も加工していません)<br>改めて読み直すと、上位階層でサブスクライブした方が良いのではと思いました。
-<img src="assets/mqtt_dashboard.png" width=600>
+本当に送信できているのか？を確認するためのIoTダッシュボードのサンプルは以下です。PCのブラウザを使ってHTMLファイルをダウンロードしてブラウザで開いてください。
+
+file : [src/mqtt_dashboard/dashboard.html](src/mqtt_dashboard/dashboard.html)<br>
+
+上記HTMLファイルをブラウザで表示すると、JavaScriptが実行され、MQTT Clientとして動作します。トピックとして、handson/sensor/volume/user001  ～　handson/sensor/volume/user016をサブスクライブしています。<img src="assets/mqtt_dashboard.png" width=600><br>
+補足：このコードはCopilotに依頼して生成したままです。(JS苦手なので生成AIに丸投げで自分では何も加工していません)<br>改めて読み直すと、Topicsの上位階層でサブスクライブした方が良いのではと思いました。
+
    
