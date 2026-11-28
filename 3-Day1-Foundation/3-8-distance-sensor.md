@@ -164,4 +164,4 @@ while True:
 
 ### 参考資料
 - HC-SR04 DataSheet (sparkfun)
-https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+  - https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
