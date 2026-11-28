@@ -35,7 +35,7 @@ pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 
 PWMを使ってLEDを中間的な明るさで点滅させるプログラムは以下です。
 
-file: [src/2-5-f-led-dimming-pwm.py](src/2-5-f-led-dimming-pwm.py)
+file : [src/2-5-f-led-dimming-pwm.py](src/2-5-f-led-dimming-pwm.py)
 ```
 #
 # file: 2-5-f-led-dimming-pwm.py
@@ -58,7 +58,7 @@ while True:
 ```
 
 sin関数を使って周期的に明滅するプログラム<br>
-sin関数は、半周するのに0からπまでの値を取ります。一方、Pythonのrange()は小数点を使えないので、ループ時の変数は、0 -> 314 で代用し、sin関数に渡す時に1/100で戻しています。
+sin関数は、１周するのに0から2πまでの値を取ります。一方、Pythonのrange()は小数点を使えないので、ループ時の変数は、0 -> 314 で代用し、sin関数に渡す時に1/100で元の値に戻しています。
 
 file : [src/2-5-ex-led-blink-pwm-sin.py](src/2-5-ex-led-blink-pwm-sin.py)
 ```
@@ -117,6 +117,7 @@ while True:
     pwm0.duty_u16(value)
     estim_vol = MAX_VOLT * value / MAX_VALUE
     print(value, hex(value), estim_vol, 'V')
+    time.sleep(0.01)
 ```
 
 
