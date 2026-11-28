@@ -68,11 +68,14 @@
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
   - NiceGUIを使ってIoTダッシュボードを自作する方法は以下のドキュメントをご参照ください
     - [NiceGUI+Python+MQTT ClientによるDashboard実装](sup-3-4-dashboard-nicegui.md)
-  - 本方式の利点、欠点 
+   
+  独自にIoTダッシュボードを構築する上での利点と欠点 
      - 自分で実装するので自由度が高い、表示対象データの特性に最適化可能
-     - セキュリティ面から、インターネット上でのサービス提供は不可
+     - セキュリティ面からインターネット上でのサービス提供は不可
      - ローカルネットワーク環境からの利用に留めるべき
         - IoTプロトタイプ試作の学びに適する
      - センサ→マイコン(Pico2W)→MQTTブローカ→IoTダッシュボード自作(onPC/RPi)というIoTシステムの試作を通してシステム設計開発を学べる
 
-上記自前構築の場合、Pico2WとPC(またはRaspberryPi)との接続は、USB Serial(仮想COMポート)か、MQTTによる接続を選ぶことができます。MQTT Brokerを介してMQTTでPico2Wと接続することで、遠隔地のPico2Wの計測値を表示することが可能になります。クラウドサービスとして提供されるIoTプラットフォームを採用する場合、Pico2WとIoTプラットフォームとの接続はHTTP/HTTPS/MQTTのいずれかになります。
+#### 通信方式について
+- クラウドサービスとして提供されるIoTプラットフォームにデータをアップロードする場合、Pico2WとIoTプラットフォームとの接続はHTTP/MQTTのいずれかになります。
+- IoTダッシュボードをローカルPCに構築する場合、Pico2WとPC(またはRaspberryPi)との接続は、USB Serial(仮想COMポート)か、HTTP/MQTTによる接続かが選択可能です。MQTT Brokerを介してMQTTでPico2Wと接続することで、遠隔地のPico2Wの計測値を表示することが可能になります。
