@@ -1,7 +1,7 @@
 # 3-6 CO2センサ(SCD41)を使う
 
 Sensirion社製のCO2センサ(SCD41)を使ってCO2濃度を測ってみましょう。
-SCD41は温度、湿度、CO2濃度が測定できる空気質センサです。I2Cによりセンサを制御します。一般的なセンサはレジスタ用のアドレスが割り振られていて、指定されたアドレスのレジスタにパラメータを書き込んだり、レジスタから値を読み込むことでデバイスとの通信を行います。Sensirionの場合、レジスタの概念がなく、コマンドの送受信でセンサを制御します。SCD41用のコンパクトなドライバがないので、今回は最小限のコードを書きました。
+SCD41は温度、湿度、CO2濃度が測定できる空気質センサです。I2Cによりセンサを制御します。一般的なセンサはレジスタ用のアドレスが割り振られていて、指定されたアドレスのレジスタにパラメータを書き込んだり、レジスタから値を読み込むことでデバイスとの通信を行います。Sensirionの場合、レジスタの概念がなく、コマンドの送受信でセンサを制御します。
 
 CO2センサの仕様
 - センサデバイス：Sensirion SCD41
@@ -24,7 +24,7 @@ I2C_SCL = 5
 BUS=0
 i2c = I2C(id=BUS, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
 ```
-`i2c.scan()`を実行するとでPico2WからI2Cバスに対して接続されているI2Cデバイスのスキャンを行います。
+`i2c.scan()`を実行することにより、Pico2WからI2Cバスに対して接続されているI2Cデバイスのスキャンを行います。
 ```
 i2c.scan()
 ```
@@ -37,6 +37,9 @@ i2c.scan()
 ```
 
 ### SCD41用ドライバソフト
+
+Sensirion公式ドライバは大規模なため、今回は研修用に最小限のコードを書きました。
+
 - Git上のドライバ置き場所 [src/lib/scd41.py](src/lib/scd41.py)
 - MicroPython側での置き場所： /lib/scd41.py
 
@@ -59,6 +62,7 @@ file : [src/3-6-f-co2-sensor.py](src/3-6-f-co2-sensor.py)
 # file : 3-6-f-co2-sensor.py
 # 機能：I2C接続のCO2センサ(SCD41)から温度・湿度・CO2濃度を定期的に読み取り表示するサンプル
 #
+import time
 from scd41 import *
 
 # Sensor I2C Connection Pin Assign
@@ -89,7 +93,7 @@ def main():
         if temp is None:
             print(f"temp: --.-- C, hum: --.-- %, CO2: ---- ppm")           
         else:
-            print(f"temp: {temp:.2f}C, hum: {hum:.2F} %, CO2: {co2} ppm")
+            print(f"temp: {temp:.2f}C, hum: {hum:.2f} %, CO2: {co2} ppm")
         time.sleep(60)
 
 if __name__ == '__main__':    
@@ -102,5 +106,5 @@ if __name__ == '__main__':
   - https://sensirion.com/jp/products/catalog/SCD41
 - Sensirion SCD4x DataSheet
   - https://sensirion.com/media/documents/48C4B7FB/67FE0194/CD_DS_SCD4x_Datasheet_D1.pdf
-- Sensirion Drvier
+- Sensirion Drivier
   - https://github.com/Sensirion/python-i2c-scd/tree/master/sensirion_i2c_scd/scd4x
