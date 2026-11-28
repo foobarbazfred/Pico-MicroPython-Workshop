@@ -1,6 +1,6 @@
 # 3-7 モーションセンサを使う
 
-モーションセンサを使うことで、加速度や回転（ヨー・ロー・ピッチ）を取得することができます。キットのモーションセンサ（MPU6050）の仕様は以下です。
+モーションセンサを使うことで、加速度や回転（ヨー・ロール・ピッチ）を取得することができます。キットのモーションセンサ（MPU6050）の仕様は以下です。
 
 - IMU (イナーシャル・メジャーメント・ユニット)
 - 6-Axis MEMS MotionTracking™ Device
@@ -19,7 +19,7 @@ I2C_CH = 0
 I2C_SCL = 5
 I2C_SDA = 4
 
-i2c = I2C(IC2_CH, scl=Pin(ISC_SCL), sda=Pin(I2C_SDA), freq=20_000)
+i2c = I2C(I2C_CH, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
 print(hex(i2c.scan()[0]))
 ```
 実行してみます。
