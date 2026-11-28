@@ -7,7 +7,7 @@ CO2センサの仕様
 - センサデバイス：Sensirion SCD41
 - 機能：温度、湿度、CO2濃度の測定
 - 接続方法：I2C接続
-   - デバイスアドレス： 0x62
+   - デバイスアドレス ： 0x62
    - センサ内のレジスタをアドレス指定でリードライトするのではなく、センサに制御コマンドを送信して制御する
 
 ### 配線図
@@ -44,17 +44,18 @@ Sensirion公式ドライバは大規模なため、今回は研修用に最小�
 - MicroPython側での置き場所： /lib/scd41.py
 
 ### ドライバをMicroPython環境(/lib)にインストールする方法
+下記２つの方法があります。
 1. mipによりGitHubからインストール
 2. プログラミングツール、Thonnyを使ってファイル保存することによりインストール
 
-mipを使ってGitHubからインストールする方法(MicroPythonのREPLで実行してください。ネットワークに接続されている必要があります)
+mipを使ってGitHubからインストールする方法(MicroPythonのREPLで実行してください。ネットワークに接続されている必要があります)。libフォルダの下に配置されます。
 ```
 import mip
 mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Workshop/main/3-Day1-Foundation/src/lib/scd41.py')
 ```
 
 ### CO2測定プログラム
-libに配置したscd41モジュールを使ってCO2を測定するプログラムです。１分おきに空気質の情報をシリアルコンソールに出力します。
+libに配置したscd41用ドライバを使ってCO2を測定するプログラムです。1分おきに空気質の情報をシリアルコンソールに出力します。
 
 file : [src/3-6-f-co2-sensor.py](src/3-6-f-co2-sensor.py)
 ```
