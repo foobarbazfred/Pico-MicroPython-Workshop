@@ -38,7 +38,7 @@ https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.html#classe
      - CircuitPython版ドライバをMicroPython版にポーティングすることも可能です
   - インターネット上で公開されている、MicroPython/CircuitPythonの情報量を比較した場合、MicroPythonの方が多い印象です 
     
-MicroPythonの組み込みモジュール一覧
+MicroPythonの組み込みモジュール一覧（RP2340版）
 ```
 MicroPython v1.29.0 on 2026-08-24; Raspberry Pi Pico 2 W with RP2350
 Type "help()" for more information.
@@ -64,7 +64,7 @@ array             gc                requests/__init__
 Plus any modules on the filesystem
 ```
 
-CircuitPythonの組み込みモジュール一覧
+CircuitPythonの組み込みモジュール一覧（RP2040版）
 ```
 Adafruit CircuitPython 10.3.2 on 2026-11-11; Raspberry Pi Pico with rp2040
 >>> help('modules')
