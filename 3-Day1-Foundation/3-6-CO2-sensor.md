@@ -13,6 +13,8 @@ CO2センサの仕様
 ### 配線図
 <img src="assets/i2c_SCD41.png" width=700>
 
+まずはセンサが正しく接続できているか、I2Cバスをスキャンして確認しましょう。
+
 デバイス接続テスト
 ```
 from machine import I2C
@@ -22,9 +24,12 @@ I2C_SCL = 5
 BUS=0
 i2c = I2C(id=BUS, scl=Pin(I2C_SCL), sda=Pin(I2C_SDA), freq=20_000)
 ```
+`i2c.scan()`を実行するとでPico2WからI2Cバスに対して接続されているI2Cデバイスのスキャンを行います。
 ```
 i2c.scan()
 ```
+デバイスが見つかると、デバイスのアドレスが表示されます。
+
 実行結果
 ```
 >>> hex(i2c.scan()[0])
