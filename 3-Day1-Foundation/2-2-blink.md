@@ -8,12 +8,13 @@ Raspberry Pi Pico 2 Wのピン配置は以下となっています。GPIO番号(
 #### 回路図
 <img src="assets/Schematics_LED_SW.png" width=400><br>
 #### 実体配線図
-ご参考に実体配線図も示します。押しボタンスイッチはどの端子間でオン／オフされるのか分かりづらいので取り付け方にご注意ください。
+ご参考に実体配線図も示します。
+
 <img src="assets/breadboard_wiring_diagram_LED_SW.png" width=400><img src="assets/LED_part_illustration.png" width=150>
-<img src="assets/" width=200>
 
+押しボタンスイッチはどの端子間でオン／オフされるのか分かりづらいので取り付け方にご注意ください。以下に内部配線図を示します。
 
-<br>
+<img src="assets/figure_push_button.png" width=400>
 
 GP16を出力用に初期化するコードは以下です。REPLにより対話的に実行してみましょう。もしエラーが出ている場合はご連絡ください。
 ```
@@ -72,9 +73,9 @@ while True:
         led.off()
 ```
 ### 補足説明
-GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIO Pin(PAD)に対して、UART、 I2C、SPI等、複数の機能から一つを切り替えて使えるためです。<br>
+GPIO とは General-Purpose Input/Output（汎用入出力）の略称です。汎用というのは、各GPIOピン(PAD)に対して、UART、 I2C、SPI等、複数の機能から一つを切り替えて使えるためです。<br>
 <img src="assets/gpio_functions.png" width=80%><br>
-どの機能をどのPinに割り当てるかは自由に決められるわけではなく、上記図の通り、各Pinで選べる機能があらかじめ決まっています。ピン配置図を見て、使いたい機能に対応したPin（GP番号）を選び、デバイスを接続してください。
+どの機能をどのピンで使うかは自由に決められるわけではなく、RP2350の場合、上記図の通り、各ピンで選べる機能が決まっています。ピン配置図を見て、使いたい機能に対応したピン（GP番号）を選び、周辺デバイスを接続してください。
 
 #### GPIO構成図
 以下はGPIOの構成を表した図です。GPIO内に機能を選択するセレクタ(図中Muxing)があり、PADにどの機能を割り当てるか選ぶことができます。MicroPythonからGPIOを使う上で、機能選択は自動的に行われており機能の切り替えを意識する必要はありません。
