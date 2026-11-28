@@ -1,14 +1,14 @@
-# PWMによるBeep音再生
+# 2-7 PWMによるBeep音再生
 
-PWMはDUTY（H区間の比率）を変えることでモータ制御等を行いますが、PWMの周波数を変えることで音階を再生することができます。昔のファミコンは矩形波の周波数を変化させてメロディを再生していました。PWMの周波数を変えることで同じ効果が得られます。
+PWMはDUTY（H区間の比率）を変えることでモータ制御等を行いますが、PWMの周波数を変えることで音階を発生させることができます。昔のファミコンは矩形波の周波数を変化させてメロディを再生していました。PWMの周波数を変えることで同じ効果が得られます。
 
 <img src="assets/sounder.png"  width="400">
 
 
-file: 2-7-f-beep-by-pwm.py
+file : [file/2-7-f-beep-by-pwm.py](file/2-7-f-beep-by-pwm.py)
 ```
 #
-# file: 2-7-f-beep-by-pwm.py
+# file : 2-7-f-beep-by-pwm.py
 # 機能：PWMの周波数を300Hzから2000Hzまで変化させ、圧電サウンダから音を鳴らすサンプル
 #
 from machine import Pin
@@ -33,9 +33,9 @@ pwm0.deinit()
 部品説明ページ<br>
 https://pim.murata.com/ja-jp/pim/details/?partNum=PKM22EPPH4001-B0
 
-音と周波数の関係は決まっています。例えば以下のサイトは、一覧表を掲示されています。<br>
-https://khufrudamonotes.com/frequencies-for-equal-tempered-scale<br>
-https://www.asahi-net.or.jp/~hb9t-ktd/music/Japan/Research/DTM/freq_map.html
+音と周波数の関係は決まっています。例えば以下のサイトは、一覧表を掲示されています。
+- https://khufrudamonotes.com/frequencies-for-equal-tempered-scale
+- https://www.asahi-net.or.jp/~hb9t-ktd/music/Japan/Research/DTM/freq_map.html
 
 簡単に、中央のド付近(4オクターブ)の音階と周波数を抜粋します
 
