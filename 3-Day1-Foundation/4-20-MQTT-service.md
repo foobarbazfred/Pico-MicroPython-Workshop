@@ -21,7 +21,7 @@ MQTTサービスを使うためには、MQTTメッセージを中継してくれ
 |--|--|--|
 |HiveMQ|無料で使えるPublic MQTT Brokerサービスがあります|https://www.mqtt-dashboard.com/|
 |EMQX|無料で使えるPublic MQTT Brokerサービスがあります|https://www.emqx.com/ja/mqtt/public-mqtt5-broker|
-|Shiftr.io|アカウント登録が必要です。帯域制限ありますが無料で使えます(Basic Planは0円) <br>PrivateなMQTT Brokerです<br>Dashboardサービスがあり、Publisher/Describer間の通信状況を確認することができます|https://www.shiftr.io/cloud|
+|Shiftr.io|無料で使えるPublic MQTT Brokerサービスがあります<br>アカウント登録することでPrivateなMQTT Brokerが無料で利用できます(Basic Planは0円) <br>Dashboardサービスがあり、Publisher/Describer間の通信状況をGUIで確認することができます|https://www.shiftr.io/cloud|
 
 ## MicroPythonで使えるMQTTライブラリ
 
