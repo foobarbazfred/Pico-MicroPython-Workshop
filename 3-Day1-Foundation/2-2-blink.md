@@ -87,5 +87,5 @@ GPIO構成図中にGPIOという名のブロックがありますが、これは
 Raspberry Pi | RP2350 Datasheetより引用
 
 #### 補足説明：GPIO のプルダウン問題
-RP2350-E9 erratumで示されるように、RP2350のGPIOに回路上の問題があり、GPIO入力パッドは一度Highになると約2.1V付近でラッチ（保持）される寄生リーク電流の問題があります。ラッチ状態を解除してLowに戻すには低い抵抗値による強いプルダウンが必要です(実際に試したところ、内蔵プルダウンだけではLowに落ちず、Highに張り付いたままでした)。
+RP2350-E9 erratumで示されるように、RP2350のGPIOに回路上の問題があり、GPIO入力パッドは一度Highになると約2.1V付近でラッチ（保持）される寄生リーク電流の問題があります。ラッチ状態を解除してLowに戻すには低い抵抗値による強いプルダウンが必要です(GPIOの内蔵プルダウンを有効にしてテストした結果、入力信号により一旦Highに上がった後、入力信号がHi-Zになっても内蔵プルダウンだけではLowに落ちず、Highに張り付いたままでした)。
 - [RP2350 Datasheet(Errata - RP2350-E9) (Appendix D: D.5. GPIO D.5.1. RP2350-E9)(PDF)](https://pip.raspberrypi.com/documents/RP-008373-DS-rp2350-datasheet.pdf)
