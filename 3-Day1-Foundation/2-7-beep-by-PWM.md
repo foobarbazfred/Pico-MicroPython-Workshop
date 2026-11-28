@@ -5,7 +5,7 @@ PWMはDUTY（H区間の比率）を変えることでモータ制御等を行い
 <img src="assets/sounder.png"  width="400">
 
 
-file : [file/2-7-f-beep-by-pwm.py](file/2-7-f-beep-by-pwm.py)
+file : [src/2-7-f-beep-by-pwm.py](src/2-7-f-beep-by-pwm.py)
 ```
 #
 # file : 2-7-f-beep-by-pwm.py
