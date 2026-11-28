@@ -27,7 +27,7 @@
 - ArduinoCloud（https://cloud.arduino.cc/）
   - Arduinoユーザ囲い込み戦略、接続できるボードはArduinoと互換ボード
   - IDE統合型サービス 
-- ThingSpeak
+- ThingSpeak(https://thingspeak.mathworks.com/)
   - 無償利用可能
   - ストレージ機能は強力だが、ダッシュボード機能は最低限
   - MATLABと組み合わせて使うことを想定
