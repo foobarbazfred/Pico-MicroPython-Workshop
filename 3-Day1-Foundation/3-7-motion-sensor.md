@@ -1,4 +1,4 @@
-# モーションセンサを使う
+# 3-7 モーションセンサを使う
 
 - IMU (イナーシャル・メジャーメント・ユニット)
 - 6-Axis MEMS MotionTracking™ Device
