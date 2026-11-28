@@ -102,7 +102,10 @@ servo_test()
 ```
 
 サーボ制御関数servo_rotate_horn() は共通ライブラリ、mylib.pyに入れています。
-共通ライブラリ mylib.py  file: [src/lib/mylib.py](src/lib/mylib.py)
+
+共通ライブラリ mylib.py  file : [src/lib/mylib.py](src/lib/mylib.py)
+
+上記ファイルをMicroPythonのファイルシステムに配置することで利用可能になります。
 
 mylibにより提供される関数 servo_rotate_horn()を使うことでコードが短縮化できます。以下ソースコードのように利用できます。
 
