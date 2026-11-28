@@ -35,7 +35,7 @@ RP2とディスプレイはSPIで接続します。必要な結線は、SPI_SCK,
 動作例<br>
 <img src="assets/IMG_g_display.png" width=200>
 
-file: 3-21-f-graphic-display.py
+file : [src/3-21-f-graphic-display.py](src/3-21-f-graphic-display.py)
 ```
 #
 # file: 3-21-f-graphic-display.py
