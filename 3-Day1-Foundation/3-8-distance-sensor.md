@@ -24,7 +24,7 @@ HC-SR04の電源電圧は5Vですので、HC-SR04からの信号をマイコン�
 HC-SR04用のドライバは以下です。下記の式により距離を計算しています。<br>
 `distance = SPEED_OF_SOUND * pulse_width * 100  / ( 1000 * 1000) / 2 `
 
-file: [src/lib/hc_sr04.py](src/lib/hc_sr04.py)
+file : [src/lib/hc_sr04.py](src/lib/hc_sr04.py)
 ```
 #
 # driver for HC-SR04
@@ -91,7 +91,7 @@ class HC_SR04:
 file : [src/3-8-f-distance-sensor.py](src/3-8-f-distance-sensor.py)
 ```
 #
-# file: 3-8-f-distance-sensor.py
+# file : 3-8-f-distance-sensor.py
 # 機能：超音波距離センサ(HC-SR04)で対象物までの距離とパルス幅を計測し、シリアルコンソールに表示するサンプル
 #
 import time
@@ -126,10 +126,10 @@ while True:
 キャラクタディスプレイの使い方は、[キャラクタ液晶ディスプレイの利用](3-2-LCD-Display.md)を参照してください。
 上記ドライバのテストプログラムは以下です (LCD ディスプレイにも対応した版）
 
-file:  3-8-ex-distance-lcd.py
+file : [src/3-8-ex-distance-lcd.py](src/3-8-ex-distance-lcd.py)
 ```
 #
-# file: 3-8-ex-distance-lcd.py
+# file : 3-8-ex-distance-lcd.py
 # 機能：超音波距離センサ(HC-SR04)で計測した距離とパルス幅をI2C接続のLCDディスプレイに表示する演習サンプル
 #
 import time
