@@ -43,10 +43,10 @@ servo.duty_u16(int(2.4/20 * MAX_VALUE))  # angle : 180 degrees
 ```
 指定された角度にアームを回転させるプログラム（関数化）は以下です。
 
-file : [src/2-6-f-servo_rotate_PWM.py](src/2-6-f-servo_rotate_PWM.py)
+file : [src/2-6-f-servo-rotate-PWM.py](src/2-6-f-servo-rotate-PWM.py)
 ```
 #
-# file: 2-6-f-servo_rotate_PWM.py
+# file: 2-6-f-servo-rotate-PWM.py
 # 概要：PWMによるサーボ制御サンプルコード
 #      アームの角度を0度から180度まで回転させる
 
@@ -106,10 +106,10 @@ servo_test()
 
 mylibにより提供される関数 servo_rorate_horn()を使うことでコードが短縮化できます。以下ソースコードのように利用できます。
 
-file : [src/2-6-f-servo_sample_w_lib.py](src/2-6-f-servo_sample_w_lib.py)
+file : [src/2-6-f-servo-sample-w-lib.py](src/2-6-f-servo-sample-w-lib.py)
 ```
 #
-# file : 2-6-f-servo_sample_w_lib.py
+# file : 2-6-f-servo-sample-w-lib.py
 # 機能：mylib内で定義された servo制御関数、servo_rotate_horn()を使ったサンプルコード
 #
 from mylib import servo_rotate_horn
@@ -126,10 +126,10 @@ servo_rotate_horn(servo, 90)
 
 可変抵抗（ボリューム）の軸の回転に連動してサーボのホーンを動かすプログラムは以下です。
 
-file : [src/2-6-ex-servo_volume_control.py](src/2-6-ex-servo_volume_control.py)
+file : [src/2-6-ex-servo-volume-control.py](src/2-6-ex-servo-volume-control.py)
 ```
 #
-# file : 2-6-ex-servo_volume_control.py
+# file : 2-6-ex-servo-volume-control.py
 # 機能：可変抵抗（ボリューム）のアナログ入力値をAD変換でデジタル化、得られた値をサーボの回転角度に変換して
 #      サーボのホーンを回転させる
 #
