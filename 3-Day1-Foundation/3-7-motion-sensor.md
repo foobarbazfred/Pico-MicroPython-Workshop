@@ -1,10 +1,12 @@
 # 3-7 モーションセンサを使う
 
+モーションセンサを使うことで、加速度や回転（ヨー・ロー・ピッチ）を取得することができます。キットのモーションセンサ（MPU6050）の仕様は以下です。
+
 - IMU (イナーシャル・メジャーメント・ユニット)
 - 6-Axis MEMS MotionTracking™ Device
-- I2Cで接続、3.3V電源です
+- I2Cで接続、3.3V電源
 
-MPU6050との接続はI2Cを使用します。回路図は以下
+MPU6050との接続はI2Cを使用します。回路図は以下です。
 
 <img src="assets/MPU6050.png" width="600">
 
@@ -20,7 +22,7 @@ I2C_SDA = 4
 i2c = I2C(IC2_CH, scl=Pin(ISC_SCL), sda=Pin(I2C_SDA), freq=20_000)
 print(hex(i2c.scan()[0]))
 ```
-実行してみます
+実行してみます。
 ```
 >>> hex(i2c.scan()[0])
 '0x68'
@@ -31,9 +33,9 @@ MPU-6050用のドライバが提供されていますのでこれを使用しま
 - 公開場所：https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/blob/master/Python/Python_Libraries/mpu6050.py
 - mip等で取得する場合：https://raw.githubusercontent.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/master/Python/Python_Libraries/mpu6050.py
 
-多くのドライバは呼び出し側でI2Cバスを初期化して、初期化したI2Cの値を引数として渡しますが、mpu6050用ドライバ(mpu6050)では
-ドライバ側でI2Cを初期化します。ですので、ドライバの引数としてI2Cのチャンネル番号とGPIO番号を指定します。
+多くのドライバは呼び出し側でI2Cバスを初期化して、初期化したI2Cの値を引数として渡しますが、mpu6050用ドライバ(mpu6050)ではドライバ側でI2Cを初期化します。ですので、ドライバの引数としてI2Cのチャンネル番号とGPIO番号を指定します。
 
+一般的なI2Cバス初期化例：
 ```
  self.i2c = I2C(id=bus, scl=Pin(sclpin), sda=Pin(sdapin), freq=400000)
 ```
