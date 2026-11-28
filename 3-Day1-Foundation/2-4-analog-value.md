@@ -7,7 +7,7 @@ RP2350にはアナログで入力された値をデジタル値に変換する�
 from machine import ADC, Pin
 adc = ADC(Pin(26))     # create ADC object on ADC pin
 ```
-GP26（物理ピン番号は31番ピン）をGNDか3.3Vに接続して値を読み取ってみましょう。
+GP26（物理ピン番号は31番ピン）に対して0V(GND)か3.3Vに接続してADC変換された値を読み取ってみましょう。
 ```
 adc.read_u16()         # read value, 0-65535 across voltage range 0.0V - 3.3V
 ```
