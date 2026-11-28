@@ -12,7 +12,9 @@ PWMを使うことでLEDをぼんやりと薄暗く光らせることができ�
 
 <img src='assets/LED_blink.png' width=400>
 
-PWMを使ってPWMの設定可能な最も低い周波数(8Hz @システムクロック125MHz)、duty:50%で点滅させるプログラム
+PWMを使ってPWMの設定可能な最も低い周波数(8Hz @システムクロック125MHz)、duty:50%で点滅させるプログラムは以下です。
+
+file : [src/2-5-f-led-blink-pwm.py](src/2-5-f-led-blink-pwm.py)
 ```
 #
 # file: 2-5-f-led-blink-pwm.py
@@ -31,7 +33,9 @@ pwm0 = PWM(Pin(PWM_OUTPUT_PIN), freq=8, duty_u16=int(0xffff/2))
 #
 ```
 
-PWMを使ってLEDを中間的な明るさで点滅させるプログラム
+PWMを使ってLEDを中間的な明るさで点滅させるプログラムは以下です。
+
+file: [src/2-5-f-led-dimming-pwd.py](src/2-5-f-led-dimming-pwd.py)
 ```
 #
 # file: 2-5-f-led-dimming-pwd.py
@@ -51,12 +55,10 @@ while True:
     time.sleep(1)
     pwm0.duty_u16(int(0xffff/4))
     time.sleep(1)
-#
-#
 ```
 
 sin関数を使って周期的に明滅するプログラム<br>
-sin関数は、半周するのに0からπまでの値を取ります。一方、Pythonのrange()は小数点を使えないので、ループ時の変数は、0 -> 314 で代用しています
+sin関数は、半周するのに0からπまでの値を取ります。一方、Pythonのrange()は小数点を使えないので、ループ時の変数は、0 -> 314 で代用し、sin関数に渡す時に1/100で戻しています。
 
 file: 2-5-ex-led-blink-pwm-sin.py
 ```
@@ -77,11 +79,9 @@ pwm0 = PWM(Pin(16), freq=2000, duty_u16=0)  # setup PWM
 # loop
 while True:
     for i in range(0, 314 , 1):  # 314 means math.pi * 100
-        value = int(MAX_VALUE * math.sin(i/100))    # i/100 means math.pi * 100 -> math.py
+        value = int(MAX_VALUE * math.sin(i/100))    # i/100 means math.pi * 100 -> math.pi
         pwm0.duty_u16(value)
         time.sleep(0.01)
-#
-#
 ```
 ### ボリュームの回転に合わせてLEDの明るさを調整
 先ほどのボリュームと連動して明るさを調整するプログラムを作りましょう。可変抵抗とLEDを以下の配線図に従って結線してください。
@@ -117,14 +117,9 @@ while True:
     pwm0.duty_u16(value)
     estim_vol = MAX_VOLT * value / MAX_VALUE
     print(value, hex(value), estim_vol, 'V')
-
-#
-#
 ```
 
 
-
-
-参考WebPage<br>
-https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#pwm-pulse-width-modulation<br>
-https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.PWM.html
+#### 参考資料
+- https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#pwm-pulse-width-modulation
+- https://micropython-docs-ja.readthedocs.io/ja/latest/library/machine.PWM.html
