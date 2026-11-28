@@ -101,7 +101,10 @@ def servo_test():
 servo_test()
 ```
 
-サーボ制御関数は共通ライブラリ、mylib.pyに入れていますので以下のコードで利用できます。
+サーボ制御関数servo_rotate_horn() は共通ライブラリ、mylib.pyに入れています。
+共通ライブラリ mylib.py  file: [src/lib/mylib.py](src/lib/mylib.py)
+
+mylibにより提供される関数 servo_rorate_horn()を使うことでコードが短縮化できます。以下ソースコードのように利用できます。
 
 file : [src/2-6-f-servo_sample_w_lib.py](src/2-6-f-servo_sample_w_lib.py)
 ```
