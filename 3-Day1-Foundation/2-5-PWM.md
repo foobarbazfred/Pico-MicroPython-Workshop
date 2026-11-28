@@ -83,7 +83,7 @@ while True:
         pwm0.duty_u16(value)
         time.sleep(0.01)
 ```
-### ボリュームの回転に合わせてLEDの明るさを調整
+### 演習：ボリュームの回転に合わせてLEDの明るさを調整
 先ほどのボリュームと連動して明るさを調整するプログラムを作りましょう。可変抵抗とLEDを以下の配線図に従って結線してください。
 
 <img src='assets/VR_LED_blink.png' width=500>
