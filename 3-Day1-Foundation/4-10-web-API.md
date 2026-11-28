@@ -141,11 +141,11 @@ temp: 13.15 C
 hum: 53 %
 wind: 3.09 m/s
 ```
-APIの呼び出し時、lang=jaと設定しているので晴天と漢字で返却されています。APIキーは共用できないので、皆さんがWeatherAPIを呼び出す際は、各自でAPIキーを取得してAPIを呼び出してください。
+APIの呼び出し時、lang=jaと設定しているので晴天と漢字で返却されています。サービス利用規約に基づき、APIキーは他人と共用できないので、皆さんがWeatherAPIを呼び出す際は、各自でAPIキーを取得してAPIを呼び出してください。
 
 ## OpenWeather APIを代理で呼び出すProxy サービス
 
-研修用にAWS上でWeatherAPI Proxyを構築しています。WeatherAPIを利用するためのキーの取得が困難な場合は、研修用のWeatherAPI Proxyをご利用ください。
+研修用にAWS上でWeatherAPI Proxyを構築しています。WeatherAPIを利用するためのAPIキーの取得が困難な場合は、研修用のWeatherAPI Proxyをご利用ください。
 
 研修用Weather APIのURLと呼び出し方は以下の通りです
 ```
