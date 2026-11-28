@@ -5,7 +5,6 @@
 from mpu6050 import MPU6050
 import time
 
-G = 9.8
 mpu = MPU6050(0, 5, 4)     #bus(0), SCL(GP5), SDA(GP4)
 mpu.MPU_Init() #initialize the MPU6050
 time.sleep(1)  #waiting for MPU6050 to work steadily
