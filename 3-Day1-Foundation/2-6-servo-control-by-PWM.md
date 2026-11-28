@@ -104,7 +104,7 @@ servo_test()
 サーボ制御関数servo_rotate_horn() は共通ライブラリ、mylib.pyに入れています。
 共通ライブラリ mylib.py  file: [src/lib/mylib.py](src/lib/mylib.py)
 
-mylibにより提供される関数 servo_rorate_horn()を使うことでコードが短縮化できます。以下ソースコードのように利用できます。
+mylibにより提供される関数 servo_rotate_horn()を使うことでコードが短縮化できます。以下ソースコードのように利用できます。
 
 file : [src/2-6-f-servo-sample-w-lib.py](src/2-6-f-servo-sample-w-lib.py)
 ```
@@ -146,11 +146,13 @@ SERVO_PIN = 17
 
 adc = ADC(Pin(VR_INPUT_PIN))     # create ADC object on ADC pin
 servo = PWM(Pin(SERVO_PIN), freq=PWM_FREQ_SERVO)
+
 while True:
     vr = adc.read_u16() 
     degree = int(180 * vr / 0xffff)
     servo_rotate_horn(servo, degree)
 ```
+調整点：サーボホーンが小刻みに揺れる症状（ジッター症状）が発生する場合、サーボモータの機械的応答時間を考慮して、ループ内に、time.sleep(0.1)程度の待機時間を設定してください。
 
 ### 参考資料
 - https://micropython-docs-ja.readthedocs.io/ja/latest/esp8266/tutorial/pwm.html#control-a-hobby-servo
