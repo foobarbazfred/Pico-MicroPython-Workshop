@@ -48,7 +48,7 @@
   - 入力装置
     - センサ接続　(接続バス　I2C) , デバイスを制御する方法（ドライバ）
       - [CO2センサ(I2C接続)](3-6-CO2-sensor.md)
-      - [ジャイロセンサ(I2C接続)](3-7-motion-sensor.md)
+      - [モーションセンサ(I2C接続)](3-7-motion-sensor.md)
       - [距離センサ(デジタル2線)](3-8-distance-sensor.md)
       - 参考：[人感センサ（デジタル1線）](3-9-pir-sensor.md)
       - 参考：[GPS（UART接続）](3-10-GPS.md)
