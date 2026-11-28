@@ -52,7 +52,7 @@
   - 認証機能があるので、インターネット上での提供は可能だが、第三者から攻撃されるリスクも考慮すべき
   - AWSと契約、EC2またはECS上でThingsBoardのCommunity Editionを稼働させる方法もある
   - 構築手順は以下のドキュメントをご参照ください
-    - [aaa](sup-3-1-dashboard-thigsboard.md) 
+    - [ThingsBoardによるIoT プラットフォーム実装](sup-3-1-dashboard-thigsboard.md) 
 
 ### ローカルＰＣ上にIoTダッシュボードを構築する
 - [Node-RED Dashboard機能を使う](sup-4-2-dashboard-node-red.md)
