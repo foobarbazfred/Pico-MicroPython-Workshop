@@ -1,4 +1,4 @@
-# CO2センサ(SCD41)を使う
+# 3-6 CO2センサ(SCD41)を使う
 
 Sensirion社製のCO2センサ(SCD41)を使ってCO2濃度を測ってみましょう。
 SCD41は温度、湿度、CO2濃度が測定できる空気質センサです。I2Cによりセンサを制御します。一般的なセンサはレジスタ用のアドレスが割り振られていて、指定されたアドレスのレジスタにパラメータを書き込んだり、レジスタから値を読み込むことでデバイスとの通信を行います。Sensirionの場合、レジスタの概念がなく、コマンドの送受信でセンサを制御します。SCD41用のコンパクトなドライバがないので、今回は最小限のコードを書きました。
@@ -48,10 +48,10 @@ mip.install('https://raw.githubusercontent.com/foobarbazfred/Pico-MicroPython-Wo
 ### CO2測定プログラム
 libに配置したscd41モジュールを使ってCO2を測定するプログラム
 
-file: 3-6-f-co2-sensor.py
+file : [src/3-6-f-co2-sensor.py](src/3-6-f-co2-sensor.py)
 ```
 #
-# file: 3-6-f-co2-sensor.py
+# file : 3-6-f-co2-sensor.py
 # 機能：I2C接続のCO2センサ(SCD41)から温度・湿度・CO2濃度を定期的に読み取り表示するサンプル
 #
 from scd41 import *
