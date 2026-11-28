@@ -30,7 +30,7 @@
 - ThingSpeak (https://thingspeak.mathworks.com/)
   - 無償利用可能
   - ストレージ機能は強力だが、ダッシュボード機能は最低限
-  - MATLABと組み合わせて使うことを想定
+  - MathWorks社が提供するサービスであり、MATLABと組み合わせて使うことを想定
   - HTTPS,POSTメソッドか、MQTT Publishによるデータ登録
 - ThinsBoard (https://thingsboard.io/)
   - 有償サービス、マルチユーザ対応
