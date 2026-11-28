@@ -116,7 +116,7 @@ servo = PWM(Pin(SERVO_PIN), freq=PWM_FREQ_SERVO)
 servo_rotate_horn(servo, 90)
 ```
 
-### ボリュームの回転に合わせてサーボホーンを動かす
+### 演習：ボリュームの回転に合わせてサーボホーンを動かす
 
 <img src="assets/VR_SERVO.png" width="500">
 
