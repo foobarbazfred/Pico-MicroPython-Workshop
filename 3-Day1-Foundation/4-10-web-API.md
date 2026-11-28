@@ -1,10 +1,10 @@
-# WebAPIを呼び出す
+# 4-10 ネットワーク経由でWebAPIを呼び出す
 
-### Internet上のWebService
+## Internet上のWebService
 
 Internet上にはいろんなWebAPIが存在し、いろんなサービスを提供しています。無料で使えるサービスや、有料のサービスもあります。マイコンによるWebAPI活用の事例として、生活に役立つ情報を提供しているWebAPIを呼び出し、情報を提示したり、得られた情報に基づいて家電機器を制御することが考えられます。
 
-### openweather
+## WebAPIの例；openweather
 
 WebAPIの一例として世界の気象情報を取得できるOpenWeatherというサービスを紹介します。サイトのURLは以下です
 
@@ -151,7 +151,12 @@ curl "https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWe
 ```
 
 MicroPythonからの呼び出し例は以下です
+file : [src/4-10-web-api-weather-proxy.py](src/4-10-web-api-weather-proxy.py)
 ```
+#
+# file : src/4-10-web-api-weather-proxy.py
+# 機能： WebAPI　OpenWeatherProxyを経由して、OpenWeatherが提供する天気予報を取得する
+#
 import urequests
 BASE_URL='https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy'
 
@@ -172,7 +177,7 @@ if response.status_code == 200:
 else:
     print("error:", data)
 ```
-RP2で実行した結果は以下です
+Pico2Wで実行した結果は以下です
 ```
 city: Higashimurayama
 weather: clear sky
