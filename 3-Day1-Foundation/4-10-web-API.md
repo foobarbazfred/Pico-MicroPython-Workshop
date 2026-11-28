@@ -153,7 +153,8 @@ API_KEY='aaaabbbbccccc123'
 curl "https://287vqq2f1a.execute-api.ap-northeast-1.amazonAAA.com/default/OpenWeatherProxy?lat=35.7&lon=139.5&api_key=${API_KEY}" 
 ```
 
-MicroPythonからの呼び出し例は以下です
+MicroPythonからの呼び出し例は以下です。
+
 file : [src/4-10-web-api-weather-proxy.py](src/4-10-web-api-weather-proxy.py)
 ```
 #
