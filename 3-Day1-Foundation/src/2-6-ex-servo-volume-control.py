@@ -3,6 +3,7 @@
 # 機能：可変抵抗（ボリューム）のアナログ入力値をAD変換でデジタル化、得られた値をサーボの回転角度に変換して
 #      サーボのホーンを回転させる
 #
+import time
 from machine import Pin
 from machine import ADC
 from machine import PWM
