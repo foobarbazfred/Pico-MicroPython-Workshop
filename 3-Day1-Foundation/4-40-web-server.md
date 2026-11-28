@@ -1,4 +1,4 @@
-# RP2をWebServerとして動かす
+# 4-40 RP2をWebServerとして動かす
 
 MicroPythonにはSocketモジュールが存在しており、RP2をWebServerとして稼働させることができます。以下はMicroPython公式ドキュメントで紹介されている簡単なWebServerの例です。
 
@@ -69,5 +69,4 @@ print(sta.ifconfig())
 
 ### ご参考
 本テキストでは、MicroPython の組み込みモジュールを使ってWebServerを実現しています。外部ライブラリのmicrodotフレームワークを活用すると簡単にWebServerを実現できそうです。
-
-microdotのサイト：https://microdot.readthedocs.io/
+- microdotのサイト：https://microdot.readthedocs.io/
