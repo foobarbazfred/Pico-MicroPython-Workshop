@@ -38,7 +38,7 @@ MPU-6050用のドライバが提供されていますのでこれを使用しま
  self.i2c = I2C(id=bus, scl=Pin(sclpin), sda=Pin(sdapin), freq=400000)
 ```
 
-file:  3-7-f-motion-sensor.py
+file : [src/3-7-f-motion-sensor.py](src/3-7-f-motion-sensor.py)
 ```
 #
 # file: 3-7-f-motion-sensor.py
@@ -65,9 +65,11 @@ while True:
     time.sleep(1)
 ```
 
+## 演習：モーションセンサで得られた加速度をＬＣＤに表示
+
 応用例として、加速度をLCDに表示するサンプルは以下です。
 
-file: 3-7-ex-motion-lcd.py
+file : [src/3-7-ex-motion-lcd.py](src/3-7-ex-motion-lcd.py])
 ```
 #
 # file: 3-7-ex-motion-lcd.py
