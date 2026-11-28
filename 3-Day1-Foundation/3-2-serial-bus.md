@@ -33,7 +33,7 @@
 
 演習では主にI2Cを使ってセンサ、液晶ディスプレイと接続します。
 
-## 参考情報
+## 参考資料
 - MicroPython Documents; RP2 用クイックリファレンス
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#uart-serial-bus 
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-i2c-bus
