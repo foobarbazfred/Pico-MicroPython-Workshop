@@ -65,6 +65,5 @@ WebPage： https://rufus.ie/ja/<br>
   - https://micropython-docs-ja.readthedocs.io/ja/latest/rp2/quickref.html#hardware-spi-bus
 - SD Card SPIモード解説 (ELM-CHAN氏) 
   - https://elm-chan.org/docs/mmc/mmc.html
-
-### SD Card Driver
-https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/storage/sdcard/sdcard.py
+- SD Card Driver
+  - https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/storage/sdcard/sdcard.py
