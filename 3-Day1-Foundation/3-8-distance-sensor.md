@@ -21,9 +21,10 @@
 
 HC-SR04は計測を指示するTrig(Trigger)信号と、センサから対象物までの距離をパルス幅で表現したEchoで制御されます。
 HC-SR04の電源電圧は5Vですので、HC-SR04からの信号をマイコンに直結するのは避けて、抵抗で分圧して電圧を3Vまで下げています。
-HC-SR04用のドライバは以下です
+HC-SR04用のドライバは以下です。下記の式により距離を計算しています。<br>
+`distance = SPEED_OF_SOUND * pulse_width * 100  / ( 1000 * 1000) / 2 `
 
-file: lib/hc_sr04.py
+file: [src/lib/hc_sr04.py](src/lib/hc_sr04.py)
 ```
 #
 # driver for HC-SR04
@@ -87,7 +88,7 @@ class HC_SR04:
 
 上記ドライバを使った距離測定プログラムは以下です
 
-3-8-f-distance-sensor.py
+file : [src/3-8-f-distance-sensor.py](src/3-8-f-distance-sensor.py)
 ```
 #
 # file: 3-8-f-distance-sensor.py
