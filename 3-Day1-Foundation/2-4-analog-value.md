@@ -1,6 +1,6 @@
 # 2-4 アナログ値の取り扱い（入力編）
 
-GP26のADC0を使用します。アナログデジタルコンバータ(ADC)の初期化は以下です
+RP2350にはアナログで入力された値をデジタルに変換するアナログデジタルコンバータ(ADC)が搭載されています。GP26のADC0を使用します。ADCの初期化は以下です
 ```
 from machine import ADC, Pin
 adc = ADC(Pin(26))     # create ADC object on ADC pin
