@@ -43,10 +43,10 @@ for file in ('ov5642.py', 'ov5642_setup.py', 'ov5642_FIFO.py'):
 ### Arducam (OV5642 5MPixel)のサンプルコード
 以下にArducamを使った撮影の例を示します。バッファに取り込むところまでのプログラムです。どのような画像が撮影できたのかを確認するには、画像データをLCDに表示する、または、PC上に表示する機能を追加する必要があります。
 
-file: 3-11-f-arducam-sample.py
+file : [src/3-11-f-arducam-sample.py](src/3-11-f-arducam-sample.py)
 ```
 #
-# file: 3-11-f-arducam-sample.py
+# file : 3-11-f-arducam-sample.py
 # 機能：Arducam(OV5642)を使って撮影し、バッファに格納するサンプル（表示機能なし）
 #
 from machine import Pin
@@ -84,7 +84,7 @@ ardu.read_pixels(buf)
 
 撮影した画像をグラフィックディスプレイに表示するコードは以下です。（ソースが長くなるのでグラフィックディスプレイの初期化は省略しています）。グラフィックディスプレイを含めたデモソースは以下に置いています。
 
-file: [3-11-ex-arducam-lcd.py](src/arducam_lcd_demo.py)
+file : [src/3-11-ex-arducam-lcd.py](src/arducam_lcd_demo.py)
 ```
 #
 # file: 3-11-ex-arducam-lcd.py
@@ -130,7 +130,7 @@ while True:
 RP2350(150MHz)の環境で、撮影->描画の処理に900msかかります。撮影性能としては、1fps程度です。
 
 
-### ドキュメント類
+### 参考資料
 - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Camera-Models/
 - Arducam-Shield-Mini-5MP-Plus
   - https://docs.arducam.com/Arduino-SPI-camera/Legacy-SPI-camera/Hardware/Arducam-Shield-Mini-5MP-Plus/
