@@ -1,5 +1,5 @@
 #
-# file : src/4-10-web-api-weather-proxy.py
+# file : 4-10-web-api-weather-proxy.py
 # 機能： WebAPI　OpenWeatherProxyを経由して、OpenWeatherが提供する天気予報を取得する
 #
 import urequests
