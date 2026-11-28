@@ -1,4 +1,6 @@
-# SPIによるデバイスとの接続
+# 3-4 SPIについて
+
+## SPI概要
 
 SPI（Serial Peripheral Interface）バスは周辺機器との接続で使われます。
 - SPIバスはモトローラによって開発され、現在はNXPが仕様を管理
