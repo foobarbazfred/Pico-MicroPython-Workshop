@@ -12,7 +12,6 @@ LCD_ADDR = 0x27
 i2c_1 = I2C(1, scl=Pin(19), sda=Pin(18), freq=400_000)
 lcd = I2CLcd(i2c_1, LCD_ADDR, 2, 16)
 
-G = 9.8
 mpu = MPU6050(0, 5, 4)     #bus(0), SCL(GP5), SDA(GP4)
 mpu.MPU_Init() #initialize the MPU6050
 time.sleep(1)  #waiting for MPU6050 to work steadily
