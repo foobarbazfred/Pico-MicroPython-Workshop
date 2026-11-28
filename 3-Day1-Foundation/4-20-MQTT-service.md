@@ -47,7 +47,8 @@ Copying: /lib/ssl.mpy
 Copying: /lib/umqtt/simple.mpy
 Done
 ```
-ファイルが置かれたか確認します。以下の操作により、 Flash上のファイルシステム内、/lib/umqtt/simple.mpy' が置かれたことが分かります
+もしupyshライブラリが利用可能であれば、ls()関数によりファイルの存在が確認できます。
+インストールによりファイルが置かれたか確認します。以下の操作により、 Flash上のファイルシステム内に、`/lib/umqtt/simple.mpy` が置かれたことが分かります
 ```
 >>> ls('lib')
     <dir> umqtt
