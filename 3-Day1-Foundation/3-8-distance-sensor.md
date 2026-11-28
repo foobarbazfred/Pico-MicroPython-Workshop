@@ -123,8 +123,7 @@ while True:
 
 <img src="assets/HC-SR04_LCD.png" width=700>
 
-キャラクタディスプレイの使い方は、[キャラクタ液晶ディスプレイの利用](3-2-LCD-Display.md)を参照してください。
-上記ドライバのテストプログラムは以下です (LCD ディスプレイにも対応した版）
+キャラクタディスプレイの使い方は、[キャラクタ液晶ディスプレイの利用](3-20-LCD-display.md)を参照してください。LCDディスプレイへの表示機能付き距離計測装置のプログラムは以下です。
 
 file : [src/3-8-ex-distance-lcd.py](src/3-8-ex-distance-lcd.py)
 ```
