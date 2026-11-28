@@ -8,7 +8,7 @@ PWMを使うことでLEDをぼんやりと薄暗く光らせることができ�
 
 <img src="assets/pwm_duty.png" width=80%>
 
-MicroPythonにはPWMを簡単に取り扱うためのクラスが用意されています。
+MicroPythonにはPWMを簡単に取り扱うための関数が用意されています。
 
 これまでと同じようにLEDを点灯させる回路を組んでください。
 
