@@ -50,4 +50,4 @@ Python版BME280用のドライバはGitHubにありますか？
 https://cc.cqpub.co.jp/lib/system/doclib_item/1376<br>
   - Interface 2025年 8月号　IoTセンサ図鑑[2025年版]<br>
 https://interface.cqpub.co.jp/magazine/202508/<br>
-RPiでセンサを使う方法(サンプルコード、活用事例)<br>
+Raspberry Pi PicoとMicroPythonの組み合わせでセンサを使う方法を説明(サンプルコードと活用事例)<br>
