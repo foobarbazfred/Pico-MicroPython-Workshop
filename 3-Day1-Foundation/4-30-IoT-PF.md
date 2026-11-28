@@ -62,7 +62,7 @@
   - 遠隔地からNode-RED dashboardを参照させたい場合はVPN等を構築
   - Node-REDをクラウド上で構築・運用できるサービスもある
   - Node-REDによるDashbard機能利用は以下のドキュメントをご参照ください
-    - [z](sup-3-2-dashboard-node-red.md) 
+    - [Node-REDのDashboard機能活用](sup-3-2-dashboard-node-red.md) 
 - Streamlit, NiceGUI等を使ってIoTダッシュボードを自作
   - Python+NiceGUI(Streamlit)を使ってWebServiceを開発、PCかRPi上でWebServiceを稼働させる
   - NiceGUI/Streamlitの場合Widgetが用意されており、画面構築は比較的容易(VisualProgrammingよりは手間)
