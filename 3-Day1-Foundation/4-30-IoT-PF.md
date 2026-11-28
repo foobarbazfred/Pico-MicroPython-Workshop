@@ -22,17 +22,17 @@
   - シンプルな仕様で手軽に使える
   - ダッシュボード機能は最低限の機能
   - 提供されるSDKを用いてデータアップロード
-- Adafruit IO
+- Adafruit IO (https://io.adafruit.com/)
   - 無償利用可能、データ保存期間が短い、ダッシュボード機能あり 
 - ArduinoCloud（https://cloud.arduino.cc/）
   - Arduinoユーザ囲い込み戦略、接続できるボードはArduinoと互換ボード
   - IDE統合型サービス 
-- ThingSpeak(https://thingspeak.mathworks.com/)
+- ThingSpeak (https://thingspeak.mathworks.com/)
   - 無償利用可能
   - ストレージ機能は強力だが、ダッシュボード機能は最低限
   - MATLABと組み合わせて使うことを想定
   - HTTPS,POSTメソッドか、MQTT Publishによるデータ登録
-- ThinsBoard(https://thingsboard.io/)
+- ThinsBoard (https://thingsboard.io/)
   - 有償サービス、マルチユーザ対応
   - GUI操作によるダッシュボード構築
   - ブロックプログラミングでデータ処理ルールを作成可能
