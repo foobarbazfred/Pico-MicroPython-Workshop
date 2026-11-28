@@ -84,7 +84,7 @@ ardu.read_pixels(buf)
 
 撮影した画像をグラフィックディスプレイに表示するコードは以下です。（ソースが長くなるのでグラフィックディスプレイの初期化は省略しています）。グラフィックディスプレイを含めたデモソースは以下に置いています。
 
-file : [src/3-11-ex-arducam-lcd.py](src/arducam_lcd_demo.py)
+file : [src/3-11-ex-arducam-lcd.py](src/3-11-ex-arducam-lcd.py)
 ```
 #
 # file: 3-11-ex-arducam-lcd.py
